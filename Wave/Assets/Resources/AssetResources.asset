@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 612724826640121007
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerArmature
     - Path: Resources/DB/Wave/TestScene_mesh
       AssetRef:
         Id:
@@ -61,11 +66,21 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/QuantumDemo/Map1
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityView
+      AssetRef:
+        Id:
+          Value: 1806898859422963237
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerCharacter
     - Path: Resources/DB/Exp/GPU-Instancer/Expo-GPUInstaceMap_mesh
       AssetRef:
         Id:
           Value: 1906811426938971220
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap_mesh
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityView
+      AssetRef:
+        Id:
+          Value: 2000648132830211038
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerArmature
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
       AssetRef:
         Id:
@@ -76,6 +91,11 @@ MonoBehaviour:
         Id:
           Value: 3247494871574351852
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 4127952087584879725
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerCharacter
     - Path: Resources/DB/QuantumDemo/Map1_mesh
       AssetRef:
         Id:
