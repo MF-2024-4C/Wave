@@ -9327,6 +9327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7fbd9999eb6e94cb28b582b93c9d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerData:
+    CharacterPrototype:
+      Id:
+        Value: 194582828604556991
 --- !u!4 &1565167105
 Transform:
   m_ObjectHideFlags: 0
@@ -11401,7 +11405,7 @@ MonoBehaviour:
   HideRoomOnStartToggle: {fileID: 1550619375}
   PlayerGrid: {fileID: 324712300}
   PlayerTemplate: {fileID: 2025719609}
-  IdProvider: 1
+  IdProvider: 0
   RuntimeConfigContainer: {fileID: 833318422}
   Spectate: 0
 --- !u!114 &1939664211

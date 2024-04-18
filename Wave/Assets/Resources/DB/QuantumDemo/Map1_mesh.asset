@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Map1_mesh
+      Path: Resources/DB/QuantumDemo/Map1_mesh
       Guid:
         Value: 4182183522022618454
     Data: 00000000

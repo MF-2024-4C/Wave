@@ -41,13 +41,33 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
-    - Path: Resources/DB/Map1
+    - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 194582828604556991
+      ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/TestScene_mesh
+      AssetRef:
+        Id:
+          Value: 1493273223259084687
+      ResourcePath: DB/Wave/TestScene_mesh
+    - Path: Resources/DB/Wave/TestScene
+      AssetRef:
+        Id:
+          Value: 1498384792810196308
+      ResourcePath: DB/Wave/TestScene
+    - Path: Resources/DB/QuantumDemo/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
-      ResourcePath: DB/Map1
-    - Path: Resources/DB/Map1_mesh
+      ResourcePath: DB/QuantumDemo/Map1
+    - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
+      AssetRef:
+        Id:
+          Value: 3202285255980693029
+      ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/QuantumDemo/Map1_mesh
       AssetRef:
         Id:
           Value: 4182183522022618454
-      ResourcePath: DB/Map1_mesh
+      ResourcePath: DB/QuantumDemo/Map1_mesh

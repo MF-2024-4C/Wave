@@ -21,7 +21,12 @@ namespace Quantum {
         new Core.EntityPrototypeSystem(),
         new Core.PlayerConnectedSystem(),
 
-        // user systems go here 
+        // user systems go here
+        
+        // Quantum.QuantumDemo Start
+        new Quantum.QuantumDemo.MovementSystem(),
+        new Quantum.QuantumDemo.PlayerSpawnSystem(),
+        // Quantum.QuantumDemo End
       };
     }
   }
