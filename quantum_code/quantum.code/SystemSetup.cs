@@ -24,9 +24,13 @@ namespace Quantum {
         // user systems go here
         
         // Quantum.QuantumDemo Start
-        new Quantum.QuantumDemo.MovementSystem(),
-        new Quantum.QuantumDemo.PlayerSpawnSystem(),
+        //new Quantum.QuantumDemo.MovementSystem(),
+        //new Quantum.QuantumDemo.PlayerSpawnSystem(),
         // Quantum.QuantumDemo End
+        
+        //feature-gun
+        new Wave.Gun.PlayerSpawnSystem(),
+        new Wave.Gun.GunFireSystem(),
       };
     }
   }

@@ -1,0 +1,10 @@
+component TempPlayer
+{
+
+}
+
+event MyEvent {
+  FPVector3 Position;
+  FPVector3 Direction;
+  FP Length;
+}
