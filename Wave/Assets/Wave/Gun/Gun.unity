@@ -2536,6 +2536,9 @@ MonoBehaviour:
   - CharacterPrototype:
       Id:
         Value: 4561826521370215918
+  - CharacterPrototype:
+      Id:
+        Value: 4561826521370215918
   PreloadAddressables: 0
   DynamicAssetDB:
     OnInitialDynamicAssetsRequested:
