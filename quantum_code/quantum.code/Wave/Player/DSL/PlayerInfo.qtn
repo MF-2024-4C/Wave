@@ -1,0 +1,6 @@
+asset PlayerConfig;
+
+component PlayerSys
+{
+    asset_ref<PlayerConfig> Config;
+}
