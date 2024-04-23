@@ -97,9 +97,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\quantum_unity\Assets"</PostBuildEvent>
+    <PostBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\Wave\Assets"</PostBuildEvent>
     <PreBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen\quantum.codegen.host.exe" "$(ProjectPath)"</PreBuildEvent>
-    <PostBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\quantum_unity\Assets"</PostBuildEvent>
+    <PostBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\Wave\Assets"</PostBuildEvent>
     <PreBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen\quantum.codegen.host.exe" "$(ProjectPath)"</PreBuildEvent>
   </PropertyGroup>
 </Project>
