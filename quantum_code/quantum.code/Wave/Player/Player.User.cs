@@ -18,10 +18,10 @@ namespace Quantum
             {
                 controller->Jump(f, false, config.JumpPower);
             }
-
+            
+            
             FP speed = config.WalkSpeed;
             if (input.PlayerDash) speed = config.RunSpeed;
-
             controller->MaxSpeed = speed;
             controller->Move(f, entityRef, input.PlayerDirection.XOY);
         }

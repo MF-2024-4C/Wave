@@ -472,6 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455442308}
   - component: {fileID: 1455442307}
+  - component: {fileID: 1455442309}
   m_Layer: 0
   m_Name: LocalInput
   m_TagString: Untagged
@@ -486,7 +487,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455442306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d80a0dde3922e0f47b2e12ce66a4cfdd, type: 3}
   m_Name: 
@@ -506,6 +507,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455442309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455442306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baed99309934aad4897f51412ec62b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1604458062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2851,10 +2864,7 @@ MonoBehaviour:
   Players:
   - CharacterPrototype:
       Id:
-        Value: 194582828604556991
-  - CharacterPrototype:
-      Id:
-        Value: 194582828604556991
+        Value: 3510670654372677438
   PreloadAddressables: 0
   DynamicAssetDB:
     OnInitialDynamicAssetsRequested:

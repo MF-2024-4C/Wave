@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/Player/Player|EntityView
+      AssetRef:
+        Id:
+          Value: 1126063772266786898
+      ResourcePath: DB/Wave/Player/Player
     - Path: Resources/DB/Wave/Player/PlayerTestScene_mesh
       AssetRef:
         Id:
@@ -71,6 +76,16 @@ MonoBehaviour:
         Id:
           Value: 3202285255980693029
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/Player/DefaultPlayerConfig
+      AssetRef:
+        Id:
+          Value: 3342626901580343345
+      ResourcePath: DB/Wave/Player/DefaultPlayerConfig
+    - Path: Resources/DB/Wave/Player/Player|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3510670654372677438
+      ResourcePath: DB/Wave/Player/Player
     - Path: Resources/DB/QuantumDemo/Map1_mesh
       AssetRef:
         Id:
