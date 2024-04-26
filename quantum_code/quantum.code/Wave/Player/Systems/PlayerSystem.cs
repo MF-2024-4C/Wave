@@ -13,7 +13,7 @@
         public override void Update(Frame f, ref Filter filter)
         {
             PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player);
-            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player);
+            //PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player);
         }
     }
 }

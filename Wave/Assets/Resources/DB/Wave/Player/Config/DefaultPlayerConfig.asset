@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Wave/Player/DefaultPlayerConfig
+      Path: Resources/DB/Wave/Player/Config/DefaultPlayerConfig
       Guid:
         Value: 3342626901580343345
     WalkSpeed:
@@ -23,5 +23,7 @@ MonoBehaviour:
       RawValue: 655360
     JumpPower:
       RawValue: 327680
+    BreakPower:
+      RawValue: 6553600
     RotationSpeed:
       RawValue: 655360

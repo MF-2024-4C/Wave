@@ -71,16 +71,21 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/QuantumDemo/Map1
+    - Path: Resources/DB/Wave/Player/Config/PlayerCharacterControllerConfig
+      AssetRef:
+        Id:
+          Value: 2485832878967613001
+      ResourcePath: DB/Wave/Player/Config/PlayerCharacterControllerConfig
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
       AssetRef:
         Id:
           Value: 3202285255980693029
       ResourcePath: DB/QuantumDemo/PlayerCharacter
-    - Path: Resources/DB/Wave/Player/DefaultPlayerConfig
+    - Path: Resources/DB/Wave/Player/Config/DefaultPlayerConfig
       AssetRef:
         Id:
           Value: 3342626901580343345
-      ResourcePath: DB/Wave/Player/DefaultPlayerConfig
+      ResourcePath: DB/Wave/Player/Config/DefaultPlayerConfig
     - Path: Resources/DB/Wave/Player/Player|EntityPrototype
       AssetRef:
         Id:

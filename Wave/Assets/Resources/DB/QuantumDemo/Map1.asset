@@ -86,6 +86,7 @@ MonoBehaviour:
     MapEntities: []
   Prototypes:
   - PlayerLink: []
+    PlayerSys: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []

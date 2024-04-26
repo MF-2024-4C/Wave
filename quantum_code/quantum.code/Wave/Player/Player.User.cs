@@ -8,6 +8,10 @@ namespace Quantum
         public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
+            CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
+
+            cconfig.Braking = config.BreakPower;
+            
             Input input = default;
             if (f.Unsafe.TryGetPointer(entityRef, out PlayerLink* playerLink))
             {
