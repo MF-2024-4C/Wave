@@ -2782,9 +2782,9 @@ namespace Quantum {
 
         // register commands
         Session.CommandSerializer.RegisterFactories(DeterministicCommandSetup.GetCommandFactories(Configurations.Runtime, Configurations.Simulation));
-
+        var systemConfig = assetDB.FindAsset<SystemConfig>(Configurations.Runtime.SystemConfig.Id, true);
         // initialize systems
-        _systemsRoot = SystemSetup.CreateSystems(Configurations.Runtime, Configurations.Simulation).Where(x => x != null).ToArray();
+        _systemsRoot = DeterministicSystemSetup.CreateSystems(Configurations.Runtime, Configurations.Simulation, systemConfig).Where(x => x != null).ToArray();
         _systemsAll = _systemsRoot.SelectMany(x => x.Hierarchy).ToArray();
 
         // the simulator creates at least one frame (Verified)
@@ -5607,6 +5607,7 @@ namespace Quantum.Task {
 namespace Quantum {
   public abstract partial class SystemBase {
     Int32? _runtimeIndex;
+    bool _startEnabled;
     String _scheduleSample;
     SystemBase _parentSystem;
 
@@ -5653,15 +5654,18 @@ namespace Quantum {
     }
 
     public virtual Boolean StartEnabled {
-      get { return true; }
+      get { return _startEnabled; }
+      set { _startEnabled = value; }
     }
-
+    
     public SystemBase() {
       _scheduleSample = GetType().Name + ".Schedule";
+      _startEnabled = true;
     }
 
     public SystemBase(string scheduleSample) {
       _scheduleSample = scheduleSample;
+      _startEnabled = true;
     }
     
     public virtual void OnInit(Frame f) {

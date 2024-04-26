@@ -3022,6 +3022,9 @@ MonoBehaviour:
     SimulationConfig:
       Id:
         Value: 0
+    SystemConfig:
+      Id:
+        Value: 3140846135020528929
   Players:
   - CharacterPrototype:
       Id:
