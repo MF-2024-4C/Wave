@@ -29,11 +29,15 @@ namespace Wave.Player
             Vector2 dir = new Vector2(x, y);
         
             //カメラの向きと入力を合わせる
-            Vector3 cameraForward = Vector3.Scale(UnityEngine.Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
-            Vector3 moveForward = cameraForward * dir.y + UnityEngine.Camera.main.transform.right * dir.x;
+            Transform mainCameraTran = UnityEngine.Camera.main.transform;
+            Vector3 cameraForward = Vector3.Scale(mainCameraTran.forward, new Vector3(1, 0, 1)).normalized;
+            Vector3 moveForward = cameraForward * dir.y + mainCameraTran.right * dir.x;
             dir.x = moveForward.x;
             dir.y = moveForward.z;
             input.PlayerDirection = dir.ToFPVector2();
+            
+            //カメラの前方向を保存
+            input.CameraForwardDirection = mainCameraTran.forward.ToFPVector3();
         
             callback.SetInput(input, DeterministicInputFlags.Repeatable);
         }
