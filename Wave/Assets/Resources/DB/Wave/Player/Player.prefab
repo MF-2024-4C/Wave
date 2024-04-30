@@ -470,7 +470,9 @@ MonoBehaviour:
   _entityView: {fileID: 5086503397990343822}
   _virtualCameraPrefab: {fileID: 9041225563005405274, guid: 751b1bfb704f3ba4e81a4f1f0f917db8,
     type: 3}
-  _cameraOffset: {x: 0, y: 1.75, z: 0.09}
+  _locakPlayerLayer:
+    BitMask: 64
+  _modelObject: {fileID: 7788832636071237674}
 --- !u!114 &6157564102664313226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,6 +585,12 @@ PrefabInstance:
 --- !u!4 &7788832636070872522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8654250720420943610, guid: 34115fd4eff069845a47d22ce756724e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1444931101471707952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7788832636071237674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8654250720420973338, guid: 34115fd4eff069845a47d22ce756724e,
     type: 3}
   m_PrefabInstance: {fileID: 1444931101471707952}
   m_PrefabAsset: {fileID: 0}

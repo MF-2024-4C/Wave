@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using Quantum;
 using UnityEngine;
+using LayerMask = Quantum.LayerMask;
 
 namespace Wave.Player
 {    
