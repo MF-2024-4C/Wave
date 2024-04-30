@@ -21,7 +21,7 @@ namespace Quantum
             }
             */
 
-            if (input.PlayerJump.WasPressed)
+            if (input.PlayerJump.WasPressed && controller->Grounded)
             {
                 controller->Jump(f, false, config.JumpPower);
                 animState |= PlayerConfig.PAnimJump;
