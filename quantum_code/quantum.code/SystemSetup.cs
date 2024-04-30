@@ -22,7 +22,7 @@ namespace Quantum {
         new Core.PlayerConnectedSystem(),
 
         // user systems go here
-        new Quantum.Player.PlayerSystem(),
+        new Player.PlayerSystem(),
         
         // Quantum.QuantumDemo Start
         //new Quantum.QuantumDemo.MovementSystem(),
