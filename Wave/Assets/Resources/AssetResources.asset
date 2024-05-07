@@ -46,11 +46,11 @@ MonoBehaviour:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
-    - Path: Resources/DB/Wave/Gun/TempPlayer|EntityView
+    - Path: Resources/DB/Wave/Gun/TmpPlayer|EntityView
       AssetRef:
         Id:
           Value: 366801976411227842
-      ResourcePath: DB/Wave/Gun/TempPlayer
+      ResourcePath: DB/Wave/Gun/TmpPlayer
     - Path: Resources/DB/Wave/TestScene_mesh
       AssetRef:
         Id:
@@ -76,8 +76,8 @@ MonoBehaviour:
         Id:
           Value: 4182183522022618454
       ResourcePath: DB/QuantumDemo/Map1_mesh
-    - Path: Resources/DB/Wave/Gun/TempPlayer|EntityPrototype
+    - Path: Resources/DB/Wave/Gun/TmpPlayer|EntityPrototype
       AssetRef:
         Id:
           Value: 4561826521370215918
-      ResourcePath: DB/Wave/Gun/TempPlayer
+      ResourcePath: DB/Wave/Gun/TmpPlayer

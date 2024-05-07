@@ -96,8 +96,9 @@
   <ItemGroup>
     <Content Include="QuantumDemo\Input.qtn" />
     <Content Include="QuantumDemo\PlayerLink.qtn" />
+    <Content Include="Wave\Gun\Input\TmpPlayerInput.qtn" />
     <Content Include="Wave\Gun\PlayerLink.qtn" />
-    <Content Include="Wave\Gun\TempPlayer.qtn" />
+    <Content Include="Wave\Gun\TmpPlayer.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

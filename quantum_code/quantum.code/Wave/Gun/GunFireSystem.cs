@@ -8,10 +8,17 @@ public unsafe struct PlayerFilter
 
 public unsafe class GunFireSystem : SystemMainThreadFilter<PlayerFilter>
 {
-    
-    
-    public override void Update(Frame f, ref PlayerFilter filter)
+    public override void Update(Frame frame, ref PlayerFilter filter)
     {
+        Input input = default;
+        if (frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player))
+        {
+            input = *frame.GetPlayerInput(player->Player);
+        }
+
+        if (input.Fire.WasPressed)
+        {
+            Log.Info($"Player {filter.Entity.Index} fired!");
+        }
     }
-    
 }

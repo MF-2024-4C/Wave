@@ -19,6 +19,8 @@ public class LocalInput : MonoBehaviour
         var x = UnityEngine.Input.GetAxis("Horizontal");
         var y = UnityEngine.Input.GetAxis("Vertical");
 
+        input.Fire = UnityEngine.Input.GetMouseButton(0);
+
         // Input that is passed into the simulation needs to be deterministic that's why it's converted to FPVector2.
         input.Direction = new Vector2(x, y).ToFPVector2();
 
