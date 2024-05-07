@@ -5,7 +5,7 @@ namespace Quantum
 {
     public unsafe partial struct PlayerSys
     {
-        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input, PlayerAnimInfo* animInfo)
+        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input, PlayerAnimInfo* localInfo)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
@@ -46,15 +46,15 @@ namespace Quantum
             {
                 animState |= PlayerConfig.PAnimFall;
             }
-            else if ((animInfo->PlayerAnimState & PlayerConfig.PAnimFall) == PlayerConfig.PAnimFall)
+            else if ((localInfo->PlayerAnimState & PlayerConfig.PAnimFall) == PlayerConfig.PAnimFall)
             {
                 animState |= PlayerConfig.PAnimGrounded;
             }
             
-            animInfo->PlayerAnimState = animState;
+            localInfo->PlayerAnimState = animState;
         }
         
-        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys, Input input)
+        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys, PlayerAnimInfo* localInfo,Input input)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
             /*
@@ -69,7 +69,9 @@ namespace Quantum
             targetRotation.X = 0;
             targetRotation.Z = 0;
             //transform->Rotation = FPQuaternion.Slerp(transform->Rotation, targetRotation, f.DeltaTime * config.RotationSpeed);
-            transform->Rotation = targetRotation;
+            //transform->Rotation = targetRotation;
+            localInfo->TargetRotation = targetRotation;
+            
         }
         
         
