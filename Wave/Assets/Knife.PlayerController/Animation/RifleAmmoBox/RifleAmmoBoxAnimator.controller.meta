@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 102277887f936a64ca33c511a46bb611
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Animation/RifleAmmoBox/RifleAmmoBoxAnimator.controller
+  uploadId: 446320

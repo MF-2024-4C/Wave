@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c3e27b01c16d724383cba1894ccdb30
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Rifle/Materials/Rifle_H_moss.mat
+  uploadId: 446320

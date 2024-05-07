@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5dde1936dc1ce6e4ea68e2e5fad3e746
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Scenes/ExampleScene_Profiles/Rifle Aim
+    Camera Profile 2.asset
+  uploadId: 446320

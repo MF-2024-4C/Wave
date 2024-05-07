@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 101de975f135aa343a21fb74a6b0b317
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Materials/MuzzleFlash 2.mat
+  uploadId: 446320
