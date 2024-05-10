@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5bfa0c119bea6a4096c4e88d63b4b0c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Injector/Materials/Substance
+    2.mat
+  uploadId: 446320

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fa06fcdf888ba21448508248106cccb9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Environment/FURNITURE/TABLE/Materials/Table
+    Maga.mat
+  uploadId: 446320
