@@ -1802,7 +1802,9 @@ namespace Quantum {
     public AssetRefMap Map;
     /// <summary> Asset reference to the SimulationConfig used with the upcoming game session. </summary>
     public AssetRefSimulationConfig SimulationConfig;
-
+    /// <summary> System configuration data. </summary>
+    public AssetRefSystemConfig SystemConfig;
+    
     /// <summary>
     /// Serializing the members to be send to the server plugin and other players.
     /// </summary>
@@ -1811,6 +1813,7 @@ namespace Quantum {
       stream.Serialize(ref Seed);
       stream.Serialize(ref Map.Id.Value);
       stream.Serialize(ref SimulationConfig.Id.Value);
+      stream.Serialize(ref SystemConfig);
       SerializeUserData(stream);
     }
 

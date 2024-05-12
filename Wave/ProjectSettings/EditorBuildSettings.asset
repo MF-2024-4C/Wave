@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wave/Exp/GPUInstancer/Expo-GPUInstancer.unity
     guid: 3016c9092ee7ad847b9f75237ec7130c
+  - enabled: 1
+    path: Assets/Wave/Exp/Enemy/01-ZombieMove/Expo-Eneymy-01ZombieMove.unity
+    guid: 522757d4c37c09044abfb85543ce4e1e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8012c229df5d8f84683449de40029a6b,
       type: 2}

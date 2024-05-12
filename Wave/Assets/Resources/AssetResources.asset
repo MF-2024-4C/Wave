@@ -51,11 +51,21 @@ MonoBehaviour:
         Id:
           Value: 391217586855469871
       ResourcePath: DB/QuantumDemo/SimulationConfig
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/PlayerCharacter|EntityView
+      AssetRef:
+        Id:
+          Value: 455085561623052725
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/PlayerCharacter
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityPrototype
       AssetRef:
         Id:
           Value: 612724826640121007
       ResourcePath: DB/Exp/GPU-Instancer/PlayerArmature
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove
+      AssetRef:
+        Id:
+          Value: 1469459477246497443
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove
     - Path: Resources/DB/Wave/TestScene_mesh
       AssetRef:
         Id:
@@ -91,6 +101,16 @@ MonoBehaviour:
         Id:
           Value: 2247853238166099880
       ResourcePath: DB/QuantumDemo/QuantumDemoSystem
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh
+      AssetRef:
+        Id:
+          Value: 2860680592704313661
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/PlayerCharacter|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3038724031888305873
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/PlayerCharacter
     - Path: Resources/DB/Configs/DefaultSystemConfig
       AssetRef:
         Id:
@@ -106,6 +126,16 @@ MonoBehaviour:
         Id:
           Value: 3247494871574351852
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh_data
+      AssetRef:
+        Id:
+          Value: 3266213940158858550
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh_data
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_mesh
+      AssetRef:
+        Id:
+          Value: 3694148504032098906
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_mesh
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
@@ -116,3 +146,8 @@ MonoBehaviour:
         Id:
           Value: 4182183522022618454
       ResourcePath: DB/QuantumDemo/Map1_mesh
+    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Exp-ZombieMove
+      AssetRef:
+        Id:
+          Value: 4183153460018405369
+      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Exp-ZombieMove

@@ -1,0 +1,11 @@
+asset ZombieSpawnAreaConfig;
+component ZombieSpawnArea {
+    Int16 CurrentSpawnCount;    
+    [HideInInspector]
+	FP EndTime;
+    asset_ref<ZombieSpawnAreaConfig> Config;
+}
+
+component RuntimeSwarm {
+
+}

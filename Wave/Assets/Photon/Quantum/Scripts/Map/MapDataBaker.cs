@@ -689,6 +689,7 @@ public static class MapDataBaker {
       // The sorting is important to always generate the same order of regions name list.
       unityNavmeshes.Sort((a, b) => string.Compare(a.name, b.name, StringComparison.Ordinal));
 
+      Debug.LogFormat("Found {0} Unity NavMeshes", unityNavmeshes.Count);
       for (int i = 0; i < unityNavmeshes.Count; i++) {
         // If NavMeshSurface installed, this will deactivate non linked surfaces 
         // to make the CalculateTriangulation work only with the selected Unity navmesh.

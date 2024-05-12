@@ -89,7 +89,10 @@
     <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
     <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
     <Compile Include="UnityExtension\SystemConfig.cs" />
-    <Compile Include="Wave\Zombie\ZombieMoveSystem.cs" />
+    <Compile Include="Wave\Zombie\Zombie.cs" />
+    <Compile Include="Wave\Zombie\ZombieSpawnAreaConfig.cs" />
+    <Compile Include="Wave\Zombie\ZombieSpawnAreaSystem.cs" />
+    <Compile Include="Wave\Zombie\ZombieSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="db.json" />
@@ -98,6 +101,8 @@
     <Content Include="QuantumDemo\Input.qtn" />
     <Content Include="QuantumDemo\PlayerLink.qtn" />
     <Content Include="UnityExtension\SysteemConfig.qtn" />
+    <Content Include="Wave\Zombie\Zombie.qtn" />
+    <Content Include="Wave\Zombie\ZombieSpawnArea.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
