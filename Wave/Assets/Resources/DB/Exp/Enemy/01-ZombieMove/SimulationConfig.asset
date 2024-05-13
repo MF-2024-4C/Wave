@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Configs/SimulationConfig
+      Path: Resources/DB/Exp/Enemy/01-ZombieMove/SimulationConfig
       Guid:
-        Value: 5
+        Value: 3380370344064645496
     Navigation:
       DefaultNavMeshAgent:
         Id:
@@ -30,7 +30,7 @@ MonoBehaviour:
       RawPathAllocationStrategy: 0
       EnableAvoidance: 1
       AvoidanceRange:
-        RawValue: 131072
+        RawValue: 6553
       MaxAvoidanceCandidates: 64
       VelocityObstacleTruncationFactor:
         RawValue: 72089
@@ -45,9 +45,9 @@ MonoBehaviour:
       SolverType: 1
       SolverIterations: 4
       PositionSolverIterations: 2
-      UseJoints: 1
-      UseAngularVelocity: 0
-      UseVerticalTransform: 1
+      UseJoints: 0
+      UseAngularVelocity: 1
+      UseVerticalTransform: 0
       PenetrationAllowance:
         RawValue: 655
       PenetrationCorrection:
@@ -86,7 +86,7 @@ MonoBehaviour:
       DefaultHitCollectionItemsCapacity: 128
       DefaultBucketsCapacity: 64
       DefaultIslandsCapacity: 512
-      DefaultManifoldsCapacity: 2048
+      DefaultManifoldsCapacity: 1024
       DefaultJointsCapacity: 128
       DefaultPhysicsMaterial:
         Id:
@@ -130,7 +130,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      LayerMatrix: bffeffffffffffffffffffffffffffffffffffffffffffff3effffff3ffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      LayerMatrix: fffeffffffffffffffffffffffffffffffffffffffffffff3fffffff3ffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     Entities:
       CommitCommandsMode: 0
       DefaultEntityCapacity: 1024
@@ -138,7 +138,7 @@ MonoBehaviour:
       ComponentTypeConfiguration: []
     AutoLoadSceneFromMap: 2
     DeltaTimeType: 0
-    ThreadCount: 5
+    ThreadCount: 8
     ChecksumSnapshotHistoryLengthSeconds:
       RawValue: 196608
     ChecksumErrorDumpOptions: 0

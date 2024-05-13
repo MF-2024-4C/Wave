@@ -8,17 +8,17 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
         public Transform3D* Transform;
         public Quantum.Zombie* Zombie;
     }
-    
+
     private NavMesh _navMesh;
-    
+
     public override void OnInit(Frame frame)
     {
         _navMesh = frame.Map.NavMeshes["Navmesh"];
         Assert.Check(_navMesh != null, "MapにNavMeshが存在しません。");
     }
-    
+
     private const int UpdateTargetPosPerFrame = 60;
-    
+
     public override void Update(Frame f, ref Filter filter)
     {
         if (filter.Zombie->ShouldDie)
@@ -31,12 +31,13 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
         {
             filter.Zombie->SetMonsterTarget(f);
         }
-        
+
         if (f.Number % UpdateTargetPosPerFrame != 0)
         {
             return;
         }
-        
+
+        if (f.Exists(filter.Zombie->Target) == false) return;
         var targetTransform = f.Unsafe.GetPointer<Transform3D>(filter.Zombie->Target);
 
         if (f.Unsafe.TryGetPointer(filter.Entity, out NavMeshPathfinder* pathfinder))

@@ -7,7 +7,7 @@ unsafe partial struct Zombie
     public void SetMonsterTarget(Frame f)
     {
         var found = FindTarget(f, out Target);
-        Assert.Check(!found,"ゾンビのターゲットが見つかりませんでした。");
+        //Assert.Check(!found,"ゾンビのターゲットが見つかりませんでした。");
     }
 
     

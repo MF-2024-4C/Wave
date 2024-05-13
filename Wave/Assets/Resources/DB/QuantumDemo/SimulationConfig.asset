@@ -30,7 +30,7 @@ MonoBehaviour:
       RawPathAllocationStrategy: 0
       EnableAvoidance: 1
       AvoidanceRange:
-        RawValue: 131072
+        RawValue: 6553
       MaxAvoidanceCandidates: 64
       VelocityObstacleTruncationFactor:
         RawValue: 72089
@@ -45,9 +45,9 @@ MonoBehaviour:
       SolverType: 1
       SolverIterations: 4
       PositionSolverIterations: 2
-      UseJoints: 1
+      UseJoints: 0
       UseAngularVelocity: 1
-      UseVerticalTransform: 1
+      UseVerticalTransform: 0
       PenetrationAllowance:
         RawValue: 655
       PenetrationCorrection:
@@ -83,8 +83,8 @@ MonoBehaviour:
       DefaultStaticsCapacity: 1024
       DefaultQueriesCapacity: 1024
       DefaultQueryItemsCapacity: 1024
-      DefaultHitCollectionItemsCapacity: 32
-      DefaultBucketsCapacity: 16
+      DefaultHitCollectionItemsCapacity: 128
+      DefaultBucketsCapacity: 64
       DefaultIslandsCapacity: 512
       DefaultManifoldsCapacity: 1024
       DefaultJointsCapacity: 128
@@ -104,6 +104,8 @@ MonoBehaviour:
       - 
       - Water
       - UI
+      - Zombie
+      - Ground
       - 
       - 
       - 
@@ -128,9 +130,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      LayerMatrix: fffefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      LayerMatrix: fffeffffffffffffffffffffffffffffffffffffffffffff3fffffffbffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     Entities:
       CommitCommandsMode: 0
       DefaultEntityCapacity: 1024
@@ -138,7 +138,7 @@ MonoBehaviour:
       ComponentTypeConfiguration: []
     AutoLoadSceneFromMap: 2
     DeltaTimeType: 0
-    ThreadCount: 2
+    ThreadCount: 8
     ChecksumSnapshotHistoryLengthSeconds:
       RawValue: 196608
     ChecksumErrorDumpOptions: 0

@@ -22,9 +22,9 @@ MonoBehaviour:
       Id:
         Value: 3266213940158858550
     DataFilepath: 
-    GridSizeX: 32
-    GridSizeY: 32
-    GridNodeSize: 4
+    GridSizeX: 8
+    GridSizeY: 8
+    GridNodeSize: 16
     WorldOffset:
       X:
         RawValue: -4194304

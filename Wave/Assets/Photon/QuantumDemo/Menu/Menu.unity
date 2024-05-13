@@ -4797,13 +4797,13 @@ MonoBehaviour:
     Seed: 0
     Map:
       Id:
-        Value: 0
+        Value: 1469459477246497443
     SimulationConfig:
       Id:
-        Value: 0
+        Value: 3380370344064645496
     SystemConfig:
       Id:
-        Value: 2247853238166099880
+        Value: 4183153460018405369
 --- !u!224 &833318423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9333,7 +9333,7 @@ MonoBehaviour:
   PlayerData:
     CharacterPrototype:
       Id:
-        Value: 194582828604556991
+        Value: 3038724031888305873
 --- !u!4 &1565167105
 Transform:
   m_ObjectHideFlags: 0

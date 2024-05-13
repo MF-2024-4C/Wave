@@ -1,4 +1,4 @@
-﻿namespace Quantum.Wave.Zombie;
+﻿namespace Quantum;
 
 public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAreaSystem.Filter>
 {

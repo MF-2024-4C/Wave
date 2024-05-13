@@ -12,8 +12,6 @@ using System.Text;
 using System.Runtime.InteropServices;
 using Quantum.Inspector;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using Quantum;
 using System.Threading;
 using Quantum.Prototypes;
 using System.Reflection;

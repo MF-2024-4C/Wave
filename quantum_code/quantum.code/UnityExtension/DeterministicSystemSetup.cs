@@ -1,4 +1,7 @@
-﻿namespace Quantum {
+﻿using Quantum.QuantumDemo;
+using Quantum.Wave.Zombie;
+
+namespace Quantum {
   using System.Collections.Generic;
   using System.Linq;
   using System.Reflection;
@@ -27,7 +30,11 @@
           new Core.PhysicsSystem3D(),
           new Core.NavigationSystem(),
           new Core.EntityPrototypeSystem(),
-          new Core.PlayerConnectedSystem()};
+          new Core.PlayerConnectedSystem(),
+          new PlayerSpawnSystem(),
+          new MovementSystem(),
+          new ZombieSystem()
+        };
       }
 
       var debugSystem = Core.DebugCommand.CreateSystem();

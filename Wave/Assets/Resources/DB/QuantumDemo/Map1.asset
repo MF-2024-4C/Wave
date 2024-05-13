@@ -38,7 +38,9 @@ MonoBehaviour:
     GridSizeX: 32
     GridSizeY: 32
     GridNodeSize: 4
-    NavMeshLinks: []
+    NavMeshLinks:
+    - Id:
+        Value: 2860680592704313661
     Regions: []
     StaticColliders2D: []
     StaticColliders3D:
@@ -86,6 +88,10 @@ MonoBehaviour:
     MapEntities: []
   Prototypes:
   - PlayerLink: []
+    RuntimeSwarm: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []

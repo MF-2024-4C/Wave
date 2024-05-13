@@ -32,7 +32,6 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
-    <Optimize>true</Optimize>
     <OutputPath>..\..\Wave\Assets\Photon\Quantum\Assemblies\</OutputPath>
     <DefineConstants>
     </DefineConstants>
