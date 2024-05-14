@@ -5,7 +5,7 @@ namespace Quantum
 {
     public unsafe partial struct PlayerSys
     {
-        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input, PlayerAnimInfo* localInfo)
+        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input, PlayerSys* localInfo)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
@@ -54,7 +54,7 @@ namespace Quantum
             localInfo->PlayerAnimState = animState;
         }
         
-        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys, PlayerAnimInfo* localInfo,Input input)
+        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys, PlayerSys* localInfo,Input input)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
             /*

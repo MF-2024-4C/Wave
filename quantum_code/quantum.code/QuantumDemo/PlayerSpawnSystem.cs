@@ -26,10 +26,12 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         }
         
         //プレイヤーアニメーション用
+        /*
         var playerAnimInfo = new PlayerAnimInfo()
         {
             PlayerAnimState = PlayerConfig.PAnimIdle,
         };
         frame.Add(entity, playerAnimInfo);
+        */
     }
 }

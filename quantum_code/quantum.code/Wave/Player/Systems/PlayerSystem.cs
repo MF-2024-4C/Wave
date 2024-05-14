@@ -19,11 +19,7 @@
                 input = *f.GetPlayerInput(playerLink->Player);
             }
 
-            if (f.Unsafe.TryGetPointer(filter.Entity, out PlayerAnimInfo* playerLocalInfo))
-            {
-                
-            }
-            
+            f.Unsafe.TryGetPointer(filter.Entity, out PlayerSys* playerLocalInfo);
             PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, playerLocalInfo, input);
             PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input, playerLocalInfo);
         }

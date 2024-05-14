@@ -97,7 +97,6 @@
   <ItemGroup>
     <Content Include="QuantumDemo\Input.qtn" />
     <Content Include="QuantumDemo\PlayerLink.qtn" />
-    <Content Include="Wave\Player\DSL\PlayerAnimInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
   </ItemGroup>

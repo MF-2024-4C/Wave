@@ -285,7 +285,7 @@ MonoBehaviour:
       CompoundShapes: []
       IsSetFromSourceCollider: 0
     Shape3D:
-      ShapeType: 1
+      ShapeType: 16
       SphereRadius:
         RawValue: 32768
       PositionOffset:
@@ -311,7 +311,85 @@ MonoBehaviour:
           RawValue: 0
       UserTag: 0
       IsPersistent: 1
-      CompoundShapes: []
+      CompoundShapes:
+      - ShapeType: 1
+        SphereRadius:
+          RawValue: 26214
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 19660
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsSetFromSourceCollider: 0
+      - ShapeType: 1
+        SphereRadius:
+          RawValue: 26214
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 98304
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsSetFromSourceCollider: 0
+      - ShapeType: 2
+        SphereRadius:
+          RawValue: 26214
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 19660
+          Y:
+            RawValue: 39321
+          Z:
+            RawValue: 19660
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsSetFromSourceCollider: 0
       IsSetFromSourceCollider: 0
     Layer: 0
     CallbackFlags:
@@ -455,6 +533,14 @@ MonoBehaviour:
     Config:
       Id:
         Value: 3342626901580343345
+    PlayerAnimState: 0
+    TargetRotation:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 0
+      Z:
+        RawValue: 0
 --- !u!114 &-4638503294811154689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,9 +556,6 @@ MonoBehaviour:
   _entityView: {fileID: 5086503397990343822}
   _virtualCameraPrefab: {fileID: 9041225563005405274, guid: 751b1bfb704f3ba4e81a4f1f0f917db8,
     type: 3}
-  _locakPlayerLayer:
-    BitMask: 64
-  _modelObject: {fileID: 7788832636071237674}
 --- !u!114 &6157564102664313226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,12 +668,6 @@ PrefabInstance:
 --- !u!4 &7788832636070872522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8654250720420943610, guid: 34115fd4eff069845a47d22ce756724e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1444931101471707952}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7788832636071237674 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8654250720420973338, guid: 34115fd4eff069845a47d22ce756724e,
     type: 3}
   m_PrefabInstance: {fileID: 1444931101471707952}
   m_PrefabAsset: {fileID: 0}

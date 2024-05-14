@@ -1,5 +1,0 @@
-component PlayerAnimInfo
-{
-    byte PlayerAnimState;
-    FPQuaternion TargetRotation;
-}

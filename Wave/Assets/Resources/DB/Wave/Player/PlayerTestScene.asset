@@ -83,5 +83,46 @@ MonoBehaviour:
         ColliderIndex: 0
         MutableMode: 0
       MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 11371
+        W:
+          RawValue: 64541
+      Position:
+        X:
+          RawValue: 186777
+        Y:
+          RawValue: 129105
+        Z:
+          RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 412221
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 196608
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: BoxStaticCollider2
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 1
+        MutableMode: 0
+      MutableMode: 0
     MapEntities: []
   Prototypes: []

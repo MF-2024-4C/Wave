@@ -23,13 +23,13 @@ namespace Wave.Player
             QuantumGame game = QuantumRunner.Default.Game;
             Frame frame = game.Frames.Verified;
 
-            if (!frame.TryGet(_entityView.EntityRef, out PlayerAnimInfo playerLocalInfo)) return;
+            if (!frame.TryGet(_entityView.EntityRef, out PlayerSys playerLocalInfo)) return;
             
             UpdateAnimation(playerLocalInfo);
             UpdateRotation(playerLocalInfo);
         }
 
-        private void UpdateAnimation(PlayerAnimInfo playerLocalInfo)
+        private void UpdateAnimation(PlayerSys playerLocalInfo)
         {
             var state = playerLocalInfo.PlayerAnimState;
                         string currentTriggerAnim = "";
@@ -81,7 +81,7 @@ namespace Wave.Player
                         _anim.SetBool("inAir", isAir);
         }
 
-        private void UpdateRotation(PlayerAnimInfo playerLocalInfo)
+        private void UpdateRotation(PlayerSys playerLocalInfo)
         {
             var targetRotation = playerLocalInfo.TargetRotation;
             this.transform.rotation = Quaternion.Slerp(transform.rotation,
