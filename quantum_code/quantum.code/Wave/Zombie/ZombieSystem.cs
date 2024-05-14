@@ -5,7 +5,6 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
     public struct Filter
     {
         public EntityRef Entity;
-        public Transform3D* Transform;
         public Quantum.Zombie* Zombie;
     }
 

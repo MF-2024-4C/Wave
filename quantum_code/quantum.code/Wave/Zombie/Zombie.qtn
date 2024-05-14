@@ -2,6 +2,7 @@ component Zombie {
     entity_ref Target;
     [HideInInspector]
     bool ShouldDie;
+    FP HP;
     asset_ref<EntityPrototype> Drop;
 }
 

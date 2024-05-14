@@ -12,12 +12,14 @@ namespace Quantum.Prototypes.Unity {
     public global::EntityPrototype Target;
     [Quantum.Inspector.HideInInspectorAttribute()]
     public Quantum.QBoolean ShouldDie;
+    public Photon.Deterministic.FP HP;
     public Quantum.AssetRefEntityPrototype Drop;
 
     public sealed override Quantum.Prototypes.Zombie_Prototype Convert(EntityPrototypeConverter converter) {
       var result = new Quantum.Prototypes.Zombie_Prototype();
       converter.Convert(this.Target, out result.Target);
       result.ShouldDie = this.ShouldDie;
+      result.HP = this.HP;
       result.Drop = this.Drop;
       return result;
     }
