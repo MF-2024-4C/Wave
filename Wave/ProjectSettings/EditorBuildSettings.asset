@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wave/Exp/Enemy/01-ZombieMove/Expo-Eneymy-01ZombieMove.unity
     guid: 522757d4c37c09044abfb85543ce4e1e
+  - enabled: 1
+    path: Assets/Wave/Exp/Enemy/02-ZombieAnimation/Expo-Eneymy-02ZombieAnimation.unity
+    guid: 97f7ca0382e729543b1f7f6c0bcda9de
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8012c229df5d8f84683449de40029a6b,
       type: 2}

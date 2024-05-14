@@ -17,7 +17,7 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
         Assert.Check(_navMesh != null, "MapにNavMeshが存在しません。");
     }
 
-    private const int UpdateTargetPosPerFrame = 60;
+    private const int UpdateTargetPosPerFrame = 20;
 
     public override void Update(Frame f, ref Filter filter)
     {

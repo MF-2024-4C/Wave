@@ -93,7 +93,7 @@ MonoBehaviour:
   serializedTransformData: {fileID: 0}
   serializedTransformDataCount: 0
   animationData: {fileID: 11400000, guid: b6463be5de83136468765900735da7db, type: 2}
-  frameRate: 60
+  frameRate: 15
   animatorCullingMode: 1
   modelPrefabPath: 
   hasNoAnimator: 0

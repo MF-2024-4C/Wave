@@ -526,7 +526,7 @@ MonoBehaviour:
   textureSizeY: 512
   optimizeGameObjects: 1
   useCrowdAnimator: 1
-  crowdAnimatorDefaultClip: 0
+  crowdAnimatorDefaultClip: 2
   applyRootMotion: 0
   rootMotions:
   - hasMotion: 0
