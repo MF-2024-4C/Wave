@@ -1,5 +1,6 @@
 component Zombie {
     entity_ref Target;
+    bool IsActive;
     [HideInInspector]
     bool ShouldDie;
     FP HP;

@@ -5,11 +5,25 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
     public struct Filter
     {
         public EntityRef Entity;
+        public Transform3D* Transform;
         public ZombieSpawnArea* ZombieSpawnArea;
     }
 
     public override void Update(Frame f, ref Filter filter)
     {
+        var spawnArea = filter.ZombieSpawnArea;
+
+        var spawnAreaConfig = f.FindAsset<ZombieSpawnAreaConfig>(spawnArea->Config.Id);
+        if (spawnArea->CurrentSpawnCount >= spawnAreaConfig.SpawnCount)
+        {
+            return;
+        }
         
+        for (var i = 0; i < spawnAreaConfig.SpawnCount; i++)
+        {
+            spawnAreaConfig.Spawn(f, filter.Transform->Position);
+        }
+
+        spawnArea->CurrentSpawnCount = spawnAreaConfig.SpawnCount;
     }
 }

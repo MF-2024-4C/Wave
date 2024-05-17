@@ -10,6 +10,7 @@ namespace Quantum.Prototypes.Unity {
   public class Zombie_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Zombie_Prototype> {
     [Quantum.LocalReference]
     public global::EntityPrototype Target;
+    public Quantum.QBoolean IsActive;
     [Quantum.Inspector.HideInInspectorAttribute()]
     public Quantum.QBoolean ShouldDie;
     public Photon.Deterministic.FP HP;
@@ -18,6 +19,7 @@ namespace Quantum.Prototypes.Unity {
     public sealed override Quantum.Prototypes.Zombie_Prototype Convert(EntityPrototypeConverter converter) {
       var result = new Quantum.Prototypes.Zombie_Prototype();
       converter.Convert(this.Target, out result.Target);
+      result.IsActive = this.IsActive;
       result.ShouldDie = this.ShouldDie;
       result.HP = this.HP;
       result.Drop = this.Drop;

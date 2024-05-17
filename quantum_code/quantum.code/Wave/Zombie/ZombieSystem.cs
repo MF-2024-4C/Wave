@@ -37,6 +37,7 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
         }
 
         if (f.Exists(filter.Zombie->Target) == false) return;
+        if (!filter.Zombie->IsActive) return;
         var targetTransform = f.Unsafe.GetPointer<Transform3D>(filter.Zombie->Target);
 
         if (f.Unsafe.TryGetPointer(filter.Entity, out NavMeshPathfinder* pathfinder))
