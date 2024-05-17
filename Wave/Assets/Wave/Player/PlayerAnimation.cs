@@ -9,9 +9,10 @@ namespace Wave.Player
     public class PlayerAnimation : MonoBehaviour
     {
         [SerializeField] private EntityView _entityView;
-        [SerializeField] private Animator _anim;
+        //[SerializeField] private Animator _anim;
 
         private string _currentTriggerAnim;
+        private Animator _anim;
 
         private void Start()
         {
@@ -31,6 +32,8 @@ namespace Wave.Player
 
         private void UpdateAnimation(PlayerSys playerLocalInfo)
         {
+            if (_anim == null) return;
+
             var state = playerLocalInfo.PlayerAnimState;
                         string currentTriggerAnim = "";
                         if ((state & PlayerConfig.PAnimMove) == PlayerConfig.PAnimMove)
@@ -94,5 +97,7 @@ namespace Wave.Player
             _anim.ResetTrigger("walk");
             _anim.ResetTrigger("run");
         }
+
+        public void SetAnimator(Animator anim) { this._anim = anim; }
     }
 }
