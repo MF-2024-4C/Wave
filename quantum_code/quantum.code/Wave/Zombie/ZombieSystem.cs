@@ -1,10 +1,13 @@
-﻿namespace Quantum.Wave.Zombie;
+﻿using Photon.Deterministic;
+
+namespace Quantum.Wave.Zombie;
 
 public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
 {
     public struct Filter
     {
         public EntityRef Entity;
+        public Transform3D* Transform;
         public Quantum.Zombie* Zombie;
     }
 
@@ -20,15 +23,41 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
 
     public override void Update(Frame f, ref Filter filter)
     {
-        if (filter.Zombie->ShouldDie)
+        if (filter.Zombie->State == ZombieState.Die)
         {
             f.Destroy(filter.Entity);
             return;
         }
 
+        var spec = f.FindAsset<ZombieSpec>(filter.Zombie->Spec.Id);
+        
         if (f.Exists(filter.Zombie->Target) == false)
         {
-            filter.Zombie->SetMonsterTarget(f);
+            if (filter.Zombie->State == ZombieState.Sleep || filter.Zombie->State == ZombieState.Idle)
+            {
+            
+                foreach (var t in f.Unsafe.GetComponentBlockIterator<ZombieTargetable>())
+                {
+                    f.Unsafe.TryGetPointer<Transform3D>(t.Entity, out var transform);
+                    var distance = FPMath.Abs((transform->Position - filter.Transform->Position).Magnitude);
+                    if (distance < spec.DormantSearchDistance)
+                    {
+                        filter.Zombie->Target = t.Entity;
+                        filter.Zombie->State = ZombieState.Chase;
+                        break;
+                    }
+                }
+
+                if (filter.Zombie->State == ZombieState.Sleep || filter.Zombie->State == ZombieState.Idle)
+                {
+                    return;
+                }
+            }
+            
+            if (filter.Zombie->SetMonsterTarget(f))
+            {
+                //filter.Zombie->State = ZombieState.Walk;
+            }
         }
 
         if (f.Number % UpdateTargetPosPerFrame != 0)
@@ -37,7 +66,7 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
         }
 
         if (f.Exists(filter.Zombie->Target) == false) return;
-        if (!filter.Zombie->IsActive) return;
+        if (filter.Zombie->State != ZombieState.Chase) return;
         var targetTransform = f.Unsafe.GetPointer<Transform3D>(filter.Zombie->Target);
 
         if (f.Unsafe.TryGetPointer(filter.Entity, out NavMeshPathfinder* pathfinder))

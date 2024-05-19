@@ -15,6 +15,14 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpec))]
+  public class AssetRefZombieSpecPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpecAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.ZombieState_Prototype))]
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.InputButtons_Prototype))]
   partial class PrototypeDrawer {}
 }

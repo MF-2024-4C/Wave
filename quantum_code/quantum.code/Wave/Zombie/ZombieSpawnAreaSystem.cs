@@ -14,16 +14,16 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
         var spawnArea = filter.ZombieSpawnArea;
 
         var spawnAreaConfig = f.FindAsset<ZombieSpawnAreaConfig>(spawnArea->Config.Id);
-        if (spawnArea->CurrentSpawnCount >= spawnAreaConfig.SpawnCount)
+        if (spawnArea->CurrentSpawnCount >= spawnArea->MaxSpawnCount)
         {
             return;
         }
-        
-        for (var i = 0; i < spawnAreaConfig.SpawnCount; i++)
+
+        for (var i = 0; i < spawnArea->MaxSpawnCount; i++)
         {
-            spawnAreaConfig.Spawn(f, filter.Transform->Position);
+            spawnAreaConfig.Spawn(f, filter.Transform->Position, spawnArea->Radius);
         }
 
-        spawnArea->CurrentSpawnCount = spawnAreaConfig.SpawnCount;
+        spawnArea->CurrentSpawnCount = spawnArea->MaxSpawnCount;
     }
 }

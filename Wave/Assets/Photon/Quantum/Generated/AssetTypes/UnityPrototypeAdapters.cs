@@ -8,21 +8,18 @@ namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Zombie))]
   public class Zombie_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Zombie_Prototype> {
+    public Photon.Deterministic.FP HP;
+    public Quantum.Prototypes.ZombieState_Prototype State;
     [Quantum.LocalReference]
     public global::EntityPrototype Target;
-    public Quantum.QBoolean IsActive;
-    [Quantum.Inspector.HideInInspectorAttribute()]
-    public Quantum.QBoolean ShouldDie;
-    public Photon.Deterministic.FP HP;
-    public Quantum.AssetRefEntityPrototype Drop;
+    public Quantum.AssetRefZombieSpec Spec;
 
     public sealed override Quantum.Prototypes.Zombie_Prototype Convert(EntityPrototypeConverter converter) {
       var result = new Quantum.Prototypes.Zombie_Prototype();
-      converter.Convert(this.Target, out result.Target);
-      result.IsActive = this.IsActive;
-      result.ShouldDie = this.ShouldDie;
       result.HP = this.HP;
-      result.Drop = this.Drop;
+      result.State = this.State;
+      converter.Convert(this.Target, out result.Target);
+      result.Spec = this.Spec;
       return result;
     }
   }

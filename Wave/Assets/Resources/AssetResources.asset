@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 27293567754500203
       ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_Navmesh
+    - Path: Resources/DB/Exp/Enemy/ZombieSpecAsset
+      AssetRef:
+        Id:
+          Value: 98722892196609692
+      ResourcePath: DB/Exp/Enemy/ZombieSpecAsset
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
@@ -91,6 +96,11 @@ MonoBehaviour:
         Id:
           Value: 839216197870305871
       ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/PlayerCharacter
+    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Zombie|EntityView
+      AssetRef:
+        Id:
+          Value: 1045202633666673824
+      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Zombie
     - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_Navmesh_data
       AssetRef:
         Id:
@@ -171,6 +181,11 @@ MonoBehaviour:
         Id:
           Value: 2860680592704313661
       ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh
+    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Zombie|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2861096775382168340
+      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Zombie
     - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
@@ -196,11 +211,6 @@ MonoBehaviour:
         Id:
           Value: 3247494871574351852
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Zombie|EntityView
-      AssetRef:
-        Id:
-          Value: 3249673447059295948
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Zombie
     - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh_data
       AssetRef:
         Id:
@@ -221,11 +231,6 @@ MonoBehaviour:
         Id:
           Value: 3694148504032098906
       ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_mesh
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Zombie|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 3833149249107639303
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Zombie
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:

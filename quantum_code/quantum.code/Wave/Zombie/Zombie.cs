@@ -4,12 +4,11 @@ using Photon.Deterministic;
 namespace Quantum;
 unsafe partial struct Zombie
 {
-    public void SetMonsterTarget(Frame f)
+    public bool SetMonsterTarget(Frame f)
     {
         var found = FindTarget(f, out Target);
-        Assert.Check(!found,"ゾンビのターゲットが見つかりませんでした。");
+        return found;
     }
-
     
     private bool FindTarget(Frame f, out EntityRef target)
     {

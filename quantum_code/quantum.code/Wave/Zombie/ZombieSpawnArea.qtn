@@ -1,6 +1,11 @@
 asset ZombieSpawnAreaConfig;
 component ZombieSpawnArea {
-    Int16 CurrentSpawnCount;    
+    Int16 MaxSpawnCount;
+    [ReadOnly]
+    Int16 CurrentSpawnCount;
+    FP Radius;
+    
+      
     [HideInInspector]
 	FP EndTime;
     asset_ref<ZombieSpawnAreaConfig> Config;

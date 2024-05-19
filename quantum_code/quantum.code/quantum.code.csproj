@@ -91,6 +91,7 @@
     <Compile Include="Wave\Zombie\Zombie.cs" />
     <Compile Include="Wave\Zombie\ZombieSpawnAreaConfig.cs" />
     <Compile Include="Wave\Zombie\ZombieSpawnAreaSystem.cs" />
+    <Compile Include="Wave\Zombie\ZombieSpecConfig.cs" />
     <Compile Include="Wave\Zombie\ZombieSystem.cs" />
   </ItemGroup>
   <ItemGroup>

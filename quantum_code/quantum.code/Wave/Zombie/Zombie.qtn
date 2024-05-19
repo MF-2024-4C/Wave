@@ -1,10 +1,18 @@
+enum ZombieState {
+    Sleep,
+    Idle,
+    Chase,
+    Attack,
+    Die,
+}
+asset ZombieSpec;
+
 component Zombie {
+    FP HP;    
+    ZombieState State;
+    
     entity_ref Target;
-    bool IsActive;
-    [HideInInspector]
-    bool ShouldDie;
-    FP HP;
-    asset_ref<EntityPrototype> Drop;
+    asset_ref<ZombieSpec> Spec;
 }
 
 component ZombieTargetable {
