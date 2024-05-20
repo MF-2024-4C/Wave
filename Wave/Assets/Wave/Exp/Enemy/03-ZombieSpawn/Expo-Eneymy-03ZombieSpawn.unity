@@ -4290,7 +4290,7 @@ MonoBehaviour:
   Players:
   - CharacterPrototype:
       Id:
-        Value: 3038724031888305873
+        Value: 2926852981925330368
   PreloadAddressables: 0
   DynamicAssetDB:
     OnInitialDynamicAssetsRequested:

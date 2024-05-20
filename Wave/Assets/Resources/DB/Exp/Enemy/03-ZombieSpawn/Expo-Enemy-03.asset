@@ -87,7 +87,8 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie: []
@@ -184,7 +185,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie: []
@@ -236,7 +238,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -364,7 +367,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -492,7 +496,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -620,7 +625,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -748,7 +754,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -876,7 +883,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -1004,7 +1012,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -1132,7 +1141,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -1260,7 +1270,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -1388,7 +1399,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -1516,7 +1528,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:
@@ -1644,7 +1657,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - InteractButton: []
+  - Character: []
+    InteractButton: []
     PlayerLink: []
     RuntimeSwarm: []
     Zombie:

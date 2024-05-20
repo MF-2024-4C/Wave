@@ -1,6 +1,7 @@
 ﻿using Photon.Deterministic;
 using Quantum;
 using UnityEngine;
+using Input = UnityEngine.Input;
 
 public class LocalInput : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LocalInput : MonoBehaviour
 
         // Note: Use GetButton not GetButtonDown/Up Quantum calculates up/down itself.
         input.Jump = UnityEngine.Input.GetButton("Jump");
+        input.ButtonInteract = Input.GetKeyDown(KeyCode.Q);
 
         var x = UnityEngine.Input.GetAxis("Horizontal");
         var y = UnityEngine.Input.GetAxis("Vertical");
