@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 150905272}
   - component: {fileID: 150905271}
   m_Layer: 0
-  m_Name: Entity
+  m_Name: Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,10 +382,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype:
+    Active:
+      Value: 0
     MaxSpawnCount: 30
     CurrentSpawnCount: 0
     Radius:
       RawValue: 327680
+    isHorde:
+      Value: 0
     EndTime:
       RawValue: 0
     Config:
@@ -4282,7 +4286,7 @@ MonoBehaviour:
         Value: 3380370344064645496
     SystemConfig:
       Id:
-        Value: 237090917514763870
+        Value: 237648692300584520
   Players:
   - CharacterPrototype:
       Id:

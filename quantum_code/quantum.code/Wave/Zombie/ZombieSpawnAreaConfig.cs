@@ -9,11 +9,14 @@ public unsafe partial class ZombieSpawnAreaConfig : AssetObject
 
     [HideInInspector] public AssetRefZombieSpawnAreaConfig ConfigRef;
 
-    public virtual void Spawn(Frame f, FPVector3 zombieSpawnAreaPosition, FP radius)
+    public virtual void Spawn(Frame f, FPVector3 zombieSpawnAreaPosition,in ZombieSpawnArea spawnArea)
     {
-        var zombie = f.Create(Prototype);
-        var zombieTransform = f.Unsafe.GetPointer<Transform3D>(zombie);
-        zombieTransform->Position = GetRandomRadiusPosition(f.RNG, zombieSpawnAreaPosition, radius);
+        var zombieEntityRef = f.Create(Prototype);
+        var zombieTransform = f.Unsafe.GetPointer<Transform3D>(zombieEntityRef);
+        var zombie = f.Unsafe.GetPointer<Zombie>(zombieEntityRef);
+        
+        zombieTransform->Position = GetRandomRadiusPosition(f.RNG, zombieSpawnAreaPosition, spawnArea.Radius);
+        
     }
 
     public FPVector3 GetRandomRadiusPosition(RNGSession* RNG, FPVector3 center, FP radius)

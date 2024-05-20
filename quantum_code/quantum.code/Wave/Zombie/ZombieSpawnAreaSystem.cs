@@ -13,6 +13,11 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
     {
         var spawnArea = filter.ZombieSpawnArea;
 
+        if (!spawnArea->Active)
+        {
+            return;
+        }
+        
         var spawnAreaConfig = f.FindAsset<ZombieSpawnAreaConfig>(spawnArea->Config.Id);
         if (spawnArea->CurrentSpawnCount >= spawnArea->MaxSpawnCount)
         {
@@ -21,7 +26,7 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
 
         for (var i = 0; i < spawnArea->MaxSpawnCount; i++)
         {
-            spawnAreaConfig.Spawn(f, filter.Transform->Position, spawnArea->Radius);
+            spawnAreaConfig.Spawn(f, filter.Transform->Position, *spawnArea);
         }
 
         spawnArea->CurrentSpawnCount = spawnArea->MaxSpawnCount;

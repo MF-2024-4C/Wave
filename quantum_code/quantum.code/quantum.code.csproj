@@ -88,9 +88,11 @@
     <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
     <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
     <Compile Include="UnityExtension\SystemConfig.cs" />
+    <Compile Include="Wave\Zombie\ZombieSpawnSystem.cs" />
     <Compile Include="Wave\Zombie\Zombie.cs" />
     <Compile Include="Wave\Zombie\ZombieSpawnAreaConfig.cs" />
     <Compile Include="Wave\Zombie\ZombieSpawnAreaSystem.cs" />
+    <Compile Include="Wave\Zombie\ZombieSpawnCondition.cs" />
     <Compile Include="Wave\Zombie\ZombieSpecConfig.cs" />
     <Compile Include="Wave\Zombie\ZombieSystem.cs" />
   </ItemGroup>

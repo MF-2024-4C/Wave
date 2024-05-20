@@ -6,6 +6,20 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.InteractButton))]
+  public class InteractButton_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.InteractButton_Prototype> {
+    public Quantum.QBoolean Active;
+    [Quantum.LocalReference]
+    public global::EntityPrototype Target;
+
+    public sealed override Quantum.Prototypes.InteractButton_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.InteractButton_Prototype();
+      result.Active = this.Active;
+      converter.Convert(this.Target, out result.Target);
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Zombie))]
   public class Zombie_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Zombie_Prototype> {
     public Photon.Deterministic.FP HP;
@@ -20,6 +34,18 @@ namespace Quantum.Prototypes.Unity {
       result.State = this.State;
       converter.Convert(this.Target, out result.Target);
       result.Spec = this.Spec;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.ZombiesSpawnTrigger))]
+  public class ZombiesSpawnTrigger_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.ZombiesSpawnTrigger_Prototype> {
+    [Quantum.LocalReference]
+    public global::EntityPrototype Target;
+
+    public sealed override Quantum.Prototypes.ZombiesSpawnTrigger_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.ZombiesSpawnTrigger_Prototype();
+      converter.Convert(this.Target, out result.Target);
       return result;
     }
   }

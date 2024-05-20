@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Exp/Enemy/ZombieSpecAsset
+      Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/ZombieSpecAsset
       Guid:
         Value: 98722892196609692
     HP:

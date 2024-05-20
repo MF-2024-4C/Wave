@@ -16,7 +16,7 @@ MonoBehaviour:
     Identifier:
       Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Exp-ZombieSpawn
       Guid:
-        Value: 237090917514763870
+        Value: 237648692300584520
     Entries:
     - SystemType:
         AssemblyQualifiedName: Quantum.Core.CullingSystem2D, quantum.code, Version=2.1.8.0,
@@ -75,6 +75,12 @@ MonoBehaviour:
     - SystemType:
         AssemblyQualifiedName: Quantum.ZombieSpawnAreaSystem, quantum.code, Version=2.1.8.0,
           Culture=neutral, PublicKeyToken=null
+      SystemName: 
+      StartDisabled: 0
+      Children: []
+    - SystemType:
+        AssemblyQualifiedName: Quantum.Wave.Zombie.ZombieSpawnSystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
       SystemName: 
       StartDisabled: 0
       Children: []

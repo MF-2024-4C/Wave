@@ -1,16 +1,29 @@
 asset ZombieSpawnAreaConfig;
 component ZombieSpawnArea {
+    bool Active;
     Int16 MaxSpawnCount;
     [ReadOnly]
     Int16 CurrentSpawnCount;
     FP Radius;
+    [Tooltip("スポーン時に活性化しターゲットの方向へ走る")]
+    bool isHorde;
     
-      
     [HideInInspector]
-	FP EndTime;
+    FP EndTime;
     asset_ref<ZombieSpawnAreaConfig> Config;
 }
 
 component RuntimeSwarm {
 
 }
+
+component InteractButton {
+    bool Active;
+    entity_ref Target;
+}
+
+component ZombiesSpawnTrigger {
+    entity_ref Target;
+}
+
+signal OccurrenceSwarm(entity_ref area);

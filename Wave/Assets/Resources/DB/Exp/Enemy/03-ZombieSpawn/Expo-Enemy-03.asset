@@ -87,11 +87,13 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie: []
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -182,20 +184,26 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie: []
     ZombieSpawnArea:
-    - MaxSpawnCount: 30
+    - Active:
+        Value: 0
+      MaxSpawnCount: 30
       CurrentSpawnCount: 0
       Radius:
         RawValue: 327680
+      isHorde:
+        Value: 0
       EndTime:
         RawValue: 0
       Config:
         Id:
           Value: 2223039371131874354
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -228,7 +236,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -242,6 +251,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -354,7 +364,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -368,6 +379,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -480,7 +492,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -494,6 +507,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -606,7 +620,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -620,6 +635,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -732,7 +748,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -746,6 +763,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -858,7 +876,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -872,6 +891,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -984,7 +1004,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -998,6 +1019,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -1110,7 +1132,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -1124,6 +1147,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -1236,7 +1260,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -1250,6 +1275,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -1362,7 +1388,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -1376,6 +1403,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -1488,7 +1516,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -1502,6 +1531,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -1614,7 +1644,8 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - PlayerLink: []
+  - InteractButton: []
+    PlayerLink: []
     RuntimeSwarm: []
     Zombie:
     - HP:
@@ -1628,6 +1659,7 @@ MonoBehaviour:
           Value: 98722892196609692
     ZombieSpawnArea: []
     ZombieTargetable: []
+    ZombiesSpawnTrigger: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []

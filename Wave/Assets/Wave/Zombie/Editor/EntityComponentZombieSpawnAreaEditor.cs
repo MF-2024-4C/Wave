@@ -15,7 +15,8 @@ namespace Wave.Zombie.Editor
             var center = spawnArea.transform.position;
 //            GizmosExtensions.DrawWireCircle(center, radius);
             GizmosExtensions.DrawCircle(center, radius);
-            Gizmos.DrawIcon(center, "ZombieSpawnArea.png", true);
+            Gizmos.DrawIcon(center + Vector3.up, "SpawnAreaIcon.png", true);
+            Handles.Label(center + Vector3.up, "Zombie Spawn Area");
         }
     }
 }
