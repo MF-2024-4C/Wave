@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentInteractButton : EntityComponentBase<Quantum.Prototypes.InteractButton_Prototype, Quantum.Prototypes.Unity.InteractButton_Prototype> {
+public partial class EntityComponentButtonEntity : EntityComponentBase<Quantum.Prototypes.ButtonEntity_Prototype> {
 }

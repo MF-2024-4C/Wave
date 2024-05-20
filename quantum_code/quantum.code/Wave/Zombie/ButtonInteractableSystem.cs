@@ -24,10 +24,15 @@ public unsafe class ButtonInteractableSystem : SystemMainThread
                 {
                     var hit = hits[i];
                     Log.Info($"Hit{i}:{hit.Entity.Index}");
-                    if (!f.Unsafe.TryGetPointer(hit.Entity, out InteractButton* interactable)) continue;
-                    interactable->Active = true;
+                    if (!f.Unsafe.TryGetPointer(hit.Entity, out ButtonEntity* interactable)) continue;
+                    
                 }
             }
         }
+    }
+
+    public void OnAdded(Frame f, EntityRef entity, ButtonEntity* component)
+    {
+        
     }
 }

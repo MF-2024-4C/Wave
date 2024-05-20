@@ -17,13 +17,10 @@ component RuntimeSwarm {
 
 }
 
-component InteractButton {
-    bool Active;
-    entity_ref Target;
-}
 
-component ZombiesSpawnTrigger {
-    entity_ref Target;
+
+component ZombiesSpawnEvent {
+    MapEvent MapEvent;
 }
 
 signal OccurrenceSwarm(entity_ref area);

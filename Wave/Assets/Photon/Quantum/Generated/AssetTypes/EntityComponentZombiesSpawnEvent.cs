@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentZombiesSpawnTrigger : EntityComponentBase<Quantum.Prototypes.ZombiesSpawnTrigger_Prototype, Quantum.Prototypes.Unity.ZombiesSpawnTrigger_Prototype> {
+public partial class EntityComponentZombiesSpawnEvent : EntityComponentBase<Quantum.Prototypes.ZombiesSpawnEvent_Prototype> {
 }
