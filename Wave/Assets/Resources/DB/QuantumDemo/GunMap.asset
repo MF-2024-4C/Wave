@@ -21,7 +21,7 @@ MonoBehaviour:
       Id:
         Value: 0
     Scene: Gun
-    ScenePath: Assets/Wave/Gun/Gun.unity
+    ScenePath: Assets/Wave/Weapon/Gun.unity
     SceneGuid: 39eb022c936953243b03bba0f1bf0965
     WorldSize: 256
     BucketsCount: 16
@@ -41,6 +41,88 @@ MonoBehaviour:
     NavMeshLinks: []
     Regions: []
     StaticColliders2D: []
-    StaticColliders3D: []
+    StaticColliders3D:
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 11371
+        W:
+          RawValue: 64541
+      Position:
+        X:
+          RawValue: 186777
+        Y:
+          RawValue: 99614
+        Z:
+          RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 412221
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 196608
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: BoxStaticCollider2
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 0
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: -29491
+        Z:
+          RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 3276800
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 3276800
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: BoxStaticCollider
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 1
+        MutableMode: 0
+      MutableMode: 0
     MapEntities: []
   Prototypes: []

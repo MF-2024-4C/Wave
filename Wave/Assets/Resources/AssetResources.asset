@@ -56,6 +56,16 @@ MonoBehaviour:
         Id:
           Value: 418898905064396654
       ResourcePath: DB/QuantumDemo/GunMap
+    - Path: Resources/DB/Wave/Player/Player|EntityView
+      AssetRef:
+        Id:
+          Value: 1126063772266786898
+      ResourcePath: DB/Wave/Player/Player
+    - Path: Resources/DB/Wave/Player/PlayerTestScene_mesh
+      AssetRef:
+        Id:
+          Value: 1237654261606116904
+      ResourcePath: DB/Wave/Player/PlayerTestScene_mesh
     - Path: Resources/DB/Wave/TestScene_mesh
       AssetRef:
         Id:
@@ -71,6 +81,11 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/QuantumDemo/Map1
+    - Path: Resources/DB/Wave/Player/Config/PlayerCharacterControllerConfig
+      AssetRef:
+        Id:
+          Value: 2485832878967613001
+      ResourcePath: DB/Wave/Player/Config/PlayerCharacterControllerConfig
     - Path: Resources/DB/QuantumDemo/GunMap_mesh
       AssetRef:
         Id:
@@ -81,11 +96,21 @@ MonoBehaviour:
         Id:
           Value: 3202285255980693029
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/Player/Config/DefaultPlayerConfig
+      AssetRef:
+        Id:
+          Value: 3342626901580343345
+      ResourcePath: DB/Wave/Player/Config/DefaultPlayerConfig
     - Path: Resources/DB/Wave/Weapon/WeaponData/AssaltRifle
       AssetRef:
         Id:
           Value: 3441278515709848495
       ResourcePath: DB/Wave/Weapon/WeaponData/AssaltRifle
+    - Path: Resources/DB/Wave/Player/Player|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3510670654372677438
+      ResourcePath: DB/Wave/Player/Player
     - Path: Resources/DB/QuantumDemo/Map1_mesh
       AssetRef:
         Id:
@@ -96,6 +121,11 @@ MonoBehaviour:
         Id:
           Value: 4340777512014185396
       ResourcePath: DB/Wave/Weapon/WeaponData/HandGun
+    - Path: Resources/DB/Wave/Player/PlayerTestScene
+      AssetRef:
+        Id:
+          Value: 4443572856780175836
+      ResourcePath: DB/Wave/Player/PlayerTestScene
     - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityPrototype
       AssetRef:
         Id:

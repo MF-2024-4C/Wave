@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Quantum.Player;
+using Quantum.QuantumDemo;
 
 namespace Quantum {
   public static class SystemSetup {
@@ -27,6 +29,8 @@ namespace Quantum {
         //new Quantum.QuantumDemo.MovementSystem(),
         //new Quantum.QuantumDemo.PlayerSpawnSystem(),
         // Quantum.QuantumDemo End
+        //feature-player
+        new PlayerSystem(),
         
         //feature-gun
         new Wave.Gun.PlayerSpawnSystem(),

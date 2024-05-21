@@ -91,6 +91,9 @@
     <Compile Include="Wave\Gun\GunFireSystem.cs" />
     <Compile Include="Wave\Gun\PlayerSpawnSystem.cs" />
     <Compile Include="Wave\Gun\WeaponData.cs" />
+    <Compile Include="Wave\Player\Player.User.cs" />
+    <Compile Include="Wave\Player\PlayerConfig.cs" />
+    <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="db.json" />
@@ -102,6 +105,8 @@
     <Content Include="Wave\Gun\PlayerLink.qtn" />
     <Content Include="Wave\Gun\TmpPlayer.qtn" />
     <Content Include="Wave\Gun\Weapon.qtn" />
+    <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
+    <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

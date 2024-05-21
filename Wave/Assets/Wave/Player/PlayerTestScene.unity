@@ -3130,10 +3130,10 @@ MonoBehaviour:
     Seed: 0
     Map:
       Id:
-        Value: 0
+        Value: 4443572856780175836
     SimulationConfig:
       Id:
-        Value: 0
+        Value: 5
   Players:
   - CharacterPrototype:
       Id:

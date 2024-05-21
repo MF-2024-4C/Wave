@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wave/Weapon/Gun.unity
     guid: 39eb022c936953243b03bba0f1bf0965
+  - enabled: 1
+    path: Assets/Wave/Player/PlayerTestScene.unity
+    guid: c4e76e7d5c314a94792fd5584806c37c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8012c229df5d8f84683449de40029a6b,
       type: 2}
