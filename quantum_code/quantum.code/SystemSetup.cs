@@ -31,6 +31,7 @@ namespace Quantum {
         //feature-gun
         new Wave.Gun.PlayerSpawnSystem(),
         new Wave.Gun.GunFireSystem(),
+        new Wave.Gun.WeaponChanger(),
       };
     }
   }

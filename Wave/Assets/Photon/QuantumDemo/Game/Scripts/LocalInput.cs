@@ -1,6 +1,7 @@
 ﻿using Photon.Deterministic;
 using Quantum;
 using UnityEngine;
+using Input = UnityEngine.Input;
 
 public class LocalInput : MonoBehaviour
 {
@@ -14,12 +15,16 @@ public class LocalInput : MonoBehaviour
         Quantum.Input input = new Quantum.Input();
 
         // Note: Use GetButton not GetButtonDown/Up Quantum calculates up/down itself.
-        input.Jump = UnityEngine.Input.GetButton("Jump");
+        input.Jump = Input.GetButton("Jump");
 
-        var x = UnityEngine.Input.GetAxis("Horizontal");
-        var y = UnityEngine.Input.GetAxis("Vertical");
+        input.ChangePrimaryWeapon = Input.GetKey(KeyCode.Alpha1);
+        input.ChangeSecondaryWeapon = Input.GetKey(KeyCode.Alpha2);
+        input.ChangeTertiaryWeapon = Input.GetKey(KeyCode.Alpha3);
 
-        input.Fire = UnityEngine.Input.GetMouseButton(0);
+        var x = Input.GetAxis("Horizontal");
+        var y = Input.GetAxis("Vertical");
+
+        input.Fire = Input.GetMouseButton(0);
 
         // Input that is passed into the simulation needs to be deterministic that's why it's converted to FPVector2.
         input.Direction = new Vector2(x, y).ToFPVector2();
