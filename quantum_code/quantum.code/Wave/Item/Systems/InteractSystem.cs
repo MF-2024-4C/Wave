@@ -1,8 +1,6 @@
-﻿using System.Dynamic;
-
-namespace Quantum.Wave.Item
+﻿namespace Quantum.Wave
 {
-    public unsafe partial class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter>
+    public unsafe class InteractSystem : SystemMainThreadFilter<InteractSystem.Filter>
     {
         public struct Filter
         {
@@ -12,8 +10,6 @@ namespace Quantum.Wave.Item
 
         public override void Update(Frame f, ref Filter filter)
         {
-            throw new System.NotImplementedException();
         }
-
     }
 }

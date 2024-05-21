@@ -46,6 +46,11 @@ MonoBehaviour:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/InteracterConfigAsset
+      AssetRef:
+        Id:
+          Value: 609515890891852871
+      ResourcePath: DB/InteracterConfigAsset
     - Path: Resources/DB/Wave/Player/Player|EntityView
       AssetRef:
         Id:
