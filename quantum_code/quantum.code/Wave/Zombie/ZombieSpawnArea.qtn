@@ -18,9 +18,16 @@ component RuntimeSwarm {
 }
 
 
+struct ZombiesSpawnEvents {
+
+}
 
 component ZombiesSpawnEvent {
     MapEvent MapEvent;
+}
+
+singleton component SingletonZombiesSpawnEvent {
+    ZombiesSpawnEvents events;
 }
 
 signal OccurrenceSwarm(entity_ref area);
