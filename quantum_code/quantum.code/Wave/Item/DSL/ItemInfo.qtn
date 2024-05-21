@@ -1,9 +1,4 @@
-component Item
+component ItemSystem
 {
 	QBoolean IsInteract;
-}
-
-component Interacter
-{
-    QBoolean IsInteract;
 }

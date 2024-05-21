@@ -2,7 +2,7 @@
 
 namespace Quantum.Wave.Item
 {
-    public unsafe partial class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter>
+    public unsafe class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter>
     {
         public struct Filter
         {

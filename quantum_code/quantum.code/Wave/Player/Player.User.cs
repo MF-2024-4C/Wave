@@ -73,10 +73,7 @@ namespace Quantum
             localInfo->TargetRotation = targetRotation;
             
         }
-
-        public static void Recoil(FPVector2 recoil)
-        {
-            
-        }
+        
+        
     }
 }
