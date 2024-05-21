@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
@@ -87,8 +87,6 @@
     <Compile Include="SimulationConfig.User.cs" />
     <Compile Include="SystemSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wave\Item\Item.User.cs" />
-    <Compile Include="Wave\Item\Systems\ItemSystem.cs" />
     <Compile Include="Wave\Player\Player.User.cs" />
     <Compile Include="Wave\Player\PlayerConfig.cs" />
     <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
@@ -101,9 +99,6 @@
     <Content Include="QuantumDemo\PlayerLink.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Wave\Item\DSL\ItemInfo.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
