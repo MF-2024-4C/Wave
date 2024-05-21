@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentTempPlayer : EntityComponentBase<Quantum.Prototypes.TempPlayer_Prototype> {
+public partial class EntityComponentTmpPlayer : EntityComponentBase<Quantum.Prototypes.TmpPlayer_Prototype> {
 }

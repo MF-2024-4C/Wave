@@ -1,10 +1,20 @@
-component TempPlayer
+component TmpPlayer
 {
 
 }
 
-event MyEvent {
-  FPVector3 Position;
-  FPVector3 Direction;
-  FP Length;
+event Fire {
+   PlayerRef Player;
+}
+
+event ChangePrimaryWeapon {
+   PlayerRef Player;
+}
+
+event ChangeSecondaryWeapon {
+   PlayerRef Player;
+}
+
+event ChangeTertiaryWeapon {
+   PlayerRef Player;
 }

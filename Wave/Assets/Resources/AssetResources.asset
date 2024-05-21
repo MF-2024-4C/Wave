@@ -46,11 +46,16 @@ MonoBehaviour:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
-    - Path: Resources/DB/Wave/Gun/TmpPlayer|EntityView
+    - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityView
       AssetRef:
         Id:
           Value: 366801976411227842
-      ResourcePath: DB/Wave/Gun/TmpPlayer
+      ResourcePath: DB/Wave/Weapon/TmpPlayer
+    - Path: Resources/DB/QuantumDemo/GunMap
+      AssetRef:
+        Id:
+          Value: 418898905064396654
+      ResourcePath: DB/QuantumDemo/GunMap
     - Path: Resources/DB/Wave/TestScene_mesh
       AssetRef:
         Id:
@@ -66,18 +71,33 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/QuantumDemo/Map1
+    - Path: Resources/DB/QuantumDemo/GunMap_mesh
+      AssetRef:
+        Id:
+          Value: 3125345421081680597
+      ResourcePath: DB/QuantumDemo/GunMap_mesh
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
       AssetRef:
         Id:
           Value: 3202285255980693029
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/Weapon/WeaponData/AssaltRifle
+      AssetRef:
+        Id:
+          Value: 3441278515709848495
+      ResourcePath: DB/Wave/Weapon/WeaponData/AssaltRifle
     - Path: Resources/DB/QuantumDemo/Map1_mesh
       AssetRef:
         Id:
           Value: 4182183522022618454
       ResourcePath: DB/QuantumDemo/Map1_mesh
-    - Path: Resources/DB/Wave/Gun/TmpPlayer|EntityPrototype
+    - Path: Resources/DB/Wave/Weapon/WeaponData/HandGun
+      AssetRef:
+        Id:
+          Value: 4340777512014185396
+      ResourcePath: DB/Wave/Weapon/WeaponData/HandGun
+    - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityPrototype
       AssetRef:
         Id:
           Value: 4561826521370215918
-      ResourcePath: DB/Wave/Gun/TmpPlayer
+      ResourcePath: DB/Wave/Weapon/TmpPlayer

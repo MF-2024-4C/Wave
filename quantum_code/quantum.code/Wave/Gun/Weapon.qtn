@@ -1,0 +1,6 @@
+asset WeaponData;
+
+struct Weapon
+{
+    Int32 CurrentAmmo;
+}
