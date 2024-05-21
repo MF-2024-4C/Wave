@@ -4,6 +4,7 @@ public unsafe class ZombieSpawnSystem : SystemMainThread
 {
     public override void Update(Frame f)
     {
+//        f.Unsafe.GetComponentBlockIterator<ZombiesSpawnEvent>();
 //        var iterator = f.Unsafe.GetComponentBlockIterator<InteractButton>();
 //        foreach (var (entity, component) in iterator)
 //        {
