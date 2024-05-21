@@ -20,6 +20,12 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
 
         Log.Info("PlayerSpawnSystem.OnPlayerDataSet");
 
+        //スーポン地点をずらすように
+        if (frame.Unsafe.TryGetPointer<Transform3D>(entity, out var transform))
+        {
+            transform->Position.X = (int)player;
+        }
+        
         /*
         if (frame.Unsafe.TryGetPointerSingleton<PlayersManager>(out var manager))
         {
