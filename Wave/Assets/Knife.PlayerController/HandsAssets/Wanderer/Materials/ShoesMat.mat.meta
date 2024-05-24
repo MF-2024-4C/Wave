@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: adf8620c5f692154db9b2d0c30d484ff
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Wanderer/Materials/ShoesMat.mat
+  uploadId: 446320

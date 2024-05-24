@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 98cb4362948bd0c41b41c0b033b10f7a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Shotgun/Animations/ReloadFromIdleStart.anim
+  uploadId: 446320

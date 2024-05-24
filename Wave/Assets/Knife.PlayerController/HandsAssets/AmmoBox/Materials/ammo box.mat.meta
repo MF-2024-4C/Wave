@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da270a42d860da6429fcfcc5521cbac0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/AmmoBox/Materials/ammo box.mat
+  uploadId: 446320

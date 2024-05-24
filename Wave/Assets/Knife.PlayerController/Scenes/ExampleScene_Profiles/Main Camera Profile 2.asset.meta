@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 512bbd64c7832cc4fbd7bed01928eb64
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Scenes/ExampleScene_Profiles/Main Camera
+    Profile 2.asset
+  uploadId: 446320

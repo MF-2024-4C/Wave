@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 24c1868133c58db4681ed09df2f1b883
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Environment/Materials/skin.mat
+  uploadId: 446320

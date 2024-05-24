@@ -4801,6 +4801,9 @@ MonoBehaviour:
     SimulationConfig:
       Id:
         Value: 0
+    SystemConfig:
+      Id:
+        Value: 2247853238166099880
 --- !u!224 &833318423
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97dccc30e95c1a94eb60b14f716478a0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Prefabs/MEDKIT_Pickupable.prefab
+  uploadId: 446320

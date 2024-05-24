@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1e1901ea87155f44aa2edd8abd72e57c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Materials/ExplosionDecal.mat
+  uploadId: 446320
