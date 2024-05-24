@@ -87,10 +87,18 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - ButtonEntity: []
+  - ButtonEntity:
+    - trigger:
+        ID: 150
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2:
+    - buffer111: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie: []
     ZombieSpawnArea: []
     ZombieTargetable: []
@@ -187,8 +195,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie: []
     ZombieSpawnArea:
     - Active:
@@ -240,8 +253,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -369,8 +387,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -498,8 +521,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -627,8 +655,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -756,8 +789,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -885,8 +923,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1014,8 +1057,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1143,8 +1191,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1272,8 +1325,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1401,8 +1459,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1530,8 +1593,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1659,8 +1727,13 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEvent2: []
+    GameEventQueue: []
     PlayerLink: []
     RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
     Zombie:
     - HP:
         RawValue: 0

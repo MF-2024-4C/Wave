@@ -77,6 +77,11 @@
     <Compile Include="Core\CodeGen.cs" />
     <Compile Include="CommandSetup.Legacy.cs" />
     <Compile Include="Core\Core.cs" />
+    <Compile Include="Events\EventData.cs" />
+    <Compile Include="Events\EventInternal.cs" />
+    <Compile Include="Events\EventReader.cs" />
+    <Compile Include="Events\EventWriter.cs" />
+    <Compile Include="Events\GameEventSystem.cs" />
     <Compile Include="Frame.User.cs" />
     <Compile Include="FrameContext.User.cs" />
     <Compile Include="QuantumDemo\MovementSystem.cs" />
@@ -88,14 +93,7 @@
     <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
     <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
     <Compile Include="UnityExtension\SystemConfig.cs" />
-    <Compile Include="Wave\Events\EventCollection.cs" />
-    <Compile Include="Wave\Events\EventData.cs" />
-    <Compile Include="Wave\Events\EventInternal.cs" />
-    <Compile Include="Wave\Events\EventReader.cs" />
-    <Compile Include="Wave\Events\EventWriter.cs" />
-    <Compile Include="Wave\Events\GameEventSystem.cs" />
     <Compile Include="Wave\Zombie\ButtonInteractableSystem.cs" />
-    <Compile Include="Wave\Zombie\ZombieEvents.cs" />
     <Compile Include="Wave\Zombie\ZombieSpawnSystem.cs" />
     <Compile Include="Wave\Zombie\Zombie.cs" />
     <Compile Include="Wave\Zombie\ZombieSpawnAreaConfig.cs" />
@@ -108,10 +106,10 @@
     <EmbeddedResource Include="db.json" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Events\Events.qtn" />
     <Content Include="QuantumDemo\Input.qtn" />
     <Content Include="QuantumDemo\PlayerLink.qtn" />
     <Content Include="UnityExtension\SysteemConfig.qtn" />
-    <Content Include="Wave\Events\Events.qtn" />
     <Content Include="Wave\Zombie\Zombie.qtn" />
     <Content Include="Wave\Zombie\ZombieSpawnArea.qtn" />
   </ItemGroup>

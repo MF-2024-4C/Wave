@@ -944,6 +944,7 @@ GameObject:
   - component: {fileID: 688440454}
   - component: {fileID: 688440453}
   - component: {fileID: 688440458}
+  - component: {fileID: 688440459}
   m_Layer: 0
   m_Name: BoxEntity
   m_TagString: Untagged
@@ -1205,13 +1206,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 688440452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1485568d00a58894d9a50e21742c436f, type: 3}
+  m_Script: {fileID: 11500000, guid: 379889d3b2dc18f42817722160693eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype:
-    Active:
-      Value: 0
-    Target: {fileID: 150905273}
+    trigger:
+      ID: 150
+--- !u!114 &688440459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688440452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c139f61f54c30c841882bad82cbc956e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    buffer111: []
 --- !u!1001 &877334505
 PrefabInstance:
   m_ObjectHideFlags: 0
