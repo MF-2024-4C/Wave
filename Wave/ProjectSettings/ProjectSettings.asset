@@ -161,6 +161,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.quantunm.tests
+    Standalone: com.DefaultCompany.quantum.unity
   buildNumber:
     Bratwurst: 0
     Standalone: 0
