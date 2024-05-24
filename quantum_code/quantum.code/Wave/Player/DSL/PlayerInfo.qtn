@@ -6,4 +6,7 @@ component PlayerSys
     
     byte PlayerAnimState;
     FPQuaternion TargetRotation;
+
+    FPVector3 InteractRayPreset;
+    FP RayDistance;
 }

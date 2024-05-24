@@ -1,5 +1,6 @@
 ﻿using Quantum.QuantumDemo;
 using Photon.Deterministic;
+using Quantum.Physics3D;
 
 namespace Quantum
 {
@@ -71,6 +72,11 @@ namespace Quantum
             if(input.Interact.WasPressed)
             {
                 Log.Info("Interact input was pressed");
+                var hit = f.Physics3D.Raycast(transform->Position + playerSys->InteractRayPreset, transform->Forward, playerSys->RayDistance);
+                if (hit != null)
+                {
+                    //TODO::ヒットしたものがインタラクトできるものかチェック
+                }
             }
         }
 
