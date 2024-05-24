@@ -4803,7 +4803,7 @@ MonoBehaviour:
         Value: 0
     SystemConfig:
       Id:
-        Value: 2247853238166099880
+        Value: 3778568326002901391
 --- !u!224 &833318423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9333,7 +9333,7 @@ MonoBehaviour:
   PlayerData:
     CharacterPrototype:
       Id:
-        Value: 3510670654372677438
+        Value: 2699151491591919434
 --- !u!4 &1565167105
 Transform:
   m_ObjectHideFlags: 0

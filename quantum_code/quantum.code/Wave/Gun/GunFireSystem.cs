@@ -1,9 +1,11 @@
+using System.Diagnostics;
+
 namespace Quantum.Wave.Gun;
 
 public unsafe struct PlayerFilter
 {
     public EntityRef Entity;
-    public TmpPlayer* Player;
+    public PlayerSys* Player;
 }
 
 public unsafe class GunFireSystem : SystemMainThreadFilter<PlayerFilter>

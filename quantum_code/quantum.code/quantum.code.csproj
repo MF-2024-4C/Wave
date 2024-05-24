@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Quantum</RootNamespace>
     <AssemblyName>quantum.code</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <!-- Valid options are: (empty), max-components-512 -->
@@ -85,8 +85,10 @@
     <Compile Include="RuntimeConfig.User.cs" />
     <Compile Include="RuntimePlayer.User.cs" />
     <Compile Include="SimulationConfig.User.cs" />
-    <Compile Include="SystemSetup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
+    <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
+    <Compile Include="UnityExtension\SystemConfig.cs" />
     <Compile Include="Wave\Gun\WeaponChanger.cs" />
     <Compile Include="Wave\Gun\GunFireSystem.cs" />
     <Compile Include="Wave\Gun\PlayerSpawnSystem.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Wave\Player\Player.User.cs" />
     <Compile Include="Wave\Player\PlayerConfig.cs" />
     <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
+    <Compile Include="Wave\Zombie\ZombieMoveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="db.json" />
@@ -101,6 +104,7 @@
   <ItemGroup>
     <Content Include="QuantumDemo\Input.qtn" />
     <Content Include="QuantumDemo\PlayerLink.qtn" />
+    <Content Include="UnityExtension\SysteemConfig.qtn" />
     <Content Include="Wave\Gun\Input\TmpPlayerInput.qtn" />
     <Content Include="Wave\Gun\PlayerLink.qtn" />
     <Content Include="Wave\Gun\TmpPlayer.qtn" />

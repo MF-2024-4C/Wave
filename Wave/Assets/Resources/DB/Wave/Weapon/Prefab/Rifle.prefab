@@ -135,8 +135,8 @@ Transform:
   m_GameObject: {fileID: 6195087082728419173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.3}
+  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3520835937631094767}
@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 7021332335922032784, guid: dcb9581ef9eb4aa4c8eea87ccf51d098,
         type: 3}
       propertyPath: m_Name
-      value: HandGun
+      value: Rifle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -4,7 +4,6 @@ public unsafe class WeaponChanger : SystemMainThreadFilter<PlayerFilter>
 {
     public override void Update(Frame frame, ref PlayerFilter filter)
     {
-        Log.Info(" GunChanger SystemMainThreadFilter<PlayerFilter> Update");
 
         Input input = default;
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
