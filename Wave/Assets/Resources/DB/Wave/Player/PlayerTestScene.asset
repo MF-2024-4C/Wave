@@ -126,9 +126,12 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - ItemSystem:
+  - Interacter:
     - IsInteract:
         Value: 0
+      InteractEntity:
+        SceneIndexPlusOne: 0
+    Item: []
     PlayerLink: []
     PlayerSys: []
     CharacterController2D: []

@@ -105,6 +105,7 @@
     <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Wave\Item\DSL\Interactor.qtn" />
     <None Include="Wave\Item\DSL\ItemInfo.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

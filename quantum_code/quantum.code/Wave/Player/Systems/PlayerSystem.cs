@@ -19,9 +19,8 @@
                 input = *f.GetPlayerInput(playerLink->Player);
             }
 
-            f.Unsafe.TryGetPointer(filter.Entity, out PlayerSys* playerLocalInfo);
-            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, playerLocalInfo, input);
-            PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input, playerLocalInfo);
+            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input);
+            PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input);
         }
     }
 }

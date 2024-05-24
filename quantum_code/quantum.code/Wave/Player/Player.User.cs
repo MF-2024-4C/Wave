@@ -5,7 +5,7 @@ namespace Quantum
 {
     public unsafe partial struct PlayerSys
     {
-        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input, PlayerSys* localInfo)
+        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
@@ -46,32 +46,32 @@ namespace Quantum
             {
                 animState |= PlayerConfig.PAnimFall;
             }
-            else if ((localInfo->PlayerAnimState & PlayerConfig.PAnimFall) == PlayerConfig.PAnimFall)
+            else if ((playerSys->PlayerAnimState & PlayerConfig.PAnimFall) == PlayerConfig.PAnimFall)
             {
                 animState |= PlayerConfig.PAnimGrounded;
             }
             
-            localInfo->PlayerAnimState = animState;
+            playerSys->PlayerAnimState = animState;
         }
         
-        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys, PlayerSys* localInfo,Input input)
-        {
-            PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
-            /*
-            FPQuaternion targetRotation = FPQuaternion.LookRotation(controller->Velocity);
-            targetRotation.X = 0;
-            targetRotation.Z = 0;
-            transform->Rotation = FPQuaternion.Slerp(transform->Rotation, targetRotation, f.DeltaTime * config.RotationSpeed);
-            */
-            
+        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys,Input input)
+        {            
             //カメラの向いている方向にプレイヤーも回転する
             FPQuaternion targetRotation = FPQuaternion.LookRotation(input.CameraForwardDirection);
             targetRotation.X = 0;
             targetRotation.Z = 0;
             //transform->Rotation = FPQuaternion.Slerp(transform->Rotation, targetRotation, f.DeltaTime * config.RotationSpeed);
             //transform->Rotation = targetRotation;
-            localInfo->TargetRotation = targetRotation;
+            playerSys->TargetRotation = targetRotation;
             
+        }
+
+        public static void Interact(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys, Input input)
+        {
+            if(input.Interact.WasPressed)
+            {
+                Log.Info("Interact input was pressed");
+            }
         }
 
         public static void Recoil(FPVector2 recoil)

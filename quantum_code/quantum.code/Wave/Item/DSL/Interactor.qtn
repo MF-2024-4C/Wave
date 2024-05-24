@@ -1,0 +1,7 @@
+component Interacter
+{
+    QBoolean IsInteract;
+    entity_ref InteractEntity;
+}
+
+signal OnInteract(entity_ref interacter, entity_ref player);

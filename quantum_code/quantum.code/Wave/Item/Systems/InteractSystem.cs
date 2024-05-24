@@ -6,10 +6,12 @@
         {
             public EntityRef Entity;
             public Transform3D* Transform;
+            public Interacter* Interacter;
         }
 
         public override void Update(Frame f, ref Filter filter)
         {
+            Interacter.Interact(f, filter.Entity, filter.Interacter);
         }
     }
 }
