@@ -21,6 +21,7 @@
 
             PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input);
             PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input);
+            PlayerSys.Interact(f, filter.Entity, filter.Transform, filter.Player, input);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace Wave.Player
             Quantum.Input input = new Quantum.Input();
             input.PlayerJump = UnityEngine.Input.GetButton("Jump");
             input.PlayerDash = UnityEngine.Input.GetButton("Fire3");
+            input.Interact = UnityEngine.Input.GetKey(KeyCode.F);
             var x = UnityEngine.Input.GetAxis("Horizontal");
             var y = UnityEngine.Input.GetAxis("Vertical");
             Vector2 dir = new Vector2(x, y);
