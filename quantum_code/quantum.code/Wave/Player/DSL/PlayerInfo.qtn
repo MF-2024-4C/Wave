@@ -5,8 +5,5 @@ component PlayerSys
     asset_ref<PlayerConfig> Config;
     
     byte PlayerAnimState;
-    FPQuaternion TargetRotation;
-
-    FPVector3 InteractRayPreset;
-    FP RayDistance;
+    FPQuaternion TargetRotation;    
 }

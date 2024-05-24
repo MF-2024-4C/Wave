@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 1520660269}
   - component: {fileID: 1520660275}
   m_Layer: 0
-  m_Name: SphereEntity
+  m_Name: InteractObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

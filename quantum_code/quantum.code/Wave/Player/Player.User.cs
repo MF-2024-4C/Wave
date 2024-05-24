@@ -72,10 +72,18 @@ namespace Quantum
             if(input.Interact.WasPressed)
             {
                 Log.Info("Interact input was pressed");
-                var hit = f.Physics3D.Raycast(transform->Position + playerSys->InteractRayPreset, transform->Forward, playerSys->RayDistance);
+                PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
+                var hit = f.Physics3D.Raycast(transform->Position + config.InteractRayOffset, transform->Forward, config.InteractRayDistance);
                 if (hit != null)
                 {
                     //TODO::ヒットしたものがインタラクトできるものかチェック
+                    //hit.Entity.
+                    Hit3D hhit = (Hit3D)hit;
+                    if(f.Unsafe.TryGetPointer<Interacter>(hhit.Entity, out Interacter* interacter))
+                    {
+
+                    }
+
                 }
             }
         }
