@@ -17,12 +17,10 @@ public unsafe class ButtonInteractableSystem : SystemMainThread
 
             if (!input.ButtonInteract.WasPressed) continue;
             var transform = f.Unsafe.GetPointer<Transform3D>(entity);
-            Log.Info($"Pressed interact button on entity {entity.Index},start:{transform->Position},end:{transform->Position + transform->Forward * FP._2}");
             var hits = f.Physics3D.LinecastAll(transform->Position,transform->Position + transform->Forward * FP._2);
             for (var i = 0; i < hits.Count; i++)
             {
                 var hit = hits[i];
-                Log.Info($"Hit{i}:{hit.Entity.Index}");
                 if (!f.Unsafe.TryGetPointer(hit.Entity, out ButtonEntity* interactable)) continue;
                 f.Signals.ActivateEvent(interactable->trigger);
             }
