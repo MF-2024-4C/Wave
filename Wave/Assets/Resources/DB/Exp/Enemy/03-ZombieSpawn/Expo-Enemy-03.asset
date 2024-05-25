@@ -93,12 +93,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2:
-    - buffer111: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie: []
     ZombieSpawnArea: []
     ZombieTargetable: []
@@ -197,11 +197,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie: []
     ZombieSpawnArea:
     - Active:
@@ -255,11 +256,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -389,11 +391,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -523,11 +526,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -657,11 +661,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -791,11 +796,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -925,11 +931,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1059,11 +1066,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1193,11 +1201,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1327,11 +1336,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1461,11 +1471,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1595,11 +1606,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
@@ -1729,11 +1741,12 @@ MonoBehaviour:
     Character: []
     EventComponent: []
     GameEvent: []
-    GameEvent2: []
     GameEventQueue: []
     PlayerLink: []
+    PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
     Zombie:
     - HP:
         RawValue: 0
