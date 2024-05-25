@@ -130,7 +130,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      LayerMatrix: fffeffffffffffffffffffffffffffffffffffffffffffffbfffffff7ffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      LayerMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     Entities:
       CommitCommandsMode: 0
       DefaultEntityCapacity: 1024

@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a366507de6e4aa44aea490bd69adace, type: 3}
-  m_Name: Expo-Enemy-03
+  m_Name: DemoStage
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03
+      Path: Resources/DB/Wave/Demo/Stage/DemoStage
       Guid:
-        Value: 3331598356427461593
+        Value: 2140463308461694544
     UserAsset:
       Id:
         Value: 0
-    Scene: Expo-Eneymy-03ZombieSpawn
-    ScenePath: Assets/Wave/Exp/Enemy/03-ZombieSpawn/Expo-Eneymy-03ZombieSpawn.unity
-    SceneGuid: 993b9de494aa1c246945aa86fe3986f4
-    WorldSize: 256
+    Scene: Demo-Stage
+    ScenePath: Assets/Wave/Demo/Stage/Demo-Stage.unity
+    SceneGuid: 035ccf41ce1c9a64b842f26c078d7a03
+    WorldSize: 512
     BucketsCount: 32
     BucketsSubdivisions: 8
     BucketingAxis: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     TriangleMeshCellSize: 4
     StaticColliders3DTrianglesData:
       Id:
-        Value: 703508689461989815
+        Value: 4399778821855107825
     OptionalTriangleMetadataSerializationEnabled: 1
     SerializeTrianglesMetadata: 0
     StaticColliders3DTrianglesBinaryFile: 
@@ -40,7 +40,7 @@ MonoBehaviour:
     GridNodeSize: 16
     NavMeshLinks:
     - Id:
-        Value: 2175693206120820960
+        Value: 1913669733921426467
     Regions: []
     StaticColliders2D: []
     StaticColliders3D:
@@ -77,7 +77,7 @@ MonoBehaviour:
       StaticData:
         Name: Floor
         Tag: Untagged
-        Layer: 7
+        Layer: 0
         Asset:
           Id:
             Value: 0
