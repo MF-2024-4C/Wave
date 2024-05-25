@@ -1,0 +1,7 @@
+input
+{
+    button PlayerJump;
+    QBoolean PlayerDash;
+    FPVector2 PlayerDirection;
+    FPVector3 CameraForwardDirection;
+}

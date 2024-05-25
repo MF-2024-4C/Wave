@@ -1,17 +1,34 @@
-﻿using System;
-using Photon.Deterministic;
+﻿using Photon.Deterministic;
 using Quantum;
 using UnityEngine;
+using Input = UnityEngine.Input;
 
-public class LocalInput : MonoBehaviour {
-    
-  private void OnEnable() {
-    
-    QuantumCallback.Subscribe(this, (CallbackPollInput callback) => PollInput(callback));
-  }
+public class LocalInput : MonoBehaviour
+{
+    private void Start()
+    {
+        QuantumCallback.Subscribe(this, (CallbackPollInput callback) => PollInput(callback));
+    }
 
-  public void PollInput(CallbackPollInput callback) {
-    Quantum.Input i = new Quantum.Input(); 
-    callback.SetInput(i, DeterministicInputFlags.Repeatable);
-  }
+    public void PollInput(CallbackPollInput callback)
+    {
+        Quantum.Input input = new Quantum.Input();
+
+        // Note: Use GetButton not GetButtonDown/Up Quantum calculates up/down itself.
+        input.Jump = Input.GetButton("Jump");
+
+        input.ChangePrimaryWeapon = Input.GetKey(KeyCode.Alpha1);
+        input.ChangeSecondaryWeapon = Input.GetKey(KeyCode.Alpha2);
+        input.ChangeTertiaryWeapon = Input.GetKey(KeyCode.Alpha3);
+
+        var x = Input.GetAxis("Horizontal");
+        var y = Input.GetAxis("Vertical");
+
+        input.Fire = Input.GetMouseButton(0);
+
+        // Input that is passed into the simulation needs to be deterministic that's why it's converted to FPVector2.
+        input.Direction = new Vector2(x, y).ToFPVector2();
+
+        callback.SetInput(input, DeterministicInputFlags.Repeatable);
+    }
 }

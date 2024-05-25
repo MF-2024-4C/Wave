@@ -12,8 +12,6 @@ using System.Text;
 using System.Runtime.InteropServices;
 using Quantum.Inspector;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using Quantum;
 using System.Threading;
 using Quantum.Prototypes;
 using System.Reflection;
@@ -1802,7 +1800,9 @@ namespace Quantum {
     public AssetRefMap Map;
     /// <summary> Asset reference to the SimulationConfig used with the upcoming game session. </summary>
     public AssetRefSimulationConfig SimulationConfig;
-
+    /// <summary> System configuration data. </summary>
+    public AssetRefSystemConfig SystemConfig;
+    
     /// <summary>
     /// Serializing the members to be send to the server plugin and other players.
     /// </summary>
@@ -1811,6 +1811,7 @@ namespace Quantum {
       stream.Serialize(ref Seed);
       stream.Serialize(ref Map.Id.Value);
       stream.Serialize(ref SimulationConfig.Id.Value);
+      stream.Serialize(ref SystemConfig);
       SerializeUserData(stream);
     }
 
@@ -2782,9 +2783,9 @@ namespace Quantum {
 
         // register commands
         Session.CommandSerializer.RegisterFactories(DeterministicCommandSetup.GetCommandFactories(Configurations.Runtime, Configurations.Simulation));
-
+        var systemConfig = assetDB.FindAsset<SystemConfig>(Configurations.Runtime.SystemConfig.Id, true);
         // initialize systems
-        _systemsRoot = SystemSetup.CreateSystems(Configurations.Runtime, Configurations.Simulation).Where(x => x != null).ToArray();
+        _systemsRoot = DeterministicSystemSetup.CreateSystems(Configurations.Runtime, Configurations.Simulation, systemConfig).Where(x => x != null).ToArray();
         _systemsAll = _systemsRoot.SelectMany(x => x.Hierarchy).ToArray();
 
         // the simulator creates at least one frame (Verified)
@@ -5607,6 +5608,7 @@ namespace Quantum.Task {
 namespace Quantum {
   public abstract partial class SystemBase {
     Int32? _runtimeIndex;
+    bool _startEnabled;
     String _scheduleSample;
     SystemBase _parentSystem;
 
@@ -5653,15 +5655,18 @@ namespace Quantum {
     }
 
     public virtual Boolean StartEnabled {
-      get { return true; }
+      get { return _startEnabled; }
+      set { _startEnabled = value; }
     }
-
+    
     public SystemBase() {
       _scheduleSample = GetType().Name + ".Schedule";
+      _startEnabled = true;
     }
 
     public SystemBase(string scheduleSample) {
       _scheduleSample = scheduleSample;
+      _startEnabled = true;
     }
     
     public virtual void OnInit(Frame f) {

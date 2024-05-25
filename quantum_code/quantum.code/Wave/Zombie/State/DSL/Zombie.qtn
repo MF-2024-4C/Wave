@@ -1,0 +1,28 @@
+enum ZombieState {
+    Sleep,
+    Idle,
+    Chase,
+    Attack,
+    Die,
+}
+asset ZombieSpec;
+
+component Character {
+
+}
+
+component Zombie {
+    FP HP;    
+    ZombieState State;
+    
+    entity_ref Target;
+    asset_ref<ZombieSpec> Spec;
+}
+
+component ZombieTargetable {
+    int order; // 低いほど優先度が高い
+    int sigma; // ゾンビ毎に対して、狙われる可能性を正規分布に基づく標準偏差で表した値
+}
+
+signal SpawnMonster(entity_ref target, asset_ref<EntityPrototype> prototype);
+signal SetMonsterTarget(entity_ref monsterEntity);

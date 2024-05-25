@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb6a65cd35f85b0449ea82e6ed3e11c5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Shotgun/Animations/FirstDeploy
+    1.anim
+  uploadId: 446320

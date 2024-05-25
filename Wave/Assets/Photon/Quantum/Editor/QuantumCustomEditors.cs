@@ -3031,11 +3031,13 @@ namespace Quantum.Editor {
 
     private void DrawLayersMatrix(SerializedProperty property) {
       bool show = property.isExpanded;
-      UnityInternal.LayerMatrixGUI.DoGUI("Layer Matrix", ref show,
+      UnityInternal.LayerMatrixGUI.Draw("Layer Matrix", ref show,
         (layerA, layerB) => {
+          Debug.Log("Get");
           return (property.GetArrayElementAtIndex(layerA).intValue & (1 << layerB)) != 0;
         },
         (layerA, layerB, val) => {
+          Debug.Log("Set");
           if (val) {
             property.GetArrayElementAtIndex(layerA).intValue |= (1 << layerB);
             property.GetArrayElementAtIndex(layerB).intValue |= (1 << layerA);

@@ -1,0 +1,5736 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca59873d9367fe4f9f67576c687e443, type: 3}
+  m_Name: PlayerArmature_51226_AnimationData
+  m_EditorClassIdentifier: 
+  bakedCAVersion: 1.16
+  clipDataList:
+  - clipIndex: 0
+    clipStartFrame: 0
+    clipFrameCount: 189
+    hasRootMotion: 1
+    length: 12.533334
+    isLoopDisabled: 0
+    isClipLooping: 1
+  - clipIndex: 1
+    clipStartFrame: 189
+    clipFrameCount: 30
+    hasRootMotion: 1
+    length: 1.9333333
+    isLoopDisabled: 0
+    isClipLooping: 1
+  skinnedMeshDataList:
+  - transformName: Armature_Mesh
+    boneIndexes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f00000040000000410000004200000043000000
+    rootBoneIndex: 0
+    hasBindPoseOffset: 0
+    bindPoseOffset:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    isOptional: 0
+  bones:
+  - boneTransformName: Hips
+    boneIndex: 0
+    parentBoneIndex: 0
+    childBoneIndexes: 010000003a0000003f000000
+    dontDestroy: 0
+    isRoot: 1
+  - boneTransformName: Spine
+    boneIndex: 1
+    parentBoneIndex: 0
+    childBoneIndexes: 02000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Chest
+    boneIndex: 2
+    parentBoneIndex: 1
+    childBoneIndexes: 03000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: UpperChest
+    boneIndex: 3
+    parentBoneIndex: 2
+    childBoneIndexes: 040000000a00000022000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Neck
+    boneIndex: 4
+    parentBoneIndex: 3
+    childBoneIndexes: 0500000009000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Head
+    boneIndex: 5
+    parentBoneIndex: 4
+    childBoneIndexes: 060000000700000008000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_Eye
+    boneIndex: 6
+    parentBoneIndex: 5
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_Eye
+    boneIndex: 7
+    parentBoneIndex: 5
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Jaw
+    boneIndex: 8
+    parentBoneIndex: 5
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Neck_Twist_A
+    boneIndex: 9
+    parentBoneIndex: 4
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_Shoulder
+    boneIndex: 10
+    parentBoneIndex: 3
+    childBoneIndexes: 0b000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_UpperArm
+    boneIndex: 11
+    parentBoneIndex: 10
+    childBoneIndexes: 0c000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_LowerArm
+    boneIndex: 12
+    parentBoneIndex: 11
+    childBoneIndexes: 0d000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_Hand
+    boneIndex: 13
+    parentBoneIndex: 12
+    childBoneIndexes: 0e00000012000000160000001a0000001e000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_PinkyProximal
+    boneIndex: 14
+    parentBoneIndex: 13
+    childBoneIndexes: 0f000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_PinkyIntermediate
+    boneIndex: 15
+    parentBoneIndex: 14
+    childBoneIndexes: 10000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_PinkyDistal
+    boneIndex: 16
+    parentBoneIndex: 15
+    childBoneIndexes: 11000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_PinkyDistalEnd
+    boneIndex: 17
+    parentBoneIndex: 16
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_RingProximal
+    boneIndex: 18
+    parentBoneIndex: 13
+    childBoneIndexes: 13000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_RingIntermediate
+    boneIndex: 19
+    parentBoneIndex: 18
+    childBoneIndexes: 14000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_RingDistal
+    boneIndex: 20
+    parentBoneIndex: 19
+    childBoneIndexes: 15000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_RingDistalEnd
+    boneIndex: 21
+    parentBoneIndex: 20
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_MiddleProximal
+    boneIndex: 22
+    parentBoneIndex: 13
+    childBoneIndexes: 17000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_MiddleIntermediate
+    boneIndex: 23
+    parentBoneIndex: 22
+    childBoneIndexes: 18000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_MiddleDistal
+    boneIndex: 24
+    parentBoneIndex: 23
+    childBoneIndexes: 19000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_MiddleDistalEnd
+    boneIndex: 25
+    parentBoneIndex: 24
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_IndexProximal
+    boneIndex: 26
+    parentBoneIndex: 13
+    childBoneIndexes: 1b000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_IndexIntermediate
+    boneIndex: 27
+    parentBoneIndex: 26
+    childBoneIndexes: 1c000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_IndexDistal
+    boneIndex: 28
+    parentBoneIndex: 27
+    childBoneIndexes: 1d000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_IndexDistalEnd
+    boneIndex: 29
+    parentBoneIndex: 28
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_ThumbProximal
+    boneIndex: 30
+    parentBoneIndex: 13
+    childBoneIndexes: 1f000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_ThumbIntermediate
+    boneIndex: 31
+    parentBoneIndex: 30
+    childBoneIndexes: 20000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_ThumbDistal
+    boneIndex: 32
+    parentBoneIndex: 31
+    childBoneIndexes: 21000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_ThumbDistalEnd
+    boneIndex: 33
+    parentBoneIndex: 32
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_Shoulder
+    boneIndex: 34
+    parentBoneIndex: 3
+    childBoneIndexes: 23000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_UpperArm
+    boneIndex: 35
+    parentBoneIndex: 34
+    childBoneIndexes: 24000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_LowerArm
+    boneIndex: 36
+    parentBoneIndex: 35
+    childBoneIndexes: 25000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_Hand
+    boneIndex: 37
+    parentBoneIndex: 36
+    childBoneIndexes: 260000002a0000002e0000003200000036000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_PinkyProximal
+    boneIndex: 38
+    parentBoneIndex: 37
+    childBoneIndexes: 27000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_PinkyIntermediate
+    boneIndex: 39
+    parentBoneIndex: 38
+    childBoneIndexes: 28000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_PinkyDistal
+    boneIndex: 40
+    parentBoneIndex: 39
+    childBoneIndexes: 29000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_PinkyDistalEnd
+    boneIndex: 41
+    parentBoneIndex: 40
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_RingProximal
+    boneIndex: 42
+    parentBoneIndex: 37
+    childBoneIndexes: 2b000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_RingIntermediate
+    boneIndex: 43
+    parentBoneIndex: 42
+    childBoneIndexes: 2c000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_RingDistal
+    boneIndex: 44
+    parentBoneIndex: 43
+    childBoneIndexes: 2d000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_RingDistalEnd
+    boneIndex: 45
+    parentBoneIndex: 44
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_MiddleProximal
+    boneIndex: 46
+    parentBoneIndex: 37
+    childBoneIndexes: 2f000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_MiddleIntermediate
+    boneIndex: 47
+    parentBoneIndex: 46
+    childBoneIndexes: 30000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_MiddleDistal
+    boneIndex: 48
+    parentBoneIndex: 47
+    childBoneIndexes: 31000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_MiddleDistalEnd
+    boneIndex: 49
+    parentBoneIndex: 48
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_IndexProximal
+    boneIndex: 50
+    parentBoneIndex: 37
+    childBoneIndexes: 33000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_IndexIntermediate
+    boneIndex: 51
+    parentBoneIndex: 50
+    childBoneIndexes: 34000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_IndexDistal
+    boneIndex: 52
+    parentBoneIndex: 51
+    childBoneIndexes: 35000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_IndexDistalEnd
+    boneIndex: 53
+    parentBoneIndex: 52
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_ThumbProximal
+    boneIndex: 54
+    parentBoneIndex: 37
+    childBoneIndexes: 37000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_ThumbIntermediate
+    boneIndex: 55
+    parentBoneIndex: 54
+    childBoneIndexes: 38000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_ThumbDistal
+    boneIndex: 56
+    parentBoneIndex: 55
+    childBoneIndexes: 39000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_ThumbDistalEnd
+    boneIndex: 57
+    parentBoneIndex: 56
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_UpperLeg
+    boneIndex: 58
+    parentBoneIndex: 0
+    childBoneIndexes: 3b000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_LowerLeg
+    boneIndex: 59
+    parentBoneIndex: 58
+    childBoneIndexes: 3c000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_Foot
+    boneIndex: 60
+    parentBoneIndex: 59
+    childBoneIndexes: 3d000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_Toes
+    boneIndex: 61
+    parentBoneIndex: 60
+    childBoneIndexes: 3e000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Left_ToesEnd
+    boneIndex: 62
+    parentBoneIndex: 61
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_UpperLeg
+    boneIndex: 63
+    parentBoneIndex: 0
+    childBoneIndexes: 40000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_LowerLeg
+    boneIndex: 64
+    parentBoneIndex: 63
+    childBoneIndexes: 41000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_Foot
+    boneIndex: 65
+    parentBoneIndex: 64
+    childBoneIndexes: 42000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_Toes
+    boneIndex: 66
+    parentBoneIndex: 65
+    childBoneIndexes: 43000000
+    dontDestroy: 0
+    isRoot: 0
+  - boneTransformName: Right_ToesEnd
+    boneIndex: 67
+    parentBoneIndex: 66
+    childBoneIndexes: 
+    dontDestroy: 0
+    isRoot: 0
+  states:
+  - fullPathName: Base Layer.Idle
+    hashCode: 1432961145
+    cycleOffset: 0
+    isBlend: 0
+  - fullPathName: Base Layer.Run
+    hashCode: -827840423
+    cycleOffset: 0
+    isBlend: 0
+  animationTexture: {fileID: 2800000, guid: 60ac670a12e164f4f8dabe230ed28aa6, type: 2}
+  totalFrameCount: 219
+  totalBoneCount: 68
+  textureSizeX: 256
+  textureSizeY: 256
+  optimizeGameObjects: 1
+  useCrowdAnimator: 1
+  crowdAnimatorDefaultClip: 1
+  applyRootMotion: 0
+  rootMotions:
+  - hasMotion: 0
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0016220981
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0051595024
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0016632167
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0046155853
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0011018208
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0041365633
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00049141515
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.003293523
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00020111012
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0024265894
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007418503
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0017917894
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0010637407
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0009093086
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0009999668
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0003921215
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0009525115
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00016115082
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00082738005
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0008538088
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0004927947
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0012196766
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007852894
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0014969046
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.000012650719
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0017200086
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0011751995
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0020457543
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0013646234
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0021390256
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0015943464
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0023602531
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002023083
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.002889216
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0023501855
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0034290375
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002472171
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.004372681
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0024203332
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0051739863
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0020760454
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0056788106
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0020786321
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0060976655
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0020523625
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0056190426
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0018122374
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0051024747
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0013756349
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.003770336
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.001077697
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.003206643
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0005264027
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0018688135
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.000017550474
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0011208213
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00049699197
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0004776409
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00095941697
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00017865331
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0012181463
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0010288524
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0011864299
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0020448773
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0010971861
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0028550352
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0009859871
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.003365212
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0008686893
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00422053
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007669127
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0045632324
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00039528724
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.005127151
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00031299004
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.005440423
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00030653528
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.005406931
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00044018793
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0053028422
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0006634415
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.005163078
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0009753631
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0049810526
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.001341818
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0047194036
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.001701575
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.004290689
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0019209314
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.003805979
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0022900314
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0030496458
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0028781355
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0022861066
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0032450808
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.001948416
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0034519376
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0018019597
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0032848474
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0019131682
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0028977524
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0016688289
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0022751724
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0015972531
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0016664378
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0014740714
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0012045698
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0013643713
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0010866144
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0012642674
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0009999112
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00060261425
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.000991589
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00031177758
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0005618448
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00007301829
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007624044
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00062758825
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0006066624
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0014660108
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00040816545
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0010450921
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0001531486
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00065821287
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0000054201237
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00069610577
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007093587
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00057169324
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0012813587
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00069875276
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0011982162
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00097348343
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0015548302
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0010562231
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0017928415
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0014620069
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.001985237
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0018272216
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0020558455
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0023853984
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0018301086
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0022866523
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0020040344
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.002451236
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.002636224
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0023858482
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0024691336
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.002858402
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0026123154
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00231109
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0026900189
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0017436087
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0027771208
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0011122546
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0028992468
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0011608173
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0020889158
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0012435382
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007001671
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00039881948
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00033413558
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0009779447
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0006205063
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0014128833
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0017688349
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0019154304
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002212969
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0011702047
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0020550624
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0012149208
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002082502
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0016189194
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0020024949
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0017570272
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002462046
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0014341422
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0028557277
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0017991575
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0021602544
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0021339178
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0010402573
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0020801607
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00010725823
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00083097274
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00009928237
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0011890021
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00014965564
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00030178798
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0001527948
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0006460938
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00009793486
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0008008835
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00014402473
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00075311115
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00036393874
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0013298086
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00011701069
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0019839874
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0005586529
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.002071816
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000864984
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.002156095
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0013785709
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0025633082
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002162889
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0034297227
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0026406392
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0035148638
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0026556763
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0027248883
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0027722653
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0014497928
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0021952293
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00075672835
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0018651361
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0001610906
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00052300806
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0016685927
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00039149856
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0024187001
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00032232798
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.001210882
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00035321517
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0005682548
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00003110549
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.000102331185
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00037752293
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0005497436
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0005985661
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00114738
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00045357778
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0010907811
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00014198842
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.001594544
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00046911926
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0016266808
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00058387534
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0008286203
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0007917446
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00031828173
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0004992047
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00059100054
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00055905944
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0018881039
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0012814302
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.002525055
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00054753036
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.002887428
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00019004686
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00315024
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0006248763
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0027770381
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0012392624
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0024301088
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0016509095
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0024067834
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0012858114
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.002255257
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0007131641
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0022385188
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00072478346
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0021322316
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0009781705
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0016974924
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0008154614
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0008890885
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00068252534
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00007968335
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0003647668
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.000714489
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00020007032
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0020127292
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00041628056
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0023219548
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00030992946
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0025629809
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000021680495
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.003539563
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0015195467
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.003362325
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0001580606
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0017431758
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0009506107
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.001922917
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0012748169
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.002452508
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0007989263
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0026331376
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00014998311
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0020630837
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00015718359
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0014761557
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00031796555
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0012384268
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00029001804
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0013316416
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00009882316
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0015313694
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00047042535
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0016523605
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00032334425
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0017164855
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00007186933
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0013305275
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.000009763751
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0004320535
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00038669948
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0001891642
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00046986828
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00065855635
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00072324404
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0009991339
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0010260746
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0012654295
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0007059109
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00114939
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00087137526
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0017674497
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0009688396
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0025670836
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0005904886
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0026168923
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00036025004
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0021346705
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00003525715
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0016554451
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0004880972
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0032046332
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.00055710593
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0048350138
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.00064226583
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.005973993
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0019269068
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0059368233
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0020112838
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.005875881
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0016003142
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0053246166
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0017346994
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.004446685
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0015339628
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.003360936
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.002425513
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.001534008
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0033470206
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.00025098937
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0036970288
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0015187864
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0030491622
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0022730795
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0020635466
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.002791025
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0014745183
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0032989886
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0013049814
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0033871785
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002019493
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.003446506
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0022314913
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0031095967
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0021674698
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0026912985
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0023115436
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.001908181
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002519172
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0004282613
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0025441498
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00011495932
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002900045
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.00026958718
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0034828756
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0004890119
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0039272807
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0013453726
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.004359255
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0020546522
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.054724537
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.23237184
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.005423647
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.02267061
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.010111405
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0035065943
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.002167673
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0045801476
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0027420067
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.015427555
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.009236429
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.014161128
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.012646665
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.009173304
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0016503148
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.010407917
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.016153099
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.001400289
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.022013647
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.009985073
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0269886
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.018842308
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.021785382
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.017727584
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.014637474
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0024468396
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0003087363
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0018334171
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.007604298
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.007083936
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.013683231
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.008292729
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.010797564
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.010537609
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.005115174
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0060640196
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0025640498
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.006049942
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.011630088
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0066824555
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.0116165755
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0027523087
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.005241177
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0054806937
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0.009270286
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.004380168
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.0019559043
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0047066095
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.006114404
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0014259141
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.010765729
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0.0072555286
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.027781432
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.0013141091
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.030631496
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.012231323
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.016448535
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.021563254
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - hasMotion: 1
+    isPositionOnly: 1
+    motionMatrix:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -0.003377695
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: -0.020389648
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  applyBoneUpdates: 0
+  isSynchronousBoneUpdates: 1
+  bindPoses:
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.9810986
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0.01590455
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -1.039328
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0.014681595
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -1.1427323
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0.014681595
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -1.2461365
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0.014681595
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0.99263394
+    e12: 0.12115316
+    e13: -1.4825187
+    e20: 0
+    e21: -0.121153146
+    e22: 0.9926339
+    e23: 0.21117856
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 1.8179902e-15
+    e13: -1.6237183
+    e20: 0
+    e21: -1.8179902e-15
+    e22: 1
+    e23: 0.014567301
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0
+    e01: 0
+    e02: 1
+    e03: -0.072173
+    e10: 2.3429107e-15
+    e11: -1
+    e12: 0
+    e13: 1.6583146
+    e20: 1
+    e21: 2.3429107e-15
+    e22: -1.110223e-14
+    e23: -0.033303294
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0
+    e01: 0
+    e02: -1
+    e03: 0.072173
+    e10: 8.073498e-31
+    e11: 1
+    e12: 0
+    e13: -1.6583164
+    e20: 1
+    e21: -8.073498e-31
+    e22: 1.110223e-14
+    e23: 0.03330326
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0
+    e01: 0.43948665
+    e02: -0.8982491
+    e03: -0.7117487
+    e10: -5.551115e-15
+    e11: 0.8982491
+    e12: 0.43948665
+    e13: -1.45091
+    e20: 1
+    e21: -5.648327e-16
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0.99263394
+    e12: 0.12115316
+    e13: -1.5462557
+    e20: 0
+    e21: -0.121153146
+    e22: 0.9926339
+    e23: 0.21117857
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.97048014
+    e01: 0.08703232
+    e02: 0.22493076
+    e03: -0.118925825
+    e10: -0.08478486
+    e11: 0.9962055
+    e12: -0.01965081
+    e13: -1.4327148
+    e20: -0.22578754
+    e21: -2.7020619e-14
+    e22: 0.9741765
+    e23: 0.022588769
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.7436626
+    e01: 0.654411
+    e02: 0.13679172
+    e03: -1.0444613
+    e10: -0.6556037
+    e11: -0.7539067
+    e12: 0.042523995
+    e13: 0.9682908
+    e20: 0.13095634
+    e21: -0.058057655
+    e22: 0.9896866
+    e23: 0.16446492
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.7436626
+    e01: 0.6544111
+    e02: 0.13679168
+    e03: -1.0444614
+    e10: -0.38116044
+    e11: -0.5831087
+    e12: 0.71742666
+    e13: 0.60604966
+    e20: 0.5492563
+    e21: 0.48138383
+    e22: 0.6830718
+    e23: -0.3557087
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.42137986
+    e01: 0.7737097
+    e02: 0.47308818
+    e03: -1.070962
+    e10: -0.43084466
+    e11: -0.6298256
+    e12: 0.64629143
+    e13: 0.40240592
+    e20: 0.79800504
+    e21: 0.06850673
+    e22: 0.59874445
+    e23: 0.205586
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.2954186
+    e01: -0.14001098
+    e02: 0.9450527
+    e03: 0.1440209
+    e10: -0.35656857
+    e11: -0.93388176
+    e12: -0.02689448
+    e13: 0.7821858
+    e20: 0.88633317
+    e21: -0.32903108
+    e22: -0.3258097
+    e23: 0.82928336
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.29541856
+    e01: -0.14001095
+    e02: 0.9450527
+    e03: 0.1440209
+    e10: 0.21333008
+    e11: -0.95455873
+    e12: -0.20810522
+    e13: 1.0891509
+    e20: 0.9312454
+    e21: 0.26308638
+    e22: -0.2521259
+    e23: 0.25264785
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.29541856
+    e01: -0.14001094
+    e02: 0.9450527
+    e03: 0.14402089
+    e10: 0.46710643
+    e11: -0.8417376
+    e12: -0.27071977
+    e13: 1.0968026
+    e20: 0.8333902
+    e21: 0.52141595
+    e22: -0.18326499
+    e23: -0.058810703
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.29541856
+    e01: -0.14001094
+    e02: 0.9450527
+    e03: 0.14402086
+    e10: 0.46710643
+    e11: -0.8417376
+    e12: -0.27071977
+    e13: 1.0782837
+    e20: 0.8333902
+    e21: 0.52141595
+    e22: -0.18326499
+    e23: -0.058810737
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.45663244
+    e01: -0.08089809
+    e02: 0.8859696
+    e03: 0.1532907
+    e10: -0.37001586
+    e11: -0.9229082
+    e12: 0.106436744
+    e13: 0.7441263
+    e20: 0.809058
+    e21: -0.3764253
+    e22: -0.45136344
+    e23: 0.86057365
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.45663244
+    e01: -0.080898106
+    e02: 0.8859696
+    e03: 0.1532907
+    e10: 0.32506007
+    e11: -0.9118317
+    e12: -0.2507969
+    e13: 1.1056622
+    e20: 0.8281441
+    e21: 0.40251547
+    e22: -0.39007518
+    e23: 0.09376718
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.4566325
+    e01: -0.0808981
+    e02: 0.8859696
+    e03: 0.15329067
+    e10: 0.46905848
+    e11: -0.82430625
+    e12: -0.31702235
+    e13: 1.0777757
+    e20: 0.75595695
+    e21: 0.56033427
+    e22: -0.3384591
+    e23: -0.10224741
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.4566325
+    e01: -0.0808981
+    e02: 0.8859696
+    e03: 0.1532907
+    e10: 0.46905848
+    e11: -0.82430625
+    e12: -0.31702235
+    e13: 1.0568185
+    e20: 0.75595695
+    e21: 0.56033427
+    e22: -0.3384591
+    e23: -0.10224739
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: 0.015932389
+    e02: 0.7459221
+    e03: 0.16475327
+    e10: -0.30740187
+    e11: -0.9051108
+    e12: 0.2937327
+    e13: 0.72367066
+    e20: 0.67982185
+    e21: -0.42487764
+    e22: -0.59776336
+    e23: 0.87448055
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: 0.015932374
+    e02: 0.74592215
+    e03: 0.16475323
+    e10: 0.19991198
+    e11: -0.96702427
+    e12: -0.15779516
+    e13: 1.0766598
+    e20: 0.71881086
+    e21: 0.25418553
+    e22: -0.6470709
+    e23: 0.24006248
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: 0.01593232
+    e02: 0.74592227
+    e03: 0.16475327
+    e10: 0.24756151
+    e11: -0.9478487
+    e12: -0.2007388
+    e13: 1.0620896
+    e20: 0.7038232
+    e21: 0.31832203
+    e22: -0.63506216
+    e23: 0.16937478
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: 0.01593232
+    e02: 0.74592227
+    e03: 0.1647533
+    e10: 0.24756151
+    e11: -0.9478487
+    e12: -0.2007388
+    e13: 1.0387434
+    e20: 0.7038232
+    e21: 0.31832203
+    e22: -0.63506216
+    e23: 0.16937481
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.7693387
+    e01: -0.014745649
+    e02: 0.6386707
+    e03: 0.24238963
+    e10: -0.26294214
+    e11: -0.91843426
+    e12: 0.2955336
+    e13: 0.7532226
+    e20: 0.58221936
+    e21: -0.39529893
+    e22: -0.7104643
+    e23: 0.8161849
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.7693388
+    e01: -0.014745688
+    e02: 0.6386707
+    e03: 0.24238971
+    e10: 0.06596741
+    e11: -0.99255574
+    e12: -0.10238009
+    e13: 1.025358
+    e20: 0.63542604
+    e21: 0.12089646
+    e22: -0.7626388
+    e23: 0.3471273
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.76933885
+    e01: -0.014745661
+    e02: 0.6386707
+    e03: 0.24238966
+    e10: 0.17040555
+    e11: -0.95877445
+    e12: -0.22740567
+    e13: 1.0439281
+    e20: 0.6156946
+    e21: 0.28378502
+    e22: -0.7351096
+    e23: 0.17649077
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.76933885
+    e01: -0.014745661
+    e02: 0.6386707
+    e03: 0.24238966
+    e10: 0.17040555
+    e11: -0.95877445
+    e12: -0.22740567
+    e13: 1.0193188
+    e20: 0.6156946
+    e21: 0.28378502
+    e22: -0.7351096
+    e23: 0.17649077
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: -0.45200297
+    e02: -0.8015603
+    e03: 0.77023536
+    e10: 0.34263638
+    e11: -0.73683673
+    e12: 0.5828139
+    e13: 0.8326078
+    e20: -0.8540528
+    e21: -0.50275725
+    e22: -0.1335254
+    e23: 0.17735943
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: -0.45200303
+    e02: -0.8015603
+    e03: 0.7702353
+    e10: 0.11492812
+    e11: -0.8402217
+    e12: 0.52992356
+    e13: 0.8227257
+    e20: -0.9130155
+    e21: -0.29953405
+    e22: -0.27691513
+    e23: -0.036215052
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: -0.45200312
+    e02: -0.8015603
+    e03: 0.7702353
+    e10: -0.20031056
+    e11: -0.89201427
+    e12: 0.40519914
+    e13: 0.722454
+    e20: -0.89815456
+    e21: 0.0019659414
+    e22: -0.43967563
+    e23: -0.29052526
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: -0.45200312
+    e02: -0.8015603
+    e03: 0.77023524
+    e10: -0.20031056
+    e11: -0.89201427
+    e12: 0.40519914
+    e13: 0.69299597
+    e20: -0.89815456
+    e21: 0.0019659414
+    e22: -0.43967563
+    e23: -0.29052526
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.97048014
+    e01: -0.08703233
+    e02: -0.2249308
+    e03: 0.11892595
+    e10: -0.08478486
+    e11: -0.99620557
+    e12: 0.019650813
+    e13: 1.4327165
+    e20: -0.22578757
+    e21: 2.7456468e-14
+    e22: -0.97417665
+    e23: -0.02258878
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.7436626
+    e01: -0.65441114
+    e02: -0.13679174
+    e03: 1.0444633
+    e10: -0.6556037
+    e11: 0.75390685
+    e12: -0.04252399
+    e13: -0.96829396
+    e20: 0.13095638
+    e21: 0.058057666
+    e22: -0.9896867
+    e23: -0.16446511
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.7436626
+    e01: -0.6544111
+    e02: -0.1367917
+    e03: 1.0444597
+    e10: -0.38116035
+    e11: 0.58310866
+    e12: -0.71742666
+    e13: -0.60604864
+    e20: 0.5492563
+    e21: -0.48138383
+    e22: -0.6830718
+    e23: 0.35570803
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: -0.42137992
+    e01: -0.7737097
+    e02: -0.47308812
+    e03: 1.0709581
+    e10: -0.43084463
+    e11: 0.6298256
+    e12: -0.64629143
+    e13: -0.4024032
+    e20: 0.79800504
+    e21: -0.06850674
+    e22: -0.5987444
+    e23: -0.20558655
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.2954186
+    e01: 0.140011
+    e02: -0.9450528
+    e03: -0.14402014
+    e10: -0.3565686
+    e11: 0.93388194
+    e12: 0.02689448
+    e13: -0.7821828
+    e20: 0.8863331
+    e21: 0.32903108
+    e22: 0.3258097
+    e23: -0.8292822
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.2954186
+    e01: 0.14001097
+    e02: -0.9450528
+    e03: -0.14402065
+    e10: 0.2133301
+    e11: 0.9545588
+    e12: 0.20810524
+    e13: -1.0891516
+    e20: 0.9312454
+    e21: -0.26308644
+    e22: 0.25212592
+    e23: -0.2526474
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.29541862
+    e01: 0.140011
+    e02: -0.9450528
+    e03: -0.14402084
+    e10: 0.46710652
+    e11: 0.84173775
+    e12: 0.27071983
+    e13: -1.0968027
+    e20: 0.8333901
+    e21: -0.52141595
+    e22: 0.18326497
+    e23: 0.058810547
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.29541862
+    e01: 0.140011
+    e02: -0.9450528
+    e03: -0.14402147
+    e10: 0.46710652
+    e11: 0.84173775
+    e12: 0.27071983
+    e13: -1.0782838
+    e20: 0.8333901
+    e21: -0.52141595
+    e22: 0.18326497
+    e23: 0.058810476
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.45663244
+    e01: 0.080898106
+    e02: -0.8859696
+    e03: -0.15329061
+    e10: -0.3700158
+    e11: 0.922908
+    e12: -0.10643674
+    e13: -0.74412394
+    e20: 0.809058
+    e21: 0.3764253
+    e22: 0.45136344
+    e23: -0.8605726
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.45663244
+    e01: 0.08089815
+    e02: -0.8859696
+    e03: -0.15329072
+    e10: 0.32506016
+    e11: 0.9118317
+    e12: 0.25079694
+    e13: -1.1056619
+    e20: 0.82814395
+    e21: -0.40251547
+    e22: 0.39007518
+    e23: -0.093767315
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.45663244
+    e01: 0.080898084
+    e02: -0.8859696
+    e03: -0.15329038
+    e10: 0.46905848
+    e11: 0.82430613
+    e12: 0.31702235
+    e13: -1.0777762
+    e20: 0.75595695
+    e21: -0.56033427
+    e22: 0.3384591
+    e23: 0.1022474
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.45663244
+    e01: 0.080898084
+    e02: -0.8859696
+    e03: -0.15329048
+    e10: 0.46905848
+    e11: 0.82430613
+    e12: 0.31702235
+    e13: -1.0568184
+    e20: 0.75595695
+    e21: -0.56033427
+    e22: 0.3384591
+    e23: 0.10224678
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: -0.015932316
+    e02: -0.74592215
+    e03: -0.16475299
+    e10: -0.30740187
+    e11: 0.9051107
+    e12: -0.29373273
+    e13: -0.723667
+    e20: 0.6798219
+    e21: 0.4248777
+    e22: 0.5977635
+    e23: -0.874479
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: -0.015932364
+    e02: -0.7459222
+    e03: -0.16475303
+    e10: 0.19991198
+    e11: 0.96702427
+    e12: 0.15779518
+    e13: -1.0766593
+    e20: 0.7188108
+    e21: -0.25418556
+    e22: 0.64707094
+    e23: -0.24006218
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: -0.015932376
+    e02: -0.74592227
+    e03: -0.16475317
+    e10: 0.24756148
+    e11: 0.9478486
+    e12: 0.2007388
+    e13: -1.0620894
+    e20: 0.7038232
+    e21: -0.31832206
+    e22: 0.63506216
+    e23: -0.16937469
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.66584253
+    e01: -0.015932376
+    e02: -0.74592227
+    e03: -0.16475318
+    e10: 0.24756148
+    e11: 0.9478486
+    e12: 0.2007388
+    e13: -1.038744
+    e20: 0.7038232
+    e21: -0.31832206
+    e22: 0.63506216
+    e23: -0.16937524
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.7693388
+    e01: 0.0147456555
+    e02: -0.6386707
+    e03: -0.24238905
+    e10: -0.26294214
+    e11: 0.9184342
+    e12: -0.29553357
+    e13: -0.75322616
+    e20: 0.58221936
+    e21: 0.39529893
+    e22: 0.7104643
+    e23: -0.8161866
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.7693388
+    e01: 0.014745677
+    e02: -0.63867074
+    e03: -0.24238981
+    e10: 0.06596742
+    e11: 0.99255574
+    e12: 0.10238012
+    e13: -1.025358
+    e20: 0.63542604
+    e21: -0.12089646
+    e22: 0.76263887
+    e23: -0.34712762
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.7693387
+    e01: 0.014745669
+    e02: -0.6386707
+    e03: -0.24238944
+    e10: 0.17040555
+    e11: 0.9587745
+    e12: 0.2274057
+    e13: -1.043928
+    e20: 0.6156946
+    e21: -0.28378507
+    e22: 0.73510975
+    e23: -0.17649044
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.7693387
+    e01: 0.014745669
+    e02: -0.6386707
+    e03: -0.24238965
+    e10: 0.17040555
+    e11: 0.9587745
+    e12: 0.2274057
+    e13: -1.0193187
+    e20: 0.6156946
+    e21: -0.28378507
+    e22: 0.73510975
+    e23: -0.17649113
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140028
+    e01: 0.45200306
+    e02: 0.80156016
+    e03: -0.77023435
+    e10: 0.3426364
+    e11: 0.7368368
+    e12: -0.5828138
+    e13: -0.83260554
+    e20: -0.8540528
+    e21: 0.5027572
+    e22: 0.13352549
+    e23: -0.17735763
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: 0.45200303
+    e02: 0.8015603
+    e03: -0.7702343
+    e10: 0.11492813
+    e11: 0.8402217
+    e12: -0.52992356
+    e13: -0.8227234
+    e20: -0.9130155
+    e21: 0.29953405
+    e22: 0.2769152
+    e23: 0.036216162
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: 0.45200312
+    e02: 0.80156016
+    e03: -0.770235
+    e10: -0.20031056
+    e11: 0.8920143
+    e12: -0.40519914
+    e13: -0.7224544
+    e20: -0.89815456
+    e21: -0.0019659416
+    e22: 0.43967563
+    e23: 0.2905257
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.39140022
+    e01: 0.45200312
+    e02: 0.80156016
+    e03: -0.77023536
+    e10: -0.20031056
+    e11: 0.8920143
+    e12: -0.40519914
+    e13: -0.6929963
+    e20: -0.89815456
+    e21: -0.001965965
+    e22: 0.43967563
+    e23: 0.2905248
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.99936956
+    e01: -0.035501998
+    e02: 8.161941e-12
+    e03: 0.11898198
+    e10: -0.035501525
+    e11: -0.999356
+    e12: -0.005215813
+    e13: 0.9238435
+    e20: 0.00018517183
+    e21: 0.005212525
+    e22: -0.9999864
+    e23: -0.032194227
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9993697
+    e01: -0.035502
+    e02: -2.0664885e-10
+    e03: 0.11898199
+    e10: -0.035406623
+    e11: -0.9966845
+    e12: -0.07325545
+    e13: 0.50712484
+    e20: 0.0026007155
+    e21: 0.073209256
+    e22: -0.997313
+    e23: -0.066860415
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9948691
+    e01: -9.7578196e-17
+    e02: 0.10116885
+    e03: 0.12090112
+    e10: 3.6143338e-16
+    e11: -1
+    e12: -1.9081958e-15
+    e13: 0.10189561
+    e20: 0.10116885
+    e21: 1.8214596e-15
+    e22: -0.99486935
+    e23: -0.047875978
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9948691
+    e01: 1.3877788e-15
+    e02: 0.10116884
+    e03: 0.12090113
+    e10: -0.10116885
+    e11: 0
+    e12: 0.99486935
+    e13: -0.07018952
+    e20: 2.7681896e-15
+    e21: -1
+    e22: -1.110223e-14
+    e23: 0.029647572
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.99682117
+    e01: 0
+    e02: 0.079670206
+    e03: 0.124777004
+    e10: 3.4678389e-15
+    e11: -1
+    e12: -1.110223e-14
+    e13: 0.012803594
+    e20: 0.079670206
+    e21: 2.220446e-14
+    e22: -0.99682117
+    e23: 0.13176158
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.99936956
+    e01: 0.035501998
+    e02: -8.161941e-12
+    e03: -0.118981995
+    e10: -0.035501525
+    e11: 0.999356
+    e12: 0.005215813
+    e13: -0.9238434
+    e20: 0.00018517183
+    e21: -0.005212525
+    e22: 0.9999864
+    e23: 0.032194234
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9993697
+    e01: 0.035502
+    e02: 2.0664885e-10
+    e03: -0.11898244
+    e10: -0.035406623
+    e11: 0.9966845
+    e12: 0.07325545
+    e13: -0.5071249
+    e20: 0.0026007155
+    e21: -0.073209256
+    e22: 0.997313
+    e23: 0.06686039
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9948691
+    e01: 2.9273459e-16
+    e02: -0.10116885
+    e03: -0.12090083
+    e10: 3.6143338e-16
+    e11: 1
+    e12: 4.3368087e-16
+    e13: -0.10189552
+    e20: 0.10116885
+    e21: -3.469447e-16
+    e22: 0.99486935
+    e23: 0.047876038
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.9948691
+    e01: -1.3877788e-15
+    e02: -0.10116884
+    e03: -0.12090068
+    e10: -0.10116885
+    e11: 0
+    e12: -0.99486935
+    e13: 0.07019396
+    e20: 2.7681896e-15
+    e21: 1
+    e22: 1.110223e-14
+    e23: -0.029647533
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.99682117
+    e01: 0
+    e02: -0.079670206
+    e03: -0.12477713
+    e10: 3.4678389e-15
+    e11: 1
+    e12: 1.110223e-14
+    e13: -0.012803634
+    e20: 0.079670206
+    e21: -2.220446e-14
+    e22: 0.99682117
+    e23: -0.13176182
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  exposedTransforms: []
+  exposedBoneIndexes: 
+  asyncBoneUpdateMaxLatency: 3

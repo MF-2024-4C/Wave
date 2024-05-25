@@ -8,6 +8,35 @@ namespace Quantum.Editor {
   using UnityEngine;
   using UnityEditor;
 
+  [CustomPropertyDrawer(typeof(AssetRefPlayerConfig))]
+  public class AssetRefPlayerConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(PlayerConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefWeaponData))]
+  public class AssetRefWeaponDataPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(WeaponDataAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpawnAreaConfig))]
+  public class AssetRefZombieSpawnAreaConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpawnAreaConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpec))]
+  public class AssetRefZombieSpecPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpecAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.ZombieState_Prototype))]
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.InputButtons_Prototype))]
   partial class PrototypeDrawer {}
 }

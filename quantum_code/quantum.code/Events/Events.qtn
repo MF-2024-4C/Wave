@@ -1,0 +1,47 @@
+struct Trigger {
+    int ID;
+}
+
+component ButtonEntity {
+    Trigger trigger;
+}
+
+signal ActivateEvent(Trigger trigger);
+
+struct MapEvent {
+    int ID;
+}
+
+component EventComponent {
+    MapEvent mapEvent;
+    bool isTriggered;
+}
+
+singleton component GameEventQueue {
+    list<Trigger> events;
+}
+
+struct GameEventInstance {
+    MapEvent value;
+    uint id;
+}
+struct GameEventsData {
+    list<GameEventInstance> buffer1;
+    list<GameEventInstance> buffer2;
+    uint eventCounter;
+    uint prevEventCounter;
+    bool state;
+    
+}
+
+struct GameEventsDataPtr {
+    Ptr ptr;
+}
+
+struct GameEvents {
+    GameEventsDataPtr container;
+}
+
+singleton component GameEvent {
+    GameEvents events;
+}

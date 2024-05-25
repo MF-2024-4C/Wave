@@ -28,7 +28,13 @@ namespace Quantum.Editor {
 
     [System.Serializable]
     public partial class KnownObjectsContainer : QuantumEditorUtility.SerializableObjectsContainerBase {
+      public Quantum.SystemConfig[] SystemConfig = {};
+      public Quantum.WeaponData[] WeaponData = {};
+      public Quantum.PlayerConfig[] PlayerConfig = {};
+      public Quantum.ZombieSpec[] ZombieSpec = {};
+      public Quantum.ZombieSpawnAreaConfig[] ZombieSpawnAreaConfig = {};
       public Quantum.SimulationConfig[] SimulationConfig = {};
+      public Quantum.ZombieSpawnAreaCondition[] ZombieSpawnAreaCondition = {};
       public Quantum.BinaryData[] BinaryData = {};
       public Quantum.CharacterController2DConfig[] CharacterController2DConfig = {};
       public Quantum.CharacterController3DConfig[] CharacterController3DConfig = {};

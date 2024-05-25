@@ -1,0 +1,20 @@
+component TmpPlayer
+{
+
+}
+
+event Fire {
+   PlayerRef Player;
+}
+
+event ChangePrimaryWeapon {
+   PlayerRef Player;
+}
+
+event ChangeSecondaryWeapon {
+   PlayerRef Player;
+}
+
+event ChangeTertiaryWeapon {
+   PlayerRef Player;
+}

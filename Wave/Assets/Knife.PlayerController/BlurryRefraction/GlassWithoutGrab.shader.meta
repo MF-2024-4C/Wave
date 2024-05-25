@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e1031e72d327348328d07bb0afb82fcc
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/BlurryRefraction/GlassWithoutGrab.shader
+  uploadId: 446320

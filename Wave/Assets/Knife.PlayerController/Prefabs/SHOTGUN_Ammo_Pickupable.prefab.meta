@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a136ff20b14b2b34c9510f9f650ccedf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Prefabs/SHOTGUN_Ammo_Pickupable.prefab
+  uploadId: 446320

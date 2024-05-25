@@ -78,14 +78,18 @@ namespace Quantum {
             for (int i = 0, j = method.IsStatic ? 0 : 1; i < methodParameters.Length; ++i, ++j) {
               convertedParameters.Add(Expression.Convert(parameters[j], methodParameters[i].ParameterType));
             }
-          } else {
+          } else if (swizzle.HasArgumentsReorder) {
             var swizzledParameters = swizzle.Swizzle(parameters.ToArray());
             for (int i = 0, j = method.IsStatic ? 0 : 1; i < methodParameters.Length; ++i, ++j) {
               convertedParameters.Add(Expression.Convert(swizzledParameters[j], methodParameters[i].ParameterType));
             }
+          } else {
+            foreach (var converter in swizzle.Converters) {
+              convertedParameters.Add(Expression.Invoke(converter, parameters));
+            }
           }
         }
-
+        
         MethodCallExpression callExpression;
         if (method.IsStatic) {
           callExpression = Expression.Call(method, convertedParameters);
@@ -102,6 +106,7 @@ namespace Quantum {
       }
     }
 
+    
     public static T CreateConstructorDelegate<T>(this Type type, BindingFlags flags, Type delegateType, params DelegateSwizzle[] fallbackSwizzles) where T : Delegate {
       try {
         var constructor = GetConstructorOrThrow(type, flags, delegateType, fallbackSwizzles, out var swizzle);
@@ -120,10 +125,14 @@ namespace Quantum {
             for (int i = 0, j = 0; i < constructorParameters.Length; ++i, ++j) {
               convertedParameters.Add(Expression.Convert(parameters[j], constructorParameters[i].ParameterType));
             }
-          } else {
+          } else if (swizzle.HasArgumentsReorder) {
             var swizzledParameters = swizzle.Swizzle(parameters.ToArray());
             for (int i = 0, j = 0; i < constructorParameters.Length; ++i, ++j) {
               convertedParameters.Add(Expression.Convert(swizzledParameters[j], constructorParameters[i].ParameterType));
+            }
+          } else {
+            foreach (var converter in swizzle.Converters) {
+              convertedParameters.Add(Expression.Invoke(converter, parameters));
             }
           }
         }
@@ -279,11 +288,15 @@ namespace Quantum {
 
       if (swizzles != null) {
         foreach (var swizzle in swizzles) {
-          Type[] swizzled = swizzle.Swizzle(allDelegateParameters);
-          constructor = type.GetConstructor(flags, null, swizzled, null);
-          if (constructor != null) {
-            firstMatchingSwizzle = swizzle;
-            return constructor;
+          if (swizzle.HasArgumentsReorder) {
+            Type[] swizzled = swizzle.Swizzle(allDelegateParameters);
+            constructor = type.GetConstructor(flags, null, swizzled, null);
+            if (constructor != null) {
+              firstMatchingSwizzle = swizzle;
+              return constructor;
+            }
+          } else {
+            throw new NotSupportedException();
           }
         }
       }
@@ -309,14 +322,29 @@ namespace Quantum {
 
       if (swizzles != null) {
         foreach (var swizzle in swizzles) {
-          Type[] swizzled = swizzle.Swizzle(allDelegateParameters);
-          if (!flags.HasFlag(BindingFlags.Static) && swizzled[0] != type) {
-            throw new InvalidOperationException();
-          }
-          method = FindMethod(type, name, flags, delegateMethod.ReturnType, flags.HasFlag(BindingFlags.Static) ? swizzled : swizzled.Skip(1).ToArray());
-          if (method != null) {
-            firstMatchingSwizzle = swizzle;
-            return method;
+          if (swizzle.HasArgumentsReorder) {
+            Type[] swizzled = swizzle.Swizzle(allDelegateParameters);
+            if (!flags.HasFlag(BindingFlags.Static) && swizzled[0] != type) {
+              throw new InvalidOperationException();
+            }
+
+            method = FindMethod(type, name, flags, delegateMethod.ReturnType, flags.HasFlag(BindingFlags.Static) ? swizzled : swizzled.Skip(1).ToArray());
+            if (method != null) {
+              firstMatchingSwizzle = swizzle;
+              return method;
+            }
+          } else {
+            var swizzled = swizzle.Types;
+            if (!flags.HasFlag(BindingFlags.Static) && swizzled[0] != type) {
+              throw new InvalidOperationException();
+            }
+
+            method = FindMethod(type, name, flags, delegateMethod.ReturnType, flags.HasFlag(BindingFlags.Static) ? swizzled : swizzled.Skip(1).ToArray());
+            if (method != null) {
+              firstMatchingSwizzle = swizzle;
+              return method;
+            }
+            
           }
         }
       }
@@ -473,22 +501,48 @@ namespace Quantum {
     }
 
     public class DelegateSwizzle {
-      private int[] _args;
+      public readonly int[] ArgumentsReorder;
+      public readonly Expression[] Converters;
+      public readonly Type[] Types;
+      
+      public bool HasArgumentsReorder => ArgumentsReorder != null;
+      public int Count => ArgumentsReorder.Length;
 
-      public int Count => _args.Length;
-
-      public DelegateSwizzle(params int[] args) {
-        _args = args;
+      public DelegateSwizzle(Expression[] converters, Type[] types) {
+        Converters = converters;
+        Types = types;
+        ArgumentsReorder = null;
+      }
+      
+      
+      public DelegateSwizzle(params int[] argumentsReorder) {
+        ArgumentsReorder = argumentsReorder;
+        Types = null;
+        Converters = null;
       }
 
       public T[] Swizzle<T>(T[] inputTypes) {
-        T[] result = new T[_args.Length];
+        T[] result = new T[ArgumentsReorder.Length];
 
-        for (int i = 0; i < _args.Length; ++i) {
-          result[i] = inputTypes[_args[i]];
+        for (int i = 0; i < ArgumentsReorder.Length; ++i) {
+          result[i] = inputTypes[ArgumentsReorder[i]];
         }
 
         return result;
+      }
+    }
+    
+    public static class DelegateSwizzle<In0, In1> {
+      public static DelegateSwizzle Make<Out0>(Expression<Func<In0, In1, Out0>> out0) {
+        return new DelegateSwizzle(new Expression[] { out0 }, new [] { typeof(Out0)});
+      }
+      
+      public static DelegateSwizzle Make<Out0, Out1>(Expression<Func<In0, In1, Out0>> out0, Expression<Func<In0, In1, Out1>> out1) {
+        return new DelegateSwizzle(new Expression[] { out0, out1 }, new [] { typeof(Out0), typeof(Out1)});
+      }
+      
+      public static DelegateSwizzle Make<Out0, Out1, Out3>(Expression<Func<In0, In1, Out0>> out0, Expression<Func<In0, In1, Out1>> out1, Expression<Func<In0, In1, Out3>> out3) {
+        return new DelegateSwizzle(new Expression[] { out0, out1, out3 }, new [] { typeof(Out0), typeof(Out1), typeof(Out3)});
       }
     }
   }
