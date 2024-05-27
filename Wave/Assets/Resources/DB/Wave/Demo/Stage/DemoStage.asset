@@ -20,9 +20,9 @@ MonoBehaviour:
     UserAsset:
       Id:
         Value: 0
-    Scene: Demo-Stage
-    ScenePath: Assets/Wave/Demo/Stage/Demo-Stage.unity
-    SceneGuid: 035ccf41ce1c9a64b842f26c078d7a03
+    Scene: Demo-Stage-ICE
+    ScenePath: Assets/Wave/Demo/Stage/Demo-Stage-ICE.unity
+    SceneGuid: 4fefca9cae85f45459bb75a817ed334a
     WorldSize: 512
     BucketsCount: 32
     BucketsSubdivisions: 8
@@ -55,27 +55,27 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: 0
+          RawValue: -483844
         Y:
-          RawValue: -155975
+          RawValue: -196608
         Z:
-          RawValue: 0
+          RawValue: 1639803
       PhysicsMaterial:
         Id:
           Value: 0
-      ShapeType: 2
+      ShapeType: 4
       SphereRadius:
         RawValue: 0
       BoxExtents:
         X:
-          RawValue: 3276800
+          RawValue: 0
         Y:
-          RawValue: 32768
+          RawValue: 0
         Z:
-          RawValue: 3276800
+          RawValue: 0
       SmoothSphereMeshCollisions: 0
       StaticData:
-        Name: Floor
+        Name: UModeler Object
         Tag: Untagged
         Layer: 0
         Asset:
