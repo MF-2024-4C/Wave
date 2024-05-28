@@ -11,7 +11,7 @@
 
         public override void Update(Frame f, ref Filter filter)
         {
-            Interacter.Interact(f, filter.Entity, filter.Interacter);
+            //Interacter.Interact(f, filter.Entity, filter.Interacter);
         }
     }
 }

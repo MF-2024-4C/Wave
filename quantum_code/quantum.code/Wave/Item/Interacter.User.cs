@@ -10,7 +10,9 @@ namespace Quantum
     {
         public static void Interact(Frame f, EntityRef playerEntity, Interacter* interacter)
         {
+            //if (!interacter->IsInteract) return;
             //Log.Info($"{playerEntity.} has Interact :")
+            Log.Info($"player[{playerEntity.Index}] has Interact : [{interacter->InteractEntity.Index}]");
         }
     }
 }

@@ -128,7 +128,7 @@ MonoBehaviour:
   Prototypes:
   - Interacter:
     - IsInteract:
-        Value: 0
+        Value: 1
       InteractEntity:
         SceneIndexPlusOne: 0
     Item: []

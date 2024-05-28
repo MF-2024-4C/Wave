@@ -13,10 +13,12 @@ namespace Wave.Player
 
         private string _currentTriggerAnim;
         private Animator _anim;
+        private EntityComponentPlayerSys _playerSys;
 
         private void Start()
         {
             _currentTriggerAnim = "idle";
+            _playerSys = GetComponent<EntityComponentPlayerSys>();
         }
 
         public void Update()
@@ -99,5 +101,7 @@ namespace Wave.Player
         }
 
         public void SetAnimator(Animator anim) { this._anim = anim; }
+        
+        
     }
 }

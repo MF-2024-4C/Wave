@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: -4638503294811154689}
   - component: {fileID: 6157564102664313226}
   - component: {fileID: 5684033664292768011}
+  - component: {fileID: 7569993271907966049}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -392,7 +393,7 @@ MonoBehaviour:
         UserTag: 0
         IsSetFromSourceCollider: 0
       IsSetFromSourceCollider: 0
-    Layer: 0
+    Layer: 6
     CallbackFlags:
       Value: 0
   PhysicsBody:
@@ -542,6 +543,14 @@ MonoBehaviour:
         RawValue: 0
       Z:
         RawValue: 0
+    WalkSpeed:
+      RawValue: 0
+    RunSpeed:
+      RawValue: 0
+    JumpPower:
+      RawValue: 0
+    BreakPower:
+      RawValue: 0
 --- !u!114 &-4638503294811154689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,11 +564,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityView: {fileID: 5086503397990343822}
+  _entityPrototype: {fileID: 7264476586775917861}
   _virtualCameraPrefab: {fileID: 9041225563005405274, guid: 751b1bfb704f3ba4e81a4f1f0f917db8,
     type: 3}
   _localPlayerModel: {fileID: 7788832636071237674}
   _ohterPlayerModel: {fileID: 7153193165534676283}
   _playerAnimation: {fileID: 6157564102664313226}
+  _localLayer:
+    BitMask: 64
+  _otherLayer:
+    BitMask: 128
 --- !u!114 &6157564102664313226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +609,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7569993271907966049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958795330284115381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5203a542424a31d4abf03b0f4c4c9eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerSys: {fileID: 7851188067770254504}
 --- !u!1001 &1444931101471707952
 PrefabInstance:
   m_ObjectHideFlags: 0

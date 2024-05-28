@@ -6,7 +6,8 @@ namespace Quantum
 {
     public unsafe partial struct PlayerSys
     {
-        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input)
+        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
+            Input input)
         {
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
 
@@ -18,14 +19,15 @@ namespace Quantum
                 controller->Jump(f, false, playerSys->JumpPower);
                 animState |= PlayerConfig.PAnimJump;
             }
-            
-            
+
+
             FP speed = playerSys->WalkSpeed;
             if (input.PlayerDash)
             {
                 speed = playerSys->RunSpeed;
                 animState |= PlayerConfig.PAnimRun;
             }
+
             controller->MaxSpeed = speed;
             controller->Move(f, entityRef, input.PlayerDirection.XOY);
 
@@ -42,12 +44,13 @@ namespace Quantum
             {
                 animState |= PlayerConfig.PAnimGrounded;
             }
-            
+
             playerSys->PlayerAnimState = animState;
         }
-        
-        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller, PlayerSys* playerSys,Input input)
-        {            
+
+        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller,
+            PlayerSys* playerSys, Input input)
+        {
             //カメラの向いている方向にプレイヤーも回転する
             FPQuaternion targetRotation = FPQuaternion.LookRotation(input.CameraForwardDirection);
             targetRotation.X = 0;
@@ -55,33 +58,37 @@ namespace Quantum
             //transform->Rotation = FPQuaternion.Slerp(transform->Rotation, targetRotation, f.DeltaTime * config.RotationSpeed);
             //transform->Rotation = targetRotation;
             playerSys->TargetRotation = targetRotation;
-            
+
+            //インタラクト用にカメラの向いている方向を保存
+            PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
+            config.CameraForwardDirection = input.CameraForwardDirection;
         }
 
-        public static void Interact(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys, Input input)
+        public static void Interact(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys,
+            Input input)
         {
-            if(input.Interact.WasPressed)
+            if (input.Interact.WasPressed)
             {
                 Log.Info("Interact input was pressed");
                 PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
-                var hit = f.Physics3D.Raycast(transform->Position + config.InteractRayOffset, transform->Forward, config.InteractRayDistance);
-                if (hit != null)
+                var start = transform->Position + config.InteractRayOffset;
+                var end = start + input.CameraForwardDirection * config.InteractRayDistance;
+                var hits = f.Physics3D.LinecastAll(start, end);
+                for (int i = 0; i < hits.Count; i++)
                 {
-                    //TODO::ヒットしたものがインタラクトできるものかチェック
-                    //hit.Entity.
-                    Hit3D hhit = (Hit3D)hit;
-                    if(f.Unsafe.TryGetPointer<Interacter>(hhit.Entity, out Interacter* interacter))
+                    var hit = hits[i];
+                    if (f.Unsafe.TryGetPointer(hit.Entity, out Interacter* interacter))
                     {
+                        if (!interacter->IsInteract) continue;
                         Interacter.Interact(f, entity, interacter);
+                        return;
                     }
-
                 }
             }
         }
 
         public static void Recoil(FPVector2 recoil)
         {
-            
         }
 
         public void SetConfig(Frame　f)
