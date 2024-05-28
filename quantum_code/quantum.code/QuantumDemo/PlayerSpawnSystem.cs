@@ -24,5 +24,14 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         {
             transform->Position.X = (int)player;
         }
+        
+        //プレイヤーアニメーション用
+        /*
+        var playerAnimInfo = new PlayerAnimInfo()
+        {
+            PlayerAnimState = PlayerConfig.PAnimIdle,
+        };
+        frame.Add(entity, playerAnimInfo);
+        */
     }
 }

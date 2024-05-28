@@ -1,2 +1,4 @@
 * text=auto
 *.asset eol=lf
+*.csproj merge=union
+*.glb filter=lfs diff=lfs merge=lfs -text

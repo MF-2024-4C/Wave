@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wave/Exp/Enemy/03-ZombieSpawn/Expo-Eneymy-03ZombieSpawn.unity
     guid: 993b9de494aa1c246945aa86fe3986f4
+  - enabled: 1
+    path: Assets/Wave/Weapon/Gun.unity
+    guid: 39eb022c936953243b03bba0f1bf0965
+  - enabled: 1
+    path: Assets/Wave/Player/PlayerTestScene.unity
+    guid: c4e76e7d5c314a94792fd5584806c37c
+  - enabled: 1
+    path: Assets/Wave/Demo/Stage/Demo-Stage.unity
+    guid: 035ccf41ce1c9a64b842f26c078d7a03
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8012c229df5d8f84683449de40029a6b,
       type: 2}

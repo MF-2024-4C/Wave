@@ -1,0 +1,8 @@
+input
+{
+    button Fire;
+    
+    button ChangePrimaryWeapon;
+    button ChangeSecondaryWeapon;
+    button ChangeTertiaryWeapon;
+}
