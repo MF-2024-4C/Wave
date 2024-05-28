@@ -105,6 +105,7 @@
         <Compile Include="Wave\Zombie\State\ZombieSpawnCondition.cs"/>
         <Compile Include="Wave\Zombie\State\ZombieSpecConfig.cs"/>
         <Compile Include="Wave\Zombie\System\ButtonInteractableSystem.cs"/>
+        <Compile Include="Wave\Zombie\System\TestedGunFireSystem.cs" />
         <Compile Include="Wave\Zombie\System\ZombieSpawnAreaSystem.cs"/>
         <Compile Include="Wave\Zombie\System\ZombieSpawnSystem.cs"/>
         <Compile Include="Wave\Zombie\System\ZombieSystem.cs"/>
