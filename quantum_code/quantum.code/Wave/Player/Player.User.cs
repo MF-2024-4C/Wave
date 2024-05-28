@@ -8,31 +8,22 @@ namespace Quantum
     {
         public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys, Input input)
         {
-            PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
 
-            cconfig.Braking = config.BreakPower;
+            cconfig.Braking = playerSys->BreakPower;
             var animState = PlayerConfig.PAnimIdle;
-            
-            /*
-            Input input = default;
-            if (f.Unsafe.TryGetPointer(entityRef, out PlayerLink* playerLink))
-            {
-                input = *f.GetPlayerInput(playerLink->Player);
-            }
-            */
 
             if (input.PlayerJump.WasPressed && controller->Grounded)
             {
-                controller->Jump(f, false, config.JumpPower);
+                controller->Jump(f, false, playerSys->JumpPower);
                 animState |= PlayerConfig.PAnimJump;
             }
             
             
-            FP speed = config.WalkSpeed;
+            FP speed = playerSys->WalkSpeed;
             if (input.PlayerDash)
             {
-                speed = config.RunSpeed;
+                speed = playerSys->RunSpeed;
                 animState |= PlayerConfig.PAnimRun;
             }
             controller->MaxSpeed = speed;
@@ -81,7 +72,7 @@ namespace Quantum
                     Hit3D hhit = (Hit3D)hit;
                     if(f.Unsafe.TryGetPointer<Interacter>(hhit.Entity, out Interacter* interacter))
                     {
-
+                        Interacter.Interact(f, entity, interacter);
                     }
 
                 }
@@ -91,6 +82,15 @@ namespace Quantum
         public static void Recoil(FPVector2 recoil)
         {
             
+        }
+
+        public void SetConfig(Frame　f)
+        {
+            PlayerConfig config = f.FindAsset<PlayerConfig>(this.Config.Id);
+            WalkSpeed = config.WalkSpeed;
+            RunSpeed = config.RunSpeed;
+            JumpPower = config.JumpPower;
+            BreakPower = config.BreakPower;
         }
     }
 }

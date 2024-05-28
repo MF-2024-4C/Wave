@@ -8,13 +8,9 @@ namespace Quantum
 {
     public unsafe partial struct Interacter
     {
-        public static void Interact(Frame f, EntityRef interacterEntity, Interacter* interacter, Transform3D* transform)
+        public static void Interact(Frame f, EntityRef playerEntity, Interacter* interacter)
         {
-            if(interacter->IsInteract)
-            {
-                Log.Info(interacterEntity.ToString() + "is Interact has " + interacter->IsInteract);
-                //f.Physics3D.Raycast()
-            }
+            //Log.Info($"{playerEntity.} has Interact :")
         }
     }
 }

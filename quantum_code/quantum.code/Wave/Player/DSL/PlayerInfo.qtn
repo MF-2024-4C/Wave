@@ -6,4 +6,9 @@ component PlayerSys
     
     byte PlayerAnimState;
     FPQuaternion TargetRotation;    
+    
+    FP WalkSpeed;
+    FP RunSpeed;
+    FP JumpPower;
+    FP BreakPower;
 }
