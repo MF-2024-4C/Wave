@@ -19,11 +19,9 @@ public class FireSystem : MonoBehaviour
 
     private void Fire(EventFire　e)
     {
-        Debug.Log("Fire event received");
-
         var frame = QuantumRunner.Default.Game.Frames.Predicted;
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
-        WeaponInventory.Instance.UsingGun.PlayFireAnimation();
+        WeaponInventory.Instance.CurrentWeapon.PlayFireAnimation();
     }
 }

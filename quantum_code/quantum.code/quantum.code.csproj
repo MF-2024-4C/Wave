@@ -89,13 +89,14 @@
     <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
     <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
     <Compile Include="UnityExtension\SystemConfig.cs" />
-    <Compile Include="Wave\Gun\WeaponChanger.cs" />
-    <Compile Include="Wave\Gun\GunFireSystem.cs" />
-    <Compile Include="Wave\Gun\PlayerSpawnSystem.cs" />
-    <Compile Include="Wave\Gun\WeaponData.cs" />
+    <Compile Include="Wave\Weapon\WeaponChanger.cs" />
+    <Compile Include="Wave\Weapon\WeaponFireSystem.cs" />
+    <Compile Include="Wave\Weapon\PlayerSpawnSystem.cs" />
+    <Compile Include="Wave\Weapon\WeaponData.cs" />
     <Compile Include="Wave\Player\Player.User.cs" />
     <Compile Include="Wave\Player\PlayerConfig.cs" />
     <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
+    <Compile Include="Wave\Weapon\WeaponInventory.cs" />
     <Compile Include="Wave\Zombie\ZombieMoveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,10 +106,10 @@
     <Content Include="QuantumDemo\Input.qtn" />
     <Content Include="QuantumDemo\PlayerLink.qtn" />
     <Content Include="UnityExtension\SysteemConfig.qtn" />
-    <Content Include="Wave\Gun\Input\TmpPlayerInput.qtn" />
-    <Content Include="Wave\Gun\PlayerLink.qtn" />
-    <Content Include="Wave\Gun\TmpPlayer.qtn" />
-    <Content Include="Wave\Gun\Weapon.qtn" />
+    <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn" />
+    <Content Include="Wave\Weapon\DSL\Weapon.qtn" />
+    <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn" />
+    <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
   </ItemGroup>

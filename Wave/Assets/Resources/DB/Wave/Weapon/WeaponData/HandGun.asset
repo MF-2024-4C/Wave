@@ -17,9 +17,10 @@ MonoBehaviour:
       Path: Resources/DB/Wave/Weapon/WeaponData/HandGun
       Guid:
         Value: 4340777512014185396
+    Type: 1
     FireRate:
       RawValue: 32768
     ReloadTime:
       RawValue: 0
-  WeaponPrefab: {fileID: 7021332335922032784, guid: dcb9581ef9eb4aa4c8eea87ccf51d098,
+  WeaponPrefab: {fileID: 8864005491116384672, guid: 4ce1037f6bcd5b74c87ad4e86685700a,
     type: 3}

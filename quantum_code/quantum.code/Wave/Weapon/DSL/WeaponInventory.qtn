@@ -1,0 +1,6 @@
+﻿component WeaponInventory
+{
+    asset_ref<WeaponData> PrimaryWeaponData;
+    asset_ref<WeaponData> SecondaryWeaponData;
+    asset_ref<WeaponData> TertiaryWeaponData;
+}

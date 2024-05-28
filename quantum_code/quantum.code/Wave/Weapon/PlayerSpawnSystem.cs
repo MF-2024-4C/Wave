@@ -1,4 +1,4 @@
-namespace Quantum.Wave.Gun;
+namespace Quantum.Wave.Weapon;
 
 public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSet
 {
@@ -13,7 +13,6 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         var playerLink = new PlayerLink()
         {
             Player = player,
-            Entity = entity,
         };
 
         frame.Add(entity, playerLink);

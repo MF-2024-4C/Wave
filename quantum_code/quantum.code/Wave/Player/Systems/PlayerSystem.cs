@@ -1,8 +1,8 @@
 ﻿namespace Quantum.Player
 {
-    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.Filter>
+    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter>
     {
-        public struct Filter
+        public struct PlayerFilter
         {
             public EntityRef Entity;
             public Transform3D* Transform;
@@ -10,18 +10,18 @@
             public PlayerSys* Player;
         }
 
-        public override void Update(Frame f, ref Filter filter)
+        public override void Update(Frame f, ref PlayerFilter playerFilter)
         {
             Input input = default;
             //PlayerAnimInfo* playerAnimInfo = f.Unsafe.GetPointer<PlayerAnimInfo>(filter.Entity);
-            if (f.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* playerLink))
+            if (f.Unsafe.TryGetPointer(playerFilter.Entity, out PlayerLink* playerLink))
             {
                 input = *f.GetPlayerInput(playerLink->Player);
             }
 
-            f.Unsafe.TryGetPointer(filter.Entity, out PlayerSys* playerLocalInfo);
-            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, playerLocalInfo, input);
-            PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input, playerLocalInfo);
+            f.Unsafe.TryGetPointer(playerFilter.Entity, out PlayerSys* playerLocalInfo);
+            PlayerSys.Rot(f, playerFilter.Entity, playerFilter.Transform, playerFilter.CharacterController, playerFilter.Player, playerLocalInfo, input);
+            PlayerSys.Move(f, playerFilter.Entity, playerFilter.CharacterController, playerFilter.Player, input, playerLocalInfo);
         }
     }
 }

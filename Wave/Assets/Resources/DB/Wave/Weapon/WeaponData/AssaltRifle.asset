@@ -21,5 +21,5 @@ MonoBehaviour:
       RawValue: 0
     ReloadTime:
       RawValue: 0
-  WeaponPrefab: {fileID: 7021332335922032784, guid: a3b2052ae07845646bff64b9d2d6d92a,
+  WeaponPrefab: {fileID: 8864005491116384672, guid: dfa3db175b8b5c5429827dd684fa1312,
     type: 3}
