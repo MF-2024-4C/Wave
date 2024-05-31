@@ -13,7 +13,11 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<PlayerSystem.Playe
 
         if (input.Fire.WasPressed)
         {
-            frame.Events.Fire(player->Player);
+            SendEventFire(frame, player);
         }
+    }
+    private void SendEventFire(Frame frame, PlayerLink* player)
+    {
+        frame.Events.Fire(player->Player);
     }
 }

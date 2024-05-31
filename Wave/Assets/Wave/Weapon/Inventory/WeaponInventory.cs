@@ -32,22 +32,13 @@ public class WeaponInventory : MonoBehaviour
 
     public void ChangeWeapon(WeaponType weaponType)
     {
-        GameObject container = null;
-
-        switch (weaponType)
+        var container = weaponType switch
         {
-            case WeaponType.Primary:
-                container = _primaryWeaponContainer;
-                break;
-            case WeaponType.Secondary:
-                container = _secondaryWeaponContainer;
-                break;
-            case WeaponType.Tertiary:
-                container = _tertiaryWeaponContainer;
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
+            WeaponType.Primary => _primaryWeaponContainer,
+            WeaponType.Secondary => _secondaryWeaponContainer,
+            WeaponType.Tertiary => _tertiaryWeaponContainer,
+            _ => throw new ArgumentOutOfRangeException()
+        };
 
         var gun = container.GetComponentInChildren<GunAnimationManager>();
         if (gun == null)
