@@ -27,6 +27,7 @@ namespace Quantum {
         // Quantum.QuantumDemo Start
         //new Quantum.QuantumDemo.MovementSystem(),
         new Quantum.QuantumDemo.PlayerSpawnSystem(),
+        new Quantum.Wave.Item.ItemSystem(),
         // Quantum.QuantumDemo End
       };
     }

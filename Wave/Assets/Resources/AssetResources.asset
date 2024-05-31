@@ -71,6 +71,16 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/QuantumDemo/Map1
+    - Path: Resources/DB/Wave/Item/Config/New Item 1 Config Asset
+      AssetRef:
+        Id:
+          Value: 2358403187508147751
+      ResourcePath: DB/Wave/Item/Config/New Item 1 Config Asset
+    - Path: Resources/DB/Wave/Item/Config/New Item 2 Config Asset
+      AssetRef:
+        Id:
+          Value: 2360401544752659421
+      ResourcePath: DB/Wave/Item/Config/New Item 2 Config Asset
     - Path: Resources/DB/Wave/Player/Config/PlayerCharacterControllerConfig
       AssetRef:
         Id:

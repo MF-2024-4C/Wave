@@ -6,20 +6,6 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
-  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Interacter))]
-  public class Interacter_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Interacter_Prototype> {
-    public Quantum.QBoolean IsInteract;
-    [Quantum.LocalReference]
-    public global::EntityPrototype InteractEntity;
-
-    public sealed override Quantum.Prototypes.Interacter_Prototype Convert(EntityPrototypeConverter converter) {
-      var result = new Quantum.Prototypes.Interacter_Prototype();
-      result.IsInteract = this.IsInteract;
-      converter.Convert(this.InteractEntity, out result.InteractEntity);
-      return result;
-    }
-  }
-  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PhysicsJoints3D))]
   public class PhysicsJoints3D_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PhysicsJoints3D_Prototype> {
     [Quantum.Inspector.DynamicCollectionAttribute()]

@@ -129,9 +129,14 @@ MonoBehaviour:
   - Interacter:
     - IsInteract:
         Value: 1
-      InteractEntity:
-        SceneIndexPlusOne: 0
-    Item: []
+      OnInteract:
+        Value: 0
+    ItemData:
+    - Config:
+        Id:
+          Value: 2358403187508147751
+      IsInteract:
+        Value: 0
     PlayerLink: []
     PlayerSys: []
     CharacterController2D: []
@@ -188,6 +193,87 @@ MonoBehaviour:
     - Position:
         X:
           RawValue: 0
+        Y:
+          RawValue: 90439
+        Z:
+          RawValue: 1030881
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - Interacter:
+    - IsInteract:
+        Value: 1
+      OnInteract:
+        Value: 0
+    ItemData:
+    - Config:
+        Id:
+          Value: 2360401544752659421
+      IsInteract:
+        Value: 0
+    PlayerLink: []
+    PlayerSys: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 1
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -182190
         Y:
           RawValue: 90439
         Z:

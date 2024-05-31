@@ -80,7 +80,7 @@ namespace Quantum
                     if (f.Unsafe.TryGetPointer(hit.Entity, out Interacter* interacter))
                     {
                         if (!interacter->IsInteract) continue;
-                        Interacter.Interact(f, entity, interacter);
+                        Interacter.Interact(f, entity, hit.Entity, interacter);
                         return;
                     }
                 }
