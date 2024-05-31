@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentWeaponInventory : EntityComponentBase<Quantum.Prototypes.WeaponInventory_Prototype> {
+public partial class EntityComponentWeaponInventory : EntityComponentBase<Quantum.Prototypes.WeaponInventory_Prototype, Quantum.Prototypes.Unity.WeaponInventory_Prototype> {
 }

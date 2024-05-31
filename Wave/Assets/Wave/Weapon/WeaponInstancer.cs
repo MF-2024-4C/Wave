@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponInstancer : MonoBehaviour
 {
     [SerializeField] private EntityComponentWeaponInventory _weaponInventory;
-    
+    [SerializeField] private EntityView _entityView;
     public void OnEntityInstantiated()
     {
         QuantumEvent.Subscribe<EventInstanceWeapon>(this, InstanceWeapon);
@@ -14,30 +14,49 @@ public class WeaponInstancer : MonoBehaviour
         InitWeaponInstance();
     }
 
-    private void InitWeaponInstance()
+    private unsafe void InitWeaponInstance()
     {
-        if (_weaponInventory.Prototype.PrimaryWeaponData != null)
+        var entity = _entityView.EntityRef;
+        var frame = QuantumRunner.Default.Game.Frames.Verified.Unsafe;
+        var inventory = frame.GetPointer<Quantum.WeaponInventory>(entity);
+
+        var primaryPrototype = inventory->primary;
+        if (TryGetWeapon(primaryPrototype,out var primaryWeapon))
         {
             InstanceWeapon(new EventInstanceWeapon()
             {
-                Weapon = _weaponInventory.Prototype.PrimaryWeaponData
+                Weapon = primaryWeapon->data
             });
         }
 
-        if (_weaponInventory.Prototype.SecondaryWeaponData != null)
+        var secondaryPrototype = inventory->secondary;
+        if (TryGetWeapon(secondaryPrototype,out var secondaryWeapon))
         {
             InstanceWeapon(new EventInstanceWeapon()
             {
-                Weapon = _weaponInventory.Prototype.SecondaryWeaponData
+                Weapon = secondaryWeapon->data
             });
         }
 
-        if (_weaponInventory.Prototype.TertiaryWeaponData != null)
+        var tertiaryPrototype = inventory->tertiary;
+        if (TryGetWeapon(tertiaryPrototype,out var tertiaryWeapon))
         {
             InstanceWeapon(new EventInstanceWeapon()
             {
-                Weapon = _weaponInventory.Prototype.TertiaryWeaponData
+                Weapon = tertiaryWeapon->data
             });
+        }
+
+        return;
+
+        bool TryGetWeapon(EntityRef prototype,out Weapon* weapon)
+        {
+            weapon = null;
+            if (!prototype.IsValid) return false;
+            weapon = frame.GetPointer<Weapon>(prototype);
+            var result = weapon->data != null;
+            weapon = result ? weapon : null;
+            return result;
         }
     }
 
@@ -53,7 +72,6 @@ public class WeaponInstancer : MonoBehaviour
             WeaponType.Tertiary => WeaponInventory.Instance.TertiaryWeaponContainer,
             _ => null
         };
-
         if (parent != null) Instantiate((Object)weapon, parent.transform);
     }
 }

@@ -1,6 +1,23 @@
-﻿component WeaponInventory
+﻿
+enum WeaponType
 {
-    asset_ref<WeaponData> PrimaryWeaponData;
-    asset_ref<WeaponData> SecondaryWeaponData;
-    asset_ref<WeaponData> TertiaryWeaponData;
+    Primary,
+    Secondary,
+    Tertiary
+}
+
+component WeaponInventorySetup {
+    asset_ref<EntityPrototype> PrimaryWeaponData;
+    asset_ref<EntityPrototype> SecondaryWeaponData;
+    asset_ref<EntityPrototype> TertiaryWeaponData;
+}
+
+
+//Runtime component
+component WeaponInventory {
+    [HideInInspector] WeaponType currentWeaponType;
+
+    [HideInInspector] entity_ref primary;
+    [HideInInspector] entity_ref secondary;
+    [HideInInspector] entity_ref tertiary;
 }

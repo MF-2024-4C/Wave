@@ -97,6 +97,8 @@
     <Compile Include="Wave\Player\PlayerConfig.cs" />
     <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
     <Compile Include="Wave\Weapon\WeaponInventory.cs" />
+    <Compile Include="Wave\Weapon\WeaponInventory.User.cs" />
+    <Compile Include="Wave\Weapon\WeaponSetupSystem.cs" />
     <Compile Include="Wave\Zombie\ZombieMoveSystem.cs" />
   </ItemGroup>
   <ItemGroup>

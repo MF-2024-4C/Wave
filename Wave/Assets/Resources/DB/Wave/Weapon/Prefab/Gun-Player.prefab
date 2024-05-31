@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponInventory: {fileID: 8264991262294301537}
+  _entityView: {fileID: 6211237910592298372}
 --- !u!1 &3426929545932231358
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +460,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8264991262294301537}
+    - targetCorrespondingSourceObject: {fileID: 4958795330284115381, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8748151291478772945}
   m_SourcePrefab: {fileID: 100100000, guid: 98fadbbd3dc3fb349a30ab16c27a6364, type: 3}
 --- !u!4 &908227075985344832 stripped
 Transform:
@@ -485,12 +490,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype:
+    currentWeaponType:
+      Value: 0
+    primary: {fileID: 0}
+    secondary: {fileID: 0}
+    tertiary: {fileID: 0}
+--- !u!114 &-8748151291478772945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6085895854327098559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9119951c05ddff74c80abb67b87fd2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
     PrimaryWeaponData:
       Id:
-        Value: 3441278515709848495
+        Value: 2105746333505255402
     SecondaryWeaponData:
       Id:
-        Value: 4340777512014185396
+        Value: 3141823093661642465
     TertiaryWeaponData:
       Id:
         Value: 0

@@ -15,6 +15,7 @@ public class FireSystem : MonoBehaviour
         }
 
         QuantumEvent.Subscribe<EventFire>(this, Fire);
+        QuantumEvent.Subscribe<EventReload>(this, Reload);
     }
 
     private void Fire(EventFire　e)
@@ -23,5 +24,13 @@ public class FireSystem : MonoBehaviour
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
         WeaponInventory.Instance.CurrentWeapon.PlayFireAnimation();
+    }
+    
+    private void Reload(EventReload e)
+    {
+        var frame = QuantumRunner.Default.Game.Frames.Predicted;
+        if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
+
+        WeaponInventory.Instance.CurrentWeapon.PlayReloadAnimation();
     }
 }

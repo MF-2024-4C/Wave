@@ -8,10 +8,8 @@ public unsafe class GunAnimationManager : QuantumCallbacks
 {
     [SerializeField] private Animator _animator;
 
-    private const string FireTrigger = "Fire";
-
-    private static readonly int Fire = Animator.StringToHash(FireTrigger);
-    
+    private static readonly int Fire = Animator.StringToHash("Fire");
+    private static readonly int Reload = Animator.StringToHash("Reload");
 
     // Start is called before the first frame update
     void Start()
@@ -27,4 +25,8 @@ public unsafe class GunAnimationManager : QuantumCallbacks
         _animator.SetTrigger(Fire);
     }
     
+    public void PlayReloadAnimation()
+    {
+        _animator.SetTrigger(Reload);
+    }
 }

@@ -6,6 +6,30 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.WeaponInventory))]
+  public class WeaponInventory_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.WeaponInventory_Prototype> {
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    public Quantum.Prototypes.WeaponType_Prototype currentWeaponType;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype primary;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype secondary;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype tertiary;
+
+    public sealed override Quantum.Prototypes.WeaponInventory_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.WeaponInventory_Prototype();
+      result.currentWeaponType = this.currentWeaponType;
+      converter.Convert(this.primary, out result.primary);
+      converter.Convert(this.secondary, out result.secondary);
+      converter.Convert(this.tertiary, out result.tertiary);
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PhysicsJoints3D))]
   public class PhysicsJoints3D_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PhysicsJoints3D_Prototype> {
     [Quantum.Inspector.DynamicCollectionAttribute()]

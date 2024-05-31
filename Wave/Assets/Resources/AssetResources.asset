@@ -111,6 +111,11 @@ MonoBehaviour:
         Id:
           Value: 2006391941954019003
       ResourcePath: DB/Wave/Weapon/Prefab/Gun-Player
+    - Path: Resources/DB/Wave/Weapon/Prefab/HandGun|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2105746333505255402
+      ResourcePath: DB/Wave/Weapon/Prefab/HandGun
     - Path: Resources/DB/QuantumDemo/QuantumDemoSystem
       AssetRef:
         Id:
@@ -136,6 +141,11 @@ MonoBehaviour:
         Id:
           Value: 3140846135020528929
       ResourcePath: DB/Configs/DefaultSystemConfig
+    - Path: Resources/DB/Wave/Weapon/Prefab/Rifle|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3141823093661642465
+      ResourcePath: DB/Wave/Weapon/Prefab/Rifle
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
       AssetRef:
         Id:
@@ -146,6 +156,11 @@ MonoBehaviour:
         Id:
           Value: 3247494871574351852
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
+    - Path: Resources/DB/Wave/Weapon/Prefab/Weapon|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3339354036211394541
+      ResourcePath: DB/Wave/Weapon/Prefab/Weapon
     - Path: Resources/DB/Wave/Player/Config/DefaultPlayerConfig
       AssetRef:
         Id:
