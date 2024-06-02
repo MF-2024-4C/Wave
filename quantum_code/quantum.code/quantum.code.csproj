@@ -91,6 +91,7 @@
         <Compile Include="SimulationConfig.User.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="UnityExtension\DeterministicSystemSetup.cs"/>
+        <Compile Include="UnityExtension\NamedElementAttribute.cs" />
         <Compile Include="UnityExtension\RuntimeConfig.System.cs"/>
         <Compile Include="UnityExtension\SystemConfig.cs"/>
         <Compile Include="Wave\Gun\WeaponChanger.cs"/>

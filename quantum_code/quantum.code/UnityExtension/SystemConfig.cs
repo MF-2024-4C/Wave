@@ -53,6 +53,10 @@ namespace Quantum
         private static Dictionary<string, object> _cache = new Dictionary<string, object>();
         public string AssemblyQualifiedName;
 
+        public override string ToString()
+        {
+            return AssemblyQualifiedName;
+        }
         public bool IsValid => !string.IsNullOrEmpty(this.AssemblyQualifiedName);
 
         public SerializableType(Type type) => this.AssemblyQualifiedName = type.AssemblyQualifiedName;
@@ -169,7 +173,8 @@ namespace Quantum
                 return Array.Empty<SystemEntryBase>();
             }
         }
-
+        
+        [NamedElement("SystemType")]
         public List<SystemEntry> Entries = new();
 
         public static List<SystemBase> CreateSystems(SystemConfig config)
