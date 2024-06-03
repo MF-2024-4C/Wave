@@ -27,3 +27,21 @@ MonoBehaviour:
       RawValue: 6553600
     RotationSpeed:
       RawValue: 655360
+    InteractRayOffset:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 110100
+      Z:
+        RawValue: 0
+    CameraForwardDirection:
+      X:
+        RawValue: 51349
+      Y:
+        RawValue: -34132
+      Z:
+        RawValue: -22208
+    InteractRayDistance:
+      RawValue: 196608
+    InteractLayer:
+      BitMask: 183

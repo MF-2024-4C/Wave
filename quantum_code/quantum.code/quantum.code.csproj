@@ -98,9 +98,13 @@
         <Compile Include="Wave\Gun\GunFireSystem.cs"/>
         <Compile Include="Wave\Gun\PlayerSpawnSystem.cs"/>
         <Compile Include="Wave\Gun\WeaponData.cs"/>
-        <Compile Include="Wave\Player\Player.User.cs"/>
-        <Compile Include="Wave\Player\PlayerConfig.cs"/>
-        <Compile Include="Wave\Player\Systems\PlayerSystem.cs"/>
+        <Compile Include="Wave\Item\Interacter.User.cs" />
+        <Compile Include="Wave\Item\Item.User.cs" />
+        <Compile Include="Wave\Item\Systems\InteractSystem.cs" />
+        <Compile Include="Wave\Item\Systems\ItemSystem.cs" />
+        <Compile Include="Wave\Player\Player.User.cs" />
+        <Compile Include="Wave\Player\PlayerConfig.cs" />
+        <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
         <Compile Include="Wave\Zombie\State\Zombie.cs"/>
         <Compile Include="Wave\Zombie\State\ZombieSpawnAreaConfig.cs"/>
         <Compile Include="Wave\Zombie\State\ZombieSpawnCondition.cs"/>
@@ -123,8 +127,10 @@
         <Content Include="Wave\Gun\PlayerLink.qtn"/>
         <Content Include="Wave\Gun\TmpPlayer.qtn"/>
         <Content Include="Wave\Gun\Weapon.qtn"/>
-        <Content Include="Wave\Player\DSL\PlayerInfo.qtn"/>
-        <Content Include="Wave\Player\DSL\PlayerInput.qtn"/>
+        <Content Include="Wave\Item\DSL\Interactor.qtn" />
+        <Content Include="Wave\Item\DSL\ItemInfo.qtn" />
+        <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
+        <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
         <Content Include="Wave\Zombie\State\DSL\Zombie.qtn"/>
         <Content Include="Wave\Zombie\State\DSL\ZombieSpawnArea.qtn"/>
     </ItemGroup>
