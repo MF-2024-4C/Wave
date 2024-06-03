@@ -22,13 +22,13 @@ MonoBehaviour:
       Id:
         Value: 3012211894084026453
     DataFilepath: 
-    GridSizeX: 8
-    GridSizeY: 8
-    GridNodeSize: 16
+    GridSizeX: 32
+    GridSizeY: 32
+    GridNodeSize: 64
     WorldOffset:
       X:
-        RawValue: -4194304
+        RawValue: -67108864
       Y:
-        RawValue: -4194304
+        RawValue: -67108864
     MinAgentRadius:
       RawValue: 32768
