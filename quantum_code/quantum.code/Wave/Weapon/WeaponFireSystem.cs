@@ -2,6 +2,8 @@ namespace Quantum.Wave.Weapon;
 
 public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySystem.GunHolderFilter>
 {
+    Quantum.Weapon* currentWeapon;
+
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
     {
         Input input = default;
@@ -9,63 +11,93 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
         input = *frame.GetPlayerInput(player->Player);
 
-        filter.Inventory->GetCurrentWeapon(frame)->nextFireTime += frame.DeltaTime;
+        currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
 
-        if (filter.Inventory->GetCurrentWeapon(frame)->currentFireMode == FireMode.FullAuto)
+
+        //Fire
+        //---------------------------------------------
+        currentWeapon->nextFireTime += frame.DeltaTime;
+
+        if (currentWeapon->currentFireMode == FireMode.FullAuto)
         {
             FullAutoFire(frame, filter, input, player);
         }
-        else if (filter.Inventory->GetCurrentWeapon(frame)->currentFireMode == FireMode.SemiAuto)
+        else if (currentWeapon->currentFireMode == FireMode.SemiAuto)
         {
             SemiAutoFire(frame, filter, input, player);
         }
+        //---------------------------------------------
 
-        if (input.Reload.WasPressed && !filter.Inventory->GetCurrentWeapon(frame)->isReloading)
+
+        //Reload
+        //---------------------------------------------
+        if (currentWeapon->isReloading)
+        {
+            currentWeapon->reloadingTime += frame.DeltaTime;
+
+            if (currentWeapon->reloadingTime >= currentWeapon->reloadTime) //リロード完了
+            {
+                currentWeapon->isReloading = false;
+                currentWeapon->reloadingTime = 0;
+            }
+        }
+        else if (input.Reload.WasPressed && //リロードキーが押された
+                 !IsReloading() && //リロード中でない
+                 currentWeapon->currentAmmo < currentWeapon->maxAmmo) //1発以上弾が減っている
         {
             Reload(frame, filter, player);
         }
+        //---------------------------------------------
     }
 
     private void Reload(Frame frame, WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player)
     {
         SendReloadEvent(frame, player);
-        filter.Inventory->GetCurrentWeapon(frame)->currentAmmo = filter.Inventory->GetCurrentWeapon(frame)->maxAmmo;
+        currentWeapon->currentAmmo = currentWeapon->maxAmmo;
+        currentWeapon->isReloading = true;
     }
 
     private void FullAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
         PlayerLink* player)
     {
         if (!input.Fire.IsDown) return;
-        if (!IsEndedFireCoolTime(frame, filter)) return;
-        if (!IsExistAmmo(frame, filter)) return;
+        if (!IsEndedFireCoolTime()) return;
+        if (!IsExistAmmo()) return;
+        if (IsReloading()) return;
 
         SendFireEvent(frame, player);
-        filter.Inventory->GetCurrentWeapon(frame)->currentAmmo--;
-        filter.Inventory->GetCurrentWeapon(frame)->nextFireTime = 0;
+        currentWeapon->currentAmmo--;
+        currentWeapon->nextFireTime = 0;
     }
 
     private void SemiAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
         PlayerLink* player)
     {
         if (!input.Fire.WasPressed) return;
-        if (!IsEndedFireCoolTime(frame, filter)) return;
-        if (!IsExistAmmo(frame, filter)) return;
+        if (!IsEndedFireCoolTime()) return;
+        if (!IsExistAmmo()) return;
+        if (IsReloading()) return;
 
         SendFireEvent(frame, player);
-        filter.Inventory->GetCurrentWeapon(frame)->currentAmmo--;
-        filter.Inventory->GetCurrentWeapon(frame)->nextFireTime = 0;
+        currentWeapon->currentAmmo--;
+        currentWeapon->nextFireTime = 0;
     }
 
-    private bool IsExistAmmo(Frame frame, WeaponInventorySystem.GunHolderFilter filter)
+    private bool IsReloading()
     {
-        var ammo = filter.Inventory->GetCurrentWeapon(frame)->currentAmmo;
+        return currentWeapon->isReloading;
+    }
+
+    private bool IsExistAmmo()
+    {
+        var ammo = currentWeapon->currentAmmo;
         return ammo > 0;
     }
 
-    private bool IsEndedFireCoolTime(Frame frame, WeaponInventorySystem.GunHolderFilter filter)
+    private bool IsEndedFireCoolTime()
     {
-        var coolTime = filter.Inventory->GetCurrentWeapon(frame)->fireRate;
-        return filter.Inventory->GetCurrentWeapon(frame)->nextFireTime >= coolTime;
+        var coolTime = currentWeapon->fireRate;
+        return currentWeapon->nextFireTime >= coolTime;
     }
 
     private void SendFireEvent(Frame frame, PlayerLink* player)

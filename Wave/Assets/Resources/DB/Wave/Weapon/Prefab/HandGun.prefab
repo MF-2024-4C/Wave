@@ -297,7 +297,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: HandGun
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7165834280828015405, guid: dcb9581ef9eb4aa4c8eea87ccf51d098,
+        type: 3}
+      propertyPath: Prototype.data.Id.Value
+      value: 4340777512014185396
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -347096684451334399, guid: dcb9581ef9eb4aa4c8eea87ccf51d098, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3075689342370076383, guid: dcb9581ef9eb4aa4c8eea87ccf51d098,

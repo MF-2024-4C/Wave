@@ -379,8 +379,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
+      propertyPath: OnEntityDestroyed.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
+        type: 3}
       propertyPath: OnEntityInstantiated.m_PersistentCalls.m_Calls.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
+        type: 3}
+      propertyPath: OnEntityDestroyed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
@@ -391,6 +401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnEntityInstantiated.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
+        type: 3}
+      propertyPath: OnEntityDestroyed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
@@ -463,7 +478,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4958795330284115381, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8748151291478772945}
+      addedObject: {fileID: 3081421989957841105}
   m_SourcePrefab: {fileID: 100100000, guid: 98fadbbd3dc3fb349a30ab16c27a6364, type: 3}
 --- !u!4 &908227075985344832 stripped
 Transform:
@@ -495,7 +510,7 @@ MonoBehaviour:
     primary: {fileID: 0}
     secondary: {fileID: 0}
     tertiary: {fileID: 0}
---- !u!114 &-8748151291478772945
+--- !u!114 &3081421989957841105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -504,7 +519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6085895854327098559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9119951c05ddff74c80abb67b87fd2f1, type: 3}
+  m_Script: {fileID: 11500000, guid: efcc4c1631ea43a45b2e19edb7dd6833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype:

@@ -19,6 +19,7 @@ component  Weapon {
     FP reloadTime;
     int maxAmmo;   
     int damage;
+    int penetrationPower;
     
     //現在マガジンに入っている段数
     int currentAmmo;

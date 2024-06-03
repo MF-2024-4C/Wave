@@ -12,8 +12,9 @@ public partial class WeaponData
 
     public FP FireRate;
     public FP ReloadTime;
-    public int maxAmmo;
-    public int damage;
+    public int MaxAmmo;
+    public int Damage;
+    public int PenetrationPower;
 
     /// <summary>
     /// WeaponDataを追加した場合、CopyDataメソッドに追加すること。
@@ -29,13 +30,14 @@ public partial class WeaponData
 
         weapon->fireRate = FireRate;
         weapon->reloadTime = ReloadTime;
-        weapon->maxAmmo = maxAmmo;
-        weapon->damage = damage;
+        weapon->maxAmmo = MaxAmmo;
+        weapon->damage = Damage;
+        weapon->penetrationPower = PenetrationPower;
     }
 
     public unsafe void Initialize(Weapon* weapon)
     {
         CopyData(weapon);
-        weapon->currentAmmo = maxAmmo;
+        weapon->currentAmmo = MaxAmmo;
     }
 }

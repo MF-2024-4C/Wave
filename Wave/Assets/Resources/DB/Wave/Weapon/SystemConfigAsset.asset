@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Wave/Weapon/WeaponData/SystemConfigAsset
+      Path: Resources/DB/Wave/Weapon/SystemConfigAsset
       Guid:
         Value: 3778568326002901391
     Entries:

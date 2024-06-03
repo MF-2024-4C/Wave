@@ -176,11 +176,11 @@ MonoBehaviour:
         Id:
           Value: 3510670654372677438
       ResourcePath: DB/Wave/Player/Player
-    - Path: Resources/DB/Wave/Weapon/WeaponData/SystemConfigAsset
+    - Path: Resources/DB/Wave/Weapon/SystemConfigAsset
       AssetRef:
         Id:
           Value: 3778568326002901391
-      ResourcePath: DB/Wave/Weapon/WeaponData/SystemConfigAsset
+      ResourcePath: DB/Wave/Weapon/SystemConfigAsset
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
