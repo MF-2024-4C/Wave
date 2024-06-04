@@ -1,39 +1,62 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Quantum;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WeaponInventory : MonoBehaviour
 {
-    
     public static WeaponInventory Instance;
-    
-    [SerializeField] private GunAnimationManager _primaryGun, _secondaryGun;
-    [HideInInspector] public GunAnimationManager _usingGun;
-    public GunAnimationManager UsingGun => _usingGun;
-    
+
+    [SerializeField] private GameObject _primaryWeaponContainer;
+    public GameObject PrimaryWeaponContainer => _primaryWeaponContainer;
+
+    [SerializeField] private GameObject _secondaryWeaponContainer;
+    public GameObject SecondaryWeaponContainer => _secondaryWeaponContainer;
+
+    [SerializeField] private GameObject _tertiaryWeaponContainer;
+    public GameObject TertiaryWeaponContainer => _tertiaryWeaponContainer;
+
+    [HideInInspector] public GunAnimationManager CurrentWeapon;
+
     private void Awake()
     {
         Instance = this;
     }
 
-    private void Start()
+    public void OnEntityInstantiated()
     {
-        ChangePrimaryGun();
+        ChangeWeapon(WeaponType.Primary);
     }
 
-    public void ChangePrimaryGun()
+    public void ChangeWeapon(WeaponType weaponType)
     {
-        _usingGun = _primaryGun;
-        _primaryGun.gameObject.SetActive(true);
-        _secondaryGun.gameObject.SetActive(false);
+        var container = weaponType switch
+        {
+            WeaponType.Primary => _primaryWeaponContainer,
+            WeaponType.Secondary => _secondaryWeaponContainer,
+            WeaponType.Tertiary => _tertiaryWeaponContainer,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        var gun = container.GetComponentInChildren<GunAnimationManager>();
+        if (gun == null)
+        {
+            Debug.LogError("GunAnimationManagerがアタッチされていません", container);
+            return;
+        }
+
+        CurrentWeapon = gun;
+
+        ToggleWeapon(container);
     }
 
-    public void ChangeSecondaryGun()
+    private void ToggleWeapon(GameObject currentGunContainer)
     {
-        _usingGun = _secondaryGun;
-        _primaryGun.gameObject.SetActive(false);
-        _secondaryGun.gameObject.SetActive(true);
+        _primaryWeaponContainer?.SetActive(false);
+        _secondaryWeaponContainer?.SetActive(false);
+        _tertiaryWeaponContainer?.SetActive(false);
+        currentGunContainer?.SetActive(true);
     }
-    
 }

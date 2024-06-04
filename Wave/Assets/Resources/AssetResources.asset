@@ -46,6 +46,26 @@ MonoBehaviour:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityView
+      AssetRef:
+        Id:
+          Value: 366801976411227842
+      ResourcePath: DB/Wave/Weapon/TmpPlayer
+    - Path: Resources/DB/QuantumDemo/SimulationConfig
+      AssetRef:
+        Id:
+          Value: 391217586855469871
+      ResourcePath: DB/QuantumDemo/SimulationConfig
+    - Path: Resources/DB/QuantumDemo/GunMap
+      AssetRef:
+        Id:
+          Value: 418898905064396654
+      ResourcePath: DB/QuantumDemo/GunMap
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 612724826640121007
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerArmature
     - Path: Resources/DB/Wave/Player/Player|EntityView
       AssetRef:
         Id:
@@ -71,43 +91,118 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/QuantumDemo/Map1
-    - Path: Resources/DB/Wave/Item/Config/New Item 1 Config Asset
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityView
       AssetRef:
         Id:
-          Value: 2358403187508147751
-      ResourcePath: DB/Wave/Item/Config/New Item 1 Config Asset
-    - Path: Resources/DB/Wave/Item/Config/New Item 2 Config Asset
+          Value: 1806898859422963237
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerCharacter
+    - Path: Resources/DB/Exp/GPU-Instancer/Expo-GPUInstaceMap_mesh
       AssetRef:
         Id:
-          Value: 2360401544752659421
-      ResourcePath: DB/Wave/Item/Config/New Item 2 Config Asset
+          Value: 1906811426938971220
+      ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap_mesh
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityView
+      AssetRef:
+        Id:
+          Value: 2000648132830211038
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerArmature
+    - Path: Resources/DB/Wave/Weapon/Prefab/Gun-Player|EntityView
+      AssetRef:
+        Id:
+          Value: 2006391941954019003
+      ResourcePath: DB/Wave/Weapon/Prefab/Gun-Player
+    - Path: Resources/DB/Wave/Weapon/Prefab/HandGun|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2105746333505255402
+      ResourcePath: DB/Wave/Weapon/Prefab/HandGun
+    - Path: Resources/DB/QuantumDemo/QuantumDemoSystem
+      AssetRef:
+        Id:
+          Value: 2247853238166099880
+      ResourcePath: DB/QuantumDemo/QuantumDemoSystem
     - Path: Resources/DB/Wave/Player/Config/PlayerCharacterControllerConfig
       AssetRef:
         Id:
           Value: 2485832878967613001
       ResourcePath: DB/Wave/Player/Config/PlayerCharacterControllerConfig
+    - Path: Resources/DB/Wave/Weapon/Prefab/Gun-Player|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 2699151491591919434
+      ResourcePath: DB/Wave/Weapon/Prefab/Gun-Player
+    - Path: Resources/DB/QuantumDemo/GunMap_mesh
+      AssetRef:
+        Id:
+          Value: 3125345421081680597
+      ResourcePath: DB/QuantumDemo/GunMap_mesh
+    - Path: Resources/DB/Configs/DefaultSystemConfig
+      AssetRef:
+        Id:
+          Value: 3140846135020528929
+      ResourcePath: DB/Configs/DefaultSystemConfig
+    - Path: Resources/DB/Wave/Weapon/Prefab/Rifle|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3141823093661642465
+      ResourcePath: DB/Wave/Weapon/Prefab/Rifle
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
       AssetRef:
         Id:
           Value: 3202285255980693029
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
+      AssetRef:
+        Id:
+          Value: 3247494871574351852
+      ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
+    - Path: Resources/DB/Wave/Weapon/Prefab/Weapon|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3339354036211394541
+      ResourcePath: DB/Wave/Weapon/Prefab/Weapon
     - Path: Resources/DB/Wave/Player/Config/DefaultPlayerConfig
       AssetRef:
         Id:
           Value: 3342626901580343345
       ResourcePath: DB/Wave/Player/Config/DefaultPlayerConfig
+    - Path: Resources/DB/Wave/Weapon/WeaponData/AssaltRifle
+      AssetRef:
+        Id:
+          Value: 3441278515709848495
+      ResourcePath: DB/Wave/Weapon/WeaponData/AssaltRifle
     - Path: Resources/DB/Wave/Player/Player|EntityPrototype
       AssetRef:
         Id:
           Value: 3510670654372677438
       ResourcePath: DB/Wave/Player/Player
+    - Path: Resources/DB/Wave/Weapon/SystemConfigAsset
+      AssetRef:
+        Id:
+          Value: 3778568326002901391
+      ResourcePath: DB/Wave/Weapon/SystemConfigAsset
+    - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 4127952087584879725
+      ResourcePath: DB/Exp/GPU-Instancer/PlayerCharacter
     - Path: Resources/DB/QuantumDemo/Map1_mesh
       AssetRef:
         Id:
           Value: 4182183522022618454
       ResourcePath: DB/QuantumDemo/Map1_mesh
+    - Path: Resources/DB/Wave/Weapon/WeaponData/HandGun
+      AssetRef:
+        Id:
+          Value: 4340777512014185396
+      ResourcePath: DB/Wave/Weapon/WeaponData/HandGun
     - Path: Resources/DB/Wave/Player/PlayerTestScene
       AssetRef:
         Id:
           Value: 4443572856780175836
       ResourcePath: DB/Wave/Player/PlayerTestScene
+    - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 4561826521370215918
+      ResourcePath: DB/Wave/Weapon/TmpPlayer
