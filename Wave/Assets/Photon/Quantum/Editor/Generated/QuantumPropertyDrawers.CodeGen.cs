@@ -57,6 +57,8 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.FireMode_Prototype))]
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.WeaponType_Prototype))]
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.ZombieState_Prototype))]
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.InputButtons_Prototype))]
   partial class PrototypeDrawer {}

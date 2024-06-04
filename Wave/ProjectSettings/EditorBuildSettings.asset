@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wave/Demo/Stage/Demo-Stage.unity
     guid: 035ccf41ce1c9a64b842f26c078d7a03
+  - enabled: 1
+    path: Assets/Wave/Demo/Stage/Demo-Stage-ICE.unity
+    guid: 4fefca9cae85f45459bb75a817ed334a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8012c229df5d8f84683449de40029a6b,
       type: 2}

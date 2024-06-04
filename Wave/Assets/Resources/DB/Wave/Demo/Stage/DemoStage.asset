@@ -470,6 +470,9 @@ MonoBehaviour:
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
     TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
     Zombie: []
     ZombieSpawnArea: []
     ZombieTargetable: []
@@ -576,6 +579,9 @@ MonoBehaviour:
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
     TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
     Zombie: []
     ZombieSpawnArea:
     - Active:
@@ -637,6 +643,9 @@ MonoBehaviour:
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
     TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
     Zombie:
     - HP:
         RawValue: 0
@@ -774,6 +783,9 @@ MonoBehaviour:
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
     TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
     Zombie:
     - HP:
         RawValue: 0

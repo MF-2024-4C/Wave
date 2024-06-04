@@ -68,6 +68,8 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         SendFireEvent(frame, player);
         currentWeapon->currentAmmo--;
         currentWeapon->nextFireTime = 0;
+        
+        OnFire(frame, filter, player);
     }
 
     private void SemiAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
@@ -81,6 +83,8 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         SendFireEvent(frame, player);
         currentWeapon->currentAmmo--;
         currentWeapon->nextFireTime = 0;
+        
+        OnFire(frame, filter, player);
     }
 
     private bool IsReloading()
@@ -108,5 +112,11 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
     private void SendReloadEvent(Frame frame, PlayerLink* player)
     {
         frame.Events.Reload(player->Player);
+    }
+    
+    private static void OnFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player)
+    {
+        Log.Info("OnFire");
+        WeaponFireUtilities.ProjectileCast(frame, filter.Transform3D, filter.Player, frame.GetPlayerInput(player->Player));
     }
 }

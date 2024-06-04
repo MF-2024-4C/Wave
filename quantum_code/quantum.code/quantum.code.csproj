@@ -73,47 +73,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="CommandSetup.User.cs"/>
-        <Compile Include="Core\CodeGen.cs"/>
-        <Compile Include="CommandSetup.Legacy.cs"/>
-        <Compile Include="Core\Core.cs"/>
-        <Compile Include="Events\EventData.cs"/>
-        <Compile Include="Events\EventInternal.cs"/>
-        <Compile Include="Events\EventReader.cs"/>
-        <Compile Include="Events\EventWriter.cs"/>
-        <Compile Include="Events\GameEventSystem.cs"/>
-        <Compile Include="Frame.User.cs"/>
-        <Compile Include="FrameContext.User.cs"/>
-        <Compile Include="QuantumDemo\MovementSystem.cs"/>
-        <Compile Include="QuantumDemo\PlayerSpawnSystem.cs"/>
-        <Compile Include="RuntimeConfig.User.cs"/>
-        <Compile Include="RuntimePlayer.User.cs"/>
-        <Compile Include="SimulationConfig.User.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="UnityExtension\DeterministicSystemSetup.cs"/>
-        <Compile Include="UnityExtension\NamedElementAttribute.cs" />
-        <Compile Include="UnityExtension\RuntimeConfig.System.cs"/>
-        <Compile Include="UnityExtension\SystemConfig.cs"/>
-        <Compile Include="Wave\Gun\WeaponChanger.cs"/>
-        <Compile Include="Wave\Gun\GunFireSystem.cs"/>
-        <Compile Include="Wave\Gun\PlayerSpawnSystem.cs"/>
-        <Compile Include="Wave\Gun\WeaponData.cs"/>
-        <Compile Include="Wave\Item\Interacter.User.cs" />
-        <Compile Include="Wave\Item\Item.User.cs" />
-        <Compile Include="Wave\Item\Systems\InteractSystem.cs" />
-        <Compile Include="Wave\Item\Systems\ItemSystem.cs" />
-        <Compile Include="Wave\Player\Player.User.cs" />
-        <Compile Include="Wave\Player\PlayerConfig.cs" />
-        <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
-        <Compile Include="Wave\Zombie\State\Zombie.cs"/>
-        <Compile Include="Wave\Zombie\State\ZombieSpawnAreaConfig.cs"/>
-        <Compile Include="Wave\Zombie\State\ZombieSpawnCondition.cs"/>
-        <Compile Include="Wave\Zombie\State\ZombieSpecConfig.cs"/>
-        <Compile Include="Wave\Zombie\System\ButtonInteractableSystem.cs"/>
-        <Compile Include="Wave\Zombie\System\TestedGunFireSystem.cs" />
-        <Compile Include="Wave\Zombie\System\ZombieSpawnAreaSystem.cs"/>
-        <Compile Include="Wave\Zombie\System\ZombieSpawnSystem.cs"/>
-        <Compile Include="Wave\Zombie\System\ZombieSystem.cs"/>
+        <Compile Include="**\*.cs" Exclude="obj/**/*.cs"/>
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Include="db.json"/>
@@ -123,10 +83,10 @@
         <Content Include="QuantumDemo\Input.qtn"/>
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
         <Content Include="UnityExtension\SysteemConfig.qtn"/>
-        <Content Include="Wave\Gun\Input\TmpPlayerInput.qtn"/>
-        <Content Include="Wave\Gun\PlayerLink.qtn"/>
-        <Content Include="Wave\Gun\TmpPlayer.qtn"/>
-        <Content Include="Wave\Gun\Weapon.qtn"/>
+        <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn"/>
+        <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn"/>
+        <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn"/>
+        <Content Include="Wave\Weapon\DSL\Weapon.qtn"/>
         <Content Include="Wave\Item\DSL\Interactor.qtn" />
         <Content Include="Wave\Item\DSL\ItemInfo.qtn" />
         <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
