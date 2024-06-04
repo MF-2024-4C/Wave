@@ -383,11 +383,11 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: 0
+          RawValue: 229376
         Y:
-          RawValue: 0
+          RawValue: -228719
         Z:
-          RawValue: -1147510
+          RawValue: 818569
       PhysicsMaterial:
         Id:
           Value: 0
@@ -424,11 +424,11 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: 0
+          RawValue: 260715
         Y:
-          RawValue: 0
+          RawValue: -228719
         Z:
-          RawValue: 1211760
+          RawValue: 3177840
       PhysicsMaterial:
         Id:
           Value: 0
@@ -463,6 +463,8 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    Interacter: []
+    ItemData: []
     PlayerLink: []
     PlayerSys: []
     RuntimeSwarm: []
@@ -567,6 +569,8 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    Interacter: []
+    ItemData: []
     PlayerLink: []
     PlayerSys: []
     RuntimeSwarm: []
@@ -626,6 +630,8 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    Interacter: []
+    ItemData: []
     PlayerLink: []
     PlayerSys: []
     RuntimeSwarm: []
@@ -761,6 +767,8 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    Interacter: []
+    ItemData: []
     PlayerLink: []
     PlayerSys: []
     RuntimeSwarm: []
