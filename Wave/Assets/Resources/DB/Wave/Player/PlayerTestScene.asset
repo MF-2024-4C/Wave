@@ -209,7 +209,7 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - Interactor:
     - IsInteract:
-        Value: 1
+        Value: 0
       OnInteract:
         Value: 0
     ItemData:

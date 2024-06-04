@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Quantum;
 using Quantum.QuantumDemo;
 using TMPro;
 using UnityEngine;
+using LayerMask = UnityEngine.LayerMask;
 
 //ここは後から別のスクリプトになりそう
 public class PlayerCheckInteract : MonoBehaviour
@@ -33,13 +35,17 @@ public class PlayerCheckInteract : MonoBehaviour
 
         var hits = Physics.RaycastAll(from, forward, distance);
 
-        EntityComponentInteractor hitInteracter = null;
+        EntityView hitEntityView = null;
+        var frame = QuantumRunner.Default.Game.Frames.Verified;
+
         foreach (RaycastHit hit in hits)
         {
             Debug.Log("Hit Any");
-            hitInteracter = null;
-            hitInteracter = hit.transform.root.transform.GetComponent<EntityComponentInteractor>();
-            if (hitInteracter == null) continue;
+            hitEntityView = null;
+            hitEntityView = hit.transform.GetComponentInParent<EntityView>();
+            if (hitEntityView == null) continue;
+            if (!frame.TryGet<Interactor>(hitEntityView.EntityRef,out var hitInteractor)) continue;
+            if (!hitInteractor.IsInteract) continue;
             Debug.Log("Hit Interacter!");
             return true;
         }

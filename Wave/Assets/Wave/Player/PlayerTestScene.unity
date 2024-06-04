@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prototype:
     IsInteract:
-      Value: 1
+      Value: 0
     OnInteract:
       Value: 0
 --- !u!1 &219408022
