@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 6157564102664313226}
   - component: {fileID: 5684033664292768011}
   - component: {fileID: 7569993271907966049}
-  - component: {fileID: 8571728936746439879}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -553,6 +552,13 @@ MonoBehaviour:
       RawValue: 0
     BreakPower:
       RawValue: 0
+    CameraForwardDirection:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 0
+      Z:
+        RawValue: 0
 --- !u!114 &-4638503294811154689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,24 +629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5203a542424a31d4abf03b0f4c4c9eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSys: {fileID: 7851188067770254504}
---- !u!114 &8571728936746439879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4958795330284115381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9695737940aca104ea88b910e3688efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerSys: {fileID: 7851188067770254504}
-  playerUISO: {fileID: 11400000, guid: e42a63ec84dc454459a0d5c0249dcb1f, type: 2}
-  _interactLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  _entityView: {fileID: 5086503397990343822}
+  _entityComponentPlayerSys: {fileID: 7851188067770254504}
 --- !u!1001 &1444931101471707952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1564,6 +1554,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8690772603380214150, guid: b23e070ee191c6248a5346edf4b6f0c6,
+        type: 3}
+      propertyPath: _playerSys
+      value: 
+      objectReference: {fileID: 7851188067770254504}
+    - target: {fileID: 8690772603380214150, guid: b23e070ee191c6248a5346edf4b6f0c6,
+        type: 3}
+      propertyPath: _entityView
+      value: 
+      objectReference: {fileID: 5086503397990343822}
+    - target: {fileID: 8690772603380214150, guid: b23e070ee191c6248a5346edf4b6f0c6,
+        type: 3}
+      propertyPath: _entityComponentPlayerSys
+      value: 
+      objectReference: {fileID: 7851188067770254504}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

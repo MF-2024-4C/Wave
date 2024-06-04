@@ -194,5 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb259205881982408fdf67d50264c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerUISO: {fileID: 11400000, guid: e42a63ec84dc454459a0d5c0249dcb1f, type: 2}
+  _playerSys: {fileID: 0}
+  _interactLayer:
+    serializedVersion: 2
+    m_Bits: 256
   _canInteractUI: {fileID: 2688293421990693531}
