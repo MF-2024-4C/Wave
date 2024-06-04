@@ -6,9 +6,9 @@ using Quantum.Physics3D;
 
 namespace Quantum
 {
-    public unsafe partial struct Interacter
+    public unsafe partial struct Interactor
     {
-        public static void Interact(Frame f, EntityRef playerEntity, EntityRef itemEntity, Interacter* interacter)
+        public static void Interact(Frame f, EntityRef playerEntity, EntityRef itemEntity, Interactor* interacter)
         {
             //if (!interacter->IsInteract) return;
             //Log.Info($"{playerEntity.} has Interact :")

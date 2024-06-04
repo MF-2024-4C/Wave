@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 66314078}
   - component: {fileID: 66314077}
   - component: {fileID: 66314083}
+  - component: {fileID: 66314084}
   m_Layer: 0
   m_Name: ItemObject2
   m_TagString: Untagged
@@ -485,6 +486,23 @@ MonoBehaviour:
         Value: 2360401544752659421
     IsInteract:
       Value: 0
+--- !u!114 &66314084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66314075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd20d009155074c4c9f7a885ff8cd443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    IsInteract:
+      Value: 1
+    OnInteract:
+      Value: 0
 --- !u!1 &219408022
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +552,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -641,7 +659,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1246,6 +1264,7 @@ GameObject:
   - component: {fileID: 1520660270}
   - component: {fileID: 1520660275}
   - component: {fileID: 1520660277}
+  - component: {fileID: 1520660278}
   m_Layer: 0
   m_Name: ItemObject
   m_TagString: Untagged
@@ -1533,6 +1552,23 @@ MonoBehaviour:
       Id:
         Value: 2358403187508147751
     IsInteract:
+      Value: 0
+--- !u!114 &1520660278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520660268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd20d009155074c4c9f7a885ff8cd443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    IsInteract:
+      Value: 1
+    OnInteract:
       Value: 0
 --- !u!1001 &1604458062
 PrefabInstance:

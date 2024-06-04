@@ -77,10 +77,10 @@ namespace Quantum
                 for (int i = 0; i < hits.Count; i++)
                 {
                     var hit = hits[i];
-                    if (f.Unsafe.TryGetPointer(hit.Entity, out Interacter* interacter))
+                    if (f.Unsafe.TryGetPointer(hit.Entity, out Interactor* interacter))
                     {
                         if (!interacter->IsInteract) continue;
-                        Interacter.Interact(f, entity, hit.Entity, interacter);
+                        Interactor.Interact(f, entity, hit.Entity, interacter);
                         return;
                     }
                 }

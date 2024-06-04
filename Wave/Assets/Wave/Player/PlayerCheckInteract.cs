@@ -33,12 +33,12 @@ public class PlayerCheckInteract : MonoBehaviour
 
         var hits = Physics.RaycastAll(from, forward, distance);
 
-        EntityComponentInteracter hitInteracter = null;
+        EntityComponentInteractor hitInteracter = null;
         foreach (RaycastHit hit in hits)
         {
             Debug.Log("Hit Any");
             hitInteracter = null;
-            hitInteracter = hit.transform.root.transform.GetComponent<EntityComponentInteracter>();
+            hitInteracter = hit.transform.root.transform.GetComponent<EntityComponentInteractor>();
             if (hitInteracter == null) continue;
             Debug.Log("Hit Interacter!");
             return true;

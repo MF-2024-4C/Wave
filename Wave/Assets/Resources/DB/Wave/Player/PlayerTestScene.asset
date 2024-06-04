@@ -126,7 +126,7 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - Interacter:
+  - Interactor:
     - IsInteract:
         Value: 1
       OnInteract:
@@ -207,7 +207,7 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - Interacter:
+  - Interactor:
     - IsInteract:
         Value: 1
       OnInteract:
