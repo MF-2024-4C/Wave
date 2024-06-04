@@ -89,7 +89,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wave\Item\Interacter.User.cs" />
     <Compile Include="Wave\Item\Item.User.cs" />
-    <Compile Include="Wave\Item\Systems\InteractSystem.cs" />
     <Compile Include="Wave\Item\Systems\ItemSystem.cs" />
     <Compile Include="Wave\Player\Player.User.cs" />
     <Compile Include="Wave\Player\PlayerConfig.cs" />
