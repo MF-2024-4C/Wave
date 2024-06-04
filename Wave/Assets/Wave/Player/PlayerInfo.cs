@@ -19,6 +19,8 @@ namespace Wave.Player
 
         private void OnDrawGizmos()
         {
+            
+            //Interact Line Gizmos
             var playerSys = _playerSys.Prototype.Config;
             if (playerSys == null) return;
             var playerConfig = UnityDB.FindAsset<PlayerConfigAsset>(playerSys.Id).Settings;
