@@ -13,11 +13,20 @@ public unsafe class WeaponChanger : SystemMainThreadFilter<WeaponInventorySystem
         TryChangeWeapon(frame, ref filter, player, input.ChangeTertiaryWeapon, WeaponType.Tertiary);
     }
 
-    private void TryChangeWeapon(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, bool changeWeaponCondition, WeaponType weaponType)
+    private void TryChangeWeapon(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player,
+        bool changeWeaponCondition, WeaponType weaponType)
     {
-        if (changeWeaponCondition && filter.Inventory->GetWeaponFromType(frame, weaponType)->data != null && filter.Inventory->currentWeaponType != weaponType)
+        if (changeWeaponCondition &&
+            filter.Inventory->GetWeaponFromType(frame, weaponType)->data != null &&
+            filter.Inventory->currentWeaponType != weaponType)
         {
+            var oldWeapon = filter.Inventory->GetCurrentWeapon(frame);
+            frame.FindAsset<WeaponData>(oldWeapon->data.Id).OnUnEquip(oldWeapon);
+
             ChangeWeapon(frame, ref filter, player, weaponType);
+            
+            var newWeapon = filter.Inventory->GetWeaponFromType(frame, weaponType);
+            frame.FindAsset<WeaponData>(newWeapon->data.Id).OnEquip(newWeapon);
         }
     }
 

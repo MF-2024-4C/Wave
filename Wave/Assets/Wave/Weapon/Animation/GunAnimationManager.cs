@@ -10,6 +10,8 @@ public unsafe class GunAnimationManager : QuantumCallbacks
 
     private static readonly int Fire = Animator.StringToHash("Fire");
     private static readonly int Reload = Animator.StringToHash("Reload");
+    private static readonly int Equip = Animator.StringToHash("Equip");
+    private static readonly int UnEquip = Animator.StringToHash("UnEquip");
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +30,15 @@ public unsafe class GunAnimationManager : QuantumCallbacks
     public void PlayReloadAnimation()
     {
         _animator.SetTrigger(Reload);
+    }
+    
+    public void PlayEquipAnimation()
+    {
+        _animator.SetTrigger(Equip);
+    }
+    
+    public void PlayUnEquipAnimation()
+    {
+        _animator.SetTrigger(UnEquip);
     }
 }

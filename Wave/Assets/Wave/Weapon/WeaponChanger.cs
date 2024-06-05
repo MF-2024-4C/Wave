@@ -17,5 +17,7 @@ public class WeaponChanger : MonoBehaviour
         var type = UnityDB.FindAsset<WeaponDataAsset>(e.NewWeapon.Id).Settings.Type;
 
         WeaponInventory.Instance.ChangeWeapon(type);
+        
+        WeaponInventory.Instance.CurrentWeapon.PlayEquipAnimation();
     }
 }
