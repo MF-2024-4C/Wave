@@ -1,20 +1,34 @@
+using Photon.Deterministic;
+
 namespace Quantum.Wave.Weapon;
 
 public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySystem.GunHolderFilter>
 {
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
     {
+        Input input = default;
+
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
         
-        var input = *frame.GetPlayerInput(player->Player);
+        Log.Info($"Player: {player->Player}");
+
+        input = *frame.GetPlayerInput(player->Player);
 
         var currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
+
+        EquipProgress(frame, currentWeapon);
 
         Fire(frame, player, input, currentWeapon);
 
         Reload(frame, player, input, currentWeapon);
 
         RecoilProgress(frame, currentWeapon);
+    }
+
+    private void EquipProgress(Frame frame, Quantum.Weapon* currentWeapon)
+    {
+        if (currentWeapon->equipTime > FP._0)
+            currentWeapon->equipTime -= frame.DeltaTime;
     }
 
     private void Fire(Frame frame, PlayerLink* player, Input input, Quantum.Weapon* currentWeapon)
@@ -36,7 +50,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
     private void FireProgress(Frame frame, Quantum.Weapon* currentWeapon)
     {
-        if (currentWeapon->nextFireTime > 0)
+        if (currentWeapon->nextFireTime > FP._0)
             currentWeapon->nextFireTime -= frame.DeltaTime;
     }
 
@@ -54,7 +68,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
     {
         if (!currentWeapon->IsReloading()) return;
 
-        if (currentWeapon->reloadingTime > 0)
+        if (currentWeapon->reloadingTime > FP._0)
         {
             currentWeapon->reloadingTime -= frame.DeltaTime;
         }
@@ -66,11 +80,11 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
     private void RecoilProgress(Frame frame, Quantum.Weapon* currentWeapon)
     {
-        if (currentWeapon->nextFireTime > 0 || currentWeapon->recoilProgressTime <= 0) return;
+        if (currentWeapon->nextFireTime > FP._0 || currentWeapon->recoilProgressTime <= FP._0) return;
 
-        currentWeapon->recoilProgressTime -= 1 / currentWeapon->recoilProgressRate * frame.DeltaTime;
+        currentWeapon->recoilProgressTime -= FP._1 / currentWeapon->recoilProgressRate * frame.DeltaTime;
 
-        if (currentWeapon->recoilProgressTime < 0)
-            currentWeapon->recoilProgressTime = 0;
+        if (currentWeapon->recoilProgressTime < FP._0)
+            currentWeapon->recoilProgressTime = FP._0;
     }
 }

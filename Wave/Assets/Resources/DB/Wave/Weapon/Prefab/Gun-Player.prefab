@@ -457,6 +457,11 @@ PrefabInstance:
       propertyPath: OnEntityInstantiated.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7264476586775917861, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
+        type: 3}
+      propertyPath: PhysicsCollider.IsEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7788832636071237674, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
       propertyPath: m_IsActive

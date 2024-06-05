@@ -24,10 +24,12 @@ MonoBehaviour:
     FireRate:
       RawValue: 524288
     ReloadTime:
-      RawValue: 196608
+      RawValue: 131072
     MaxAmmo: 20
     Damage: 0
     PenetrationPower: 0
+    EquipTime:
+      RawValue: 32768
     HorizontalRecoilCurve:
       Samples:
       - RawValue: 0

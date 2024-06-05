@@ -1,4 +1,6 @@
-﻿namespace Quantum;
+﻿using Photon.Deterministic;
+
+namespace Quantum;
 
 public unsafe partial struct Weapon
 {
@@ -10,7 +12,7 @@ public unsafe partial struct Weapon
     private void OnFire(Frame frame, PlayerLink* player)
     {
         currentAmmo--;
-        nextFireTime = 1 / fireRate;
+        nextFireTime = FP._1 / fireRate;
 
         Recoil(frame);
         SendFireEvent(frame, player);
@@ -32,13 +34,13 @@ public unsafe partial struct Weapon
     {
         currentAmmo = maxAmmo;
         isReloading = false;
-        reloadingTime = 0;
+        reloadingTime = FP._0;
     }
 
     private void Recoil(Frame frame)
     {
         recoilProgressTime +=
-            1 / recoilProgressRate * (1 / fireRate);
+            FP._1 / recoilProgressRate * (FP._1 / fireRate);
 
         var weaponData = frame.FindAsset<WeaponData>(this.data.Id);
         var recoilX = weaponData.HorizontalRecoilCurve.Evaluate(recoilProgressTime);
@@ -49,7 +51,12 @@ public unsafe partial struct Weapon
 
     public bool CanFire()
     {
-        return IsEndedFireCoolTime() && IsExistAmmo() && !IsReloading();
+        return IsEndedFireCoolTime() && IsExistAmmo() && !IsReloading() && IsEndedEquipTime();
+    }
+    
+    private bool IsEndedEquipTime()
+    {
+        return equipTime <= FP._0;
     }
 
     public bool CanReload()
@@ -69,12 +76,12 @@ public unsafe partial struct Weapon
 
     private bool IsExistAmmo()
     {
-        return currentAmmo > 0;
+        return currentAmmo > FP._0;
     }
 
     private bool IsEndedFireCoolTime()
     {
-        return nextFireTime <= 0;
+        return nextFireTime <= FP._0;
     }
 
     private void SendFireEvent(Frame frame, PlayerLink* player)

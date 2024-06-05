@@ -4,7 +4,7 @@ public unsafe partial struct WeaponInventory
 {
     public Weapon* GetWeaponFromType(Frame frame, WeaponType type)
     {
-        EntityRef entity = default;
+        EntityRef entity;
         switch (type)
         {
             case WeaponType.Primary:
@@ -19,6 +19,8 @@ public unsafe partial struct WeaponInventory
             default:
                 return null;
         }
+
+        if (entity == default) return null;
 
         var weapon = frame.Unsafe.GetPointer<Weapon>(entity);
         return weapon;
