@@ -89,6 +89,7 @@
     <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
     <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
     <Compile Include="UnityExtension\SystemConfig.cs" />
+    <Compile Include="Wave\Weapon\Weapon.User.cs" />
     <Compile Include="Wave\Weapon\WeaponChanger.cs" />
     <Compile Include="Wave\Weapon\WeaponFireSystem.cs" />
     <Compile Include="Wave\Weapon\PlayerSpawnSystem.cs" />

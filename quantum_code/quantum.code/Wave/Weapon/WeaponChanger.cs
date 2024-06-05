@@ -4,26 +4,23 @@ public unsafe class WeaponChanger : SystemMainThreadFilter<WeaponInventorySystem
 {
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
     {
-        Input input = default;
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
 
-        input = *frame.GetPlayerInput(player->Player);
+        Input input = *frame.GetPlayerInput(player->Player);
 
-        if (input.ChangePrimaryWeapon && filter.Inventory->GetWeaponFromType(frame, WeaponType.Primary)->data != null)
-        {
-            ChangeWeapon(frame, ref filter, player, WeaponType.Primary);
-        }
+        TryChangeWeapon(frame, ref filter, player, input.ChangePrimaryWeapon, WeaponType.Primary);
+        TryChangeWeapon(frame, ref filter, player, input.ChangeSecondaryWeapon, WeaponType.Secondary);
+        TryChangeWeapon(frame, ref filter, player, input.ChangeTertiaryWeapon, WeaponType.Tertiary);
+    }
 
-        if (input.ChangeSecondaryWeapon && filter.Inventory->GetWeaponFromType(frame, WeaponType.Secondary)->data != null)
+    private void TryChangeWeapon(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, bool changeWeaponCondition, WeaponType weaponType)
+    {
+        if (changeWeaponCondition && filter.Inventory->GetWeaponFromType(frame, weaponType)->data != null && filter.Inventory->currentWeaponType != weaponType)
         {
-            ChangeWeapon(frame, ref filter, player, WeaponType.Secondary);
-        }
-
-        if (input.ChangeTertiaryWeapon && filter.Inventory->GetWeaponFromType(frame, WeaponType.Tertiary)->data != null)
-        {
-            ChangeWeapon(frame, ref filter, player, WeaponType.Tertiary);
+            ChangeWeapon(frame, ref filter, player, weaponType);
         }
     }
+
 
     private void ChangeWeapon(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player,
         WeaponType weaponType)

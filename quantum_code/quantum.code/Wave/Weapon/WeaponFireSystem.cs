@@ -2,135 +2,75 @@ namespace Quantum.Wave.Weapon;
 
 public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySystem.GunHolderFilter>
 {
-    Quantum.Weapon* currentWeapon;
-
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
     {
-        Input input = default;
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
-
-        input = *frame.GetPlayerInput(player->Player);
-
-        currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
-
-        //Fire
-        //---------------------------------------------
-        currentWeapon->nextFireTime -= frame.DeltaTime;
-
-        switch (currentWeapon->currentFireMode)
-        {
-            case FireMode.FullAuto:
-                FullAutoFire(frame, filter, input, player);
-                break;
-            case FireMode.SemiAuto:
-                SemiAutoFire(frame, filter, input, player);
-                break;
-        }
-        //---------------------------------------------
-
-
-        //Reload
-        //---------------------------------------------
-        if (currentWeapon->isReloading)
-        {
-            currentWeapon->reloadingTime += frame.DeltaTime;
-
-            if (currentWeapon->reloadingTime >= currentWeapon->reloadTime) //リロード完了
-            {
-                currentWeapon->isReloading = false;
-                currentWeapon->reloadingTime = 0;
-            }
-        }
-        else if (input.Reload.WasPressed && //リロードキーが押された
-                 !IsReloading() && //リロード中でない
-                 currentWeapon->currentAmmo < currentWeapon->maxAmmo) //1発以上弾が減っている
-        {
-            Reload(frame, filter, player);
-        }
-        //---------------------------------------------
-
-        //Recoil
-        //---------------------------------------------
-        if (currentWeapon->nextFireTime <= 0 && currentWeapon->recoilProgressTime > 0)
-        {
-            currentWeapon->recoilProgressTime -= 1 / currentWeapon->recoilProgressRate * frame.DeltaTime;
-            if (currentWeapon->recoilProgressTime < 0)
-                currentWeapon->recoilProgressTime = 0;
-        }
-        //---------------------------------------------
-    }
-
-    private void Recoil(Frame frame)
-    {
-        currentWeapon->recoilProgressTime +=
-            1 / currentWeapon->recoilProgressRate * (1 / currentWeapon->fireRate);
-
-        var data = frame.FindAsset<WeaponData>(currentWeapon->data.Id);
-        var recoilX = data.HorizontalRecoilCurve.Evaluate(currentWeapon->recoilProgressTime);
-        var recoilY = data.VerticalRecoilCurve.Evaluate(currentWeapon->recoilProgressTime);
-
-        //Log.Info($"RecoilX: {recoilX}, RecoilY: {recoilY}");
-    }
-
-    private void Reload(Frame frame, WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player)
-    {
-        SendReloadEvent(frame, player);
-        currentWeapon->currentAmmo = currentWeapon->maxAmmo;
-        currentWeapon->isReloading = true;
-    }
-
-    private void FullAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
-        PlayerLink* player)
-    {
-        if (!input.Fire.IsDown) return;
-        if (!IsEndedFireCoolTime()) return;
-        if (!IsExistAmmo()) return;
-        if (IsReloading()) return;
-
-        SendFireEvent(frame, player);
-        currentWeapon->currentAmmo--;
-        currentWeapon->nextFireTime = 1 / currentWeapon->fireRate;
         
-        Recoil(frame);
+        var input = *frame.GetPlayerInput(player->Player);
+
+        var currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
+
+        Fire(frame, player, input, currentWeapon);
+
+        Reload(frame, player, input, currentWeapon);
+
+        RecoilProgress(frame, currentWeapon);
     }
 
-    private void SemiAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
-        PlayerLink* player)
+    private void Fire(Frame frame, PlayerLink* player, Input input, Quantum.Weapon* currentWeapon)
     {
-        if (!input.Fire.WasPressed) return;
-        if (!IsEndedFireCoolTime()) return;
-        if (!IsExistAmmo()) return;
-        if (IsReloading()) return;
+        FireProgress(frame, currentWeapon);
 
-        SendFireEvent(frame, player);
-        currentWeapon->currentAmmo--;
-        currentWeapon->nextFireTime = 1 / currentWeapon->fireRate;
-        
-        Recoil(frame);
+        if (!currentWeapon->CanFire()) return;
+
+        var shouldFire = currentWeapon->currentFireMode switch
+        {
+            FireMode.FullAuto => input.Fire.IsDown,
+            FireMode.SemiAuto => input.Fire.WasPressed,
+            _ => false
+        };
+
+        if (shouldFire)
+            currentWeapon->Fire(frame, player);
     }
 
-    private bool IsReloading()
+    private void FireProgress(Frame frame, Quantum.Weapon* currentWeapon)
     {
-        return currentWeapon->isReloading;
+        if (currentWeapon->nextFireTime > 0)
+            currentWeapon->nextFireTime -= frame.DeltaTime;
     }
 
-    private bool IsExistAmmo()
+    private void Reload(Frame frame, PlayerLink* player, Input input, Quantum.Weapon* currentWeapon)
     {
-        return currentWeapon->currentAmmo > 0;
+        ReloadProgress(frame, currentWeapon);
+
+        if (input.Reload.WasPressed && currentWeapon->CanReload())
+        {
+            currentWeapon->Reload(frame, player);
+        }
     }
 
-    private bool IsEndedFireCoolTime()
+    private void ReloadProgress(Frame frame, Quantum.Weapon* currentWeapon)
     {
-        return currentWeapon->nextFireTime <= 0;
+        if (!currentWeapon->IsReloading()) return;
+
+        if (currentWeapon->reloadingTime > 0)
+        {
+            currentWeapon->reloadingTime -= frame.DeltaTime;
+        }
+        else
+        {
+            currentWeapon->OnReloaded();
+        }
     }
 
-    private void SendFireEvent(Frame frame, PlayerLink* player)
+    private void RecoilProgress(Frame frame, Quantum.Weapon* currentWeapon)
     {
-        frame.Events.Fire(player->Player);
-    }
+        if (currentWeapon->nextFireTime > 0 || currentWeapon->recoilProgressTime <= 0) return;
 
-    private void SendReloadEvent(Frame frame, PlayerLink* player)
-    {
-        frame.Events.Reload(player->Player);
+        currentWeapon->recoilProgressTime -= 1 / currentWeapon->recoilProgressRate * frame.DeltaTime;
+
+        if (currentWeapon->recoilProgressTime < 0)
+            currentWeapon->recoilProgressTime = 0;
     }
 }
