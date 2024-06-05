@@ -13,18 +13,18 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
         currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
 
-
         //Fire
         //---------------------------------------------
-        currentWeapon->nextFireTime += frame.DeltaTime;
+        currentWeapon->nextFireTime -= frame.DeltaTime;
 
-        if (currentWeapon->currentFireMode == FireMode.FullAuto)
+        switch (currentWeapon->currentFireMode)
         {
-            FullAutoFire(frame, filter, input, player);
-        }
-        else if (currentWeapon->currentFireMode == FireMode.SemiAuto)
-        {
-            SemiAutoFire(frame, filter, input, player);
+            case FireMode.FullAuto:
+                FullAutoFire(frame, filter, input, player);
+                break;
+            case FireMode.SemiAuto:
+                SemiAutoFire(frame, filter, input, player);
+                break;
         }
         //---------------------------------------------
 
@@ -48,6 +48,28 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
             Reload(frame, filter, player);
         }
         //---------------------------------------------
+
+        //Recoil
+        //---------------------------------------------
+        if (currentWeapon->nextFireTime <= 0 && currentWeapon->recoilProgressTime > 0)
+        {
+            currentWeapon->recoilProgressTime -= 1 / currentWeapon->recoilProgressRate * frame.DeltaTime;
+            if (currentWeapon->recoilProgressTime < 0)
+                currentWeapon->recoilProgressTime = 0;
+        }
+        //---------------------------------------------
+    }
+
+    private void Recoil(Frame frame)
+    {
+        currentWeapon->recoilProgressTime +=
+            1 / currentWeapon->recoilProgressRate * (1 / currentWeapon->fireRate);
+
+        var data = frame.FindAsset<WeaponData>(currentWeapon->data.Id);
+        var recoilX = data.HorizontalRecoilCurve.Evaluate(currentWeapon->recoilProgressTime);
+        var recoilY = data.VerticalRecoilCurve.Evaluate(currentWeapon->recoilProgressTime);
+
+        //Log.Info($"RecoilX: {recoilX}, RecoilY: {recoilY}");
     }
 
     private void Reload(Frame frame, WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player)
@@ -67,7 +89,9 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
         SendFireEvent(frame, player);
         currentWeapon->currentAmmo--;
-        currentWeapon->nextFireTime = 0;
+        currentWeapon->nextFireTime = 1 / currentWeapon->fireRate;
+        
+        Recoil(frame);
     }
 
     private void SemiAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
@@ -80,7 +104,9 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
         SendFireEvent(frame, player);
         currentWeapon->currentAmmo--;
-        currentWeapon->nextFireTime = 0;
+        currentWeapon->nextFireTime = 1 / currentWeapon->fireRate;
+        
+        Recoil(frame);
     }
 
     private bool IsReloading()
@@ -90,14 +116,12 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
     private bool IsExistAmmo()
     {
-        var ammo = currentWeapon->currentAmmo;
-        return ammo > 0;
+        return currentWeapon->currentAmmo > 0;
     }
 
     private bool IsEndedFireCoolTime()
     {
-        var coolTime = currentWeapon->fireRate;
-        return currentWeapon->nextFireTime >= coolTime;
+        return currentWeapon->nextFireTime <= 0;
     }
 
     private void SendFireEvent(Frame frame, PlayerLink* player)

@@ -1,20 +1,23 @@
 using Photon.Deterministic;
+using Quantum.Inspector;
 
 namespace Quantum;
 
 public partial class WeaponData
 {
     public WeaponType Type;
+    
+    [Tooltip("初期の射撃モード")]public FireMode FireMode;
+    [Tooltip("フルオート射撃（複数選択可")]public bool IsFullAuto;
+    [Tooltip("セミオート射撃（複数選択可")]public bool IsSemiAuto;
 
-    public FireMode FireMode;
-    public bool IsFullAuto;
-    public bool IsSemiAuto;
-
-    public FP FireRate;
-    public FP ReloadTime;
-    public int MaxAmmo;
-    public int Damage;
-    public int PenetrationPower;
+    [Tooltip("1秒間に発射できる弾数")]public FP FireRate;
+    [Tooltip("リロードするのにかかる時間")]public FP ReloadTime;
+    [Tooltip("マガジンに入る弾の弾数")]public int MaxAmmo;
+    [Tooltip("1発のダメージ")]public int Damage;
+    [Tooltip("弾の貫通力")]public int PenetrationPower;
+    [Tooltip("射撃時の横反動")]public FPAnimationCurve HorizontalRecoilCurve;
+    [Tooltip("射撃時の縦反動")]public FPAnimationCurve VerticalRecoilCurve;
 
     /// <summary>
     /// WeaponDataを追加した場合、CopyDataメソッドに追加すること。
@@ -39,5 +42,6 @@ public partial class WeaponData
     {
         CopyData(weapon);
         weapon->currentAmmo = MaxAmmo;
+        weapon->recoilProgressRate = FP._1 / FireRate * MaxAmmo;
     }
 }

@@ -21,12 +21,23 @@ component  Weapon {
     int damage;
     int penetrationPower;
     
+    //----------射撃----------
     //現在マガジンに入っている段数
     int currentAmmo;
+    //1発の弾丸を撃つのにかかる時間
+    FP fireTime;
     //射撃中の加算時間
     FP nextFireTime;
+    
+    //----------リロード----------
     //リロード中の加算時間
     FP reloadingTime;
     //リロード中かどうか
     bool isReloading;
+    
+    //----------リコイル----------
+    //全弾撃ちきるまでの時間
+    FP recoilProgressRate;
+    //リコイルの進行加算時間
+    FP recoilProgressTime;
 }
