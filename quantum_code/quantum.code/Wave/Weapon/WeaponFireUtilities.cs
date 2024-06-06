@@ -1,6 +1,4 @@
-﻿using Quantum.Physics3D;
-
-namespace Quantum.Wave.Weapon;
+﻿namespace Quantum.Wave.Weapon;
 public static unsafe class WeaponFireUtilities
 {
     public static bool ProjectileCast(Frame frame, Transform3D* transform, PlayerSys* playerSys, Input* input)
