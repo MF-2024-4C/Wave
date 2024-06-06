@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
+using Wave.Weapon.Animation;
 
 public class FireSystem : MonoBehaviour
 {
@@ -24,14 +25,14 @@ public class FireSystem : MonoBehaviour
         var frame = QuantumRunner.Default.Game.Frames.Predicted;
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
-        _weaponInventory.CurrentWeapon.PlayFireAnimation();
+        _weaponInventory.CurrentWeapon.PlayAnimation(WeaponAnimation.Fire);
     }
-    
+
     private void Reload(EventReload e)
     {
         var frame = QuantumRunner.Default.Game.Frames.Predicted;
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
-        _weaponInventory.CurrentWeapon.PlayReloadAnimation();
+        _weaponInventory.CurrentWeapon.PlayAnimation(WeaponAnimation.Reload);
     }
 }

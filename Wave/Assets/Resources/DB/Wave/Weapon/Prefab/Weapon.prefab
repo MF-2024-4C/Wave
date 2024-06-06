@@ -280,13 +280,24 @@ MonoBehaviour:
       RawValue: 0
     maxAmmo: 0
     damage: 0
+    penetrationPower: 0
+    equipTime:
+      RawValue: 0
     currentAmmo: 0
+    fireTime:
+      RawValue: 0
     nextFireTime:
+      RawValue: 0
+    equipProgressTime:
       RawValue: 0
     reloadingTime:
       RawValue: 0
     isReloading:
       Value: 0
+    recoilProgressRate:
+      RawValue: 0
+    recoilProgressTime:
+      RawValue: 0
 --- !u!114 &4882928742382680679
 MonoBehaviour:
   m_ObjectHideFlags: 0

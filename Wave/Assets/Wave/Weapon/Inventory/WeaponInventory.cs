@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Wave.Weapon.Animation;
 
 public class WeaponInventory : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class WeaponInventory : MonoBehaviour
     [SerializeField] private GameObject _tertiaryWeaponContainer;
     public GameObject TertiaryWeaponContainer => _tertiaryWeaponContainer;
 
-    [HideInInspector] public GunAnimationManager CurrentWeapon;
+    [HideInInspector] public WeaponAnimationManager CurrentWeapon;
 
     public void OnEntityInstantiated()
     {
@@ -33,7 +34,7 @@ public class WeaponInventory : MonoBehaviour
             _ => throw new ArgumentOutOfRangeException()
         };
 
-        var gun = container.GetComponentInChildren<GunAnimationManager>();
+        var gun = container.GetComponentInChildren<WeaponAnimationManager>();
         if (gun == null)
         {
             Debug.LogError("GunAnimationManagerがアタッチされていません", container);
@@ -43,8 +44,8 @@ public class WeaponInventory : MonoBehaviour
         CurrentWeapon = gun;
 
         ToggleWeapon(container);
-        
-        CurrentWeapon.PlayEquipAnimation();
+
+        CurrentWeapon.PlayAnimation(WeaponAnimation.Equip);
     }
 
     private void ToggleWeapon(GameObject currentGunContainer)
