@@ -6,13 +6,9 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 {
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
     {
-        Input input = default;
-
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
-        
-        Log.Info($"Player: {player->Player}");
 
-        input = *frame.GetPlayerInput(player->Player);
+        var input = *frame.GetPlayerInput(player->Player);
 
         var currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
 

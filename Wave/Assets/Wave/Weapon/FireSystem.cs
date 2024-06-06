@@ -6,6 +6,7 @@ using UnityEngine;
 public class FireSystem : MonoBehaviour
 {
     [SerializeField] private EntityView _entityView;
+    [SerializeField] private WeaponInventory _weaponInventory;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class FireSystem : MonoBehaviour
         var frame = QuantumRunner.Default.Game.Frames.Predicted;
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
-        WeaponInventory.Instance.CurrentWeapon.PlayFireAnimation();
+        _weaponInventory.CurrentWeapon.PlayFireAnimation();
     }
     
     private void Reload(EventReload e)
@@ -31,6 +32,6 @@ public class FireSystem : MonoBehaviour
         var frame = QuantumRunner.Default.Game.Frames.Predicted;
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
-        WeaponInventory.Instance.CurrentWeapon.PlayReloadAnimation();
+        _weaponInventory.CurrentWeapon.PlayReloadAnimation();
     }
 }

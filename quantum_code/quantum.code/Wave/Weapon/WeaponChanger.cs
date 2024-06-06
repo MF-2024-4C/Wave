@@ -6,7 +6,7 @@ public unsafe class WeaponChanger : SystemMainThreadFilter<WeaponInventorySystem
     {
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
 
-        Input input = *frame.GetPlayerInput(player->Player);
+        var input = *frame.GetPlayerInput(player->Player);
 
         TryChangeWeapon(frame, ref filter, player, input.ChangePrimaryWeapon, WeaponType.Primary);
         TryChangeWeapon(frame, ref filter, player, input.ChangeSecondaryWeapon, WeaponType.Secondary);

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WeaponInstancer : MonoBehaviour
 {
-    [SerializeField] private EntityComponentWeaponInventory _weaponInventory;
+    [ SerializeField] private WeaponInventory _weaponInventory;
+    [SerializeField] private EntityComponentWeaponInventory _entityWeaponInventory;
     [SerializeField] private EntityView _entityView;
     public void OnEntityInstantiated()
     {
@@ -67,9 +69,9 @@ public class WeaponInstancer : MonoBehaviour
 
         var parent = type switch
         {
-            WeaponType.Primary => WeaponInventory.Instance.PrimaryWeaponContainer,
-            WeaponType.Secondary => WeaponInventory.Instance.SecondaryWeaponContainer,
-            WeaponType.Tertiary => WeaponInventory.Instance.TertiaryWeaponContainer,
+            WeaponType.Primary => _weaponInventory.PrimaryWeaponContainer,
+            WeaponType.Secondary => _weaponInventory.SecondaryWeaponContainer,
+            WeaponType.Tertiary => _weaponInventory.TertiaryWeaponContainer,
             _ => null
         };
         if (parent != null) Instantiate((Object)weapon, parent.transform);

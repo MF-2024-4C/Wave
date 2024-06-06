@@ -45,8 +45,6 @@ public unsafe partial struct Weapon
         var weaponData = frame.FindAsset<WeaponData>(this.data.Id);
         var recoilX = weaponData.HorizontalRecoilCurve.Evaluate(recoilProgressTime);
         var recoilY = weaponData.VerticalRecoilCurve.Evaluate(recoilProgressTime);
-
-        Log.Info($"RecoilX: {recoilX}, RecoilY: {recoilY}");
     }
 
     public bool CanFire()

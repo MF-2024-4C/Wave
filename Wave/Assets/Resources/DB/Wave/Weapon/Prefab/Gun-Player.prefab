@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa885dfff8c59244abc209519c769aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponInventory: {fileID: 8264991262294301537}
+  _weaponInventory: {fileID: 3815468106646078529}
+  _entityWeaponInventory: {fileID: 8264991262294301537}
   _entityView: {fileID: 6211237910592298372}
 --- !u!1 &3426929545932231358
 GameObject:
@@ -152,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3664d74c782d746ae7dbeb7adef705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityView: {fileID: 6211237910592298372}
+  _weaponInventory: {fileID: 3815468106646078529}
 --- !u!1 &5178483128118272216
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityView: {fileID: 6211237910592298372}
+  _weaponInventory: {fileID: 3815468106646078529}
 --- !u!1 &9098430744729961634
 GameObject:
   m_ObjectHideFlags: 0

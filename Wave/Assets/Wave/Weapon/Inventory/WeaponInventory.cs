@@ -7,8 +7,6 @@ using UnityEngine.Serialization;
 
 public class WeaponInventory : MonoBehaviour
 {
-    public static WeaponInventory Instance;
-
     [SerializeField] private GameObject _primaryWeaponContainer;
     public GameObject PrimaryWeaponContainer => _primaryWeaponContainer;
 
@@ -19,11 +17,6 @@ public class WeaponInventory : MonoBehaviour
     public GameObject TertiaryWeaponContainer => _tertiaryWeaponContainer;
 
     [HideInInspector] public GunAnimationManager CurrentWeapon;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     public void OnEntityInstantiated()
     {
@@ -50,6 +43,8 @@ public class WeaponInventory : MonoBehaviour
         CurrentWeapon = gun;
 
         ToggleWeapon(container);
+        
+        CurrentWeapon.PlayEquipAnimation();
     }
 
     private void ToggleWeapon(GameObject currentGunContainer)
