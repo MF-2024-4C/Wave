@@ -8,7 +8,7 @@ enum ZombieState {
 asset ZombieSpec;
 
 component Character {
-
+    FP HP;
 }
 
 component Zombie {

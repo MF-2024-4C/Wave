@@ -363,6 +363,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "dev.n5y.asmdefhelper": {
+      "version": "https://github.com/naninunenoy/AsmdefHelper.git?path=Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d0a17c5bbd1cbc7f34b3e705d3547e858371bf3a"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
