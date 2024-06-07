@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: decfa61019699be45af0909f1c597710
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/GameData/Options/Audio/Voice Microphone.asset
+  uploadId: 642007
