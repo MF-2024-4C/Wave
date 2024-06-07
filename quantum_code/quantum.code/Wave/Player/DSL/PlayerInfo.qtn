@@ -5,5 +5,12 @@ component PlayerSys
     asset_ref<PlayerConfig> Config;
     
     byte PlayerAnimState;
-    FPQuaternion TargetRotation;
+    FPQuaternion TargetRotation;    
+    
+    FP WalkSpeed;
+    FP RunSpeed;
+    FP JumpPower;
+    FP BreakPower;
+    
+    FPVector3 CameraForwardDirection;
 }

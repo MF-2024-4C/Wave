@@ -17,6 +17,10 @@ namespace Quantum
         public FP BreakPower;
         
         public FP RotationSpeed;
+
+        public FPVector3 InteractRayOffset;
+        public FP InteractRayDistance;
+        public LayerMask InteractLayer;
     }
 }
 
