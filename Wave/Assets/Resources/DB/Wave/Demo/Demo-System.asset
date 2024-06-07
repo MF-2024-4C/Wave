@@ -55,7 +55,7 @@ MonoBehaviour:
       StartDisabled: 0
       Children: []
     - SystemType:
-        AssemblyQualifiedName: Quantum.Wave.Gun.PlayerSpawnSystem, quantum.code,
+        AssemblyQualifiedName: Quantum.Wave.Weapon.PlayerSpawnSystem, quantum.code,
           Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
       SystemName: 
       StartDisabled: 0
@@ -91,20 +91,32 @@ MonoBehaviour:
       StartDisabled: 0
       Children: []
     - SystemType:
-        AssemblyQualifiedName: Quantum.Wave.Gun.GunFireSystem, quantum.code, Version=2.1.8.0,
+        AssemblyQualifiedName: Quantum.Wave.Zombie.TestedGunFireSystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
+      SystemName: 
+      StartDisabled: 0
+      Children: []
+    - SystemType:
+        AssemblyQualifiedName: Quantum.Wave.Weapon.WeaponChanger, quantum.code, Version=2.1.8.0,
           Culture=neutral, PublicKeyToken=null
       SystemName: 
       StartDisabled: 0
       Children: []
     - SystemType:
-        AssemblyQualifiedName: Quantum.Wave.Gun.WeaponChanger, quantum.code, Version=2.1.8.0,
-          Culture=neutral, PublicKeyToken=null
+        AssemblyQualifiedName: Quantum.Wave.Weapon.WeaponFireSystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
       SystemName: 
       StartDisabled: 0
       Children: []
     - SystemType:
-        AssemblyQualifiedName: Quantum.Events.GameEventSystem, quantum.code, Version=2.1.8.0,
-          Culture=neutral, PublicKeyToken=null
+        AssemblyQualifiedName: Quantum.Wave.Weapon.WeaponInventorySystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
+      SystemName: 
+      StartDisabled: 0
+      Children: []
+    - SystemType:
+        AssemblyQualifiedName: Quantum.Wave.Weapon.WeaponSetupSystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
       SystemName: 
       StartDisabled: 0
       Children: []

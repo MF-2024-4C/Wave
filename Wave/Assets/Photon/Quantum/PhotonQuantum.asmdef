@@ -1,5 +1,6 @@
 {
     "name": "PhotonQuantum",
+    "rootNamespace": "",
     "references": [
         "PhotonRealtime",
         "PhotonQuantumCode",
@@ -9,9 +10,14 @@
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "quantum.code.dll",
+        "quantum.core.dll",
+        "PhotonDeterministic.dll",
+        "Photon3Unity3D.dll"
+    ],
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [
         {

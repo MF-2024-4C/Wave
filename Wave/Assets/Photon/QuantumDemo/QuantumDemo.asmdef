@@ -1,0 +1,26 @@
+{
+    "name": "QuantumDemo",
+    "rootNamespace": "",
+    "references": [
+        "PhotonRealtime",
+        "PhotonQuantumCode",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "PhotonQuantum",
+        "PhotonQuantumEditor"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "quantum.code.dll",
+        "quantum.core.dll",
+        "PhotonDeterministic.dll",
+        "Photon3Unity3D.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

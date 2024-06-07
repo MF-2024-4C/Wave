@@ -8,6 +8,8 @@ public unsafe class WeaponInventorySystem : SystemMainThreadFilter<WeaponInvento
     {
         public EntityRef Entity;
         public WeaponInventory* Inventory;
+        public Transform3D* Transform3D;
+        public PlayerSys* Player;
     }
 
     public override void Update(Frame f, ref GunHolderFilter filter)

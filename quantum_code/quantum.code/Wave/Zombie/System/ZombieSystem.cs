@@ -2,7 +2,7 @@
 
 namespace Quantum.Wave.Zombie;
 
-public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
+public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,ISignalOnDamage
 {
     public struct Filter
     {
@@ -72,6 +72,18 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>
         if (f.Unsafe.TryGetPointer(filter.Entity, out NavMeshPathfinder* pathfinder))
         {
             pathfinder->SetTarget(f, targetTransform->Position, _navMesh);
+        }
+    }
+
+    public void OnDamage(Frame f, EntityRef target, FP damage)
+    {
+        if (f.Unsafe.TryGetPointer(target, out Quantum.Zombie* zombie))
+        {
+            zombie->HP -= damage;
+            if (zombie->HP <= 0)
+            {
+                zombie->State = ZombieState.Die;
+            }
         }
     }
 }
