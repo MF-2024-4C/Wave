@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
+using Wave;
+using Wave.Weapon.Animation;
 
 public class FireSystem : MonoBehaviour
 {
     [SerializeField] private EntityView _entityView;
+    [SerializeField] private WeaponInventory _weaponInventory;
 
     private void Start()
     {
@@ -15,15 +18,26 @@ public class FireSystem : MonoBehaviour
         }
 
         QuantumEvent.Subscribe<EventFire>(this, Fire);
+        QuantumEvent.Subscribe<EventReload>(this, Reload);
     }
 
     private void Fire(EventFire　e)
     {
-        Debug.Log("Fire event received");
+        if (!this.EqualsPlayer(_entityView, e.Player))
+        {
+            return;
+        }
 
-        var frame = QuantumRunner.Default.Game.Frames.Predicted;
-        if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
+        _weaponInventory.CurrentWeapon.PlayAnimation(WeaponAnimation.Fire);
+    }
 
-        WeaponInventory.Instance.UsingGun.PlayFireAnimation();
+    private void Reload(EventReload e)
+    {
+        if (!this.EqualsPlayer(_entityView, e.Player))
+        {
+            return;
+        }
+        
+        _weaponInventory.CurrentWeapon.PlayAnimation(WeaponAnimation.Reload);
     }
 }

@@ -41,31 +41,11 @@ MonoBehaviour:
         Id:
           Value: 5
       ResourcePath: DB/Configs/SimulationConfig
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_Navmesh
-      AssetRef:
-        Id:
-          Value: 27293567754500203
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_Navmesh
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/ZombieSpecAsset
-      AssetRef:
-        Id:
-          Value: 98722892196609692
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/ZombieSpecAsset
-    - Path: Resources/DB/Wave/Demo/Demo-Player|EntityView
-      AssetRef:
-        Id:
-          Value: 99500203735378038
-      ResourcePath: DB/Wave/Demo/Demo-Player
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Exp-ZombieSpawn
-      AssetRef:
-        Id:
-          Value: 237648692300584520
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Exp-ZombieSpawn
     - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityView
       AssetRef:
         Id:
@@ -81,51 +61,11 @@ MonoBehaviour:
         Id:
           Value: 418898905064396654
       ResourcePath: DB/QuantumDemo/GunMap
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/PlayerCharacter|EntityView
-      AssetRef:
-        Id:
-          Value: 455085561623052725
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/PlayerCharacter
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityPrototype
       AssetRef:
         Id:
           Value: 612724826640121007
       ResourcePath: DB/Exp/GPU-Instancer/PlayerArmature
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/PlayerCharacter|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 658121822497109592
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/PlayerCharacter
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_mesh
-      AssetRef:
-        Id:
-          Value: 703508689461989815
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_mesh
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Exp-ZombieMove
-      AssetRef:
-        Id:
-          Value: 818730676775290368
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Exp-ZombieMove
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/PlayerCharacter|EntityView
-      AssetRef:
-        Id:
-          Value: 839216197870305871
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/PlayerCharacter
-    - Path: Resources/DB/Wave/Demo/Demo-System
-      AssetRef:
-        Id:
-          Value: 1013300404219888102
-      ResourcePath: DB/Wave/Demo/Demo-System
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Zombie|EntityView
-      AssetRef:
-        Id:
-          Value: 1045202633666673824
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Zombie
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_Navmesh_data
-      AssetRef:
-        Id:
-          Value: 1112719190163457075
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_Navmesh_data
     - Path: Resources/DB/Wave/Player/Player|EntityView
       AssetRef:
         Id:
@@ -136,16 +76,6 @@ MonoBehaviour:
         Id:
           Value: 1237654261606116904
       ResourcePath: DB/Wave/Player/PlayerTestScene_mesh
-    - Path: Resources/DB/Wave/Zombie/Zombie|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 1447724697571922008
-      ResourcePath: DB/Wave/Zombie/Zombie
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove
-      AssetRef:
-        Id:
-          Value: 1469459477246497443
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove
     - Path: Resources/DB/Wave/TestScene_mesh
       AssetRef:
         Id:
@@ -171,11 +101,6 @@ MonoBehaviour:
         Id:
           Value: 1906811426938971220
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap_mesh
-    - Path: Resources/DB/Wave/Demo/Stage/DemoStage_Navmesh
-      AssetRef:
-        Id:
-          Value: 1913669733921426467
-      ResourcePath: DB/Wave/Demo/Stage/DemoStage_Navmesh
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityView
       AssetRef:
         Id:
@@ -186,86 +111,26 @@ MonoBehaviour:
         Id:
           Value: 2006391941954019003
       ResourcePath: DB/Wave/Weapon/Prefab/Gun-Player
-    - Path: Resources/DB/Wave/Demo/Stage/DemoStage
+    - Path: Resources/DB/Wave/Weapon/Prefab/HandGun|EntityPrototype
       AssetRef:
         Id:
-          Value: 2140463308461694544
-      ResourcePath: DB/Wave/Demo/Stage/DemoStage
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_Navmesh
-      AssetRef:
-        Id:
-          Value: 2175693206120820960
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_Navmesh
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/ZombieSpawnAreaConfigAsset
-      AssetRef:
-        Id:
-          Value: 2223039371131874354
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/ZombieSpawnAreaConfigAsset
+          Value: 2105746333505255402
+      ResourcePath: DB/Wave/Weapon/Prefab/HandGun
     - Path: Resources/DB/QuantumDemo/QuantumDemoSystem
       AssetRef:
         Id:
           Value: 2247853238166099880
       ResourcePath: DB/QuantumDemo/QuantumDemoSystem
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_mesh
-      AssetRef:
-        Id:
-          Value: 2297739561713297934
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_mesh
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/PlayerCharacter|EntityView
-      AssetRef:
-        Id:
-          Value: 2428610613299962539
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/PlayerCharacter
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/SimulationConfig
-      AssetRef:
-        Id:
-          Value: 2454673886818744998
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/SimulationConfig
     - Path: Resources/DB/Wave/Player/Config/PlayerCharacterControllerConfig
       AssetRef:
         Id:
           Value: 2485832878967613001
       ResourcePath: DB/Wave/Player/Config/PlayerCharacterControllerConfig
-    - Path: Resources/DB/Wave/Zombie/Zombie|EntityView
-      AssetRef:
-        Id:
-          Value: 2654404672301726934
-      ResourcePath: DB/Wave/Zombie/Zombie
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_Navmesh_data
-      AssetRef:
-        Id:
-          Value: 2688460485045220673
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_Navmesh_data
     - Path: Resources/DB/Wave/Weapon/Prefab/Gun-Player|EntityPrototype
       AssetRef:
         Id:
           Value: 2699151491591919434
       ResourcePath: DB/Wave/Weapon/Prefab/Gun-Player
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh
-      AssetRef:
-        Id:
-          Value: 2860680592704313661
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Zombie|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 2861096775382168340
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Zombie
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/PlayerCharacter|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 2926852981925330368
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/PlayerCharacter
-    - Path: Resources/DB/Wave/Demo/Stage/DemoStage_Navmesh_data
-      AssetRef:
-        Id:
-          Value: 3012211894084026453
-      ResourcePath: DB/Wave/Demo/Stage/DemoStage_Navmesh_data
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/PlayerCharacter|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 3038724031888305873
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/PlayerCharacter
     - Path: Resources/DB/QuantumDemo/GunMap_mesh
       AssetRef:
         Id:
@@ -276,6 +141,11 @@ MonoBehaviour:
         Id:
           Value: 3140846135020528929
       ResourcePath: DB/Configs/DefaultSystemConfig
+    - Path: Resources/DB/Wave/Weapon/Prefab/Rifle|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3141823093661642465
+      ResourcePath: DB/Wave/Weapon/Prefab/Rifle
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityView
       AssetRef:
         Id:
@@ -286,26 +156,16 @@ MonoBehaviour:
         Id:
           Value: 3247494871574351852
       ResourcePath: DB/Exp/GPU-Instancer/Expo-GPUInstaceMap
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh_data
+    - Path: Resources/DB/Wave/Weapon/Prefab/Weapon|EntityPrototype
       AssetRef:
         Id:
-          Value: 3266213940158858550
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh_data
-    - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03
-      AssetRef:
-        Id:
-          Value: 3331598356427461593
-      ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03
+          Value: 3339354036211394541
+      ResourcePath: DB/Wave/Weapon/Prefab/Weapon
     - Path: Resources/DB/Wave/Player/Config/DefaultPlayerConfig
       AssetRef:
         Id:
           Value: 3342626901580343345
       ResourcePath: DB/Wave/Player/Config/DefaultPlayerConfig
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/SimulationConfig
-      AssetRef:
-        Id:
-          Value: 3380370344064645496
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/SimulationConfig
     - Path: Resources/DB/Wave/Weapon/WeaponData/AssaltRifle
       AssetRef:
         Id:
@@ -316,21 +176,11 @@ MonoBehaviour:
         Id:
           Value: 3510670654372677438
       ResourcePath: DB/Wave/Player/Player
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_mesh
-      AssetRef:
-        Id:
-          Value: 3694148504032098906
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_mesh
-    - Path: Resources/DB/Wave/Weapon/WeaponData/SystemConfigAsset
+    - Path: Resources/DB/Wave/Weapon/SystemConfigAsset
       AssetRef:
         Id:
           Value: 3778568326002901391
-      ResourcePath: DB/Wave/Weapon/WeaponData/SystemConfigAsset
-    - Path: Resources/DB/Wave/Zombie/ZombieSpecAsset
-      AssetRef:
-        Id:
-          Value: 3975413205851126371
-      ResourcePath: DB/Wave/Zombie/ZombieSpecAsset
+      ResourcePath: DB/Wave/Weapon/SystemConfigAsset
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
@@ -341,36 +191,16 @@ MonoBehaviour:
         Id:
           Value: 4182183522022618454
       ResourcePath: DB/QuantumDemo/Map1_mesh
-    - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Exp-ZombieMove
-      AssetRef:
-        Id:
-          Value: 4183153460018405369
-      ResourcePath: DB/Exp/Enemy/01-ZombieMove/Exp-ZombieMove
-    - Path: Resources/DB/Wave/Demo/Demo-Player|EntityPrototype
-      AssetRef:
-        Id:
-          Value: 4254466666631320402
-      ResourcePath: DB/Wave/Demo/Demo-Player
     - Path: Resources/DB/Wave/Weapon/WeaponData/HandGun
       AssetRef:
         Id:
           Value: 4340777512014185396
       ResourcePath: DB/Wave/Weapon/WeaponData/HandGun
-    - Path: Resources/DB/Wave/Demo/Stage/DemoStage_mesh
-      AssetRef:
-        Id:
-          Value: 4399778821855107825
-      ResourcePath: DB/Wave/Demo/Stage/DemoStage_mesh
     - Path: Resources/DB/Wave/Player/PlayerTestScene
       AssetRef:
         Id:
           Value: 4443572856780175836
       ResourcePath: DB/Wave/Player/PlayerTestScene
-    - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove
-      AssetRef:
-        Id:
-          Value: 4521193822983562594
-      ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove
     - Path: Resources/DB/Wave/Weapon/TmpPlayer|EntityPrototype
       AssetRef:
         Id:

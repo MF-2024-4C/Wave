@@ -17,9 +17,156 @@ MonoBehaviour:
       Path: Resources/DB/Wave/Weapon/WeaponData/AssaltRifle
       Guid:
         Value: 3441278515709848495
+    Type: 1
+    FireMode: 0
+    IsFullAuto: 1
+    IsSemiAuto: 1
     FireRate:
-      RawValue: 0
+      RawValue: 786432
     ReloadTime:
-      RawValue: 0
-  WeaponPrefab: {fileID: 7021332335922032784, guid: a3b2052ae07845646bff64b9d2d6d92a,
+      RawValue: 196608
+    MaxAmmo: 30
+    Damage: 0
+    PenetrationPower: 0
+    EquipTime:
+      RawValue: 65536
+    HorizontalRecoilCurve:
+      Samples:
+      - RawValue: 0
+      - RawValue: 7370
+      - RawValue: 13315
+      - RawValue: 17930
+      - RawValue: 21310
+      - RawValue: 23550
+      - RawValue: 24745
+      - RawValue: 24989
+      - RawValue: 24378
+      - RawValue: 23007
+      - RawValue: 20970
+      - RawValue: 18363
+      - RawValue: 15281
+      - RawValue: 11818
+      - RawValue: 8069
+      - RawValue: 4129
+      - RawValue: 94
+      - RawValue: -3941
+      - RawValue: -7882
+      - RawValue: -11635
+      - RawValue: -15103
+      - RawValue: -18192
+      - RawValue: -20808
+      - RawValue: -22854
+      - RawValue: -24236
+      - RawValue: -24860
+      - RawValue: -24629
+      - RawValue: -23450
+      - RawValue: -21227
+      - RawValue: -17866
+      - RawValue: -13271
+      - RawValue: -7347
+      - RawValue: 0
+      PreWrapMode: 0
+      PostWrapMode: 0
+      StartTime:
+        RawValue: 0
+      EndTime:
+        RawValue: 65536
+      Resolution: 32
+      OriginalPreWrapMode: 8
+      OriginalPostWrapMode: 8
+      Keys:
+      - Time:
+          RawValue: 0
+        Value:
+          RawValue: 0
+        InTangent:
+          RawValue: 259662
+        OutTangent:
+          RawValue: 259662
+        TangentMode: 0
+        TangentModeLeft: 0
+        TangentModeRight: 0
+        WeightedMode: 0
+      - Time:
+          RawValue: 65536
+        Value:
+          RawValue: 0
+        InTangent:
+          RawValue: 258904
+        OutTangent:
+          RawValue: 258904
+        TangentMode: 0
+        TangentModeLeft: 0
+        TangentModeRight: 0
+        WeightedMode: 0
+    VerticalRecoilCurve:
+      Samples:
+      - RawValue: 0
+      - RawValue: 4032
+      - RawValue: 7936
+      - RawValue: 11712
+      - RawValue: 15360
+      - RawValue: 18880
+      - RawValue: 22272
+      - RawValue: 25536
+      - RawValue: 28672
+      - RawValue: 31680
+      - RawValue: 34560
+      - RawValue: 37312
+      - RawValue: 39936
+      - RawValue: 42432
+      - RawValue: 44800
+      - RawValue: 47040
+      - RawValue: 49152
+      - RawValue: 51136
+      - RawValue: 52992
+      - RawValue: 54720
+      - RawValue: 56320
+      - RawValue: 57792
+      - RawValue: 59136
+      - RawValue: 60352
+      - RawValue: 61440
+      - RawValue: 62400
+      - RawValue: 63232
+      - RawValue: 63936
+      - RawValue: 64512
+      - RawValue: 64960
+      - RawValue: 65280
+      - RawValue: 65472
+      - RawValue: 65536
+      PreWrapMode: 0
+      PostWrapMode: 0
+      StartTime:
+        RawValue: 0
+      EndTime:
+        RawValue: 65536
+      Resolution: 32
+      OriginalPreWrapMode: 8
+      OriginalPostWrapMode: 8
+      Keys:
+      - Time:
+          RawValue: 0
+        Value:
+          RawValue: 0
+        InTangent:
+          RawValue: 131072
+        OutTangent:
+          RawValue: 131072
+        TangentMode: 0
+        TangentModeLeft: 0
+        TangentModeRight: 0
+        WeightedMode: 0
+      - Time:
+          RawValue: 65536
+        Value:
+          RawValue: 65536
+        InTangent:
+          RawValue: 0
+        OutTangent:
+          RawValue: 0
+        TangentMode: 0
+        TangentModeLeft: 0
+        TangentModeRight: 0
+        WeightedMode: 0
+  WeaponPrefab: {fileID: 8864005491116384672, guid: dfa3db175b8b5c5429827dd684fa1312,
     type: 3}

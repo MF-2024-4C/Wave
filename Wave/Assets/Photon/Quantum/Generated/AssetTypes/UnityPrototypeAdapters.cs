@@ -6,16 +6,26 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
-  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PlayerLink))]
-  public class PlayerLink_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PlayerLink_Prototype> {
-    public Quantum.PlayerRef Player;
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.WeaponInventory))]
+  public class WeaponInventory_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.WeaponInventory_Prototype> {
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    public Quantum.Prototypes.WeaponType_Prototype currentWeaponType;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     [Quantum.LocalReference]
-    public global::EntityPrototype Entity;
+    public global::EntityPrototype primary;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype secondary;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype tertiary;
 
-    public sealed override Quantum.Prototypes.PlayerLink_Prototype Convert(EntityPrototypeConverter converter) {
-      var result = new Quantum.Prototypes.PlayerLink_Prototype();
-      result.Player = this.Player;
-      converter.Convert(this.Entity, out result.Entity);
+    public sealed override Quantum.Prototypes.WeaponInventory_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.WeaponInventory_Prototype();
+      result.currentWeaponType = this.currentWeaponType;
+      converter.Convert(this.primary, out result.primary);
+      converter.Convert(this.secondary, out result.secondary);
+      converter.Convert(this.tertiary, out result.tertiary);
       return result;
     }
   }

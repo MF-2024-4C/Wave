@@ -20,8 +20,8 @@ MonoBehaviour:
     UserAsset:
       Id:
         Value: 0
-    Scene: Gun
-    ScenePath: Assets/Wave/Weapon/Gun.unity
+    Scene: Weapon
+    ScenePath: Assets/Wave/Weapon/Weapon.unity
     SceneGuid: 39eb022c936953243b03bba0f1bf0965
     WorldSize: 256
     BucketsCount: 16

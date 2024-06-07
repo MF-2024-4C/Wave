@@ -1,0 +1,48 @@
+asset WeaponData;
+
+enum FireMode {
+    FullAuto,
+    SemiAuto
+}
+
+// Player -- WeaponInventory --*> GunEntity;
+// GunEntity -- Weapon
+component  Weapon {
+    asset_ref<WeaponData> data;
+    
+    FireMode currentFireMode;
+    bool isFullAuto;
+    bool isSemiAuto;
+   
+    WeaponType type;
+    FP fireRate;
+    FP reloadTime;
+    int maxAmmo;   
+    int damage;
+    int penetrationPower;
+    
+    FP equipTime;
+    
+    //----------射撃----------
+    //現在マガジンに入っている段数
+    int currentAmmo;
+    //1発の弾丸を撃つのにかかる時間
+    FP fireTime;
+    //射撃中の加算時間
+    FP nextFireTime;
+    //武器取り出し加算時間
+    FP equipProgressTime;
+    
+    //----------リロード----------
+    //リロード中の加算時間
+    FP reloadingTime;
+    //リロード中かどうか
+    bool isReloading;
+    
+    //----------リコイル----------
+    //全弾撃ちきるまでの時間
+    FP recoilProgressRate;
+    //リコイルの進行加算時間E
+    FP recoilProgressTime;
+   
+}

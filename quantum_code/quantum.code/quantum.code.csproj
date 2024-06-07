@@ -1,136 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"/>
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{FBF32099-B197-4AB9-8E5A-B44D9D3750BD}</ProjectGuid>
-        <OutputType>Library</OutputType>
-        <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Quantum</RootNamespace>
-        <AssemblyName>quantum.code</AssemblyName>
-        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <TargetFrameworkProfile/>
-        <!-- Valid options are: (empty), max-components-512 -->
-        <QuantumCoreAssemblyPathSuffix/>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>portable</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>..\..\Wave\Assets\Photon\Quantum\Assemblies\</OutputPath>
-        <DefineConstants>TRACE;DEBUG;QUANTUM_PROFILER_ENABLED</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <Prefer32Bit>false</Prefer32Bit>
-        <LangVersion>latest</LangVersion>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>portable</DebugType>
-        <OutputPath>..\..\Wave\Assets\Photon\Quantum\Assemblies\</OutputPath>
-        <DefineConstants>
-        </DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <Prefer32Bit>false</Prefer32Bit>
-        <LangVersion>latest</LangVersion>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseProfiler|AnyCPU'">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>portable</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>..\..\quantum_unity\Assets\Photon\Quantum\Assemblies\</OutputPath>
-        <DefineConstants>QUANTUM_PROFILER_ENABLED</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <Prefer32Bit>false</Prefer32Bit>
-        <LangVersion>latest</LangVersion>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="PhotonDeterministic, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
-            <SpecificVersion>False</SpecificVersion>
-            <HintPath Condition="'$(Configuration)' == 'Release'">..\..\assemblies\release\PhotonDeterministic.dll</HintPath>
-            <HintPath Condition="'$(Configuration)' == 'Debug'">..\..\assemblies\debug\PhotonDeterministic.dll</HintPath>
-        </Reference>
-        <Reference Include="quantum.core, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
-            <SpecificVersion>False</SpecificVersion>
-            <HintPath Condition="'$(Configuration)' == 'Release'">..\..\assemblies\release\$(QuantumCoreAssemblyPathSuffix)\quantum.core.dll</HintPath>
-            <HintPath Condition="'$(Configuration)' == 'ReleaseProfiler'">..\..\assemblies\release-profiler\$(QuantumCoreAssemblyPathSuffix)\quantum.core.dll</HintPath>
-            <HintPath Condition="'$(Configuration)' == 'Debug'">..\..\assemblies\debug\$(QuantumCoreAssemblyPathSuffix)\quantum.core.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="CommandSetup.User.cs"/>
-        <Compile Include="Core\CodeGen.cs"/>
-        <Compile Include="CommandSetup.Legacy.cs"/>
-        <Compile Include="Core\Core.cs"/>
-        <Compile Include="Events\EventData.cs"/>
-        <Compile Include="Events\EventInternal.cs"/>
-        <Compile Include="Events\EventReader.cs"/>
-        <Compile Include="Events\EventWriter.cs"/>
-        <Compile Include="Events\GameEventSystem.cs"/>
-        <Compile Include="Frame.User.cs"/>
-        <Compile Include="FrameContext.User.cs"/>
-        <Compile Include="QuantumDemo\MovementSystem.cs"/>
-        <Compile Include="QuantumDemo\PlayerSpawnSystem.cs"/>
-        <Compile Include="RuntimeConfig.User.cs"/>
-        <Compile Include="RuntimePlayer.User.cs"/>
-        <Compile Include="SimulationConfig.User.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="UnityExtension\DeterministicSystemSetup.cs"/>
-        <Compile Include="UnityExtension\RuntimeConfig.System.cs"/>
-        <Compile Include="UnityExtension\SystemConfig.cs"/>
-        <Compile Include="Wave\Gun\WeaponChanger.cs"/>
-        <Compile Include="Wave\Gun\GunFireSystem.cs"/>
-        <Compile Include="Wave\Gun\PlayerSpawnSystem.cs"/>
-        <Compile Include="Wave\Gun\WeaponData.cs"/>
-        <Compile Include="Wave\Player\Player.User.cs"/>
-        <Compile Include="Wave\Player\PlayerConfig.cs"/>
-        <Compile Include="Wave\Player\Systems\PlayerSystem.cs"/>
-        <Compile Include="Wave\Zombie\State\Zombie.cs"/>
-        <Compile Include="Wave\Zombie\State\ZombieSpawnAreaConfig.cs"/>
-        <Compile Include="Wave\Zombie\State\ZombieSpawnCondition.cs"/>
-        <Compile Include="Wave\Zombie\State\ZombieSpecConfig.cs"/>
-        <Compile Include="Wave\Zombie\System\ButtonInteractableSystem.cs"/>
-        <Compile Include="Wave\Zombie\System\ZombieSpawnAreaSystem.cs"/>
-        <Compile Include="Wave\Zombie\System\ZombieSpawnSystem.cs"/>
-        <Compile Include="Wave\Zombie\System\ZombieSystem.cs"/>
-    </ItemGroup>
-    <ItemGroup>
-        <EmbeddedResource Include="db.json"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="Events\Events.qtn"/>
-        <Content Include="QuantumDemo\Input.qtn"/>
-        <Content Include="QuantumDemo\PlayerLink.qtn"/>
-        <Content Include="UnityExtension\SysteemConfig.qtn"/>
-        <Content Include="Wave\Gun\Input\TmpPlayerInput.qtn"/>
-        <Content Include="Wave\Gun\PlayerLink.qtn"/>
-        <Content Include="Wave\Gun\TmpPlayer.qtn"/>
-        <Content Include="Wave\Gun\Weapon.qtn"/>
-        <Content Include="Wave\Player\DSL\PlayerInfo.qtn"/>
-        <Content Include="Wave\Player\DSL\PlayerInput.qtn"/>
-        <Content Include="Wave\Zombie\State\DSL\Zombie.qtn"/>
-        <Content Include="Wave\Zombie\State\DSL\ZombieSpawnArea.qtn"/>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
-    <PropertyGroup>
-        <PostBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\Wave\Assets"</PostBuildEvent>
-        <PreBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen\quantum.codegen.host.exe" "$(ProjectPath)"</PreBuildEvent>
-        <PostBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\Wave\Assets"</PostBuildEvent>
-        <PreBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen\quantum.codegen.host.exe" "$(ProjectPath)"</PreBuildEvent>
-    </PropertyGroup>
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBF32099-B197-4AB9-8E5A-B44D9D3750BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quantum</RootNamespace>
+    <AssemblyName>quantum.code</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <!-- Valid options are: (empty), max-components-512 -->
+    <QuantumCoreAssemblyPathSuffix />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Wave\Assets\Photon\Quantum\Assemblies\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;QUANTUM_PROFILER_ENABLED</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\quantum_unity\Assets\Photon\Quantum\Assemblies\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseProfiler|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\quantum_unity\Assets\Photon\Quantum\Assemblies\</OutputPath>
+    <DefineConstants>QUANTUM_PROFILER_ENABLED</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowedReferenceRelatedFileExtensions>.pdb</AllowedReferenceRelatedFileExtensions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="PhotonDeterministic, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(Configuration)' == 'Release'">..\..\assemblies\release\PhotonDeterministic.dll</HintPath>
+      <HintPath Condition="'$(Configuration)' == 'Debug'">..\..\assemblies\debug\PhotonDeterministic.dll</HintPath>
+    </Reference>
+    <Reference Include="quantum.core, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath Condition="'$(Configuration)' == 'Release'">..\..\assemblies\release\$(QuantumCoreAssemblyPathSuffix)\quantum.core.dll</HintPath>
+      <HintPath Condition="'$(Configuration)' == 'ReleaseProfiler'">..\..\assemblies\release-profiler\$(QuantumCoreAssemblyPathSuffix)\quantum.core.dll</HintPath>
+      <HintPath Condition="'$(Configuration)' == 'Debug'">..\..\assemblies\debug\$(QuantumCoreAssemblyPathSuffix)\quantum.core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandSetup.User.cs" />
+    <Compile Include="Core\CodeGen.cs" />
+    <Compile Include="CommandSetup.Legacy.cs" />
+    <Compile Include="Core\Core.cs" />
+    <Compile Include="Frame.User.cs" />
+    <Compile Include="FrameContext.User.cs" />
+    <Compile Include="QuantumDemo\MovementSystem.cs" />
+    <Compile Include="QuantumDemo\PlayerSpawnSystem.cs" />
+    <Compile Include="RuntimeConfig.User.cs" />
+    <Compile Include="RuntimePlayer.User.cs" />
+    <Compile Include="SimulationConfig.User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnityExtension\DeterministicSystemSetup.cs" />
+    <Compile Include="UnityExtension\RuntimeConfig.System.cs" />
+    <Compile Include="UnityExtension\SystemConfig.cs" />
+    <Compile Include="Wave\Weapon\Weapon.User.cs" />
+    <Compile Include="Wave\Weapon\WeaponChanger.cs" />
+    <Compile Include="Wave\Weapon\WeaponFireSystem.cs" />
+    <Compile Include="Wave\Weapon\PlayerSpawnSystem.cs" />
+    <Compile Include="Wave\Weapon\WeaponData.cs" />
+    <Compile Include="Wave\Player\Player.User.cs" />
+    <Compile Include="Wave\Player\PlayerConfig.cs" />
+    <Compile Include="Wave\Player\Systems\PlayerSystem.cs" />
+    <Compile Include="Wave\Weapon\WeaponInventory.cs" />
+    <Compile Include="Wave\Weapon\WeaponInventory.User.cs" />
+    <Compile Include="Wave\Weapon\WeaponSetupSystem.cs" />
+    <Compile Include="Wave\Zombie\ZombieMoveSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="db.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QuantumDemo\Input.qtn" />
+    <Content Include="QuantumDemo\PlayerLink.qtn" />
+    <Content Include="UnityExtension\SysteemConfig.qtn" />
+    <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn" />
+    <Content Include="Wave\Weapon\DSL\Weapon.qtn" />
+    <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn" />
+    <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn" />
+    <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
+    <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\Wave\Assets"</PostBuildEvent>
+    <PreBuildEvent Condition="'$(OS)' == 'Windows_NT'">"$(ProjectDir)..\..\tools\codegen\quantum.codegen.host.exe" "$(ProjectPath)"</PreBuildEvent>
+    <PostBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen_unity\quantum.codegen.unity.host.exe" "$(TargetDir)\quantum.code.dll" "$(ProjectDir)..\..\Wave\Assets"</PostBuildEvent>
+    <PreBuildEvent Condition="'$(OS)' != 'Windows_NT'">mono "$(ProjectDir)..\..\tools\codegen\quantum.codegen.host.exe" "$(ProjectPath)"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

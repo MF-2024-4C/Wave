@@ -9,7 +9,7 @@ namespace Wave.Player
     public class PlayerLocalInput : MonoBehaviour
     {
         private DispatcherSubscription _subscription;
-        
+
         private void OnEnable()
         {
             _subscription = QuantumCallback.Subscribe(this, (CallbackPollInput callback) => PollInput(callback));
@@ -28,14 +28,16 @@ namespace Wave.Player
             var x = Input.GetAxis("Horizontal");
             var y = Input.GetAxis("Vertical");
             Vector2 dir = new Vector2(x, y);
-            
+
             //Weapon
             input.ChangePrimaryWeapon = Input.GetKey(KeyCode.Alpha1);
             input.ChangeSecondaryWeapon = Input.GetKey(KeyCode.Alpha2);
             input.ChangeTertiaryWeapon = Input.GetKey(KeyCode.Alpha3);
-            
+
             input.Fire = Input.GetMouseButton(0);
-        
+
+            input.Reload = Input.GetKey(KeyCode.R);
+
             //カメラの向きと入力を合わせる
             Transform mainCameraTran = Camera.main.transform;
             Vector3 cameraForward = Vector3.Scale(mainCameraTran.forward, new Vector3(1, 0, 1)).normalized;
@@ -43,10 +45,10 @@ namespace Wave.Player
             dir.x = moveForward.x;
             dir.y = moveForward.z;
             input.PlayerDirection = dir.ToFPVector2();
-            
+
             //カメラの前方向を保存
             input.CameraForwardDirection = mainCameraTran.forward.ToFPVector3();
-        
+
             callback.SetInput(input, DeterministicInputFlags.Repeatable);
         }
     }

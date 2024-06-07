@@ -7,6 +7,20 @@ event Fire {
    PlayerRef Player;
 }
 
+event Reload {
+   PlayerRef Player;
+}
+
+event ChangeActiveWeapon {
+   PlayerRef Player;
+   asset_ref<WeaponData> NewWeapon;
+}
+
+event InstanceWeapon {
+   PlayerRef Player;
+   asset_ref<WeaponData> Weapon;
+}
+
 event ChangePrimaryWeapon {
    PlayerRef Player;
 }
