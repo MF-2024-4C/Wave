@@ -126,7 +126,12 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - Interactor:
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    Interactor:
     - IsInteract:
         Value: 1
       OnInteract:
@@ -139,6 +144,16 @@ MonoBehaviour:
         Value: 0
     PlayerLink: []
     PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
@@ -207,7 +222,12 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
-  - Interactor:
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    Interactor:
     - IsInteract:
         Value: 1
       OnInteract:
@@ -220,6 +240,16 @@ MonoBehaviour:
         Value: 0
     PlayerLink: []
     PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
     CharacterController2D: []
     CharacterController3D: []
     NavMeshAvoidanceAgent: []
