@@ -25,7 +25,8 @@ MonoBehaviour:
       RawValue: 32768
     ReloadTime:
       RawValue: 196608
-    maxAmmo: 15
-    damage: 15
+    MaxAmmo: 20
+    Damage: 0
+    PenetrationPower: 0
   WeaponPrefab: {fileID: 8864005491116384672, guid: 4ce1037f6bcd5b74c87ad4e86685700a,
     type: 3}
