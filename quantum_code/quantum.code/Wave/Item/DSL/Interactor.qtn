@@ -4,8 +4,21 @@ component Interactor
 {
     asset_ref<InteractConfig> Config;
     
-    QBoolean IsInteract;
+    //インタラクト可能か？
+    QBoolean CanInteract;
+    
+    //インタラクト中か？
     QBoolean OnInteract;
+    FP InteractStartTime;
+    FP InteractEndTime;
+    EntityRef InteractPlayer;
+    
+    //クールダウン中か？
+    QBoolean NowCoolDown;
 }
 
-signal OnInteract(entity_ref interactor, entity_ref player);
+signal OnInteractCall(entity_ref interactor, entity_ref player);
+signal OnReleaseCall(entity_ref interactor, entity_ref player);
+
+//インタラクターが呼ばれる用のシグナル
+signal OnReleaseInteractor(entity_ref interactor, entity_ref player);

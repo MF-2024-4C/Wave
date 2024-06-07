@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d4d5ef64d170154e9e8dc9af9d3d50f, type: 3}
-  m_Name: ItemInteractConfig
+  m_Name: Item3InteractConfig
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Wave/Item/ItemInteractConfig
+      Path: Resources/DB/Wave/Item/Item3InteractConfig
       Guid:
-        Value: 198859142049440293
+        Value: 2372404301621152629
     IsHoldInteract:
-      Value: 0
+      Value: 1
     HoldTime:
-      RawValue: 0
+      RawValue: 65536

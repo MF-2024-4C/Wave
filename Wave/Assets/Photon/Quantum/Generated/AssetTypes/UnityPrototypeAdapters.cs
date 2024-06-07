@@ -6,6 +6,30 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Interactor))]
+  public class Interactor_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Interactor_Prototype> {
+    public Quantum.AssetRefInteractConfig Config;
+    public Quantum.QBoolean CanInteract;
+    public Quantum.QBoolean OnInteract;
+    public Photon.Deterministic.FP InteractStartTime;
+    public Photon.Deterministic.FP InteractEndTime;
+    [Quantum.LocalReference]
+    public global::EntityPrototype InteractPlayer;
+    public Quantum.QBoolean NowCoolDown;
+
+    public sealed override Quantum.Prototypes.Interactor_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Interactor_Prototype();
+      result.Config = this.Config;
+      result.CanInteract = this.CanInteract;
+      result.OnInteract = this.OnInteract;
+      result.InteractStartTime = this.InteractStartTime;
+      result.InteractEndTime = this.InteractEndTime;
+      converter.Convert(this.InteractPlayer, out result.InteractPlayer);
+      result.NowCoolDown = this.NowCoolDown;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PlayerSys))]
   public class PlayerSys_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PlayerSys_Prototype> {
     public Quantum.AssetRefPlayerConfig Config;
@@ -17,8 +41,6 @@ namespace Quantum.Prototypes.Unity {
     public Photon.Deterministic.FP JumpPower;
     public Photon.Deterministic.FP BreakPower;
     public Photon.Deterministic.FPVector3 CameraForwardDirection;
-    public Quantum.QBoolean IsHoldInteract;
-    public Photon.Deterministic.FP InteractTime;
     [Quantum.LocalReference]
     public global::EntityPrototype InteractEntity;
 
@@ -32,8 +54,6 @@ namespace Quantum.Prototypes.Unity {
       result.JumpPower = this.JumpPower;
       result.BreakPower = this.BreakPower;
       result.CameraForwardDirection = this.CameraForwardDirection;
-      result.IsHoldInteract = this.IsHoldInteract;
-      result.InteractTime = this.InteractTime;
       converter.Convert(this.InteractEntity, out result.InteractEntity);
       return result;
     }

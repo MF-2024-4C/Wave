@@ -49,17 +49,18 @@ public class PlayerUI : MonoBehaviour
         
         foreach (RaycastHit hit in hits)
         {
-            Debug.Log("Hit Any");
+            //Debug.Log("Hit Any");
             hitEntityView = null;
             hitEntityView = hit.transform.GetComponentInParent<EntityView>();
             if (hitEntityView == null) continue;
             if (!frame.TryGet<Interactor>(hitEntityView.EntityRef,out var hitInteractor)) continue;
-            if (!hitInteractor.IsInteract) continue;
-            Debug.Log("Hit Interacter!");
+            Debug.Log($"Can Interact is {hitInteractor.CanInteract} :: OnInteract is {hitInteractor.OnInteract} :: NowCoolDown is {hitInteractor.NowCoolDown}");
+            if (!hitInteractor.CanInteract || hitInteractor.OnInteract || hitInteractor.NowCoolDown) continue;
+            //Debug.Log("Hit Interacter!");
             return true;
         }
 
-        Debug.Log("Not Hit Interacter!");
+        //Debug.Log("Not Hit Interacter!");
         return false;
     }
 }
