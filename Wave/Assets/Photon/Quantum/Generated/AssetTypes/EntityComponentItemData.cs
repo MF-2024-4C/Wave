@@ -4,9 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-<<<<<<<< HEAD:Wave/Assets/Photon/Quantum/Generated/AssetTypes/EntityComponentWeapon.cs
-public partial class EntityComponentWeapon : EntityComponentBase<Quantum.Prototypes.Weapon_Prototype> {
-========
 public partial class EntityComponentItemData : EntityComponentBase<Quantum.Prototypes.ItemData_Prototype> {
->>>>>>>> refs/remotes/origin/feature-Item:Wave/Assets/Photon/Quantum/Generated/AssetTypes/EntityComponentItemData.cs
 }
