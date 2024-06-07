@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 325984b52e4128546bc7558552f8b1d2
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/CompilerSymbols/Mirror.CompilerSymbols.asmdef
+  uploadId: 642007

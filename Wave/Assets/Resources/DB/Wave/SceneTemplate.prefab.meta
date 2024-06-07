@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Wave/Assets/Resources/DB/Wave/SceneTemplate.prefab.meta
 guid: 98de4f5da91430c448f3c77981101df4
 PrefabImporter:
+========
+guid: f1768043a405e66439cb27c914549d44
+DefaultImporter:
+>>>>>>>> refs/heads/feature-Zombie:Wave/Assets/GPUInstancer-CrowdAnimations/Demos/Crowd_Animations-HDRP_Demos_Package_(10_&_Later).unitypackage.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

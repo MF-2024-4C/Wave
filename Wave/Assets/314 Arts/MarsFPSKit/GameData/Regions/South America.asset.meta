@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce75b64d7f8473e4eae31fa03505536f
+timeCreated: 1478018111
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/GameData/Regions/South America.asset
+  uploadId: 642007

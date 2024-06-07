@@ -8,8 +8,8 @@ NativeFormatImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 125288
-  packageName: 'PRO Military: Customizable FPS Character'
-  packageVersion: 1.2
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
   assetPath: Assets/Knife.PlayerController/Effects/FireExplosionEffects/Materials/SmokeLightParticle.mat
-  uploadId: 446320
+  uploadId: 642007

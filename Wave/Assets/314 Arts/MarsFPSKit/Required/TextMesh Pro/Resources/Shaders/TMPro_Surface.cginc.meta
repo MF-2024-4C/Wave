@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d930090c0cd643c7b55f19a38538c162
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc
+  uploadId: 642007

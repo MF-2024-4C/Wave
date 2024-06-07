@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2e5656107e61a93439544b91e5f541f6
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/ScriptTemplates/54-Mirror__Network
+    Room Manager-NewNetworkRoomManager.cs.txt
+  uploadId: 642007

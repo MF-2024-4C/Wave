@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6806a62c384838046a3c66c44f06d75f
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/Transports/KCP/kcp2k/KCP.asmdef
+  uploadId: 642007

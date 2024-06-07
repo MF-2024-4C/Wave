@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e1cda8afe30f847fe8b40485b4768089
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/Transports/Multiplex/MultiplexTransport.asmdef
+  uploadId: 642007
