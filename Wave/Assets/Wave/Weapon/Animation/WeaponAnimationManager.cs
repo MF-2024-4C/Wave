@@ -14,7 +14,7 @@ namespace Wave.Weapon.Animation
         UnEquip
     }
 
-    public unsafe class WeaponAnimationManager : QuantumCallbacks
+    public class WeaponAnimationManager : MonoBehaviour
     {
         [SerializeField] private Animator _animator;
         
