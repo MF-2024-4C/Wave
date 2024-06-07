@@ -2,6 +2,7 @@ input
 {
     button PlayerJump;
     QBoolean PlayerDash;
+    QBoolean Interact;
     FPVector2 PlayerDirection;
     FPVector3 CameraForwardDirection;
 }

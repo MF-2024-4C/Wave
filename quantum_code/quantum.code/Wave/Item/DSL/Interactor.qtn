@@ -1,5 +1,9 @@
+asset InteractConfig;
+
 component Interactor
 {
+    asset_ref<InteractConfig> Config;
+    
     QBoolean IsInteract;
     QBoolean OnInteract;
 }

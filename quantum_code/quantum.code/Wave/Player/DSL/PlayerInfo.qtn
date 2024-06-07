@@ -13,4 +13,8 @@ component PlayerSys
     FP BreakPower;
     
     FPVector3 CameraForwardDirection;
+    
+    QBoolean IsHoldInteract;
+    FP InteractTime;
+    EntityRef InteractEntity;
 }

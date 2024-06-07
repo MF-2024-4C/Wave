@@ -132,7 +132,10 @@ MonoBehaviour:
     GameEvent: []
     GameEventQueue: []
     Interactor:
-    - IsInteract:
+    - Config:
+        Id:
+          Value: 0
+      IsInteract:
         Value: 1
       OnInteract:
         Value: 0
@@ -228,7 +231,10 @@ MonoBehaviour:
     GameEvent: []
     GameEventQueue: []
     Interactor:
-    - IsInteract:
+    - Config:
+        Id:
+          Value: 0
+      IsInteract:
         Value: 1
       OnInteract:
         Value: 0

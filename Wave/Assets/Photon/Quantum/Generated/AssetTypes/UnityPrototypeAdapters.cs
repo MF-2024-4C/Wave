@@ -6,6 +6,39 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PlayerSys))]
+  public class PlayerSys_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PlayerSys_Prototype> {
+    public Quantum.AssetRefPlayerConfig Config;
+    public System.Byte PlayerAnimState;
+    [Quantum.Inspector.DegreesAttribute()]
+    public Photon.Deterministic.FPVector3 TargetRotation;
+    public Photon.Deterministic.FP WalkSpeed;
+    public Photon.Deterministic.FP RunSpeed;
+    public Photon.Deterministic.FP JumpPower;
+    public Photon.Deterministic.FP BreakPower;
+    public Photon.Deterministic.FPVector3 CameraForwardDirection;
+    public Quantum.QBoolean IsHoldInteract;
+    public Photon.Deterministic.FP InteractTime;
+    [Quantum.LocalReference]
+    public global::EntityPrototype InteractEntity;
+
+    public sealed override Quantum.Prototypes.PlayerSys_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.PlayerSys_Prototype();
+      result.Config = this.Config;
+      result.PlayerAnimState = this.PlayerAnimState;
+      result.TargetRotation = this.TargetRotation;
+      result.WalkSpeed = this.WalkSpeed;
+      result.RunSpeed = this.RunSpeed;
+      result.JumpPower = this.JumpPower;
+      result.BreakPower = this.BreakPower;
+      result.CameraForwardDirection = this.CameraForwardDirection;
+      result.IsHoldInteract = this.IsHoldInteract;
+      result.InteractTime = this.InteractTime;
+      converter.Convert(this.InteractEntity, out result.InteractEntity);
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.WeaponInventory))]
   public class WeaponInventory_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.WeaponInventory_Prototype> {
     [Quantum.Inspector.HideInInspectorAttribute()]

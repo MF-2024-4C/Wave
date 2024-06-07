@@ -2,7 +2,7 @@
 
 namespace Quantum.Wave.Item
 {
-    public unsafe partial class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter> , ISignalOnInteract 
+    public unsafe partial class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter> , ISignalOnInteract
     {
         public struct Filter
         {
@@ -19,7 +19,6 @@ namespace Quantum.Wave.Item
         public void OnInteract(Frame f, EntityRef interacter, EntityRef player)
         {
             InteractItem(f, interacter, player);
-            
         }
 
         protected virtual void InteractItem(Frame f, EntityRef item, EntityRef player)

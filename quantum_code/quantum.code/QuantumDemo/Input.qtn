@@ -3,6 +3,5 @@
 input
 {
     button Jump;
-    button Interact;
     FPVector2 Direction;
 }
