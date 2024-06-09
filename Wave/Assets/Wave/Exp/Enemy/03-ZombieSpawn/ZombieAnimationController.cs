@@ -47,11 +47,24 @@ namespace Wave.Exp.Enemy
                 EntityRef = entityRef,
             });
         }
+        
+        public void RemoveZombie(EntityRef entityRef)
+        {
+            // 末尾とスワップすることでO(1)で削除できる。
+            // ただし、順序は保証されないので注意。
+            for (var i = 0; i < _zombies.Count; i++)
+            {
+                if (_zombies[i].EntityRef != entityRef) continue;
+                _zombies[i] = _zombies[^1];
+                _zombies.RemoveAt(_zombies.Count - 1);
+                return;
+            }
+        }
+        
 
         public override void OnUpdateView(QuantumGame game)
         {
             var frame = game.Frames.Predicted;
-
             foreach (var zombie in _zombies)
             {
                 var zombieComponent = frame.Get<Zombie>(zombie.EntityRef);
