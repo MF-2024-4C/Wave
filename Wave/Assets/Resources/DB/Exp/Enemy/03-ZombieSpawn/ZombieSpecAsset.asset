@@ -20,4 +20,4 @@ MonoBehaviour:
     HP:
       RawValue: 1310720
     DormantSearchDistance:
-      RawValue: 131072
+      RawValue: 196608

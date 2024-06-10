@@ -23,9 +23,10 @@ namespace Wave.Exp.Enemy
 
         [Header("Animations")] [SerializeField]
         private AnimationClip _idle;
-
         [SerializeField] private AnimationClip _run;
-
+        [SerializeField] private AnimationClip _attack;
+        [SerializeField] private AnimationClip _die;
+        
         private static ZombieAnimationController _instance;
 
         public static ZombieAnimationController Instance()
@@ -47,7 +48,7 @@ namespace Wave.Exp.Enemy
                 EntityRef = entityRef,
             });
         }
-        
+
         public void RemoveZombie(EntityRef entityRef)
         {
             // 末尾とスワップすることでO(1)で削除できる。
@@ -60,7 +61,7 @@ namespace Wave.Exp.Enemy
                 return;
             }
         }
-        
+
 
         public override void OnUpdateView(QuantumGame game)
         {
@@ -73,29 +74,40 @@ namespace Wave.Exp.Enemy
             }
         }
 
+        private AnimationClip GetClip(ZombieState state)
+        {
+            switch (state)
+            {
+                case ZombieState.Sleep:
+                case ZombieState.Idle:
+                    return _idle;
+                    break;
+                case ZombieState.Chase:
+                    return _run;
+                    break;
+                case ZombieState.Attack:
+                    return _attack;
+                    break;
+                case ZombieState.Die:
+                    return _die;
+                    break;
+            }
+
+            Debug.LogWarning($"{state} State AnimationClip not found.");
+            return null;
+        }
+
         private void AnimationState(ZombieAgent agent, ZombieState currentState)
         {
             if (agent.State == currentState)
                 return;
 
+            var prevState = agent.State;
             agent.State = currentState;
-
-            switch (currentState)
-            {
-                case ZombieState.Sleep:
-                case ZombieState.Idle:
-                    GPUICrowdAPI.StartAnimation(agent.crowdPrefab, _idle, -1, 1, 0.5f);
-                    break;
-                case ZombieState.Chase:
-                    GPUICrowdAPI.StartAnimation(agent.crowdPrefab, _run, -1, 1, 0.5f);
-                    break;
-                case ZombieState.Attack:
-                    break;
-                case ZombieState.Die:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            var clip = GetClip(currentState);
+            if (clip == null)
+                return;
+            GPUICrowdAPI.StartAnimation(agent.crowdPrefab, clip, -1, 1, 0.5f);
         }
 
         private void Awake()

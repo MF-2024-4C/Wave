@@ -100,4 +100,6 @@ MonoBehaviour:
   clipList:
   - {fileID: 7400000, guid: 2e2b7350e68ead84ebb8efca8fd1643a, type: 3}
   - {fileID: 7400000, guid: 69628e28ee201db49a35fdb9d07e7bc8, type: 3}
+  - {fileID: 7400000, guid: af3e8211bb06a254a87a2f896d19ffba, type: 3}
+  - {fileID: 7400000, guid: 17a048d96cd39924faa3168945c686ea, type: 3}
   hasOptionalRenderers: 0

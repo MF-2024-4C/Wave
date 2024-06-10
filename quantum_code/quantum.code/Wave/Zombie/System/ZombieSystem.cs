@@ -25,7 +25,6 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,I
     {
         if (filter.Zombie->State == ZombieState.Die)
         {
-            f.Destroy(filter.Entity);
             return;
         }
 
