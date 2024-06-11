@@ -133,7 +133,7 @@ MonoBehaviour:
     GameEventQueue: []
     Interactor:
     - IsInteract:
-        Value: 1
+        Value: 0
       OnInteract:
         Value: 0
     ItemData:
@@ -229,7 +229,7 @@ MonoBehaviour:
     GameEventQueue: []
     Interactor:
     - IsInteract:
-        Value: 1
+        Value: 0
       OnInteract:
         Value: 0
     ItemData:

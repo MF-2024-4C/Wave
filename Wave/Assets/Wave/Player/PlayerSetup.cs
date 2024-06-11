@@ -13,9 +13,7 @@ namespace Wave.Player
         [SerializeField] private EntityView _entityView;
         [SerializeField] private EntityPrototype _entityPrototype;
         [SerializeField] private GameObject _virtualCameraPrefab;
-        [SerializeField] private GameObject _localPlayerModel;
-        [SerializeField] private GameObject _ohterPlayerModel;
-        [SerializeField] private PlayerAnimation _playerAnimation;
+        [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
 
         [Header("Layer Mask")] [SerializeField]
         private LayerMask _localLayer;
@@ -33,16 +31,19 @@ namespace Wave.Player
                 if (!game.PlayerIsLocal(playerLink.Player))
                 {
                     //ローカルじゃない場合
-                    _localPlayerModel.SetActive(false);
+                    //_localPlayerModel.SetActive(false);
                     _entityPrototype.PhysicsCollider.Layer = _otherLayer.BitMask;
-                    if (_ohterPlayerModel.TryGetComponent<Animator>(out anim)) SetAnimator(anim);
+                    //if (_ohterPlayerModel.TryGetComponent<Animator>(out anim)) SetAnimator(anim);
+                    _skinnedMeshRenderer.enabled = true;
                     return;
                 }
 
                 //ローカルの場合
-                _ohterPlayerModel.SetActive(false);
+                //_ohterPlayerModel.SetActive(false);
                 _entityPrototype.PhysicsCollider.Layer = _localLayer.BitMask;
-                if (_localPlayerModel.TryGetComponent<Animator>(out anim)) SetAnimator(anim);
+                //if (_localPlayerModel.TryGetComponent<Animator>(out anim)) SetAnimator(anim);
+                _skinnedMeshRenderer.enabled = false;
+                
                 GameObject virtualCameraObject = Instantiate(_virtualCameraPrefab);
                 if (virtualCameraObject.TryGetComponent<CinemachineVirtualCamera>(
                         out CinemachineVirtualCamera virtualCamera))
@@ -53,11 +54,6 @@ namespace Wave.Player
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
-        }
-
-        private void SetAnimator(Animator anim)
-        {
-            _playerAnimation.SetAnimator(anim);
         }
     }
 }
