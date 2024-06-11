@@ -9,10 +9,10 @@ namespace Wave.Player
     public class PlayerAnimation : MonoBehaviour
     {
         [SerializeField] private EntityView _entityView;
-        [SerializeField] private Animator _anim;
+        //[SerializeField] private Animator _anim;
 
         private string _currentTriggerAnim;
-        //private Animator _anim;
+        private Animator _anim;
         private EntityComponentPlayerSys _playerSys;
 
         private void Start()
