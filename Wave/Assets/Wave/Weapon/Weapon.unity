@@ -119,38 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &173780635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 173780636}
-  m_Layer: 6
-  m_Name: ShoulderL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &173780636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173780635}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1760830626178449698}
-  m_Father: {fileID: 1381085120}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419985077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,7 +2260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1253482314}
   - component: {fileID: 1253482313}
-  - component: {fileID: 1253482312}
   - component: {fileID: 1253482311}
   m_Layer: 0
   m_Name: Camera
@@ -2345,14 +2312,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1253482312
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253482310}
-  m_Enabled: 1
 --- !u!20 &1253482313
 Camera:
   m_ObjectHideFlags: 0
@@ -2392,7 +2351,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 512
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2419,7 +2378,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1279007856
+--- !u!1 &1300367940
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2427,61 +2386,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1279007857}
-  m_Layer: 6
-  m_Name: ShoulderR
+  - component: {fileID: 1300367941}
+  m_Layer: 9
+  m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1279007857
+--- !u!4 &1300367941
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279007856}
+  m_GameObject: {fileID: 1300367940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1760830626178449776}
-  m_Father: {fileID: 1381085120}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1381085119
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1381085120}
-  m_Layer: 6
-  m_Name: Chest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1381085120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381085119}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 173780636}
-  - {fileID: 1279007857}
+  m_Children: []
   m_Father: {fileID: 1760830626178449696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410881585
@@ -2545,7 +2470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451396950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LHandTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2560,12 +2485,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451396949}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.87}
+  m_LocalRotation: {x: 0.64278764, y: 0, z: -0.76604444, w: 0}
+  m_LocalPosition: {x: 0.1013, y: -0.153, z: 0.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6028205763151148426}
+  m_LocalEulerAnglesHint: {x: 180, y: 100, z: 0}
+--- !u!1 &1623539350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1623539351}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1623539351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623539350}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1760830626178449696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943093363
 GameObject:
@@ -2576,7 +2532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1943093364}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: RHandTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2592,7 +2548,7 @@ Transform:
   m_GameObject: {fileID: 1943093363}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.87}
+  m_LocalPosition: {x: 0.1109, y: -0.2458, z: 0.3256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2638,7 +2594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2060295890211929782}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Mag_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2747,7 +2703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 405700845946593442}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Mag_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449744}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2874,7 +2830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449746}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2890,7 +2846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449748}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2906,7 +2862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449750}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2922,7 +2878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449752}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2938,7 +2894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449754}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +2910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449756}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2970,7 +2926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449758}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2986,9 +2942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449696}
-  - component: {fileID: 1760830626178449699}
-  - component: {fileID: 1760830626178449697}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigBase_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3004,7 +2958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449698}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3021,7 +2975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760830626178449700}
   - component: {fileID: 1760830626164494358}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: First PersonArms_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3037,7 +2991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449704}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3053,7 +3007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449706}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3069,7 +3023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449710}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3085,7 +3039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449760}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmMidle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3101,7 +3055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449762}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmMidle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3117,7 +3071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449764}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmLower2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3133,7 +3087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449766}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmLower3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3149,7 +3103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449768}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3165,7 +3119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449770}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3181,7 +3135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449772}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmMidle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3197,7 +3151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449774}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3213,7 +3167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449776}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,7 +3183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449780}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3245,7 +3199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449784}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3261,7 +3215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449786}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmLower1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3277,7 +3231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449788}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3293,7 +3247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449790}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigRArmIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3309,7 +3263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449664}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3325,7 +3279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449666}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3341,7 +3295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449668}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3357,7 +3311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449670}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3373,7 +3327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449672}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3389,7 +3343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449674}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3405,7 +3359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449676}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3421,7 +3375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449678}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3437,7 +3391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449680}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmLower3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3453,7 +3407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449682}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmMidle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3469,7 +3423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449684}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmLower1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3485,7 +3439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449686}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmLower2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3501,7 +3455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449688}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3517,7 +3471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449690}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3533,7 +3487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449692}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmMidle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3549,7 +3503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760830626178449694}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FP_RigLArmMidle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3826,115 +3780,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1381085120}
+  - {fileID: 1760830626178449698}
+  - {fileID: 1760830626178449776}
+  - {fileID: 1623539351}
+  - {fileID: 1300367941}
   m_Father: {fileID: 6028205763151148426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1760830626178449697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760830626178096384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9643e11c77c0d4fb27fbcf6ff4839c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fixTransforms: 0
-  solver:
-    executedInEditor: 0
-    IKPosition: {x: 0.7691972, y: 1.6139386, z: 0.32782662}
-    IKPositionWeight: 1
-    root: {fileID: 1760830626178449696}
-    IKRotationWeight: 1
-    IKRotation: {x: -0.39283052, y: -0.8412974, z: 0.11486432, w: -0.3531418}
-    chest:
-      transform: {fileID: 1381085120}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: 0, y: 0, z: 0}
-      defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-    shoulder:
-      transform: {fileID: 1279007857}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: 0, y: 0, z: 0}
-      defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
-    upperArm:
-      transform: {fileID: 1760830626178449754}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -0.28333688, y: 0, z: 0}
-      defaultLocalRotation: {x: -0.025346503, y: -0.44684863, z: -0.19914937, w: 0.8717932}
-    forearm:
-      transform: {fileID: 1760830626178449786}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -0.3202829, y: -0.000000006055832, z: -0.00000009689331}
-      defaultLocalRotation: {x: -0.04208294, y: -0.019545691, z: -0.35035512, w: 0.9354669}
-    hand:
-      transform: {fileID: 1760830626178449774}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -0.14051725, y: -0.00000003027916, z: 0.000000048446655}
-      defaultLocalRotation: {x: 0.7100214, y: -0.026542906, z: 0.055174172, w: 0.70151335}
-    isLeft: 0
-    arm:
-      bones:
-      - readPosition: {x: 0, y: 2, z: 0}
-        readRotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
-        solverPosition: {x: 0, y: 2, z: 0}
-        solverRotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
-        length: 0.31835976
-        sqrMag: 0.10135293
-        axis: {x: -0.026666565, y: -0.002629757, z: -0.31723005}
-      - readPosition: {x: 0.31723005, y: 2.0266666, z: -0.002629757}
-        readRotation: {x: -0.22856529, y: -0.6902555, z: -0.630777, w: -0.27097183}
-        solverPosition: {x: 0.31723005, y: 2.0266666, z: -0.002629757}
-        solverRotation: {x: -0.22856529, y: -0.6902555, z: -0.630777, w: -0.27097183}
-        length: 0.32028288
-        sqrMag: 0.10258113
-        axis: {x: -0.32028297, y: -0.000000029480764, z: -0.00000022850048}
-      - readPosition: {x: 0.5570143, y: 1.8161181, z: 0.024828732}
-        readRotation: {x: 0.02709362, y: -0.6939489, z: -0.5197151, w: -0.49759132}
-        solverPosition: {x: 0.5570143, y: 1.8161181, z: 0.024828732}
-        solverRotation: {x: 0.02709362, y: -0.6939489, z: -0.5197151, w: -0.49759132}
-        length: 0.42155176
-        sqrMag: 0.17770588
-        axis: {x: -0.4215518, y: 0.000000072871515, z: 0.0000001261498}
-      - readPosition: {x: 0.7691972, y: 1.6139386, z: 0.32782662}
-        readRotation: {x: -0.39283052, y: -0.8412974, z: 0.11486432, w: -0.3531418}
-        solverPosition: {x: 0.7691972, y: 1.6139386, z: 0.32782662}
-        solverRotation: {x: -0.39283052, y: -0.8412974, z: 0.11486432, w: -0.3531418}
-        length: 0
-        sqrMag: 0
-        axis: {x: 0, y: 0, z: 0}
-      target: {fileID: 1943093364}
-      positionWeight: 1
-      rotationWeight: 1
-      shoulderRotationWeight: 1
-      shoulderRotationMode: 0
-      shoulderTwistWeight: 1
-      shoulderYawOffset: 45
-      shoulderPitchOffset: -30
-      bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 0, z: 0}
-      palmToThumbAxis: {x: 0, y: 0, z: 0}
-      armLengthMlp: 1
-      stretchCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
 --- !u!4 &1760830626178449698
 Transform:
   m_ObjectHideFlags: 0
@@ -3943,120 +3794,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760830626178096386}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13027462, y: 0.6199671, z: 0.13507783, w: 0.76185524}
+  m_LocalRotation: {x: 0.13027462, y: 0.6199671, z: 0.13507783, w: 0.7618552}
   m_LocalPosition: {x: 0.028524622, y: 0.10145447, z: 0.0595477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760830626178449780}
-  m_Father: {fileID: 173780636}
+  m_Father: {fileID: 1760830626178449696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1760830626178449699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760830626178096384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9643e11c77c0d4fb27fbcf6ff4839c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fixTransforms: 0
-  solver:
-    executedInEditor: 0
-    IKPosition: {x: -0.7693019, y: 1.6139059, z: 0.32773194}
-    IKPositionWeight: 1
-    root: {fileID: 1760830626178449696}
-    IKRotationWeight: 1
-    IKRotation: {x: -0.11509019, y: 0.35358176, z: 0.392727, w: 0.84113014}
-    chest:
-      transform: {fileID: 1381085120}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: 0, y: 0, z: 0}
-      defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-    shoulder:
-      transform: {fileID: 173780636}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: 0, y: 0, z: 0}
-      defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
-    upperArm:
-      transform: {fileID: 1760830626178449780}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -0.28333688, y: 0.000000012111664, z: 0}
-      defaultLocalRotation: {x: 0.025469083, y: 0.4467591, z: -0.19922785, w: 0.8718176}
-    forearm:
-      transform: {fileID: 1760830626178449684}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -0.32028288, y: 0, z: 0}
-      defaultLocalRotation: {x: 0.042060636, y: 0.019491471, z: -0.3502039, w: 0.93552566}
-    hand:
-      transform: {fileID: 1760830626178449688}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -0.14051732, y: 0.000000012111664, z: -0.00000009689331}
-      defaultLocalRotation: {x: -0.71007437, y: 0.027000885, z: 0.05464912, w: 0.7014833}
-    isLeft: 1
-    arm:
-      bones:
-      - readPosition: {x: 0, y: 2, z: 0}
-        readRotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
-        solverPosition: {x: 0, y: 2, z: 0}
-        solverRotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
-        length: 0.31835976
-        sqrMag: 0.10135293
-        axis: {x: -0.02666648, y: -0.0026297271, z: 0.31723008}
-      - readPosition: {x: -0.31723008, y: 2.0266664, z: -0.0026297271}
-        readRotation: {x: 0.6309002, y: 0.27096665, z: 0.228476, w: 0.6901746}
-        solverPosition: {x: -0.31723008, y: 2.0266664, z: -0.0026297271}
-        solverRotation: {x: 0.6309002, y: 0.27096665, z: 0.228476, w: 0.6901746}
-        length: 0.32028297
-        sqrMag: 0.10258118
-        axis: {x: -0.320283, y: 0.000000054587698, z: -0.00000002420537}
-      - readPosition: {x: -0.5570425, y: 1.8161501, z: 0.02483052}
-        readRotation: {x: 0.5199055, y: 0.4975024, z: -0.027056485, w: 0.6938715}
-        solverPosition: {x: -0.5570425, y: 1.8161501, z: 0.02483052}
-        solverRotation: {x: 0.5199055, y: 0.4975024, z: -0.027056485, w: 0.6938715}
-        length: 0.42155194
-        sqrMag: 0.17770603
-        axis: {x: -0.42155194, y: -0.00000014073292, z: -0.00000011156328}
-      - readPosition: {x: -0.7693019, y: 1.6139059, z: 0.32773194}
-        readRotation: {x: -0.11509019, y: 0.35358176, z: 0.392727, w: 0.84113014}
-        solverPosition: {x: -0.7693019, y: 1.6139059, z: 0.32773194}
-        solverRotation: {x: -0.11509019, y: 0.35358176, z: 0.392727, w: 0.84113014}
-        length: 0
-        sqrMag: 0
-        axis: {x: 0, y: 0, z: 0}
-      target: {fileID: 1451396950}
-      positionWeight: 1
-      rotationWeight: 1
-      shoulderRotationWeight: 1
-      shoulderRotationMode: 0
-      shoulderTwistWeight: 1
-      shoulderYawOffset: 45
-      shoulderPitchOffset: -30
-      bendGoal: {fileID: 0}
-      bendGoalWeight: 0
-      swivelOffset: 0
-      wristToPalmAxis: {x: 0, y: 0, z: 0}
-      palmToThumbAxis: {x: 0, y: 0, z: 0}
-      armLengthMlp: 1
-      stretchCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
 --- !u!4 &1760830626178449700
 Transform:
   m_ObjectHideFlags: 0
@@ -4383,13 +4128,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760830626178096464}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.1302746, y: -0.619967, z: 0.13507786, w: 0.7618553}
+  m_LocalRotation: {x: -0.13027458, y: -0.6199669, z: 0.13507783, w: 0.76185536}
   m_LocalPosition: {x: 0.028524652, y: 0.10145445, z: -0.059547666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760830626178449754}
-  m_Father: {fileID: 1279007857}
+  m_Father: {fileID: 1760830626178449696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1760830626178449780
 Transform:
@@ -4479,7 +4224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6826764876206144302}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Camera001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4511,7 +4256,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6028205763151148426}
-  m_Layer: 6
+  - component: {fileID: 6028205763151148428}
+  - component: {fileID: 6028205763151148427}
+  m_Layer: 9
   m_Name: Recoil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4527,7 +4274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8879717037517642784}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Main_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4544,7 +4291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188094392211226143}
   - component: {fileID: 1201778952160894520}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4562,7 +4309,7 @@ GameObject:
   - component: {fileID: 6550503575203861607}
   - component: {fileID: 8420285353783623791}
   - component: {fileID: 4041573793314219097}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bullet001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4578,7 +4325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758937945183658012}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Mag_Release
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9292,7 +9039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8178876390342441974}
   - component: {fileID: 9067508853277776725}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: BAAR_FP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9352,7 +9099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7330492228929366168}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9370,7 +9117,7 @@ GameObject:
   - component: {fileID: 7231911329779354585}
   - component: {fileID: 5086663934061826833}
   - component: {fileID: 6577584641434574129}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9410,7 +9157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5044736720446831872}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: AttachmentSockets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9428,7 +9175,7 @@ GameObject:
   - component: {fileID: 6035016661081637938}
   - component: {fileID: 3868848118105499907}
   - component: {fileID: 6206726317290229810}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9444,7 +9191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3919278906290395316}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: On Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9471,6 +9218,218 @@ Transform:
   - {fileID: 1943093364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6028205763151148427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2882804699593728553}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9643e11c77c0d4fb27fbcf6ff4839c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0.7691972, y: 1.6139387, z: 0.32782668}
+    IKPositionWeight: 1
+    root: {fileID: 6028205763151148426}
+    IKRotationWeight: 1
+    IKRotation: {x: -0.3928305, y: -0.84129745, z: 0.11486423, w: -0.35314184}
+    chest:
+      transform: {fileID: 1760830626178449696}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: 0, y: 0, z: 0}
+      defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+    shoulder:
+      transform: {fileID: 1760830626178449776}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: 0.028524652, y: 0.10145445, z: -0.059547666}
+      defaultLocalRotation: {x: -0.13027458, y: -0.6199669, z: 0.13507783, w: 0.76185536}
+    upperArm:
+      transform: {fileID: 1760830626178449754}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0.28333688, y: 0, z: 0}
+      defaultLocalRotation: {x: -0.025346503, y: -0.44684863, z: -0.19914937, w: 0.8717932}
+    forearm:
+      transform: {fileID: 1760830626178449786}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0.3202829, y: -0.000000006055832, z: -0.00000009689331}
+      defaultLocalRotation: {x: -0.04208294, y: -0.019545691, z: -0.35035512, w: 0.9354669}
+    hand:
+      transform: {fileID: 1760830626178449774}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0.14051725, y: -0.00000003027916, z: 0.000000048446655}
+      defaultLocalRotation: {x: 0.7100214, y: -0.026542906, z: 0.055174172, w: 0.70151335}
+    isLeft: 0
+    arm:
+      bones:
+      - readPosition: {x: 0.059547674, y: 1.9714754, z: 0.10145445}
+        readRotation: {x: -0.061731905, y: -0.69331276, z: -0.68850946, w: 0.2036205}
+        solverPosition: {x: 0.059547674, y: 1.9714754, z: 0.10145445}
+        solverRotation: {x: -0.061731905, y: -0.69331276, z: -0.68850946, w: 0.2036205}
+        length: 0.28333694
+        sqrMag: 0.08027981
+        axis: {x: -0.2833369, y: -0.0000000027744473, z: 0.000000009696376}
+      - readPosition: {x: 0.31723005, y: 2.0266666, z: -0.002629757}
+        readRotation: {x: -0.22856519, y: -0.6902555, z: -0.630777, w: -0.27097178}
+        solverPosition: {x: 0.31723005, y: 2.0266666, z: -0.002629757}
+        solverRotation: {x: -0.22856519, y: -0.6902555, z: -0.630777, w: -0.27097178}
+        length: 0.32028282
+        sqrMag: 0.102581084
+        axis: {x: -0.32028285, y: -0.0000000025888243, z: -0.00000020906857}
+      - readPosition: {x: 0.5570143, y: 1.8161182, z: 0.024828792}
+        readRotation: {x: 0.02709359, y: -0.69394886, z: -0.51971513, w: -0.49759135}
+        solverPosition: {x: 0.5570143, y: 1.8161182, z: 0.024828792}
+        solverRotation: {x: 0.02709359, y: -0.69394886, z: -0.51971513, w: -0.49759135}
+        length: 0.42155176
+        sqrMag: 0.17770588
+        axis: {x: -0.4215518, y: 0.000000101618056, z: 0.00000018024777}
+      - readPosition: {x: 0.7691972, y: 1.6139387, z: 0.32782668}
+        readRotation: {x: -0.3928305, y: -0.84129745, z: 0.11486423, w: -0.35314184}
+        solverPosition: {x: 0.7691972, y: 1.6139387, z: 0.32782668}
+        solverRotation: {x: -0.3928305, y: -0.84129745, z: 0.11486423, w: -0.35314184}
+        length: 0
+        sqrMag: 0
+        axis: {x: 0, y: 0, z: 0}
+      target: {fileID: 1943093364}
+      positionWeight: 1
+      rotationWeight: 1
+      shoulderRotationWeight: 1
+      shoulderRotationMode: 0
+      shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      wristToPalmAxis: {x: 0, y: 0, z: 0}
+      palmToThumbAxis: {x: 0, y: 0, z: 0}
+      armLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+--- !u!114 &6028205763151148428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2882804699593728553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9643e11c77c0d4fb27fbcf6ff4839c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: -0.7693019, y: 1.613906, z: 0.32773197}
+    IKPositionWeight: 1
+    root: {fileID: 6028205763151148426}
+    IKRotationWeight: 1
+    IKRotation: {x: -0.11509018, y: 0.35358173, z: 0.39272702, w: 0.84113014}
+    chest:
+      transform: {fileID: 1760830626178449696}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: 0, y: 0, z: 0}
+      defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+    shoulder:
+      transform: {fileID: 1760830626178449698}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: 0.028524622, y: 0.10145447, z: 0.0595477}
+      defaultLocalRotation: {x: 0.13027462, y: 0.6199671, z: 0.13507783, w: 0.7618552}
+    upperArm:
+      transform: {fileID: 1760830626178449780}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0.28333688, y: 0.000000012111664, z: 0}
+      defaultLocalRotation: {x: 0.025469083, y: 0.4467591, z: -0.19922785, w: 0.8718176}
+    forearm:
+      transform: {fileID: 1760830626178449684}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0.32028288, y: 0, z: 0}
+      defaultLocalRotation: {x: 0.042060636, y: 0.019491471, z: -0.3502039, w: 0.93552566}
+    hand:
+      transform: {fileID: 1760830626178449688}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0.14051732, y: 0.000000012111664, z: -0.00000009689331}
+      defaultLocalRotation: {x: -0.71007437, y: 0.027000885, z: 0.05464912, w: 0.7014833}
+    isLeft: 1
+    arm:
+      bones:
+      - readPosition: {x: -0.059547693, y: 1.9714754, z: 0.10145447}
+        readRotation: {x: 0.6885096, y: -0.20362018, z: 0.061732277, w: 0.69331276}
+        solverPosition: {x: -0.059547693, y: 1.9714754, z: 0.10145447}
+        solverRotation: {x: 0.6885096, y: -0.20362018, z: 0.061732277, w: 0.69331276}
+        length: 0.28333688
+        sqrMag: 0.08027978
+        axis: {x: -0.28333688, y: 0.000000007773702, z: -0.00000003207907}
+      - readPosition: {x: -0.31723008, y: 2.0266664, z: -0.0026297271}
+        readRotation: {x: 0.63090014, y: 0.27096665, z: 0.228476, w: 0.69017446}
+        solverPosition: {x: -0.31723008, y: 2.0266664, z: -0.0026297271}
+        solverRotation: {x: 0.63090014, y: 0.27096665, z: 0.228476, w: 0.69017446}
+        length: 0.32028297
+        sqrMag: 0.10258118
+        axis: {x: -0.32028297, y: 0.0000000032504444, z: -0.0000000480452}
+      - readPosition: {x: -0.5570425, y: 1.8161501, z: 0.02483052}
+        readRotation: {x: 0.5199054, y: 0.4975024, z: -0.027056456, w: 0.69387144}
+        solverPosition: {x: -0.5570425, y: 1.8161501, z: 0.02483052}
+        solverRotation: {x: 0.5199054, y: 0.4975024, z: -0.027056456, w: 0.69387144}
+        length: 0.4215519
+        sqrMag: 0.177706
+        axis: {x: -0.42155185, y: -0.00000014271933, z: -0.00000017912744}
+      - readPosition: {x: -0.7693019, y: 1.613906, z: 0.32773197}
+        readRotation: {x: -0.11509018, y: 0.35358173, z: 0.39272702, w: 0.84113014}
+        solverPosition: {x: -0.7693019, y: 1.613906, z: 0.32773197}
+        solverRotation: {x: -0.11509018, y: 0.35358173, z: 0.39272702, w: 0.84113014}
+        length: 0
+        sqrMag: 0
+        axis: {x: 0, y: 0, z: 0}
+      target: {fileID: 1451396950}
+      positionWeight: 1
+      rotationWeight: 1
+      shoulderRotationWeight: 1
+      shoulderRotationMode: 0
+      shoulderTwistWeight: 1
+      shoulderYawOffset: 0
+      shoulderPitchOffset: 0
+      bendGoal: {fileID: 1760830626178449688}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      wristToPalmAxis: {x: 0, y: 0, z: 0}
+      palmToThumbAxis: {x: 0, y: 0, z: 0}
+      armLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
 --- !u!4 &6035016661081637938
 Transform:
   m_ObjectHideFlags: 0
@@ -9495,7 +9454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6226852323454878224}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Barrel_ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9527,7 +9486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7080723232478243598}
   - component: {fileID: 9020582413017016935}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: fal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9620,7 +9579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054109822816270889}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9725,7 +9684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6633078847529300879}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: ShellEjectionPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9741,7 +9700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102158201929976935}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Triger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9836,7 +9795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7289949187320129418}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Camera001.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9876,7 +9835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3810430137150347305}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: AimTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

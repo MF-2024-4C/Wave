@@ -58,8 +58,6 @@ public class PlayerUI : MonoBehaviour
             Debug.Log("Hit Interacter!");
             return true;
         }
-
-        Debug.Log("Not Hit Interacter!");
         return false;
     }
 }
