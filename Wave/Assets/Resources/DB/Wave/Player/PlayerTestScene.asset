@@ -145,6 +145,8 @@ MonoBehaviour:
         RawValue: 0
       InteractPlayer:
         SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
     ItemData:
     - Config:
         Id:
@@ -248,6 +250,8 @@ MonoBehaviour:
         RawValue: 0
       InteractPlayer:
         SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
     ItemData:
     - Config:
         Id:
@@ -351,6 +355,8 @@ MonoBehaviour:
         RawValue: 0
       InteractPlayer:
         SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
     ItemData:
     - Config:
         Id:

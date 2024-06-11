@@ -1,5 +1,6 @@
 using UnityEngine;
 using Quantum;
+using UnityEngine.UI;
 using LayerMask = UnityEngine.LayerMask;
 
 public class PlayerUI : MonoBehaviour
@@ -7,8 +8,10 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private EntityView _entityView;
     [SerializeField] private EntityComponentPlayerSys _entityComponentPlayerSys;
     [SerializeField] private LayerMask _interactLayer;
+    //[SerializeField] private GameObject _canInteractUI;
     [SerializeField] private GameObject _canInteractUI;
-
+    [SerializeField] private Image _elapsedTimeUI;
+    
     private void Start()
     {
         QuantumGame game = QuantumRunner.Default.Game;
@@ -24,7 +27,22 @@ public class PlayerUI : MonoBehaviour
     
     private void Update()
     {
-        _canInteractUI.SetActive(CheckCanInteract());
+        if (CheckCanInteract())
+        {
+            _canInteractUI.SetActive(true);
+            return;
+        }
+        
+        _canInteractUI.SetActive(false);
+        
+        if (!CheckElapsedTime(out float elapsedTimeRate))
+        {
+            _elapsedTimeUI.enabled = false;
+            return;
+        }
+        
+        _elapsedTimeUI.enabled = true;
+        _elapsedTimeUI.fillAmount = elapsedTimeRate;
     }
     
     private bool CheckCanInteract()
@@ -62,5 +80,20 @@ public class PlayerUI : MonoBehaviour
 
         //Debug.Log("Not Hit Interacter!");
         return false;
+    }
+
+    private bool CheckElapsedTime(out float elapsedTimeRate)
+    {
+        elapsedTimeRate = 0;
+        Frame frame = QuantumRunner.Default.Game.Frames.Verified;
+        if (!frame.TryGet<PlayerSys>(_entityView.EntityRef, out PlayerSys playerSys)) return false;
+        if (!frame.TryGet<Interactor>(playerSys.InteractEntity, out Interactor interactor)) return false;
+        if (interactor.InteractPlayer != _entityView.EntityRef) return false;
+        if(!frame.TryFindAsset<InteractConfig>(interactor.Config.Id, out InteractConfig interactConfig)) return false;
+        
+        float nowElapsedTime = (frame.Number * frame.DeltaTime - interactor.InteractStartTime).AsFloat;
+        elapsedTimeRate = nowElapsedTime / interactConfig.HoldTime.AsFloat;
+        elapsedTimeRate = Mathf.Clamp01(elapsedTimeRate);
+        return true;
     }
 }

@@ -491,6 +491,8 @@ MonoBehaviour:
     InteractEndTime:
       RawValue: 0
     InteractPlayer: {fileID: 0}
+    NowCoolDown:
+      Value: 0
 --- !u!1 &219408022
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +647,8 @@ MonoBehaviour:
     InteractEndTime:
       RawValue: 0
     InteractPlayer: {fileID: 0}
+    NowCoolDown:
+      Value: 0
 --- !u!114 &247466785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,6 +1860,8 @@ MonoBehaviour:
     InteractEndTime:
       RawValue: 0
     InteractPlayer: {fileID: 0}
+    NowCoolDown:
+      Value: 0
 --- !u!1001 &1604458062
 PrefabInstance:
   m_ObjectHideFlags: 0
