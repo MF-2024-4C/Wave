@@ -911,3 +911,143 @@ MonoBehaviour:
     View: []
     PhysicsJoints2D: []
     PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    Interacter: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Weapon: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie:
+    - HP:
+        RawValue: 0
+      State:
+        Value: 0
+      Target:
+        SceneIndexPlusOne: 0
+      Spec:
+        Id:
+          Value: 98722892196609692
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder:
+    - AgentConfig:
+        Id:
+          Value: 2
+      InitialTarget:
+        _hasValue: 0
+        _value:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+      InitialTargetNavMesh:
+        Id:
+          Value: 0
+      InitialTargetNavMeshName: 
+    NavMeshSteeringAgent:
+    - OverrideMaxSpeed: 0
+      OverrideAcceleration: 0
+      MaxSpeed:
+        RawValue: 0
+      Acceleration:
+        RawValue: 0
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 5
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 12451
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 19660
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 6
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -151257
+        Y:
+          RawValue: -226845
+        Z:
+          RawValue: 1458831
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []

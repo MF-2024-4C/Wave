@@ -31,10 +31,11 @@ MonoBehaviour:
       type: 3}
     probeSamplingDebugTexture: {fileID: 2800000, guid: 24ec0e140fb444a44ab96ee80844e18e,
       type: 3}
-  m_RendererFeatures: []
-  m_RendererFeatureMap: 
+  m_RendererFeatures:
+  - {fileID: 8698382425381249831}
+  m_RendererFeatureMap: 27a359d9badcb678
   m_UseNativeRenderPass: 0
-  postProcessData: {fileID: 0}
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -61,7 +62,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 471
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -75,3 +76,25 @@ MonoBehaviour:
   m_CopyDepthMode: 1
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &8698382425381249831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d370000a2542e0bab2558e1c789708, type: 3}
+  m_Name: UIRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 32
+  _execblur: 0
+  _execGlassMorphism: 1
+  _blurRate: 1
+  _blurWidth: 1
+  _blurRenderScale: 0.5
+  _blurShader: {fileID: 4800000, guid: aa3b7fcaa55d474ea716afc4e001dce4, type: 3}
