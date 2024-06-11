@@ -6,9 +6,10 @@ using UnityEngine.Serialization;
 
 public class WeaponInstancer : MonoBehaviour
 {
-    [ SerializeField] private WeaponInventory _weaponInventory;
+    [SerializeField] private WeaponInventory _weaponInventory;
     [SerializeField] private EntityComponentWeaponInventory _entityWeaponInventory;
     [SerializeField] private EntityView _entityView;
+
     public void OnEntityInstantiated()
     {
         QuantumEvent.Subscribe<EventInstanceWeapon>(this, InstanceWeapon);
@@ -23,7 +24,7 @@ public class WeaponInstancer : MonoBehaviour
         var inventory = frame.GetPointer<Quantum.WeaponInventory>(entity);
 
         var primaryPrototype = inventory->primary;
-        if (TryGetWeapon(primaryPrototype,out var primaryWeapon))
+        if (TryGetWeapon(primaryPrototype, out var primaryWeapon))
         {
             InstanceWeapon(new EventInstanceWeapon()
             {
@@ -32,7 +33,7 @@ public class WeaponInstancer : MonoBehaviour
         }
 
         var secondaryPrototype = inventory->secondary;
-        if (TryGetWeapon(secondaryPrototype,out var secondaryWeapon))
+        if (TryGetWeapon(secondaryPrototype, out var secondaryWeapon))
         {
             InstanceWeapon(new EventInstanceWeapon()
             {
@@ -41,7 +42,7 @@ public class WeaponInstancer : MonoBehaviour
         }
 
         var tertiaryPrototype = inventory->tertiary;
-        if (TryGetWeapon(tertiaryPrototype,out var tertiaryWeapon))
+        if (TryGetWeapon(tertiaryPrototype, out var tertiaryWeapon))
         {
             InstanceWeapon(new EventInstanceWeapon()
             {
@@ -51,7 +52,7 @@ public class WeaponInstancer : MonoBehaviour
 
         return;
 
-        bool TryGetWeapon(EntityRef prototype,out Weapon* weapon)
+        bool TryGetWeapon(EntityRef prototype, out Weapon* weapon)
         {
             weapon = null;
             if (!prototype.IsValid) return false;
@@ -74,6 +75,10 @@ public class WeaponInstancer : MonoBehaviour
             WeaponType.Tertiary => _weaponInventory.TertiaryWeaponContainer,
             _ => null
         };
-        if (parent != null) Instantiate((Object)weapon, parent.transform);
+
+        if (parent != null)
+        {
+            Instantiate(weapon, parent.transform);
+        }
     }
 }

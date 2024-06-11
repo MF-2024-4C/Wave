@@ -28,7 +28,9 @@ public class FireSystem : MonoBehaviour
             return;
         }
 
-        _weaponInventory.CurrentWeapon.PlayAnimation(WeaponAnimation.Fire);
+        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(WeaponAnimation.Fire);
+        
+        _weaponInventory.CurrentWeapon.WeaponSoundManager.PlayFireSound();
     }
 
     private void Reload(EventReload e)
@@ -38,6 +40,6 @@ public class FireSystem : MonoBehaviour
             return;
         }
         
-        _weaponInventory.CurrentWeapon.PlayAnimation(WeaponAnimation.Reload);
+        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(WeaponAnimation.Reload);
     }
 }
