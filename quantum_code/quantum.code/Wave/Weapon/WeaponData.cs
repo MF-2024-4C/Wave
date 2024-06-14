@@ -17,10 +17,10 @@ public partial class WeaponData
     [Tooltip("1発のダメージ")] public int Damage;
     [Tooltip("弾の貫通力")] public int PenetrationPower;
     [Tooltip("武器を取り出す時間")] public FP EquipTime;
-    
+
     [Tooltip("射撃時の横反動")] public FPAnimationCurve HorizontalRecoilCurve;
     [Tooltip("射撃時の縦反動")] public FPAnimationCurve VerticalRecoilCurve;
-    
+
     /// <summary>
     /// WeaponDataを追加した場合、CopyDataメソッドに追加すること。
     /// </summary>
@@ -38,7 +38,7 @@ public partial class WeaponData
         weapon->maxAmmo = MaxAmmo;
         weapon->damage = Damage;
         weapon->penetrationPower = PenetrationPower;
-        
+
         weapon->equipTime = EquipTime;
     }
 
@@ -49,18 +49,20 @@ public partial class WeaponData
         weapon->recoilProgressRate = FP._1 / FireRate * MaxAmmo;
     }
 
-    public unsafe void OnEquip(Weapon* weapon)
+    public unsafe void OnEquip(Frame frame, PlayerLink* playerLink, Weapon* weapon, EntityRef weaponEntity)
     {
         weapon->equipTime = EquipTime;
+
+        frame.Events.Equip(playerLink->Player, weaponEntity);
     }
 
     public unsafe void OnUnEquip(Weapon* weapon)
     {
         weapon->nextFireTime = FP._0;
-        
+
         weapon->reloadingTime = FP._0;
         weapon->isReloading = false;
-        
+
         weapon->recoilProgressTime = FP._0;
     }
 }

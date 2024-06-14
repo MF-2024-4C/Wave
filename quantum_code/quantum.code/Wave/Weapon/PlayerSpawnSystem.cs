@@ -31,13 +31,16 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
             if (frame.Unsafe.TryGetPointer<WeaponInventorySetup>(entity, out var weaponSetup))
             {
                 var weaponPrototype = frame.FindAsset<EntityPrototype>(weaponSetup->PrimaryWeaponData.Id);
-                if (weaponPrototype != null) inventory->primary = frame.Create(weaponPrototype);
+                if (weaponPrototype != null)
+                    inventory->SetWeapon(frame, WeaponType.Primary, frame.Create(weaponPrototype));
 
                 weaponPrototype = frame.FindAsset<EntityPrototype>(weaponSetup->SecondaryWeaponData.Id);
-                if (weaponPrototype != null) inventory->secondary = frame.Create(weaponPrototype);
+                if (weaponPrototype != null) 
+                    inventory->SetWeapon(frame, WeaponType.Secondary, frame.Create(weaponPrototype));
 
                 weaponPrototype = frame.FindAsset<EntityPrototype>(weaponSetup->TertiaryWeaponData.Id);
-                if (weaponPrototype != null) inventory->tertiary = frame.Create(weaponPrototype);
+                if (weaponPrototype != null) 
+                    inventory->SetWeapon(frame, WeaponType.Tertiary, frame.Create(weaponPrototype));
             }
         }
 

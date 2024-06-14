@@ -170,3 +170,5 @@ MonoBehaviour:
         WeightedMode: 0
   WeaponPrefab: {fileID: 8864005491116384672, guid: 4ce1037f6bcd5b74c87ad4e86685700a,
     type: 3}
+  FireSound: {fileID: 6418180475301049370, guid: 5947199187a90b645aae32b32fbb2435,
+    type: 2}

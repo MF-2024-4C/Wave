@@ -1,14 +1,21 @@
-component TmpPlayer
+component WeaponEvents
 {
 
 }
 
 event Fire {
    PlayerRef Player;
+   entity_ref Weapon;
 }
 
 event Reload {
    PlayerRef Player;
+   entity_ref Weapon;
+}
+
+event Equip {
+   PlayerRef Player;
+   entity_ref Weapon;
 }
 
 event ChangeActiveWeapon {

@@ -420,7 +420,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnEntityInstantiated.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 3815468106646078529}
+      objectReference: {fileID: 6178245200959018209}
     - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
       propertyPath: OnEntityInstantiated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
       propertyPath: OnEntityInstantiated.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: WeaponInventory, Assembly-CSharp
+      value: WeaponChanger, Wave
       objectReference: {fileID: 0}
     - target: {fileID: 5086503397990343822, guid: 98fadbbd3dc3fb349a30ab16c27a6364,
         type: 3}
