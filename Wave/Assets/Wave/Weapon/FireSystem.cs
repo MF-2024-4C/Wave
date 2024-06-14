@@ -19,27 +19,51 @@ public class FireSystem : MonoBehaviour
 
         QuantumEvent.Subscribe<EventFire>(this, Fire);
         QuantumEvent.Subscribe<EventReload>(this, Reload);
+        QuantumEvent.Subscribe<EventEquip>(this, Equip);
     }
 
     private void Fire(EventFire　e)
     {
-        if (!this.EqualsPlayer(_entityView, e.Player))
-        {
-            return;
-        }
+        if (!this.EqualsPlayer(_entityView, e.Player)) return;
 
-        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(WeaponAnimation.Fire);
-        
-        _weaponInventory.CurrentWeapon.WeaponSoundManager.PlayFireSound();
+        var anim = WeaponAnimation.Fire;
+        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(anim);
+
+        var frame = QuantumRunner.Default.Game.Frames.Predicted;
+        if (frame.TryGet<Weapon>(e.Weapon, out var weapon))
+        {
+            var sound = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id).FireSound;
+            _weaponInventory.CurrentWeapon.WeaponSoundManager.PlayWeaponSound(sound);
+        }
     }
 
     private void Reload(EventReload e)
     {
-        if (!this.EqualsPlayer(_entityView, e.Player))
+        if (!this.EqualsPlayer(_entityView, e.Player)) return;
+
+        var anim = WeaponAnimation.Reload;
+        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(anim);
+
+        var frame = QuantumRunner.Default.Game.Frames.Predicted;
+        if (frame.TryGet<Weapon>(e.Weapon, out var weapon))
         {
-            return;
+            var sound = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id).ReloadSound;
+            _weaponInventory.CurrentWeapon.WeaponSoundManager.PlayWeaponSound(sound);
         }
+    }
+
+    private void Equip(EventEquip e)
+    {
+        if (!this.EqualsPlayer(_entityView, e.Player)) return;
         
-        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(WeaponAnimation.Reload);
+        var anim = WeaponAnimation.Equip;
+        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(anim);
+
+        var frame = QuantumRunner.Default.Game.Frames.Predicted;
+        if (frame.TryGet<Weapon>(e.Weapon, out var weapon))
+        {
+            var sound = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id).EquipSound;
+            _weaponInventory.CurrentWeapon.WeaponSoundManager.PlayWeaponSound(sound);
+        }
     }
 }

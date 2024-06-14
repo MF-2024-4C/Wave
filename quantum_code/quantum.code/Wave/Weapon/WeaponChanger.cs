@@ -28,7 +28,8 @@ public unsafe class WeaponChanger : SystemMainThreadFilter<WeaponInventorySystem
         ChangeWeapon(frame, ref filter, player, weaponType);
 
         var newWeapon = filter.Inventory->GetWeaponFromType(frame, weaponType);
-        frame.FindAsset<WeaponData>(newWeapon->data.Id).OnEquip(newWeapon);
+        var newWeaponEntity = filter.Inventory->GetCurrentWeaponEntity();
+        frame.FindAsset<WeaponData>(newWeapon->data.Id).OnEquip(frame,player,newWeapon,newWeaponEntity);
     }
 
 

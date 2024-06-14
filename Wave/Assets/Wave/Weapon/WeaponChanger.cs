@@ -36,8 +36,6 @@ public class WeaponChanger : MonoBehaviour
         _weaponInventory.CurrentWeapon = gun;
 
         _weaponInventory.ToggleWeapon(container);
-
-        _weaponInventory.CurrentWeapon.WeaponAnimationManager.PlayAnimation(WeaponAnimation.Equip);
     }
 
     private void ChangeWeapon(EventChangeActiveWeapon e)

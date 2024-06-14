@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Quantum;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Wave.Weapon.Animation;
 
 public class WeaponManager : MonoBehaviour

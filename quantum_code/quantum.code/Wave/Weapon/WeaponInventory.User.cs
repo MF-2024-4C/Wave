@@ -42,6 +42,32 @@ public unsafe partial struct WeaponInventory
         return weapon;
     }
 
+    public EntityRef GetWeaponEntityFromType(WeaponType type)
+    {
+        EntityRef entity;
+        switch (type)
+        {
+            case WeaponType.Primary:
+                entity = primary;
+                break;
+            case WeaponType.Secondary:
+                entity = secondary;
+                break;
+            case WeaponType.Tertiary:
+                entity = tertiary;
+                break;
+            default:
+                return default;
+        }
+
+        return entity;
+    }
+    
+    public EntityRef GetCurrentWeaponEntity()
+    {
+        return GetWeaponEntityFromType(currentWeaponType);
+    }
+    
     public Weapon* GetCurrentWeapon(Frame frame)
     {
         return GetWeaponFromType(frame, currentWeaponType);

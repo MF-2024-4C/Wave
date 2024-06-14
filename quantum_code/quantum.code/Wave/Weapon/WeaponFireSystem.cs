@@ -14,9 +14,9 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
 
         EquipProgress(frame, currentWeapon);
 
-        Fire(frame, player, input, currentWeapon);
+        Fire(frame, ref filter, player, input, currentWeapon);
 
-        Reload(frame, player, input, currentWeapon);
+        Reload(frame, ref filter, player, input, currentWeapon);
 
         RecoilProgress(frame, currentWeapon);
     }
@@ -27,7 +27,8 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
             currentWeapon->equipTime -= frame.DeltaTime;
     }
 
-    private void Fire(Frame frame, PlayerLink* player, Input input, Quantum.Weapon* currentWeapon)
+    private void Fire(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, Input input,
+        Quantum.Weapon* currentWeapon)
     {
         FireProgress(frame, currentWeapon);
 
@@ -41,7 +42,10 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         };
 
         if (shouldFire)
-            currentWeapon->Fire(frame, player);
+        {
+            var weapon = filter.Inventory->GetCurrentWeaponEntity();
+            currentWeapon->Fire(frame, player, weapon);
+        }
     }
 
     private void FireProgress(Frame frame, Quantum.Weapon* currentWeapon)
@@ -50,13 +54,15 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
             currentWeapon->nextFireTime -= frame.DeltaTime;
     }
 
-    private void Reload(Frame frame, PlayerLink* player, Input input, Quantum.Weapon* currentWeapon)
+    private void Reload(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, Input input,
+        Quantum.Weapon* currentWeapon)
     {
         ReloadProgress(frame, currentWeapon);
 
         if (input.Reload.WasPressed && currentWeapon->CanReload())
         {
-            currentWeapon->Reload(frame, player);
+            var weapon = filter.Inventory->GetCurrentWeaponEntity();
+            currentWeapon->Reload(frame, player, weapon);
         }
     }
 

@@ -88,7 +88,7 @@
     <Content Include="Wave\Item\DSL\ItemInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
-    <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn" />
+    <Content Include="Wave\Weapon\DSL\WeaponEvents.qtn" />
     <Content Include="Wave\Weapon\DSL\Weapon.qtn" />
     <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn" />
     <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn" />
