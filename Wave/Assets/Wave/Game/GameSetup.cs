@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using Quantum;
+using UnityEngine;
 
 namespace Wave.Game
 {
-    public class GameSetup : MonoBehaviour
+    public class GameSetup : QuantumCallbacks
     {
         private void Awake()
         {
+            
             CursorLockedAndHidden();
         }
         
@@ -14,6 +16,11 @@ namespace Wave.Game
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+        }
+        
+        private void Build()
+        {
+            
         }
     }
 }

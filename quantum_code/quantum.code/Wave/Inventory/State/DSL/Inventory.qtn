@@ -1,0 +1,4 @@
+﻿
+component Inventory{
+    array<EntityPrototype>[5] Options;
+}
