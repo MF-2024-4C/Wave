@@ -60,8 +60,7 @@ namespace Quantum
             playerSys->TargetRotation = targetRotation;
 
             //インタラクト用にカメラの向いている方向を保存
-            PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
-            config.CameraForwardDirection = input.CameraForwardDirection;
+            playerSys->CameraForwardDirection = input.CameraForwardDirection;
         }
 
         public static void Interact(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys,
@@ -77,10 +76,10 @@ namespace Quantum
                 for (int i = 0; i < hits.Count; i++)
                 {
                     var hit = hits[i];
-                    if (f.Unsafe.TryGetPointer(hit.Entity, out Interacter* interacter))
+                    if (f.Unsafe.TryGetPointer(hit.Entity, out Interactor* interacter))
                     {
                         if (!interacter->IsInteract) continue;
-                        Interacter.Interact(f, entity, hit.Entity, interacter);
+                        Interactor.Interact(f, entity, hit.Entity, interacter);
                         return;
                     }
                 }

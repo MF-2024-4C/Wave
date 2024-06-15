@@ -11,11 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Zombie
-  - Ground
   - LocalPlayer
-  - 
-  - 
+  - OtherPlayer
+  - Interacter
   - 
   - 
   - 

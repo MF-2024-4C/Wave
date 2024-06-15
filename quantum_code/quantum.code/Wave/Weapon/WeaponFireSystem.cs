@@ -1,122 +1,92 @@
+using Photon.Deterministic;
+
 namespace Quantum.Wave.Weapon;
 
 public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySystem.GunHolderFilter>
 {
-    Quantum.Weapon* currentWeapon;
-
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
     {
-        Input input = default;
         if (!frame.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* player)) return;
 
-        input = *frame.GetPlayerInput(player->Player);
+        var input = *frame.GetPlayerInput(player->Player);
 
-        currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
+        var currentWeapon = filter.Inventory->GetCurrentWeapon(frame);
 
+        EquipProgress(frame, currentWeapon);
 
-        //Fire
-        //---------------------------------------------
-        currentWeapon->nextFireTime += frame.DeltaTime;
+        Fire(frame, ref filter, player, input, currentWeapon);
 
-        if (currentWeapon->currentFireMode == FireMode.FullAuto)
+        Reload(frame, ref filter, player, input, currentWeapon);
+
+        RecoilProgress(frame, currentWeapon);
+    }
+
+    private void EquipProgress(Frame frame, Quantum.Weapon* currentWeapon)
+    {
+        if (currentWeapon->equipTime > FP._0)
+            currentWeapon->equipTime -= frame.DeltaTime;
+    }
+
+    private void Fire(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, Input input,
+        Quantum.Weapon* currentWeapon)
+    {
+        FireProgress(frame, currentWeapon);
+
+        if (!currentWeapon->CanFire()) return;
+
+        var shouldFire = currentWeapon->currentFireMode switch
         {
-            FullAutoFire(frame, filter, input, player);
-        }
-        else if (currentWeapon->currentFireMode == FireMode.SemiAuto)
+            FireMode.FullAuto => input.Fire.IsDown,
+            FireMode.SemiAuto => input.Fire.WasPressed,
+            _ => false
+        };
+
+        if (shouldFire)
         {
-            SemiAutoFire(frame, filter, input, player);
+            var weapon = filter.Inventory->GetCurrentWeaponEntity();
+            currentWeapon->Fire(frame, player, weapon);
         }
-        //---------------------------------------------
+    }
 
+    private void FireProgress(Frame frame, Quantum.Weapon* currentWeapon)
+    {
+        if (currentWeapon->nextFireTime > FP._0)
+            currentWeapon->nextFireTime -= frame.DeltaTime;
+    }
 
-        //Reload
-        //---------------------------------------------
-        if (currentWeapon->isReloading)
+    private void Reload(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, Input input,
+        Quantum.Weapon* currentWeapon)
+    {
+        ReloadProgress(frame, currentWeapon);
+
+        if (input.Reload.WasPressed && currentWeapon->CanReload())
         {
-            currentWeapon->reloadingTime += frame.DeltaTime;
-
-            if (currentWeapon->reloadingTime >= currentWeapon->reloadTime) //リロード完了
-            {
-                currentWeapon->isReloading = false;
-                currentWeapon->reloadingTime = 0;
-            }
+            var weapon = filter.Inventory->GetCurrentWeaponEntity();
+            currentWeapon->Reload(frame, player, weapon);
         }
-        else if (input.Reload.WasPressed && //リロードキーが押された
-                 !IsReloading() && //リロード中でない
-                 currentWeapon->currentAmmo < currentWeapon->maxAmmo) //1発以上弾が減っている
+    }
+
+    private void ReloadProgress(Frame frame, Quantum.Weapon* currentWeapon)
+    {
+        if (!currentWeapon->IsReloading()) return;
+
+        if (currentWeapon->reloadingTime > FP._0)
         {
-            Reload(frame, filter, player);
+            currentWeapon->reloadingTime -= frame.DeltaTime;
         }
-        //---------------------------------------------
+        else
+        {
+            currentWeapon->OnReloaded();
+        }
     }
 
-    private void Reload(Frame frame, WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player)
+    private void RecoilProgress(Frame frame, Quantum.Weapon* currentWeapon)
     {
-        SendReloadEvent(frame, player);
-        currentWeapon->currentAmmo = currentWeapon->maxAmmo;
-        currentWeapon->isReloading = true;
-    }
+        if (currentWeapon->nextFireTime > FP._0 || currentWeapon->recoilProgressTime <= FP._0) return;
 
-    private void FullAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
-        PlayerLink* player)
-    {
-        if (!input.Fire.IsDown) return;
-        if (!IsEndedFireCoolTime()) return;
-        if (!IsExistAmmo()) return;
-        if (IsReloading()) return;
+        currentWeapon->recoilProgressTime -= FP._1 / currentWeapon->recoilProgressRate * frame.DeltaTime;
 
-        SendFireEvent(frame, player);
-        currentWeapon->currentAmmo--;
-        currentWeapon->nextFireTime = 0;
-        
-        OnFire(frame, filter, player);
-    }
-
-    private void SemiAutoFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, Input input,
-        PlayerLink* player)
-    {
-        if (!input.Fire.WasPressed) return;
-        if (!IsEndedFireCoolTime()) return;
-        if (!IsExistAmmo()) return;
-        if (IsReloading()) return;
-
-        SendFireEvent(frame, player);
-        currentWeapon->currentAmmo--;
-        currentWeapon->nextFireTime = 0;
-        
-        OnFire(frame, filter, player);
-    }
-
-    private bool IsReloading()
-    {
-        return currentWeapon->isReloading;
-    }
-
-    private bool IsExistAmmo()
-    {
-        var ammo = currentWeapon->currentAmmo;
-        return ammo > 0;
-    }
-
-    private bool IsEndedFireCoolTime()
-    {
-        var coolTime = currentWeapon->fireRate;
-        return currentWeapon->nextFireTime >= coolTime;
-    }
-
-    private void SendFireEvent(Frame frame, PlayerLink* player)
-    {
-        frame.Events.Fire(player->Player);
-    }
-
-    private void SendReloadEvent(Frame frame, PlayerLink* player)
-    {
-        frame.Events.Reload(player->Player);
-    }
-    
-    private static void OnFire(Frame frame, WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player)
-    {
-        Log.Info("OnFire");
-        WeaponFireUtilities.ProjectileCast(frame, filter.Transform3D, filter.Player, frame.GetPlayerInput(player->Player));
+        if (currentWeapon->recoilProgressTime < FP._0)
+            currentWeapon->recoilProgressTime = FP._0;
     }
 }

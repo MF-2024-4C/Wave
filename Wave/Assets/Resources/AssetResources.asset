@@ -321,6 +321,11 @@ MonoBehaviour:
         Id:
           Value: 3038724031888305873
       ResourcePath: DB/Exp/Enemy/01-ZombieMove/PlayerCharacter
+    - Path: Resources/DB/Wave/Player/Config/PlayerTestSystemConfig
+      AssetRef:
+        Id:
+          Value: 3057101041959360271
+      ResourcePath: DB/Wave/Player/Config/PlayerTestSystemConfig
     - Path: Resources/DB/QuantumDemo/GunMap_mesh
       AssetRef:
         Id:

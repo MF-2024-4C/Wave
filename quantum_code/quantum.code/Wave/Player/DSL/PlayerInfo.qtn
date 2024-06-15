@@ -11,4 +11,6 @@ component PlayerSys
     FP RunSpeed;
     FP JumpPower;
     FP BreakPower;
+    
+    FPVector3 CameraForwardDirection;
 }

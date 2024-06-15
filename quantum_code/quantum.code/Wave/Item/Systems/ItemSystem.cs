@@ -8,7 +8,7 @@ namespace Quantum.Wave.Item
         {
             public EntityRef Entity;
             public Transform3D* Transform;
-            public Interacter* Interacter;
+            public Interactor* Interactor;
             public ItemData* ItemData;
         }
 
@@ -35,7 +35,7 @@ namespace Quantum.Wave.Item
         private bool CheckItemInteract(Frame f, EntityRef item, EntityRef player)
         {
             //if(_entityRef != item) return false;
-            if (!f.Unsafe.TryGetPointer<Interacter>(item, out var interacter))
+            if (!f.Unsafe.TryGetPointer<Interactor>(item, out var interacter))
             {
                 return false;
             }

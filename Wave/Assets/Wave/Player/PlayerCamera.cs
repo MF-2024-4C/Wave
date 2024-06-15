@@ -32,12 +32,14 @@ namespace Wave.Player
                 frame.TryGet(_entityView.EntityRef,out PhysicsCollider3D collider3D);
                 if (!game.PlayerIsLocal(playerLink.Player))
                 {
+                    //ローカルじゃない場合
                     _localPlayerModel.SetActive(false);
                     _entityPrototype.PhysicsCollider.Layer = _otherLayer.BitMask;
                     if (_ohterPlayerModel.TryGetComponent<Animator>(out anim)) SetAnimator(anim);
                     return;
                 }
 
+                //ローカルの場合
                 _ohterPlayerModel.SetActive(false);
                 _entityPrototype.PhysicsCollider.Layer = _localLayer.BitMask;
                 if (_localPlayerModel.TryGetComponent<Animator>(out anim)) SetAnimator(anim);
@@ -47,6 +49,9 @@ namespace Wave.Player
                 {
                     virtualCamera.m_Follow = this.transform;
                 }
+                
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
 

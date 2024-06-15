@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Wave.Weapon.Animation;
 
 public class WeaponInventory : MonoBehaviour
 {
-    public static WeaponInventory Instance;
-
     [SerializeField] private GameObject _primaryWeaponContainer;
     public GameObject PrimaryWeaponContainer => _primaryWeaponContainer;
 
@@ -18,41 +17,9 @@ public class WeaponInventory : MonoBehaviour
     [SerializeField] private GameObject _tertiaryWeaponContainer;
     public GameObject TertiaryWeaponContainer => _tertiaryWeaponContainer;
 
-    [HideInInspector] public GunAnimationManager CurrentWeapon;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    public void OnEntityInstantiated()
-    {
-        ChangeWeapon(WeaponType.Primary);
-    }
-
-    public void ChangeWeapon(WeaponType weaponType)
-    {
-        var container = weaponType switch
-        {
-            WeaponType.Primary => _primaryWeaponContainer,
-            WeaponType.Secondary => _secondaryWeaponContainer,
-            WeaponType.Tertiary => _tertiaryWeaponContainer,
-            _ => throw new ArgumentOutOfRangeException()
-        };
-
-        var gun = container.GetComponentInChildren<GunAnimationManager>();
-        if (gun == null)
-        {
-            Debug.LogError("GunAnimationManagerがアタッチされていません", container);
-            return;
-        }
-
-        CurrentWeapon = gun;
-
-        ToggleWeapon(container);
-    }
-
-    private void ToggleWeapon(GameObject currentGunContainer)
+    [HideInInspector] public WeaponManager CurrentWeapon;
+    
+    public void ToggleWeapon(GameObject currentGunContainer)
     {
         _primaryWeaponContainer?.SetActive(false);
         _secondaryWeaponContainer?.SetActive(false);
