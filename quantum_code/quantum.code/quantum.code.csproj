@@ -83,6 +83,7 @@
         <Content Include="QuantumDemo\Input.qtn"/>
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
         <Content Include="UnityExtension\SysteemConfig.qtn"/>
+        <Content Include="Wave\Inventory\State\DSL\Inventory.qtn" />
         <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn"/>
         <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn"/>
         <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn"/>

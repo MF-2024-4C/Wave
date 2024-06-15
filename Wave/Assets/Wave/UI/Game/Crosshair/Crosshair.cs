@@ -36,6 +36,11 @@ namespace Wave.UI.Game
             Initialize();
         }
 
+        private void OnFireEvent(EventFire e)
+        {
+            OnFire();
+        }
+
         private void Initialize()
         {
             _initSizeDelta = _crosshairContainer.sizeDelta;
