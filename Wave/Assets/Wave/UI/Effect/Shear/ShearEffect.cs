@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Wave.UI.Effect.Shear
+namespace Wave.UI.Effect
 {
     [AddComponentMenu("UI/Effects/ShearEffect")]
     public class ShearEffect : BaseMeshEffect
