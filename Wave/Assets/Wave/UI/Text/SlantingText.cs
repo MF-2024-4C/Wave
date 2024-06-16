@@ -14,6 +14,7 @@ namespace Wave.UI.Text
         {
             _textMeshPro = gameObject.GetComponent<TMP_Text>();
             _textMeshPro.OnPreRenderText += TextUpdate;
+            _textMeshPro.ForceMeshUpdate();
             TextUpdate(_textMeshPro.textInfo);
         }
         
