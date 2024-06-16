@@ -83,7 +83,6 @@
         <Content Include="Events\Events.qtn"/>
         <Content Include="QuantumDemo\Input.qtn"/>
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
-        <Content Include="UnityExtension\SysteemConfig.qtn"/>
         <Content Include="Wave\Inventory\State\DSL\Inventory.qtn"/>
         <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn"/>
         <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn"/>
@@ -96,9 +95,6 @@
         <Content Include="Wave\Player\DSL\PlayerInput.qtn"/>
         <Content Include="Wave\Zombie\State\DSL\Zombie.qtn"/>
         <Content Include="Wave\Zombie\State\DSL\ZombieSpawnArea.qtn"/>
-        <Content Include="QuantumDemo\Input.qtn"/>
-        <Content Include="QuantumDemo\PlayerLink.qtn"/>
-        <Content Include="Events\Events.qtn"/>
         <Content Include="UnityExtension\SysteemConfig.qtn"/>
     </ItemGroup>
     <ItemGroup>

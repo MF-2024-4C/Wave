@@ -2,7 +2,7 @@
 
 public unsafe partial struct WeaponInventory
 {
-    public void SetWeapon(Frame frame, WeaponType type, EntityRef entityRef)
+    public void SetWeapon(Frame frame, PlayerRef playerRef, WeaponType type, EntityRef entityRef)
     {
         switch (type)
         {
@@ -16,6 +16,8 @@ public unsafe partial struct WeaponInventory
                 tertiary = entityRef;
                 break;
         }
+
+        frame.Events.InventoryUpdate(playerRef, entityRef);
     }
 
     public Weapon* GetWeaponFromType(Frame frame, WeaponType type)
@@ -62,12 +64,12 @@ public unsafe partial struct WeaponInventory
 
         return entity;
     }
-    
+
     public EntityRef GetCurrentWeaponEntity()
     {
         return GetWeaponEntityFromType(currentWeaponType);
     }
-    
+
     public Weapon* GetCurrentWeapon(Frame frame)
     {
         return GetWeaponFromType(frame, currentWeaponType);

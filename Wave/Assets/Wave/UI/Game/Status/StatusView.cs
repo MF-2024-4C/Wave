@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Quantum;
 using UnityEngine;
 
@@ -27,17 +26,13 @@ namespace Wave.UI.Game.Status
 
             _itemDetailView = GetComponentInChildren<ItemDetailView>();
         }
-        
-        private void BindEvents()
+
+        public void OnWeaponChanged(EventChangeActiveWeapon e)
         {
-            QuantumEvent.Subscribe<EventChangeActiveWeapon>(this, ChangeWeapon);
+            
         }
 
-        private void ChangeWeapon(EventChangeActiveWeapon callback)
-        {
-        }
-
-        private void OnItemChanged(int index, ItemViewInfo itemViewInfo)
+        public void OnItemChanged(int index, ItemViewInfo itemViewInfo)
         {
             if (index < 0 || index >= _itemHolderViews.Count)
             {
@@ -52,7 +47,7 @@ namespace Wave.UI.Game.Status
             }
         }
 
-        private void OnItemSelected(int index, ItemViewInfo itemViewInfo)
+        public void OnItemSelected(int index, ItemViewInfo itemViewInfo)
         {
             if (index < 0 || index >= _itemHolderViews.Count)
             {

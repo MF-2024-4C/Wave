@@ -1,4 +1,4 @@
-﻿
-component Inventory{
-    array<EntityPrototype>[5] Options;
+﻿event InventoryUpdate {
+    PlayerRef Player;
+    entity_ref WeaponRef;
 }

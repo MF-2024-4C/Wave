@@ -32,15 +32,15 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
             {
                 var weaponPrototype = frame.FindAsset<EntityPrototype>(weaponSetup->PrimaryWeaponData.Id);
                 if (weaponPrototype != null)
-                    inventory->SetWeapon(frame, WeaponType.Primary, frame.Create(weaponPrototype));
+                    inventory->SetWeapon(frame, player, WeaponType.Primary, frame.Create(weaponPrototype));
 
                 weaponPrototype = frame.FindAsset<EntityPrototype>(weaponSetup->SecondaryWeaponData.Id);
-                if (weaponPrototype != null) 
-                    inventory->SetWeapon(frame, WeaponType.Secondary, frame.Create(weaponPrototype));
+                if (weaponPrototype != null)
+                    inventory->SetWeapon(frame, player, WeaponType.Secondary, frame.Create(weaponPrototype));
 
                 weaponPrototype = frame.FindAsset<EntityPrototype>(weaponSetup->TertiaryWeaponData.Id);
-                if (weaponPrototype != null) 
-                    inventory->SetWeapon(frame, WeaponType.Tertiary, frame.Create(weaponPrototype));
+                if (weaponPrototype != null)
+                    inventory->SetWeapon(frame, player, WeaponType.Tertiary, frame.Create(weaponPrototype));
             }
         }
 

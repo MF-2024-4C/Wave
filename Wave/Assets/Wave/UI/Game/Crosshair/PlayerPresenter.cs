@@ -1,17 +1,26 @@
-﻿using Quantum;
+﻿using System;
+using Photon.Deterministic;
+using Quantum;
 using UnityEngine;
 using Wave.UI.Game;
+using Wave.UI.Game.Status;
 
 namespace Wave
 {
     public class PlayerPresenter : MonoBehaviour
     {
         private EntityView _entityView;
+
+        // References
+        // LocalPlayer
+
         private Crosshair _crosshair;
+        private StatusView _statusView;
+
         private bool _isLocalPlayer;
-        
+
         private bool _isInstantiated = false;
-        
+
         private QuantumGame _game;
 
         private void Awake()
@@ -19,7 +28,7 @@ namespace Wave
             _entityView = GetComponentInChildren<EntityView>();
             _entityView.OnEntityInstantiated.AddListener(InstantiatePlayer);
         }
-        
+
         public void InstantiatePlayer(QuantumGame game)
         {
             _game = game;
@@ -35,26 +44,57 @@ namespace Wave
         private void PlayerSetup()
         {
         }
-        
+
         private void LocalPlayerSetup()
         {
             if (!_isLocalPlayer) return;
 
             _crosshair = FindObjectsByType<Crosshair>(FindObjectsSortMode.None)[0];
             QuantumEvent.Subscribe<EventFire>(this, OnFireLocal);
+
+            _statusView = FindObjectsByType<StatusView>(FindObjectsSortMode.None)[0];
+            QuantumEvent.Subscribe<EventChangeActiveWeapon>(this, OnWeaponChanged);
+            QuantumEvent.Subscribe<EventInventoryUpdate>(this, OnInventoryUpdated);
         }
-        
+
         private void RemotePlayerSetup()
         {
             if (_isLocalPlayer) return;
         }
-        
+
         private void OnFireLocal(EventFire e)
         {
             if (!_game.PlayerIsLocal(e.Player)) return;
-            
+
             _crosshair.OnFire();
-            
+        }
+
+        private void OnWeaponChanged(EventChangeActiveWeapon e)
+        {
+            if (!_game.PlayerIsLocal(e.Player)) return;
+
+            var asset = UnityDB.FindAsset<WeaponDataAsset>(e.NewWeapon.Id);
+
+            _statusView.OnWeaponChanged(e);
+        }
+
+        private void OnInventoryUpdated(EventInventoryUpdate e)
+        {
+            Debug.Log("Inventory updated");
+            if (!_game.PlayerIsLocal(e.Player)) return;
+            var frame = _game.Frames.Predicted;
+            var weapon = frame.Get<Quantum.Weapon>(e.WeaponRef);
+            var index = weapon.type switch
+            {
+                WeaponType.Primary => 0,
+                WeaponType.Secondary => 1,
+                WeaponType.Tertiary => 2,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+            var weaponDataAsset = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id);
+
+            var info = new ItemViewInfo(null, weaponDataAsset.name, "", weapon.currentAmmo);
+            _statusView.OnItemChanged(index, info);
         }
     }
 }
