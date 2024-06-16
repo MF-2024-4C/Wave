@@ -1,5 +1,4 @@
-﻿using Quantum;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Wave.Game
 {
@@ -7,7 +6,6 @@ namespace Wave.Game
     {
         private void Awake()
         {
-            
             CursorLockedAndHidden();
         }
         
@@ -16,11 +14,6 @@ namespace Wave.Game
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-        }
-        
-        private void Build()
-        {
-            
         }
     }
 }

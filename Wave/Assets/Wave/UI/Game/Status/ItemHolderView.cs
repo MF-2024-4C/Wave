@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Wave.UI.Game.Status
@@ -7,7 +8,7 @@ namespace Wave.UI.Game.Status
     {
         [SerializeField] private Image _focusImage;
         [SerializeField] private Image _itemImage;
-        [SerializeField] private Text _itemName;
+        [SerializeField] private TextMeshProUGUI _itemName;
 
         public void OnFocus()
         {

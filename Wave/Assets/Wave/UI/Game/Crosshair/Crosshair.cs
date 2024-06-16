@@ -1,5 +1,4 @@
-﻿using Quantum;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Wave.UI.Game
 {
@@ -36,11 +35,6 @@ namespace Wave.UI.Game
             Initialize();
         }
 
-        private void OnFireEvent(EventFire e)
-        {
-            OnFire();
-        }
-
         private void Initialize()
         {
             _initSizeDelta = _crosshairContainer.sizeDelta;
@@ -49,9 +43,6 @@ namespace Wave.UI.Game
         private void Update()
         {
             ScaleContent();
-            
-            if(UnityEngine.Input.GetMouseButton(0))
-                OnFire();
         }
 
         private void ScaleContent()

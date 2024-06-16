@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Wave.UI.Game.Status
@@ -6,9 +7,9 @@ namespace Wave.UI.Game.Status
     public class ItemDetailView : MonoBehaviour
     {
         [SerializeField] private Image _itemImage;
-        [SerializeField] private Text _itemName;
-        [SerializeField] private Text _itemCount;
-        [SerializeField] private Text _itemStackCount;
+        [SerializeField] private TextMeshProUGUI _itemName;
+        [SerializeField] private TextMeshProUGUI _itemCount;
+        [SerializeField] private TextMeshProUGUI _itemStackCount;
         
         public void SetItemViewInfo(ItemViewInfo itemViewInfo)
         {
