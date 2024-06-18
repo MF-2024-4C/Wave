@@ -131,9 +131,10 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - IsInteract:
-        Value: 0
+        Value: 1
       OnInteract:
         Value: 0
     ItemData:
@@ -227,6 +228,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - IsInteract:
         Value: 0

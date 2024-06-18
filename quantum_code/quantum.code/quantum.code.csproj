@@ -86,6 +86,7 @@
     <Content Include="UnityExtension\SysteemConfig.qtn" />
     <Content Include="Wave\Item\DSL\Interactor.qtn" />
     <Content Include="Wave\Item\DSL\ItemInfo.qtn" />
+    <Content Include="Wave\Player\DSL\HealthSystem.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInfo.qtn" />
     <Content Include="Wave\Player\DSL\PlayerInput.qtn" />
     <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn" />

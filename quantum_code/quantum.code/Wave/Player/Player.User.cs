@@ -85,18 +85,32 @@ namespace Quantum
                 }
             }
         }
+        
+        public static void Dead(Frame f, EntityRef entity, PlayerSys* playerSys)
+        {
+            playerSys->Dead(entity);
+        }
 
         public static void Recoil(FPVector2 recoil)
         {
         }
 
-        public void SetConfig(Frame　f)
+        public void SetConfig(Frame　f, EntityRef entity)
         {
             PlayerConfig config = f.FindAsset<PlayerConfig>(this.Config.Id);
             WalkSpeed = config.WalkSpeed;
             RunSpeed = config.RunSpeed;
             JumpPower = config.JumpPower;
             BreakPower = config.BreakPower;
+
+            if (!f.Unsafe.TryGetPointer(entity, out HealthComponent* health)) return;
+
+            HealthComponent.InitializeHealth(f, health);
+        }
+
+        private void Dead(EntityRef entity)
+        {
+            Log.Info($"Player{entity.Index} is Dead");
         }
     }
 }
