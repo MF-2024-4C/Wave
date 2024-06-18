@@ -20,8 +20,10 @@ namespace Wave.Player
 
             if (_playerEntityView == null) return;
             if(!frame.TryGet(_playerEntityView.EntityRef, out HealthComponent healthComponent)) return;
-            //var maxHealth = FP.FromRaw()
-            //var currentHealth = healthComponent.CurrentHealth.AsFloat();
+            var maxHealth = healthComponent.MaxHealth.AsFloat;
+            var currentHealth = healthComponent.CurrentHealth.AsFloat;
+            
+            _healthBar.fillAmount = currentHealth / maxHealth;
         }
         
         public void SetPlayerEntityView(EntityView entityView) => _playerEntityView = entityView;
