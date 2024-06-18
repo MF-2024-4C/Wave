@@ -15,13 +15,6 @@ namespace Quantum.Editor {
     }
   }
 
-  [CustomPropertyDrawer(typeof(AssetRefHealthConfig))]
-  public class AssetRefHealthConfigPropertyDrawer : PropertyDrawer {
-    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(HealthConfigAsset));
-    }
-  }
-
   [CustomPropertyDrawer(typeof(AssetRefItem1Config))]
   public class AssetRefItem1ConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {

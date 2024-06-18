@@ -1,9 +1,7 @@
-asset HealthConfig;
-
 component HealthComponent
-{   
-    asset_ref<HealthConfig> Config;
-    
+{       
+    FP MaxHealth;
+    [ReadOnly]
     FP CurrentHealth;
 }
 
