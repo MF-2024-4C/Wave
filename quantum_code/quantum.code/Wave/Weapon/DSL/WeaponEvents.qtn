@@ -13,6 +13,11 @@ event Reload {
    entity_ref Weapon;
 }
 
+event ReloadComplete {
+   PlayerRef Player;
+   entity_ref Weapon;
+}
+
 event Equip {
    PlayerRef Player;
    entity_ref Weapon;

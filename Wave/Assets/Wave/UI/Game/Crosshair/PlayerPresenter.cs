@@ -1,11 +1,9 @@
 ﻿using System;
-using Photon.Deterministic;
 using Quantum;
 using UnityEngine;
-using Wave.UI.Game;
 using Wave.UI.Game.Status;
 
-namespace Wave
+namespace Wave.UI.Game
 {
     public class PlayerPresenter : MonoBehaviour
     {
@@ -55,6 +53,7 @@ namespace Wave
             _statusView = FindObjectsByType<StatusView>(FindObjectsSortMode.None)[0];
             QuantumEvent.Subscribe<EventChangeActiveWeapon>(this, OnWeaponChanged);
             QuantumEvent.Subscribe<EventInventoryUpdate>(this, OnInventoryUpdated);
+            QuantumEvent.Subscribe<EventReloadComplete>(this, OnReloadCompleteLocal);
         }
 
         private void RemotePlayerSetup()
@@ -67,8 +66,25 @@ namespace Wave
             if (!_game.PlayerIsLocal(e.Player)) return;
 
             _crosshair.OnFire();
+            
+            var frame = _game.Frames.Predicted;
+            var weapon = frame.Get<Quantum.Weapon>(e.Weapon);
+            var index = ItemTypeIndex(weapon);
+            var info = CreateItemViewInfo(weapon);
+            
+            _statusView.OnItemChanged(index, info);
         }
 
+        private void OnReloadCompleteLocal(EventReloadComplete e)
+        {
+            if (!_game.PlayerIsLocal(e.Player)) return;
+            var frame = _game.Frames.Predicted;
+            var weapon = frame.Get<Quantum.Weapon>(e.Weapon);
+            var index = ItemTypeIndex(weapon);
+            var info = CreateItemViewInfo(weapon);
+            _statusView.OnItemChanged(index, info);
+        }
+        
         private void OnWeaponChanged(EventChangeActiveWeapon e)
         {
             if (!_game.PlayerIsLocal(e.Player)) return;
@@ -80,21 +96,29 @@ namespace Wave
 
         private void OnInventoryUpdated(EventInventoryUpdate e)
         {
-            Debug.Log("Inventory updated");
             if (!_game.PlayerIsLocal(e.Player)) return;
             var frame = _game.Frames.Predicted;
             var weapon = frame.Get<Quantum.Weapon>(e.WeaponRef);
-            var index = weapon.type switch
+            var index = ItemTypeIndex(weapon);
+            var info = CreateItemViewInfo(weapon);
+            _statusView.OnItemChanged(index, info);
+        }
+
+        private static ItemViewInfo CreateItemViewInfo(in Quantum.Weapon weapon)
+        {
+            var weaponDataAsset = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id);
+            return new ItemViewInfo(null, weaponDataAsset.name, "", weapon.currentAmmo);
+        }
+
+        private static int ItemTypeIndex(in Quantum.Weapon weapon)
+        {
+            return weapon.type switch
             {
                 WeaponType.Primary => 0,
                 WeaponType.Secondary => 1,
                 WeaponType.Tertiary => 2,
                 _ => throw new ArgumentOutOfRangeException()
             };
-            var weaponDataAsset = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id);
-
-            var info = new ItemViewInfo(null, weaponDataAsset.name, "", weapon.currentAmmo);
-            _statusView.OnItemChanged(index, info);
         }
     }
 }

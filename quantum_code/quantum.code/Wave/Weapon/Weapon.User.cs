@@ -1,4 +1,5 @@
 ﻿using Photon.Deterministic;
+using Quantum.Wave.Weapon;
 
 namespace Quantum;
 

@@ -1,7 +1,6 @@
 using Photon.Deterministic;
 
 namespace Quantum.Wave.Weapon;
-
 public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySystem.GunHolderFilter>
 {
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
@@ -45,6 +44,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         {
             var weapon = filter.Inventory->GetCurrentWeaponEntity();
             currentWeapon->Fire(frame, player, weapon);
+            WeaponFireUtilities.ProjectileCast(frame, filter.Transform3D, filter.Player, &input);
         }
     }
 
@@ -57,7 +57,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
     private void Reload(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player, Input input,
         Quantum.Weapon* currentWeapon)
     {
-        ReloadProgress(frame, currentWeapon);
+        ReloadProgress(frame, ref filter, player, currentWeapon);
 
         if (input.Reload.WasPressed && currentWeapon->CanReload())
         {
@@ -66,7 +66,8 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         }
     }
 
-    private void ReloadProgress(Frame frame, Quantum.Weapon* currentWeapon)
+    private void ReloadProgress(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player,
+        Quantum.Weapon* currentWeapon)
     {
         if (!currentWeapon->IsReloading()) return;
 
@@ -77,6 +78,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         else
         {
             currentWeapon->OnReloaded();
+            frame.Events.ReloadComplete(player->Player, filter.Inventory->GetCurrentWeaponEntity());
         }
     }
 

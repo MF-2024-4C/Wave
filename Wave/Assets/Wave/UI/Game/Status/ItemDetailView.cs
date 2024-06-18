@@ -21,7 +21,7 @@ namespace Wave.UI.Game.Status
         {
             var sb = new StringBuilder();
             sb.Append($"<color=#{ColorUtility.ToHtmlStringRGB(color)}>");
-            var digit = (num == 0) ? 0 : ((int)Mathf.Log10(num) + 1);
+            var digit = (num == 0) ? 1 : ((int)Mathf.Log10(num) + 1);
             for (var i = 0; i < len - digit; i++)
             {
                 sb.Append("0");
