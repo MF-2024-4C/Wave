@@ -6,14 +6,14 @@ namespace Wave.Lobby
     public class PlayerNameSetter : MonoBehaviour
     {
         [SerializeField] private TMP_InputField _inputField;
-
-        private void Start()
+        public void ViewPlayerName()
         {
-            _inputField.text = PlayerProfile.PlayerProfile.Instance.PlayerName;
+            _inputField.text = WaveUIConnect.Client.LocalPlayer.NickName;
         }
 
         public void SetPlayerName()
         {
+            
             if (string.IsNullOrEmpty(_inputField.text))
             {
                 _inputField.text = PlayerProfile.PlayerProfile.Instance.PlayerName;
@@ -21,6 +21,7 @@ namespace Wave.Lobby
             }
 
             PlayerProfile.PlayerProfile.Instance.PlayerName = _inputField.text;
+            WaveUIConnect.Client.LocalPlayer.NickName = _inputField.text;
         }
     }
 }

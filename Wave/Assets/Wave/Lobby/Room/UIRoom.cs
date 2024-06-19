@@ -1,22 +1,21 @@
-using System.Collections.Generic;
-using System.Linq;
 using ExitGames.Client.Photon;
 using Michsky.UI.Heat;
 using Photon.Realtime;
-using Quantum.Demo;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Wave.Lobby
 {
-    public class UIRoom : MonoBehaviour,ILobbyCallbacks
+    public class UIRoom : MonoBehaviour, IInRoomCallbacks
     {
         public static UIRoom Instance;
 
         [SerializeField] private ButtonManager _playButtonManager;
         [SerializeField] private TMP_InputField _roomNameInputField;
         [SerializeField] private SwitchManager _privateSwitchManager;
+
+        [SerializeField] private OverlayCharacterManager _overlayCharacterManager;
+
 
         private void Awake()
         {
@@ -37,55 +36,66 @@ namespace Wave.Lobby
         public void OnJoinRoom()
         {
             _playButtonManager.gameObject.SetActive(WaveUIConnect.Client.LocalPlayer.IsMasterClient);
-            
+
             _roomNameInputField.interactable = WaveUIConnect.Client.LocalPlayer.IsMasterClient;
             _roomNameInputField.text = WaveUIConnect.Client.CurrentRoom.Name;
-            
+
             _privateSwitchManager.isOn = WaveUIConnect.Client.CurrentRoom.IsVisible;
             _privateSwitchManager.isInteractable = WaveUIConnect.Client.LocalPlayer.IsMasterClient;
+
+            foreach (var player in WaveUIConnect.Client.CurrentRoom.Players.Values)
+            {
+                _overlayCharacterManager.AddOverlayCharacter(player);
+            }
         }
+
 
         public void OnRoomNameChanged()
         {
             //WaveUIConnect.Client.CurrentRoom.Name = _roomNameInputField.text;
         }
-        
+
         public void OnPrivateSwitchChanged()
         {
             WaveUIConnect.Client.CurrentRoom.IsVisible = _privateSwitchManager.isOn;
         }
-        
+
         public void LeaveRoom()
         {
             WaveUIConnect.Client.OpLeaveRoom(true);
-        }
-        
-        
-        #region ILobbyCallbacks
 
-        public void OnJoinedLobby()
+            _overlayCharacterManager.AllRemoveOverlayCharacter();
+        }
+
+        #region IInRoomCallbacks
+
+        public void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+        {
+            Debug.Log("新しいプレイヤーが入室しました");
+            _overlayCharacterManager.AddOverlayCharacter(newPlayer);
+        }
+
+        public void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
+        {
+            Debug.Log("プレイヤーが退室しました");
+            _overlayCharacterManager.RemoveOverlayCharacter(otherPlayer);
+        }
+
+        public void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
+        {
+            //Todo: Update Room Name
+            _roomNameInputField.text = WaveUIConnect.Client.CurrentRoom.Name;
+            _privateSwitchManager.isOn = WaveUIConnect.Client.CurrentRoom.IsVisible;
+        }
+
+        public void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, Hashtable changedProps)
         {
         }
 
-        public void OnLeftLobby()
+        public void OnMasterClientSwitched(Photon.Realtime.Player newMasterClient)
         {
         }
 
-        public void OnRoomListUpdate(List<RoomInfo> roomList)
-        {
-            if (WaveUIConnect.Client.CurrentRoom == null) return;
-            foreach (var roomInfo in roomList.Where(roomInfo => Equals(roomInfo, WaveUIConnect.Client.CurrentRoom)))
-            {
-                _roomNameInputField.text = roomInfo.Name;
-                _privateSwitchManager.isOn = roomInfo.IsVisible;
-                break;
-            }
-        }
-
-        public void OnLobbyStatisticsUpdate(List<TypedLobbyInfo> lobbyStatistics)
-        {
-        }
-        
         #endregion
     }
 }
