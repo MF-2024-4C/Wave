@@ -30,13 +30,12 @@ namespace Wave.Lobby
         public void OnJoinedLobby()
         {
             Debug.Log("ロビーに入室した");
-
-            _panelManager.OpenPanelByIndex(0);
-            _panelManager.ShowCurrentPanel();
+            LoadingScreen.Instance.HideLoading();
         }
 
         public void JoinRoom(EnterRoomParams enterRoomParams)
         {
+            LoadingScreen.Instance.ShowLoading("Joining Room...");
             WaveUIConnect.Client.OpJoinRoom(enterRoomParams);
         }
 
@@ -69,8 +68,10 @@ namespace Wave.Lobby
                 }
             };
             Random.InitState(DateTime.Now.Millisecond);
-            enterRoomParams.RoomName = Random.Range(1, 1000000000).ToString();
+            enterRoomParams.RoomName = PlayerProfile.PlayerProfile.Instance.PlayerName + "'s Room";
             WaveUIConnect.Client.OpCreateRoom(enterRoomParams);
+            
+            LoadingScreen.Instance.ShowLoading("Creating Room...");
         }
 
         public void OnLeftLobby()
@@ -97,23 +98,28 @@ namespace Wave.Lobby
         public void OnCreatedRoom()
         {
             Debug.Log("部屋を作成した");
+            LoadingScreen.Instance.HideLoading();
+            LoadingScreen.Instance.ShowLoading("Joining Room...");
         }
 
         public void OnCreateRoomFailed(short returnCode, string message)
         {
             Debug.Log("部屋の作成に失敗した");
+            LoadingScreen.Instance.HideLoading();
         }
 
         public void OnJoinedRoom()
         {
             Debug.Log("部屋に入室した");
-            _panelManager.OpenPanelByIndex(1);
+            _panelManager.OpenPanelByIndex(2);
             UIRoom.Instance.OnJoinRoom();
+            LoadingScreen.Instance.HideLoading();
         }
 
         public void OnJoinRoomFailed(short returnCode, string message)
         {
             Debug.Log("部屋の入室に失敗した");
+            LoadingScreen.Instance.HideLoading();
         }
 
         public void OnJoinRandomFailed(short returnCode, string message)

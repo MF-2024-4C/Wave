@@ -20,12 +20,12 @@ namespace Wave.Lobby
             if (Client.ConnectUsingSettings(appSettings, "Player test"))
             {
                 Debug.Log("サーバーに接続中...");
+                LoadingScreen.Instance.ShowLoading("Connecting to server...");
             }
             else
             {
                 Debug.Log("サーバーに接続できませんでした");
             }
-            //Client.ConnectToMasterServer();
         }
 
         private void OnDestroy()
@@ -51,7 +51,13 @@ namespace Wave.Lobby
         public void OnConnectedToMaster()
         {
             Debug.Log("サーバーに接続した");
+            LoadingScreen.Instance.HideLoading();
+        }
+
+        public void JoinToLobby()
+        {
             Client.OpJoinLobby(null);
+            LoadingScreen.Instance.ShowLoading("Joining Lobby...");
         }
 
         public void OnDisconnected(DisconnectCause cause)
