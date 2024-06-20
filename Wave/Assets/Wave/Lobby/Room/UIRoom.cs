@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using ExitGames.Client.Photon;
 using Michsky.UI.Heat;
 using Photon.Realtime;
@@ -16,53 +17,70 @@ namespace Wave.Lobby
 
         [SerializeField] private OverlayCharacterManager _overlayCharacterManager;
 
-
         private void Awake()
         {
             if (Instance == null) Instance = this;
-            else Destroy(gameObject);
+            else
+            {
+                Destroy(Instance.gameObject);
+                Instance = this;
+            }
         }
 
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
+            WaveUIConnect.Client.AddCallbackTarget(this);
         }
 
         public void OnJoinRoom()
         {
-            _playButtonManager.gameObject.SetActive(WaveUIConnect.Client.LocalPlayer.IsMasterClient);
-
-            _roomNameInputField.interactable = WaveUIConnect.Client.LocalPlayer.IsMasterClient;
-            _roomNameInputField.text = WaveUIConnect.Client.CurrentRoom.Name;
-
-            _privateSwitchManager.isOn = WaveUIConnect.Client.CurrentRoom.IsVisible;
-            _privateSwitchManager.isInteractable = WaveUIConnect.Client.LocalPlayer.IsMasterClient;
-
-            foreach (var player in WaveUIConnect.Client.CurrentRoom.Players.Values)
-            {
-                _overlayCharacterManager.AddOverlayCharacter(player);
-            }
+            UpdateRoomControls();
+            UpdateRoomInfo();
+            UpdatePlayerInfo();
         }
 
+        private void UpdateRoomControls()
+        {
+            bool isMasterClient = WaveUIConnect.Client.LocalPlayer.IsMasterClient;
+            _playButtonManager.Interactable(isMasterClient);
+            _roomNameInputField.interactable = isMasterClient;
+            _privateSwitchManager.isInteractable = isMasterClient;
+        }
+
+        private void UpdateRoomInfo()
+        {
+            _roomNameInputField.text = WaveUIConnect.Client.CurrentRoom.Name;
+            if (WaveUIConnect.Client.CurrentRoom.IsVisible)
+                _privateSwitchManager.SetOff();
+            else
+                _privateSwitchManager.SetOn();
+        }
+
+        private void UpdatePlayerInfo()
+        {
+            _overlayCharacterManager.ViewOverlayCharacter(
+                new List<Photon.Realtime.Player>(WaveUIConnect.Client.CurrentRoom.Players.Values));
+        }
 
         public void OnRoomNameChanged()
         {
-            //WaveUIConnect.Client.CurrentRoom.Name = _roomNameInputField.text;
+            if (!WaveUIConnect.Client.LocalPlayer.IsMasterClient) return;
+            Debug.Log($"部屋名を{_roomNameInputField.text}に変更します");
+
+            //TODO:部屋名の変更
         }
 
         public void OnPrivateSwitchChanged()
         {
-            WaveUIConnect.Client.CurrentRoom.IsVisible = _privateSwitchManager.isOn;
+            if (!WaveUIConnect.Client.LocalPlayer.IsMasterClient) return;
+            Debug.Log($"部屋の公開設定を{!_privateSwitchManager.isOn}に変更します");
+            WaveUIConnect.Client.CurrentRoom.IsVisible = !_privateSwitchManager.isOn;
         }
 
         public void LeaveRoom()
         {
-            WaveUIConnect.Client.OpLeaveRoom(true);
+            //TODO:部屋から退出
+            WaveUIConnect.Client.OpLeaveRoom(false);
 
             _overlayCharacterManager.AllRemoveOverlayCharacter();
         }
@@ -83,9 +101,10 @@ namespace Wave.Lobby
 
         public void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
         {
-            //Todo: Update Room Name
-            _roomNameInputField.text = WaveUIConnect.Client.CurrentRoom.Name;
-            _privateSwitchManager.isOn = WaveUIConnect.Client.CurrentRoom.IsVisible;
+            if (WaveUIConnect.Client.LocalPlayer.IsMasterClient) return;
+            Debug.Log("部屋のプロパティが更新された");
+
+            UpdateRoomInfo();
         }
 
         public void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, Hashtable changedProps)
@@ -94,6 +113,7 @@ namespace Wave.Lobby
 
         public void OnMasterClientSwitched(Photon.Realtime.Player newMasterClient)
         {
+            UpdateRoomControls();
         }
 
         #endregion

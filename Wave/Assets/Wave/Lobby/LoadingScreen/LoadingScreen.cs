@@ -26,6 +26,9 @@ public class LoadingScreen : MonoBehaviour
         if (_isShowing) return;
         _isShowing = true;
         
+        StopAllCoroutines();
+        _canvasGroup.alpha = 0;
+        
         _loading.SetActive(true);
         _loadingText.text = text;
         StartCoroutine(FadeIn());
@@ -35,6 +38,9 @@ public class LoadingScreen : MonoBehaviour
     {
         if (!_isShowing) return;
         _isShowing = false;
+        
+        StopAllCoroutines();
+        _canvasGroup.alpha = 1;
         
         StartCoroutine(FadeOut());
     }

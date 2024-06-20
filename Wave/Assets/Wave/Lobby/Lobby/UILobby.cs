@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace Wave.Lobby
 {
-    public class UILobby : MonoBehaviour, ILobbyCallbacks, IMatchmakingCallbacks
+    public class UILobby : MonoBehaviour, IMatchmakingCallbacks, ILobbyCallbacks
     {
         public static UILobby Instance;
 
@@ -20,17 +20,16 @@ namespace Wave.Lobby
         private void Awake()
         {
             if (Instance == null) Instance = this;
-            else Destroy(gameObject);
-
-            WaveUIConnect.Client?.AddCallbackTarget(this);
+            else
+            {
+                Destroy(Instance.gameObject);
+                Instance = this;
+            }
         }
 
-        #region ILobbyCallbacks
-
-        public void OnJoinedLobby()
+        private void Start()
         {
-            Debug.Log("ロビーに入室した");
-            LoadingScreen.Instance.HideLoading();
+            WaveUIConnect.Client.AddCallbackTarget(this);
         }
 
         public void JoinRoom(EnterRoomParams enterRoomParams)
@@ -41,15 +40,11 @@ namespace Wave.Lobby
 
         public void RoomCreate()
         {
-            long defaultMapGuid = 0;
-            if (defaultMapGuid == 0)
-            {
-                // Fall back to the first map asset we find
-                var allMapsInResources =
-                    UnityEngine.Resources.LoadAll<MapAsset>(QuantumEditorSettings.Instance.DatabasePathInResources);
-                defaultMapGuid = allMapsInResources[0].AssetObject.Guid.Value;
-                Debug.Log($"defaultMapGuid: {defaultMapGuid}");
-            }
+            // Fall back to the first map asset we find
+            var allMapsInResources =
+                Resources.LoadAll<MapAsset>(QuantumEditorSettings.Instance.DatabasePathInResources);
+            var defaultMapGuid = allMapsInResources[0].AssetObject.Guid.Value;
+            Debug.Log($"defaultMapGuid: {defaultMapGuid}");
 
             var enterRoomParams = new EnterRoomParams
             {
@@ -65,13 +60,21 @@ namespace Wave.Lobby
                     },
                     PlayerTtl = PhotonServerSettings.Instance.PlayerTtlInSeconds * 1000,
                     EmptyRoomTtl = PhotonServerSettings.Instance.EmptyRoomTtlInSeconds * 1000
-                }
+                },
+                RoomName = PlayerProfile.PlayerProfile.Instance.PlayerName + "'s Room",
             };
-            Random.InitState(DateTime.Now.Millisecond);
-            enterRoomParams.RoomName = PlayerProfile.PlayerProfile.Instance.PlayerName + "'s Room";
             WaveUIConnect.Client.OpCreateRoom(enterRoomParams);
-            
+
             LoadingScreen.Instance.ShowLoading("Creating Room...");
+        }
+
+
+        #region ILobbyCallbacks
+
+        public void OnJoinedLobby()
+        {
+            Debug.Log("ロビーに参加しました");
+            LoadingScreen.Instance.HideLoading();
         }
 
         public void OnLeftLobby()
@@ -80,6 +83,8 @@ namespace Wave.Lobby
 
         public void OnRoomListUpdate(List<RoomInfo> roomList)
         {
+            Debug.Log("部屋リストが更新されました");
+            Debug.Log($"roomList.Count: {roomList.Count}");
             roomViewer.OnRoomListUpdate(roomList);
         }
 
@@ -128,6 +133,7 @@ namespace Wave.Lobby
 
         public void OnLeftRoom()
         {
+            Debug.Log("部屋から退室した");
         }
 
         #endregion

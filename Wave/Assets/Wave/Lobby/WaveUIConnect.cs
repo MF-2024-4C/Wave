@@ -9,16 +9,24 @@ namespace Wave.Lobby
         public static QuantumLoadBalancingClient Client { get; set; }
         [SerializeField] private string _appVersion = "Development";
         private string _fixedRegion = "jp";
-        
+
         [SerializeField] private PlayerNameSetter _playerNameSetter;
 
         private void Awake()
         {
-            var appSettings = PhotonServerSettings.CloneAppSettings(PhotonServerSettings.Instance.AppSettings);
+          
             Client = new QuantumLoadBalancingClient(PhotonServerSettings.Instance.AppSettings.Protocol);
+    
+            
+            Client.AddCallbackTarget(this);
+        }
+
+        private void Start()
+        {
+            var appSettings = PhotonServerSettings.CloneAppSettings(PhotonServerSettings.Instance.AppSettings);
             appSettings.FixedRegion = _fixedRegion;
             appSettings.AppVersion = _appVersion;
-            Client.AddCallbackTarget(this);
+
             if (Client.ConnectUsingSettings(appSettings, "Player test"))
             {
                 Debug.Log("サーバーに接続中...");
@@ -44,6 +52,13 @@ namespace Wave.Lobby
             Client?.Service();
         }
 
+        public void JoinToLobby()
+        {
+            Debug.Log("ロビーに参加中...");
+            LoadingScreen.Instance.ShowLoading("Joining Lobby...");
+            Client.OpJoinLobby(null);
+        }
+
         #region IConnectionCallbacks
 
         public void OnConnected()
@@ -54,15 +69,9 @@ namespace Wave.Lobby
         {
             Debug.Log("サーバーに接続した");
             LoadingScreen.Instance.HideLoading();
-            
+
             Client.LocalPlayer.NickName = PlayerProfile.PlayerProfile.Instance.PlayerName;
             _playerNameSetter.ViewPlayerName();
-        }
-
-        public void JoinToLobby()
-        {
-            Client.OpJoinLobby(null);
-            LoadingScreen.Instance.ShowLoading("Joining Lobby...");
         }
 
         public void OnDisconnected(DisconnectCause cause)
