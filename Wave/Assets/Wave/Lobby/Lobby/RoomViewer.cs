@@ -11,17 +11,18 @@ namespace Wave.Lobby.Lobby
 
         public void OnRoomListUpdate(List<RoomInfo> roomList)
         {
-            Clear();
+            ClearAllRoomItems();
             foreach (var roomInfo in roomList)
             {
                 if (roomInfo.RemovedFromList) continue;
                 if (!roomInfo.IsVisible) continue;
+                if (roomInfo.PlayerCount == 0) continue;
                 
                 AddRoomItem(roomInfo);
             }
         }
 
-        private void Clear()
+        public void ClearAllRoomItems()
         {
             foreach (Transform child in _content)
             {

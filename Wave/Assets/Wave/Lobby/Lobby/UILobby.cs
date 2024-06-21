@@ -14,7 +14,7 @@ namespace Wave.Lobby.Lobby
         [SerializeField] private RoomViewer roomViewer;
 
         [SerializeField] private PanelManager _panelManager;
-        
+
         [SerializeField] private MapManager.MapManager _mapManager;
 
         private void Awake()
@@ -29,7 +29,7 @@ namespace Wave.Lobby.Lobby
 
         private void Start()
         {
-            WaveUIConnect.Client.AddCallbackTarget(this);
+            ClientManager.Client.AddCallbackTarget(this);
         }
 
         public void ViewRoomInfo(EnterRoomParams enterRoomParams)
@@ -40,7 +40,7 @@ namespace Wave.Lobby.Lobby
         public void JoinRoom(EnterRoomParams enterRoomParams)
         {
             LoadingScreen.LoadingScreen.Instance.ShowLoading("Joining Room...");
-            WaveUIConnect.Client.OpJoinRoom(enterRoomParams);
+            ClientManager.Client.OpJoinRoom(enterRoomParams);
         }
 
         public void RoomCreate()
@@ -49,7 +49,7 @@ namespace Wave.Lobby.Lobby
             var allMapsInResources =
                 Resources.LoadAll<MapAsset>(QuantumEditorSettings.Instance.DatabasePathInResources);
             var defaultMapGuid = _mapManager.Maps[0].MapAsset.AssetObject.Guid.Value;
-
+            
             var enterRoomParams = new EnterRoomParams
             {
                 RoomOptions = new RoomOptions
@@ -57,7 +57,7 @@ namespace Wave.Lobby.Lobby
                     IsVisible = true,
                     MaxPlayers = 4,
                     Plugins = new[] { "QuantumPlugin" },
-                    CustomRoomPropertiesForLobby = new[] { "ROOM-NAME" },
+                    CustomRoomPropertiesForLobby = new[] { "MAP-GUID","ROOM-NAME" },
                     CustomRoomProperties = new Hashtable
                     {
                         { "MAP-GUID", defaultMapGuid },
@@ -68,7 +68,7 @@ namespace Wave.Lobby.Lobby
                 },
                 RoomName = Random.Range(1, 100000000).ToString(),
             };
-            WaveUIConnect.Client.OpCreateRoom(enterRoomParams);
+            ClientManager.Client.OpCreateRoom(enterRoomParams);
 
             LoadingScreen.LoadingScreen.Instance.ShowLoading("Creating Room...");
         }
@@ -80,13 +80,14 @@ namespace Wave.Lobby.Lobby
         {
             Debug.Log("ロビーに参加しました");
             LoadingScreen.LoadingScreen.Instance.HideLoading();
+            roomViewer.ClearAllRoomItems();
         }
 
         public void OnLeftLobby()
         {
             Debug.Log("ロビーに再接続中...");
             LoadingScreen.LoadingScreen.Instance.ShowLoading("Rejoining Lobby...");
-            WaveUIConnect.Client.OpJoinLobby(null);
+            ClientManager.Client.OpJoinLobby(null);
         }
 
         public void OnRoomListUpdate(List<RoomInfo> roomList)
@@ -142,6 +143,7 @@ namespace Wave.Lobby.Lobby
         public void OnLeftRoom()
         {
             Debug.Log("部屋から退室した");
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
         }
 
         #endregion

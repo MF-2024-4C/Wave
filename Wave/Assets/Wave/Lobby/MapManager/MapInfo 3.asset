@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcbbf7b8ffb5ca741b9a94db9b2763a9, type: 3}
-  m_Name: MapInfo
+  m_Name: MapInfo 3
   m_EditorClassIdentifier: 
-  MapAsset: {fileID: 11400000, guid: 01a0d42e4647ae04e905e945c53d1a10, type: 2}
-  MapName: TestMap
-  MapDescription: This is test map discription!!
-  PreviewImage: {fileID: 21300000, guid: 93c7a66a2c6e2864c800bef5427bd672, type: 3}
+  MapAsset: {fileID: 11400000, guid: 9b700629dcc8f894aa6e6ed2d4035ed8, type: 2}
+  MapName: TestScene
+  MapDescription: tjkkr6tyuyt
+  PreviewImage: {fileID: 21300000, guid: 781ac5235ee88a643bc07f2abfcaf6e0, type: 3}

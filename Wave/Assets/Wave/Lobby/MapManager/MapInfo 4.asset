@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcbbf7b8ffb5ca741b9a94db9b2763a9, type: 3}
-  m_Name: MapInfo
+  m_Name: MapInfo 4
   m_EditorClassIdentifier: 
-  MapAsset: {fileID: 11400000, guid: 01a0d42e4647ae04e905e945c53d1a10, type: 2}
-  MapName: TestMap
-  MapDescription: This is test map discription!!
-  PreviewImage: {fileID: 21300000, guid: 93c7a66a2c6e2864c800bef5427bd672, type: 3}
+  MapAsset: {fileID: 11400000, guid: de49e7c6f658f1343910bce4ee2dfc99, type: 2}
+  MapName: Zombie
+  MapDescription: rykrfyhtfrfhj
+  PreviewImage: {fileID: 21300000, guid: c8ecd8f6dcfe2314e9d327bdf3402b90, type: 3}

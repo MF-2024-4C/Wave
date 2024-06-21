@@ -8,7 +8,7 @@ namespace Wave.Lobby
         [SerializeField] private TMP_InputField _inputField;
         public void ViewPlayerName()
         {
-            _inputField.text = WaveUIConnect.Client.LocalPlayer.NickName;
+            _inputField.text = ClientManager.Client.LocalPlayer.NickName;
         }
 
         public void SetPlayerName()
@@ -21,7 +21,7 @@ namespace Wave.Lobby
             }
 
             PlayerProfile.PlayerProfile.Instance.PlayerName = _inputField.text;
-            WaveUIConnect.Client.LocalPlayer.NickName = _inputField.text;
+            ClientManager.Client.LocalPlayer.NickName = _inputField.text;
         }
     }
 }

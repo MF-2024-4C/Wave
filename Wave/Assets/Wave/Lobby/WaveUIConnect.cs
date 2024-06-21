@@ -6,33 +6,26 @@ namespace Wave.Lobby
 {
     public class WaveUIConnect : MonoBehaviour, IConnectionCallbacks
     {
-        public static QuantumLoadBalancingClient Client { get; set; }
         [SerializeField] private string _appVersion = "Development";
         private const string FixedRegion = "jp";
 
         [SerializeField] private PlayerNameSetter _playerNameSetter;
-        
-        public enum PhotonEventCode : byte {
-            StartGame = 110
-        }
 
-
-        private void Awake()
+        public enum PhotonEventCode : byte
         {
-          
-            Client = new QuantumLoadBalancingClient(PhotonServerSettings.Instance.AppSettings.Protocol);
-    
-            
-            Client.AddCallbackTarget(this);
+            StartGame = 110
         }
 
         private void Start()
         {
+            ClientManager.Client.AddCallbackTarget(this);
+           //ClientManager.Client.RemoveCallbackTarget(this);
+
             var appSettings = PhotonServerSettings.CloneAppSettings(PhotonServerSettings.Instance.AppSettings);
             appSettings.FixedRegion = FixedRegion;
             appSettings.AppVersion = _appVersion;
 
-            if (Client.ConnectUsingSettings(appSettings, "Player test"))
+            if (ClientManager.Client.ConnectUsingSettings(appSettings, "Player test"))
             {
                 Debug.Log("サーバーに接続中...");
                 LoadingScreen.LoadingScreen.Instance.ShowLoading("Connecting to server...");
@@ -43,25 +36,11 @@ namespace Wave.Lobby
             }
         }
 
-        private void OnDestroy()
-        {
-            Client?.RemoveCallbackTarget(this);
-            if (Client is { IsConnected: true })
-            {
-                Client.Disconnect();
-            }
-        }
-
-        private void Update()
-        {
-            Client?.Service();
-        }
-
         private void JoinToLobby()
         {
             Debug.Log("ロビーに参加中...");
             LoadingScreen.LoadingScreen.Instance.ShowLoading("Joining Lobby...");
-            Client.OpJoinLobby(null);
+            ClientManager.Client.OpJoinLobby(null);
         }
 
         #region IConnectionCallbacks
@@ -75,15 +54,14 @@ namespace Wave.Lobby
             Debug.Log("サーバーに接続した");
             LoadingScreen.LoadingScreen.Instance.HideLoading();
 
-            Client.LocalPlayer.NickName = PlayerProfile.PlayerProfile.Instance.PlayerName;
+            ClientManager.Client.LocalPlayer.NickName = PlayerProfile.PlayerProfile.Instance.PlayerName;
             _playerNameSetter.ViewPlayerName();
-            
+
             JoinToLobby();
         }
 
         public void OnDisconnected(DisconnectCause cause)
         {
-            
         }
 
         public void OnRegionListReceived(RegionHandler regionHandler)

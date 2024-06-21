@@ -8,7 +8,9 @@ namespace Wave.Lobby.MapManager
     public class MapInfo : ScriptableObject
     {
         public MapAsset MapAsset;
+        
         public string MapName;
+        public string MapDescription;
         public Sprite PreviewImage;
     }
 }
