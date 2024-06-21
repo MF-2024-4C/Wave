@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2582229026265985290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967a1b4bc90a4800bcbbb1e341d4eee2, type: 3}
-  m_Name: UIShearFeature
-  m_EditorClassIdentifier: 
-  m_Active: 0
-  _settings: {_shearShader: {fileID: 4800000, guid: c50e9d0383d44a3aba23dec532d9ab7c,
-      type: 3}, _shearY: 44.36, _layerMask:
-      m_Bits: 32
-}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

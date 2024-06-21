@@ -66,12 +66,12 @@ namespace Wave.UI.Game
             if (!_game.PlayerIsLocal(e.Player)) return;
 
             _crosshair.OnFire();
-            
+
             var frame = _game.Frames.Predicted;
             var weapon = frame.Get<Quantum.Weapon>(e.Weapon);
             var index = ItemTypeIndex(weapon);
             var info = CreateItemViewInfo(weapon);
-            
+
             _statusView.OnItemChanged(index, info);
         }
 
@@ -84,14 +84,16 @@ namespace Wave.UI.Game
             var info = CreateItemViewInfo(weapon);
             _statusView.OnItemChanged(index, info);
         }
-        
+
         private void OnWeaponChanged(EventChangeActiveWeapon e)
         {
             if (!_game.PlayerIsLocal(e.Player)) return;
 
-            var asset = UnityDB.FindAsset<WeaponDataAsset>(e.NewWeapon.Id);
-
-            _statusView.OnWeaponChanged(e);
+            var frame = _game.Frames.Predicted;
+            var weapon = frame.Get<Quantum.Weapon>(e.NewWeapon);
+            var index = ItemTypeIndex(weapon);
+            var info = CreateItemViewInfo(weapon);
+            _statusView.OnHandChanged(index, info);
         }
 
         private void OnInventoryUpdated(EventInventoryUpdate e)

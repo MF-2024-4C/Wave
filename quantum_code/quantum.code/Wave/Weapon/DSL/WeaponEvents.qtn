@@ -25,7 +25,7 @@ event Equip {
 
 event ChangeActiveWeapon {
    PlayerRef Player;
-   asset_ref<WeaponData> NewWeapon;
+   entity_ref NewWeapon;
 }
 
 event InstanceWeapon {
