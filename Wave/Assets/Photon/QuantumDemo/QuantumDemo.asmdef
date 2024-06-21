@@ -6,8 +6,7 @@
         "PhotonQuantumCode",
         "Unity.Addressables",
         "Unity.ResourceManager",
-        "PhotonQuantum",
-        "PhotonQuantumEditor"
+        "PhotonQuantum"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

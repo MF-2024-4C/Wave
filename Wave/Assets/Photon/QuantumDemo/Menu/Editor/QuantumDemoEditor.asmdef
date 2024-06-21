@@ -1,15 +1,20 @@
 {
-    "name": "QuantumExtension.Editor",
+    "name": "QuantumDemoEditor",
     "rootNamespace": "",
     "references": [
-        "GUID:f6fa0c2f8b9a9f64897d3351666f3d66",
-        "GUID:3dc2666f1394e2c48a30ea492efb1717"
+        "PhotonRealtime",
+        "PhotonQuantumCode",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "PhotonQuantum",
+        "QuantumDemo",
+        "PhotonQuantumEditor"
     ],
     "includePlatforms": [
         "Editor"
     ],
     "excludePlatforms": [],
-    "allowUnsafeCode": true,
+    "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
         "quantum.code.dll",
