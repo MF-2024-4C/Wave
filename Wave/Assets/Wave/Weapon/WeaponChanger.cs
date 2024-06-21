@@ -43,7 +43,8 @@ public class WeaponChanger : MonoBehaviour
         var frame = QuantumRunner.Default.Game.Frames.Predicted;
         if (e.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
 
-        var type = UnityDB.FindAsset<WeaponDataAsset>(e.NewWeapon.Id).Settings.Type;
+        var assetGuid = frame.Get<Weapon>(e.NewWeapon).data.Id;
+        var type = UnityDB.FindAsset<WeaponDataAsset>(assetGuid).Settings.Type;
 
         ChangeWeaponFromType(type);
     }

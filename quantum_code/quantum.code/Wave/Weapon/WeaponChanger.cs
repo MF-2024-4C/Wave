@@ -36,7 +36,7 @@ public unsafe class WeaponChanger : SystemMainThreadFilter<WeaponInventorySystem
     private void ChangeWeapon(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter, PlayerLink* player,
         WeaponType weaponType)
     {
-        var weaponData = filter.Inventory->GetWeaponFromType(frame, weaponType)->data;
+        var weaponData = filter.Inventory->GetWeaponEntityFromType(weaponType);
 
         frame.Events.ChangeActiveWeapon(player->Player, weaponData);
 

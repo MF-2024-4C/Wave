@@ -27,9 +27,19 @@ namespace Wave.UI.Game.Status
             _itemDetailView = GetComponentInChildren<ItemDetailView>();
         }
 
-        public void OnWeaponChanged(EventChangeActiveWeapon e)
+        public void OnHandChanged(int index, ItemViewInfo itemViewInfo)
         {
+            if (index < 0 || index >= _itemHolderViews.Count)
+            {
+                return;
+            }
             
+            _selectedItemIndex = index;
+            
+            if (_selectedItemIndex == index)
+            {
+                UpdateItemDetail(itemViewInfo);
+            }
         }
 
         public void OnItemChanged(int index, ItemViewInfo itemViewInfo)
