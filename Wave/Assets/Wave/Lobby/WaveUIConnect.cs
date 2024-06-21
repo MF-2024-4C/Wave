@@ -8,9 +8,14 @@ namespace Wave.Lobby
     {
         public static QuantumLoadBalancingClient Client { get; set; }
         [SerializeField] private string _appVersion = "Development";
-        private string _fixedRegion = "jp";
+        private const string FixedRegion = "jp";
 
         [SerializeField] private PlayerNameSetter _playerNameSetter;
+        
+        public enum PhotonEventCode : byte {
+            StartGame = 110
+        }
+
 
         private void Awake()
         {
@@ -24,13 +29,13 @@ namespace Wave.Lobby
         private void Start()
         {
             var appSettings = PhotonServerSettings.CloneAppSettings(PhotonServerSettings.Instance.AppSettings);
-            appSettings.FixedRegion = _fixedRegion;
+            appSettings.FixedRegion = FixedRegion;
             appSettings.AppVersion = _appVersion;
 
             if (Client.ConnectUsingSettings(appSettings, "Player test"))
             {
                 Debug.Log("サーバーに接続中...");
-                LoadingScreen.Instance.ShowLoading("Connecting to server...");
+                LoadingScreen.LoadingScreen.Instance.ShowLoading("Connecting to server...");
             }
             else
             {
@@ -52,10 +57,10 @@ namespace Wave.Lobby
             Client?.Service();
         }
 
-        public void JoinToLobby()
+        private void JoinToLobby()
         {
             Debug.Log("ロビーに参加中...");
-            LoadingScreen.Instance.ShowLoading("Joining Lobby...");
+            LoadingScreen.LoadingScreen.Instance.ShowLoading("Joining Lobby...");
             Client.OpJoinLobby(null);
         }
 
@@ -68,14 +73,17 @@ namespace Wave.Lobby
         public void OnConnectedToMaster()
         {
             Debug.Log("サーバーに接続した");
-            LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
 
             Client.LocalPlayer.NickName = PlayerProfile.PlayerProfile.Instance.PlayerName;
             _playerNameSetter.ViewPlayerName();
+            
+            JoinToLobby();
         }
 
         public void OnDisconnected(DisconnectCause cause)
         {
+            
         }
 
         public void OnRegionListReceived(RegionHandler regionHandler)

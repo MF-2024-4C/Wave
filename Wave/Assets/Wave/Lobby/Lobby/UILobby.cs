@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using ExitGames.Client.Photon;
 using Michsky.UI.Heat;
 using Photon.Realtime;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
+using Wave.Lobby.Room;
 
-namespace Wave.Lobby
+namespace Wave.Lobby.Lobby
 {
     public class UILobby : MonoBehaviour, IMatchmakingCallbacks, ILobbyCallbacks
     {
@@ -16,6 +14,8 @@ namespace Wave.Lobby
         [SerializeField] private RoomViewer roomViewer;
 
         [SerializeField] private PanelManager _panelManager;
+        
+        [SerializeField] private MapManager.MapManager _mapManager;
 
         private void Awake()
         {
@@ -32,9 +32,14 @@ namespace Wave.Lobby
             WaveUIConnect.Client.AddCallbackTarget(this);
         }
 
+        public void ViewRoomInfo(EnterRoomParams enterRoomParams)
+        {
+            //TODO:プレイヤーに見せるべき部屋情報を表示する
+        }
+
         public void JoinRoom(EnterRoomParams enterRoomParams)
         {
-            LoadingScreen.Instance.ShowLoading("Joining Room...");
+            LoadingScreen.LoadingScreen.Instance.ShowLoading("Joining Room...");
             WaveUIConnect.Client.OpJoinRoom(enterRoomParams);
         }
 
@@ -43,8 +48,7 @@ namespace Wave.Lobby
             // Fall back to the first map asset we find
             var allMapsInResources =
                 Resources.LoadAll<MapAsset>(QuantumEditorSettings.Instance.DatabasePathInResources);
-            var defaultMapGuid = allMapsInResources[0].AssetObject.Guid.Value;
-            Debug.Log($"defaultMapGuid: {defaultMapGuid}");
+            var defaultMapGuid = _mapManager.Maps[0].MapAsset.AssetObject.Guid.Value;
 
             var enterRoomParams = new EnterRoomParams
             {
@@ -53,19 +57,20 @@ namespace Wave.Lobby
                     IsVisible = true,
                     MaxPlayers = 4,
                     Plugins = new[] { "QuantumPlugin" },
+                    CustomRoomPropertiesForLobby = new[] { "ROOM-NAME" },
                     CustomRoomProperties = new Hashtable
                     {
-                        { "HIDE-ROOM", false },
                         { "MAP-GUID", defaultMapGuid },
+                        { "ROOM-NAME", PlayerProfile.PlayerProfile.Instance.PlayerName + "'s Room" },
                     },
                     PlayerTtl = PhotonServerSettings.Instance.PlayerTtlInSeconds * 1000,
-                    EmptyRoomTtl = PhotonServerSettings.Instance.EmptyRoomTtlInSeconds * 1000
+                    EmptyRoomTtl = 1000
                 },
-                RoomName = PlayerProfile.PlayerProfile.Instance.PlayerName + "'s Room",
+                RoomName = Random.Range(1, 100000000).ToString(),
             };
             WaveUIConnect.Client.OpCreateRoom(enterRoomParams);
 
-            LoadingScreen.Instance.ShowLoading("Creating Room...");
+            LoadingScreen.LoadingScreen.Instance.ShowLoading("Creating Room...");
         }
 
 
@@ -74,11 +79,14 @@ namespace Wave.Lobby
         public void OnJoinedLobby()
         {
             Debug.Log("ロビーに参加しました");
-            LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
         }
 
         public void OnLeftLobby()
         {
+            Debug.Log("ロビーに再接続中...");
+            LoadingScreen.LoadingScreen.Instance.ShowLoading("Rejoining Lobby...");
+            WaveUIConnect.Client.OpJoinLobby(null);
         }
 
         public void OnRoomListUpdate(List<RoomInfo> roomList)
@@ -103,14 +111,14 @@ namespace Wave.Lobby
         public void OnCreatedRoom()
         {
             Debug.Log("部屋を作成した");
-            LoadingScreen.Instance.HideLoading();
-            LoadingScreen.Instance.ShowLoading("Joining Room...");
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.ShowLoading("Joining Room...");
         }
 
         public void OnCreateRoomFailed(short returnCode, string message)
         {
             Debug.Log("部屋の作成に失敗した");
-            LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
         }
 
         public void OnJoinedRoom()
@@ -118,13 +126,13 @@ namespace Wave.Lobby
             Debug.Log("部屋に入室した");
             _panelManager.OpenPanelByIndex(2);
             UIRoom.Instance.OnJoinRoom();
-            LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
         }
 
         public void OnJoinRoomFailed(short returnCode, string message)
         {
             Debug.Log("部屋の入室に失敗した");
-            LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
         }
 
         public void OnJoinRandomFailed(short returnCode, string message)

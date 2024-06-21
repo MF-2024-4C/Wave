@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using System.Linq;
 using Photon.Realtime;
 using UnityEngine;
 
-namespace Wave.Lobby
+namespace Wave.Lobby.Lobby
 {
     public class RoomViewer : MonoBehaviour
     {
@@ -15,6 +14,9 @@ namespace Wave.Lobby
             Clear();
             foreach (var roomInfo in roomList)
             {
+                if (roomInfo.RemovedFromList) continue;
+                if (!roomInfo.IsVisible) continue;
+                
                 AddRoomItem(roomInfo);
             }
         }

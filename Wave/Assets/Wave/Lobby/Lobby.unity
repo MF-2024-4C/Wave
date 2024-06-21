@@ -896,7 +896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -526.70703}
+  m_AnchoredPosition: {x: 350, y: -527.23804}
   m_SizeDelta: {x: 700, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60301351
@@ -1561,7 +1561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -91.95, y: -559.207}
+  m_AnchoredPosition: {x: -91.95, y: -559.7379}
   m_SizeDelta: {x: 383.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89079209
@@ -14553,7 +14553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -100.255005, y: -429.20697}
+  m_AnchoredPosition: {x: -100.255005, y: -429.7379}
   m_SizeDelta: {x: 400.51, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813533334
@@ -14624,18 +14624,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 927833890}
-        m_TargetAssemblyTypeName: Wave.Lobby.WaveUIConnect, Wave
-        m_MethodName: JoinToLobby
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -17232,7 +17220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.169998, y: -719.207}
+  m_AnchoredPosition: {x: 17.169998, y: -719.7379}
   m_SizeDelta: {x: 165.66, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964775541
@@ -19176,7 +19164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -20.894997, y: -799.207}
+  m_AnchoredPosition: {x: -20.894997, y: -799.7379}
   m_SizeDelta: {x: 241.79, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072452273
@@ -23331,6 +23319,7 @@ MonoBehaviour:
   _roomNameInputField: {fileID: 876196365}
   _privateSwitchManager: {fileID: 993110030}
   _overlayCharacterManager: {fileID: 1568637415}
+  _config: {fileID: 2019711792}
 --- !u!1 &1242643120
 GameObject:
   m_ObjectHideFlags: 0
@@ -24832,6 +24821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomViewer: {fileID: 851209359}
   _panelManager: {fileID: 927833889}
+  _mapManager: {fileID: 11400000, guid: 2dbcdc428bc089d4a94f74256d4a7942, type: 2}
 --- !u!1 &1327015539
 GameObject:
   m_ObjectHideFlags: 0
@@ -26403,7 +26393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -56.035004, y: -639.207}
+  m_AnchoredPosition: {x: -56.035004, y: -639.7379}
   m_SizeDelta: {x: 312.07, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1422705069
@@ -27279,7 +27269,19 @@ MonoBehaviour:
   fadingMultiplier: 8
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1242034316}
+        m_TargetAssemblyTypeName: Wave.Lobby.Room.UIRoom, Wave
+        m_MethodName: OnStartClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDoubleClick:
     m_PersistentCalls:
       m_Calls: []

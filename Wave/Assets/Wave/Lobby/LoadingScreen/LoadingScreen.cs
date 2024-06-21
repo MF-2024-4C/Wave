@@ -1,71 +1,73 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class LoadingScreen : MonoBehaviour
+namespace Wave.Lobby.LoadingScreen
 {
-    public static LoadingScreen Instance;
-
-    [SerializeField] private GameObject _loading;
-    [SerializeField] private CanvasGroup _canvasGroup;
-    [SerializeField] private TextMeshProUGUI _loadingText;
-
-    private bool _isShowing;
-
-    private const float FadeTime = 0.1f;
-
-    private void Awake()
+    public class LoadingScreen : MonoBehaviour
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-    }
+        public static LoadingScreen Instance;
 
-    public void ShowLoading(string text)
-    {
-        if (_isShowing) return;
-        _isShowing = true;
-        
-        StopAllCoroutines();
-        _canvasGroup.alpha = 0;
-        
-        _loading.SetActive(true);
-        _loadingText.text = text;
-        StartCoroutine(FadeIn());
-    }
+        [SerializeField] private GameObject _loading;
+        [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private TextMeshProUGUI _loadingText;
 
-    public void HideLoading()
-    {
-        if (!_isShowing) return;
-        _isShowing = false;
-        
-        StopAllCoroutines();
-        _canvasGroup.alpha = 1;
-        
-        StartCoroutine(FadeOut());
-    }
+        private bool _isShowing;
 
-    private IEnumerator FadeIn()
-    {
-        var time = 0f;
-        while (time < FadeTime)
+        private const float FadeTime = 0.1f;
+
+        private void Awake()
         {
-            time += Time.deltaTime;
-            _canvasGroup.alpha = time / FadeTime;
-            yield return null;
-        }
-    }
-
-    private IEnumerator FadeOut()
-    {
-        var time = 0f;
-        while (time < FadeTime)
-        {
-            time += Time.deltaTime;
-            _canvasGroup.alpha = 1 - time / FadeTime;
-            yield return null;
+            if (Instance == null) Instance = this;
+            else Destroy(gameObject);
         }
 
-        _loading.SetActive(false);
+        public void ShowLoading(string text)
+        {
+            if (_isShowing) return;
+            _isShowing = true;
+        
+            StopAllCoroutines();
+            _canvasGroup.alpha = 0;
+        
+            _loading.SetActive(true);
+            _loadingText.text = text;
+            StartCoroutine(FadeIn());
+        }
+
+        public void HideLoading()
+        {
+            if (!_isShowing) return;
+            _isShowing = false;
+        
+            StopAllCoroutines();
+            _canvasGroup.alpha = 1;
+        
+            StartCoroutine(FadeOut());
+        }
+
+        private IEnumerator FadeIn()
+        {
+            var time = 0f;
+            while (time < FadeTime)
+            {
+                time += Time.deltaTime;
+                _canvasGroup.alpha = time / FadeTime;
+                yield return null;
+            }
+        }
+
+        private IEnumerator FadeOut()
+        {
+            var time = 0f;
+            while (time < FadeTime)
+            {
+                time += Time.deltaTime;
+                _canvasGroup.alpha = 1 - time / FadeTime;
+                yield return null;
+            }
+
+            _loading.SetActive(false);
+        }
     }
 }
