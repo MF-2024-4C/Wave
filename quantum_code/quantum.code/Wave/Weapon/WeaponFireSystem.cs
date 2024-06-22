@@ -1,6 +1,7 @@
 using Photon.Deterministic;
 
 namespace Quantum.Wave.Weapon;
+
 public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySystem.GunHolderFilter>
 {
     public override void Update(Frame frame, ref WeaponInventorySystem.GunHolderFilter filter)
@@ -44,7 +45,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         {
             var weapon = filter.Inventory->GetCurrentWeaponEntity();
             currentWeapon->Fire(frame, player, weapon);
-            WeaponFireUtilities.ProjectileCast(frame, filter.Transform3D, filter.Player, &input);
+            WeaponFireUtilities.ProjectileCast(frame, filter.Entity, filter.Transform3D, filter.Player, &input);
         }
     }
 

@@ -26,6 +26,3 @@ component ZombieTargetable {
 
 signal SpawnMonster(entity_ref target, asset_ref<EntityPrototype> prototype);
 signal SetMonsterTarget(entity_ref monsterEntity);
-
-signal OnDamage(entity_ref target, FP damage);
-signal OnLivingHurtSignal();

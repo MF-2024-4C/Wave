@@ -49,6 +49,7 @@ namespace Wave.UI.Game
 
             _crosshair = FindObjectsByType<Crosshair>(FindObjectsSortMode.None)[0];
             QuantumEvent.Subscribe<EventFire>(this, OnFireLocal);
+            QuantumEvent.Subscribe<EventOnPlayerAttackHitLocal>(this, OnAttackHitLocal);
 
             _statusView = FindObjectsByType<StatusView>(FindObjectsSortMode.None)[0];
             QuantumEvent.Subscribe<EventChangeActiveWeapon>(this, OnWeaponChanged);
@@ -60,7 +61,7 @@ namespace Wave.UI.Game
         {
             if (_isLocalPlayer) return;
         }
-
+        
         private void OnFireLocal(EventFire e)
         {
             if (!_game.PlayerIsLocal(e.Player)) return;
@@ -73,6 +74,11 @@ namespace Wave.UI.Game
             var info = CreateItemViewInfo(weapon);
 
             _statusView.OnItemChanged(index, info);
+        }
+        
+        private void OnAttackHitLocal(EventOnPlayerAttackHitLocal e)
+        {
+            _crosshair.OnHit();
         }
 
         private void OnReloadCompleteLocal(EventReloadComplete e)
