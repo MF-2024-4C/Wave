@@ -17,6 +17,7 @@ public unsafe partial struct WeaponInventory
                 break;
         }
 
+        Log.Info($"WeaponInventory.SetWeapon:{frame.Number}");
         frame.Events.InventoryUpdate(playerRef, entityRef);
     }
 

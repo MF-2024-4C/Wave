@@ -1,6 +1,7 @@
 ﻿using System;
 using Quantum;
 using UnityEngine;
+using UnityEngine.Animations;
 using Wave.UI.Game.Status;
 
 namespace Wave.UI.Game
@@ -14,7 +15,9 @@ namespace Wave.UI.Game
 
         private Crosshair _crosshair;
         private StatusView _statusView;
+        private GunHand.GunHand _gunHand;
 
+        private PlayerRef _playerRef;
         private bool _isLocalPlayer;
 
         private bool _isInstantiated = false;
@@ -31,8 +34,10 @@ namespace Wave.UI.Game
         {
             _game = game;
             var frame = game.Frames.Predicted;
+            Debug.Log($"Player instantiated:{frame.Number}");
             var playerLink = frame.Get<PlayerLink>(_entityView.EntityRef);
             _isLocalPlayer = game.PlayerIsLocal(playerLink.Player);
+            _playerRef = playerLink.Player;
             _isInstantiated = true;
             PlayerSetup();
             LocalPlayerSetup();
@@ -46,7 +51,9 @@ namespace Wave.UI.Game
         private void LocalPlayerSetup()
         {
             if (!_isLocalPlayer) return;
-
+            _gunHand = GetComponentInChildren<GunHand.GunHand>();
+            _gunHand.Active();
+            
             _crosshair = FindObjectsByType<Crosshair>(FindObjectsSortMode.None)[0];
             QuantumEvent.Subscribe<EventFire>(this, OnFireLocal);
             QuantumEvent.Subscribe<EventOnPlayerAttackHitLocal>(this, OnAttackHitLocal);
@@ -55,13 +62,27 @@ namespace Wave.UI.Game
             QuantumEvent.Subscribe<EventChangeActiveWeapon>(this, OnWeaponChanged);
             QuantumEvent.Subscribe<EventInventoryUpdate>(this, OnInventoryUpdated);
             QuantumEvent.Subscribe<EventReloadComplete>(this, OnReloadCompleteLocal);
+
+
+            var e = new EventInventoryUpdate
+            {
+                Player = _playerRef
+            };
+
+            var inventory = _game.Frames.Predicted.Get<Quantum.WeaponInventory>(_entityView.EntityRef);
+            e.WeaponRef = inventory.primary;
+            OnInventoryUpdated(e);
+            e.WeaponRef = inventory.secondary;
+            OnInventoryUpdated(e);
+            e.WeaponRef = inventory.tertiary;
+            OnInventoryUpdated(e);
         }
 
         private void RemotePlayerSetup()
         {
             if (_isLocalPlayer) return;
         }
-        
+
         private void OnFireLocal(EventFire e)
         {
             if (!_game.PlayerIsLocal(e.Player)) return;
@@ -75,7 +96,7 @@ namespace Wave.UI.Game
 
             _statusView.OnItemChanged(index, info);
         }
-        
+
         private void OnAttackHitLocal(EventOnPlayerAttackHitLocal e)
         {
             _crosshair.OnHit();
@@ -105,6 +126,8 @@ namespace Wave.UI.Game
         private void OnInventoryUpdated(EventInventoryUpdate e)
         {
             if (!_game.PlayerIsLocal(e.Player)) return;
+            if (!e.WeaponRef.IsValid) return;
+            Debug.Log("Inventory updated");
             var frame = _game.Frames.Predicted;
             var weapon = frame.Get<Quantum.Weapon>(e.WeaponRef);
             var index = ItemTypeIndex(weapon);

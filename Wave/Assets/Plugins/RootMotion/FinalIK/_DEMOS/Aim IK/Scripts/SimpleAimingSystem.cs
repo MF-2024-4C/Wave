@@ -31,7 +31,7 @@ namespace RootMotion.Demos {
 		void Start() {
 			// Disable IK components to manage their updating order
 			aim.enabled = false;
-			lookAt.enabled = false;
+			if(lookAt!= null)lookAt.enabled = false;
 		}
 		
 		// LateUpdate is called once per frame
