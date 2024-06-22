@@ -37,6 +37,8 @@ TagManager:
   - 
   - 
   - 
+  - 
+  - 
   m_SortingLayers:
   - name: UIBlurBelow
     uniqueID: 492727205
