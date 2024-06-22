@@ -15,8 +15,12 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,I
 
     public override void OnInit(Frame frame)
     {
-        _navMesh = frame.Map.NavMeshes["Navmesh"];
-        Assert.Check(_navMesh != null, "MapにNavMeshが存在しません。");
+        if (!frame.Map.NavMeshes.TryGetValue("Navmesh", out var mesh))
+        {
+            Log.Warn("MapにNavMeshが存在しません。");
+            return;
+        }
+        _navMesh = mesh;
     }
 
     private const int UpdateTargetPosPerFrame = 20;
