@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +8,13 @@ namespace Wave.UI.Game
     {
         [Header("Settings")] [Range(1, 10)] public float _scaleLerp = 5;
         [Range(0.01f, 1)] public float _onFireScaleRate = 0.1f;
-        [SerializeField] private CrosshairFormat _crosshairFormat = null;
-        [SerializeField] private HitCrosshairFormat _hitCrosshairFormat = null;
+        [SerializeField] private CrosshairFormat _crosshairFormat;
+        [SerializeField] private HitCrosshairFormat _hitCrosshairFormat;
 
 
         [Header("References")] [SerializeField]
-        private RectTransform _crosshairContainer = null;
-        [SerializeField] private RectTransform _hitMarkerRoot = null;
+        private RectTransform _crosshairContainer;
+        [SerializeField] private RectTransform _hitMarkerRoot;
 
 
         private Vector2 _initSizeDelta;
@@ -23,8 +22,8 @@ namespace Wave.UI.Game
         private float _lastTimeFire;
 
         private float _hitDuration;
-        private CanvasGroup m_HitAlpha;
-        private Vector2 defaultHitSize;
+        private CanvasGroup _hitAlpha;
+        private Vector2 _defaultHitSize;
 
 
         public void OnFire()
@@ -59,11 +58,11 @@ namespace Wave.UI.Game
 
             if (_hitMarkerRoot != null)
             {
-                m_HitAlpha = _hitMarkerRoot.GetComponent<CanvasGroup>();
-                defaultHitSize = _hitMarkerRoot.sizeDelta;
-                if (m_HitAlpha != null)
+                _hitAlpha = _hitMarkerRoot.GetComponent<CanvasGroup>();
+                _defaultHitSize = _hitMarkerRoot.sizeDelta;
+                if (_hitAlpha != null)
                 {
-                    m_HitAlpha.alpha = 0;
+                    _hitAlpha.alpha = 0;
                 }
 
                 var hmg = _hitMarkerRoot.GetComponentsInChildren<Graphic>();
@@ -89,18 +88,18 @@ namespace Wave.UI.Game
         private IEnumerator OnHitMarker()
         {
             _hitDuration = 0;
-            _hitMarkerRoot.sizeDelta = defaultHitSize;
+            _hitMarkerRoot.sizeDelta = _defaultHitSize;
             var sizeTarget = new Vector2(_hitCrosshairFormat.IncreaseAmount, _hitCrosshairFormat.IncreaseAmount);
             _crosshairContainer.gameObject.SetActive(false);
 
             while (_hitDuration < 1)
             {
                 _hitDuration += Time.unscaledDeltaTime / _hitCrosshairFormat.Duration;
-                _hitMarkerRoot.sizeDelta = Vector2.Lerp(defaultHitSize, sizeTarget,
+                _hitMarkerRoot.sizeDelta = Vector2.Lerp(_defaultHitSize, sizeTarget,
                     _hitCrosshairFormat.HitScaleCurve.Evaluate(_hitDuration));
-                if (m_HitAlpha != null)
+                if (_hitAlpha != null)
                 {
-                    m_HitAlpha.alpha = _hitCrosshairFormat.HitAlphaCurve.Evaluate(_hitDuration);
+                    _hitAlpha.alpha = _hitCrosshairFormat.HitAlphaCurve.Evaluate(_hitDuration);
                 }
 
                 yield return null;
