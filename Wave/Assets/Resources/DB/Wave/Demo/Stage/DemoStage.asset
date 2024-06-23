@@ -456,117 +456,6 @@ MonoBehaviour:
       MutableMode: 0
     MapEntities: []
   Prototypes:
-  - ButtonEntity:
-    - trigger:
-        ID: 150
-    Character: []
-    EventComponent: []
-    GameEvent: []
-    GameEventQueue: []
-    Interactor: []
-    ItemData: []
-    PlayerLink: []
-    PlayerSys: []
-    RuntimeSwarm: []
-    SingletonZombiesSpawnEvent: []
-    Weapon: []
-    WeaponEvents: []
-    WeaponInventory: []
-    WeaponInventorySetup: []
-    Zombie: []
-    ZombieSpawnArea: []
-    ZombieTargetable: []
-    ZombiesSpawnEvent: []
-    CharacterController2D: []
-    CharacterController3D: []
-    NavMeshAvoidanceAgent: []
-    NavMeshAvoidanceObstacle: []
-    NavMeshPathfinder: []
-    NavMeshSteeringAgent: []
-    PhysicsBody2D: []
-    PhysicsBody3D:
-    - Version: 2
-      Config:
-        Value: 58
-      Mass:
-        RawValue: 65536
-      Drag:
-        RawValue: 32768
-      AngularDrag:
-        RawValue: 32768
-      CenterOfMass:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-      RotationFreeze:
-        Value: 0
-      GravityScale:
-        _hasValue: 0
-        _value:
-          RawValue: 65536
-    PhysicsCollider2D: []
-    PhysicsCollider3D:
-    - ShapeConfig:
-        ShapeType: 2
-        SphereRadius:
-          RawValue: 0
-        PositionOffset:
-          X:
-            RawValue: 0
-          Y:
-            RawValue: 0
-          Z:
-            RawValue: 0
-        BoxExtents:
-          X:
-            RawValue: 32768
-          Y:
-            RawValue: 32768
-          Z:
-            RawValue: 32768
-        RotationOffset:
-          X:
-            RawValue: 0
-          Y:
-            RawValue: 0
-          Z:
-            RawValue: 0
-        UserTag: 0
-        IsPersistent: 1
-        CompoundShapes: []
-        IsSetFromSourceCollider: 0
-      Layer: 0
-      IsTrigger: 0
-      PhysicsMaterial:
-        Id:
-          Value: 0
-    PhysicsCallbacks2D: []
-    PhysicsCallbacks3D:
-    - CallbackFlags:
-        Value: 0
-    Transform2D: []
-    Transform2DVertical: []
-    Transform3D:
-    - Position:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 262144
-        Z:
-          RawValue: 0
-      Rotation:
-        X:
-          RawValue: 2949120
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 2949119
-    View: []
-    PhysicsJoints2D: []
-    PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
     EventComponent:
@@ -590,7 +479,7 @@ MonoBehaviour:
     ZombieSpawnArea:
     - Active:
         Value: 0
-      MaxSpawnCount: 30
+      MaxSpawnCount: 50
       CurrentSpawnCount: 0
       Radius:
         RawValue: 327680
@@ -1145,11 +1034,11 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 0
+          RawValue: -360448
         Y:
-          RawValue: -65536
+          RawValue: -129105
         Z:
-          RawValue: 65536
+          RawValue: 191365
       Rotation:
         X:
           RawValue: 0
