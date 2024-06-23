@@ -11,6 +11,7 @@ using UnityEngine;
 using Wave.Lobby.MapManager;
 using Wave.Lobby.Room.OverlayPlayer;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Wave.Lobby.Room
 {
@@ -51,7 +52,8 @@ namespace Wave.Lobby.Room
         {
             Debug.Log($"マップを{map.MapName}に設定します");
 
-            var customProperties = new Hashtable { { "MAP-GUID", map.MapAsset.AssetObject.Guid.Value } };
+            var mapIndex = _mapManager.Maps.ToList().IndexOf(map);
+            var customProperties = new Hashtable { { "MAP-INDEX", mapIndex} };
             ClientManager.Client.CurrentRoom.SetCustomProperties(customProperties);
 
             _mapSelectModalWindow.CloseWindow();
@@ -82,15 +84,10 @@ namespace Wave.Lobby.Room
                 case WaveUIConnect.PhotonEventCode.StartGame:
 
                     Debug.Log("ゲーム開始イベントを受信しました");
-                    ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-GUID", out var mapGuid);
-
-                    if (mapGuid == null)
-                    {
-                        Debug.Log("マップが選択されていません");
-                        return;
-                    }
-
-                    StartGame((long)mapGuid);
+                    ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-INDEX", out var mapIndex);
+                    if (mapIndex == null) return;
+                    var mapGuid = _mapManager.Maps[(int)mapIndex].MapAsset.AssetObject.Guid.Value;
+                    StartGame(mapGuid);
                     break;
                 default:
                     break;
@@ -124,7 +121,8 @@ namespace Wave.Lobby.Room
                 StartGameTimeoutInSeconds = 10.0f
             };
 
-            var clientId = ClientManager.Client.LocalPlayer.NickName;
+            //var clientId = ClientManager.Client.LocalPlayer.NickName;
+            var clientId = Random.Range(1, 100000000).ToString();
 
             _overlayCharacterManager.AllRemoveOverlayCharacter();
 
@@ -163,17 +161,17 @@ namespace Wave.Lobby.Room
 
         private void UpdateMapInfo()
         {
-            if (!ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-GUID", out var mapGuid)) return;
-            var mapInfo = GetMapInfoFromGuid((long)mapGuid);
+            if (!ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-INDEX", out var mapIndex)) return;
+            var mapInfo = GetMapInfoFromMapIndex((int)mapIndex);
             if (mapInfo == null) return;
             _mapNameText.text = mapInfo.MapName;
             _mapDescriptionText.text = mapInfo.MapDescription;
             _mapPreviewImage.sprite = mapInfo.PreviewImage;
         }
 
-        public MapInfo GetMapInfoFromGuid(long mapGuid)
+        public MapInfo GetMapInfoFromMapIndex(int mapIndex)
         {
-            return _mapManager.Maps.FirstOrDefault(map => map.MapAsset.AssetObject.Guid.Value == mapGuid);
+            return _mapManager.Maps[mapIndex];
         }
 
         private void UpdatePlayerInfo()
