@@ -78,18 +78,6 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,I
         }
     }
 
-    public void OnDamage(Frame f, EntityRef target, FP damage)
-    {
-        if (f.Unsafe.TryGetPointer(target, out Quantum.Zombie* zombie))
-        {
-            zombie->HP -= damage;
-            if (zombie->HP <= 0)
-            {
-                zombie->State = ZombieState.Die;
-            }
-        }
-    }
-
     public void OnDamage(Frame f, EntityRef target, DamageSource source, FP amount)
     {
         if (!f.Unsafe.TryGetPointer(target, out Quantum.Zombie* zombie)) return;
@@ -98,6 +86,9 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,I
         if (zombie->HP <= 0)
         {
             zombie->State = ZombieState.Die;
+            f.Remove<PhysicsCollider3D>(target);
+            f.Remove<PhysicsBody3D>(target);
+            f.Remove<NavMeshPathfinder>(target);
         }
     }
 }

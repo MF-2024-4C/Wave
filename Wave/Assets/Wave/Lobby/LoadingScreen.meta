@@ -1,10 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Wave/Assets/3Dynamite/Real Ivy/Compatibility Pack - HDRP.unitypackage.meta
-guid: 99c873905be25b742a566c3efde1d0f4
-========
-guid: d9811b6c9e79eb246b7ef8845c9d8c5f
-folderAsset: yes
->>>>>>>> refs/remotes/origin/feature-Lobby:Wave/Assets/Wave/Lobby/LoadingScreen.meta
+guid: 615e00e48c4ec4d4ea72853793bd8c39
 DefaultImporter:
   externalObjects: {}
   userData: 

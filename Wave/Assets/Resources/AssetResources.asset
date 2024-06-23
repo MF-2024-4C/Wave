@@ -56,6 +56,11 @@ MonoBehaviour:
         Id:
           Value: 99500203735378038
       ResourcePath: DB/Wave/Demo/Demo-Player
+    - Path: Resources/DB/Wave/Demo/New Zombie Spawn Item Config Asset
+      AssetRef:
+        Id:
+          Value: 121356383486418889
+      ResourcePath: DB/Wave/Demo/New Zombie Spawn Item Config Asset
     - Path: Resources/DB/Wave/Item/Config/New Item 3 Config Asset
       AssetRef:
         Id:

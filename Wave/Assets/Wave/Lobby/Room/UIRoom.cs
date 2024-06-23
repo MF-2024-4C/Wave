@@ -67,6 +67,7 @@ namespace Wave.Lobby.Room
                     new RaiseEventOptions { Receivers = ReceiverGroup.All },
                     SendOptions.SendReliable))
             {
+                Camera.main.Hide();
                 Debug.Log("ゲームを開始します");
             }
             else

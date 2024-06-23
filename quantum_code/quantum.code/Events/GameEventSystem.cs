@@ -19,9 +19,6 @@ public unsafe class GameEventSystem : SystemMainThread, ISignalActivateEvent
     {
         var ptr = EventInternal.GetSingletonComponent(f).events.container.ptr;
         f.Heap->Void<GameEventsData>(ptr)->Update(f);
-        foreach (var mapEvent in _eventReader.Read(f))
-        {
-            //Log.Info($"Call Event:{mapEvent.ID}");
-        }
+
     }
 }

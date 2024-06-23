@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d8588b9b4d4e344b3c6c8da8806a1c, type: 3}
   m_Name: GPUInstancerShaderBindings
   m_EditorClassIdentifier: 
-  shaderInstances: []
+  shaderInstances:
+  - name: Universal Render Pipeline/Lit
+    instancedShader: {fileID: 4800000, guid: 84959c381895b0343930134b5fff753b, type: 3}
+    modifiedDate: 06/23/2024 03:23:34.504
+    isOriginalInstanced: 0
+    extensionCode: 

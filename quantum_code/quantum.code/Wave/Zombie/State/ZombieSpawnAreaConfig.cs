@@ -15,6 +15,29 @@ public unsafe partial class ZombieSpawnAreaConfig : AssetObject
         var zombieTransform = f.Unsafe.GetPointer<Transform3D>(zombieEntityRef);
         var zombie = f.Unsafe.GetPointer<Zombie>(zombieEntityRef);
         
+        if(spawnArea.isHorde)
+        {
+            var targetCount = 0;
+            foreach (var t in f.Unsafe.GetComponentBlockIterator<ZombieTargetable>())
+            {
+                targetCount++;
+            }
+
+            var index = 0;
+            foreach (var t in f.Unsafe.GetComponentBlockIterator<ZombieTargetable>())
+            {
+                f.Unsafe.TryGetPointer<Transform3D>(t.Entity, out var transform);
+
+                if (zombieEntityRef.Index % targetCount == index)
+                {
+                    zombie->Target = t.Entity;
+                    zombie->State = ZombieState.Chase;
+                    break;
+                }
+                
+                index++;
+            }
+        }
         zombieTransform->Position = GetRandomRadiusPosition(f.RNG, zombieSpawnAreaPosition, spawnArea.Radius);
         
     }

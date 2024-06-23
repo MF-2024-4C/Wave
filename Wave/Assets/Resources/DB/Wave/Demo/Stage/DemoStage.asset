@@ -569,7 +569,11 @@ MonoBehaviour:
     PhysicsJoints3D: []
   - ButtonEntity: []
     Character: []
-    EventComponent: []
+    EventComponent:
+    - mapEvent:
+        ID: 1
+      isTriggered:
+        Value: 0
     GameEvent: []
     GameEventQueue: []
     Interactor: []
@@ -591,7 +595,7 @@ MonoBehaviour:
       Radius:
         RawValue: 327680
       isHorde:
-        Value: 0
+        Value: 1
       EndTime:
         RawValue: 0
       Config:
@@ -616,11 +620,11 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 0
+          RawValue: 218234
         Y:
-          RawValue: -124518
+          RawValue: -217382
         Z:
-          RawValue: 902430
+          RawValue: 2761687
       Rotation:
         X:
           RawValue: 0
@@ -1041,6 +1045,111 @@ MonoBehaviour:
           RawValue: -226845
         Z:
           RawValue: 1458831
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    Interactor:
+    - Config:
+        Id:
+          Value: 198859142049440293
+      CanInteract:
+        Value: 1
+      OnInteract:
+        Value: 0
+      InteractStartTime:
+        RawValue: 0
+      InteractEndTime:
+        RawValue: 0
+      InteractPlayer:
+        SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
+    ItemData:
+    - Config:
+        Id:
+          Value: 121356383486418889
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 1
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: -65536
+        Z:
+          RawValue: 65536
       Rotation:
         X:
           RawValue: 0

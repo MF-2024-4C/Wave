@@ -64,6 +64,13 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpawnItemConfig))]
+  public class AssetRefZombieSpawnItemConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpawnItemConfigAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(AssetRefZombieSpec))]
   public class AssetRefZombieSpecPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {

@@ -82839,7 +82839,7 @@ MonoBehaviour:
   PlayerData:
     CharacterPrototype:
       Id:
-        Value: 2699151491591919434
+        Value: 4254466666631320402
 --- !u!4 &1311992739
 Transform:
   m_ObjectHideFlags: 0
@@ -124201,7 +124201,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1317171191}
   m_HandleRect: {fileID: 1508784318}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -126757,10 +126757,10 @@ MonoBehaviour:
         Value: 0
     SimulationConfig:
       Id:
-        Value: 0
+        Value: 3380370344064645496
     SystemConfig:
       Id:
-        Value: 3778568326002901391
+        Value: 1013300404219888102
 --- !u!224 &2019711793
 RectTransform:
   m_ObjectHideFlags: 0
