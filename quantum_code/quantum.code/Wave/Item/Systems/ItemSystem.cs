@@ -1,8 +1,9 @@
-﻿using System.Dynamic;
+﻿using System;
+using System.Dynamic;
 
 namespace Quantum.Wave.Item
 {
-    public unsafe partial class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter> , ISignalOnInteract 
+    public unsafe partial class ItemSystem : SystemMainThreadFilter<ItemSystem.Filter> , ISignalOnInteractCall, ISignalOnReleaseCall
     {
         public struct Filter
         {
@@ -16,10 +17,14 @@ namespace Quantum.Wave.Item
         {
         }
 
-        public void OnInteract(Frame f, EntityRef interacter, EntityRef player)
+        public void OnInteractCall(Frame f, EntityRef interacter, EntityRef player)
         {
             InteractItem(f, interacter, player);
-            
+        }
+        
+        public void OnReleaseCall(Frame f, EntityRef interactor, EntityRef player)
+        {
+            ReleaseItem(f, interactor, player);
         }
 
         protected virtual void InteractItem(Frame f, EntityRef item, EntityRef player)
@@ -30,6 +35,15 @@ namespace Quantum.Wave.Item
             config.Execute(f, item, player);
             
             Log.Info($"player[{player.Index}] has interact Item[{item.Index}]");    
+        }
+
+        protected virtual void ReleaseItem(Frame f, EntityRef item, EntityRef player)
+        {
+            if(!CheckItemInteract(f, item, player)) return;
+            if (!GetItemConfig(f, item, out BaseItemConfig config)) return;
+            config.Release(f, item, player);
+            
+            Log.Info($"player[{player.Index}] has release Item[{item.Index}]");
         }
 
         private bool CheckItemInteract(Frame f, EntityRef item, EntityRef player)

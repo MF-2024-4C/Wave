@@ -1,9 +1,9 @@
 asset BaseItemConfig;
 asset import Item1Config;
 asset import Item2Config;
+asset import Item3Config;
 
 component ItemData
 {
     asset_ref<BaseItemConfig> Config;
-	QBoolean IsInteract;
 }

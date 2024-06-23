@@ -4800,10 +4800,10 @@ MonoBehaviour:
         Value: 0
     SimulationConfig:
       Id:
-        Value: 3380370344064645496
+        Value: 0
     SystemConfig:
       Id:
-        Value: 1013300404219888102
+        Value: 3778568326002901391
 --- !u!224 &833318423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9333,7 +9333,7 @@ MonoBehaviour:
   PlayerData:
     CharacterPrototype:
       Id:
-        Value: 4254466666631320402
+        Value: 3510670654372677438
 --- !u!4 &1565167105
 Transform:
   m_ObjectHideFlags: 0

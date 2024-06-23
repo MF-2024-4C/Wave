@@ -56,11 +56,21 @@ MonoBehaviour:
         Id:
           Value: 99500203735378038
       ResourcePath: DB/Wave/Demo/Demo-Player
+    - Path: Resources/DB/Wave/Item/Config/New Item 3 Config Asset
+      AssetRef:
+        Id:
+          Value: 172054419130776438
+      ResourcePath: DB/Wave/Item/Config/New Item 3 Config Asset
     - Path: Resources/DB/QuantumDemo/PlayerCharacter|EntityPrototype
       AssetRef:
         Id:
           Value: 194582828604556991
       ResourcePath: DB/QuantumDemo/PlayerCharacter
+    - Path: Resources/DB/Wave/Item/DefaultItemInteractConfig
+      AssetRef:
+        Id:
+          Value: 198859142049440293
+      ResourcePath: DB/Wave/Item/DefaultItemInteractConfig
     - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Exp-ZombieSpawn
       AssetRef:
         Id:
@@ -261,6 +271,11 @@ MonoBehaviour:
         Id:
           Value: 2360401544752659421
       ResourcePath: DB/Wave/Item/Config/New Item 2 Config Asset
+    - Path: Resources/DB/Wave/Item/Item3InteractConfig
+      AssetRef:
+        Id:
+          Value: 2372404301621152629
+      ResourcePath: DB/Wave/Item/Item3InteractConfig
     - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/PlayerCharacter|EntityView
       AssetRef:
         Id:

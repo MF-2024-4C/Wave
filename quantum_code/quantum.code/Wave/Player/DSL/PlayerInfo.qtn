@@ -13,4 +13,6 @@ component PlayerSys
     FP BreakPower;
     
     FPVector3 CameraForwardDirection;
+    
+    EntityRef InteractEntity;
 }

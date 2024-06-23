@@ -15,6 +15,13 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefInteractConfig))]
+  public class AssetRefInteractConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(InteractConfigAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(AssetRefItem1Config))]
   public class AssetRefItem1ConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -26,6 +33,13 @@ namespace Quantum.Editor {
   public class AssetRefItem2ConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
       AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(Item2ConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefItem3Config))]
+  public class AssetRefItem3ConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(Item3ConfigAsset));
     }
   }
 
