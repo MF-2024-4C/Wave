@@ -383,6 +383,252 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
+          RawValue: -393216
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 2663011
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill (5)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 8
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -393216
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 3484833
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill (7)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 9
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -393216
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 4381365
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill (9)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 10
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 1507328
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 4381365
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill (10)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 11
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 1507328
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 3484833
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill (8)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 12
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 1507328
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 2663011
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill (6)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 13
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
           RawValue: 229376
         Y:
           RawValue: -228719
@@ -410,7 +656,48 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 8
+        ColliderIndex: 14
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 229376
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: -1490550
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (11)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 15
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -451,7 +738,376 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 9
+        ColliderIndex: 16
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 1469526
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 3177840
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (3)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 17
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -963824
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 3177840
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (2)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 18
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 260715
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 5519441
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (4)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 19
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 1469526
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 5519441
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (5)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 20
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 2665558
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 3177840
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (9)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 21
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 2665558
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 5519441
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (10)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 22
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -963824
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 5519441
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (6)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 23
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -2177551
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 3177840
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (7)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 24
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -2177551
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 5519441
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (8)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 25
         MutableMode: 0
       MutableMode: 0
     MapEntities: []
@@ -514,6 +1170,550 @@ MonoBehaviour:
           RawValue: -217382
         Z:
           RawValue: 2761687
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -1678377
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 2761687
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -1478492
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 3554672
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -1479802
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 4480041
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -802816
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 5524685
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1955594
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 2761687
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1930690
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 3554672
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1899233
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 4480041
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent:
+    - mapEvent:
+        ID: 2
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 50
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1158021
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: 5524685
       Rotation:
         X:
           RawValue: 0
@@ -1039,6 +2239,111 @@ MonoBehaviour:
           RawValue: -129105
         Z:
           RawValue: 191365
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    Interactor:
+    - Config:
+        Id:
+          Value: 198859142049440293
+      CanInteract:
+        Value: 1
+      OnInteract:
+        Value: 0
+      InteractStartTime:
+        RawValue: 0
+      InteractEndTime:
+        RawValue: 0
+      InteractPlayer:
+        SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
+    ItemData:
+    - Config:
+        Id:
+          Value: 4169943264844684611
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 1
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -360448
+        Y:
+          RawValue: -129105
+        Z:
+          RawValue: -154664
       Rotation:
         X:
           RawValue: 0

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9020107d3bccda94487b07f429e8b69b, type: 3}
-  m_Name: New Zombie Spawn Item Config Asset
+  m_Name: ZombieSpawn1
   m_EditorClassIdentifier: 
   Settings:
     Identifier:
-      Path: Resources/DB/Wave/Demo/New Zombie Spawn Item Config Asset
+      Path: Resources/DB/Wave/Demo/ZombieSpawn1
       Guid:
         Value: 121356383486418889
     TestFP:
