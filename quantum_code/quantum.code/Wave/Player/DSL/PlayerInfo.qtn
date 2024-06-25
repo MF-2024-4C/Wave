@@ -14,3 +14,7 @@ component PlayerSys
     
     FPVector3 CameraForwardDirection;
 }
+
+event PlayerSpawnEvent{
+    EntityRef EntityRef;
+}

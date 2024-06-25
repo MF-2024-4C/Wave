@@ -134,7 +134,7 @@ MonoBehaviour:
     HealthComponent: []
     Interactor:
     - IsInteract:
-        Value: 0
+        Value: 1
       OnInteract:
         Value: 0
     ItemData:
@@ -231,7 +231,7 @@ MonoBehaviour:
     HealthComponent: []
     Interactor:
     - IsInteract:
-        Value: 0
+        Value: 1
       OnInteract:
         Value: 0
     ItemData:
@@ -328,21 +328,21 @@ MonoBehaviour:
     HealthComponent: []
     Interactor:
     - IsInteract:
-        Value: 0
+        Value: 1
       OnInteract:
         Value: 0
     ItemData:
     - Config:
         Id:
-          Value: 1809941471795655791
+          Value: 2986412491819037066
       IsInteract:
         Value: 0
     PlayerLink: []
     PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
-    TmpPlayer: []
     Weapon: []
+    WeaponEvents: []
     WeaponInventory: []
     WeaponInventorySetup: []
     Zombie: []
@@ -425,21 +425,21 @@ MonoBehaviour:
     HealthComponent: []
     Interactor:
     - IsInteract:
-        Value: 0
+        Value: 1
       OnInteract:
         Value: 0
     ItemData:
     - Config:
         Id:
-          Value: 3345942751966868795
+          Value: 4058567449002783269
       IsInteract:
         Value: 0
     PlayerLink: []
     PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
-    TmpPlayer: []
     Weapon: []
+    WeaponEvents: []
     WeaponInventory: []
     WeaponInventorySetup: []
     Zombie: []

@@ -644,9 +644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype:
-    Config:
-      Id:
-        Value: 3498581491164885236
+    MaxHealth:
+      RawValue: 6553600
     CurrentHealth:
       RawValue: 0
 --- !u!1001 &7421127153867234411

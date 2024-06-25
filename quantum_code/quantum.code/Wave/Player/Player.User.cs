@@ -104,7 +104,9 @@ namespace Quantum
             BreakPower = config.BreakPower;
 
             if (!f.Unsafe.TryGetPointer(entity, out HealthComponent* health)) return;
-
+            //if (!f.Unsafe.TryGetPointer(entity, out PlayerLink* playerLink)) return;
+            f.Events.PlayerSpawnEvent(entity);
+            Log.Info("イベント発行");
             HealthComponent.InitializeHealth(f, health);
         }
 

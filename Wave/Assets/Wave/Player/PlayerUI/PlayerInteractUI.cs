@@ -2,7 +2,7 @@ using UnityEngine;
 using Quantum;
 using LayerMask = UnityEngine.LayerMask;
 
-public class PlayerUI : MonoBehaviour
+public class PlayerInteractUI : MonoBehaviour
 {
     [SerializeField] private EntityView _entityView;
     [SerializeField] private EntityComponentPlayerSys _entityComponentPlayerSys;

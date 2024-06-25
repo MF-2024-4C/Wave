@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Deterministic;
@@ -11,21 +12,46 @@ namespace Wave.Player
     {
         [SerializeField] private Image _healthBar;
         
-        private EntityView _playerEntityView;
+        private EntityRef _playerEntityRef;
 
+        private void Awake()
+        {
+            if (!IsSetEntityView())
+            {
+                this.gameObject.SetActive(false);
+                return;
+            }
+        }
+
+        public void ActiveStateUI(EntityRef entityRef)
+        {
+            _playerEntityRef = entityRef;
+            this.gameObject.SetActive(true);
+        }
+        
         private void Update()
         {
+            if (!IsSetEntityView())
+            {
+                this.gameObject.SetActive(false);
+                return;
+            }
+            
             QuantumGame game = QuantumRunner.Default.Game;
             Frame frame = game.Frames.Verified;
 
-            if (_playerEntityView == null) return;
-            if(!frame.TryGet(_playerEntityView.EntityRef, out HealthComponent healthComponent)) return;
+            if(!frame.TryGet(_playerEntityRef, out HealthComponent healthComponent)) return;
             var maxHealth = healthComponent.MaxHealth.AsFloat;
             var currentHealth = healthComponent.CurrentHealth.AsFloat;
             
             _healthBar.fillAmount = currentHealth / maxHealth;
         }
         
-        public void SetPlayerEntityView(EntityView entityView) => _playerEntityView = entityView;
+        public void SetPlayerEntityView(EntityRef entityView) => _playerEntityRef = entityView;
+
+        public bool IsSetEntityView()
+        {
+            return (_playerEntityRef != EntityRef.None);
+        }
     }
 }
