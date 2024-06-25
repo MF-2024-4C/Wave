@@ -53,7 +53,7 @@ namespace Wave.Lobby.Room
             Debug.Log($"マップを{map.MapName}に設定します");
 
             var mapIndex = _mapManager.Maps.ToList().IndexOf(map);
-            var customProperties = new Hashtable { { "MAP-INDEX", mapIndex} };
+            var customProperties = new Hashtable { { "MAP-INDEX", mapIndex } };
             ClientManager.Client.CurrentRoom.SetCustomProperties(customProperties);
 
             _mapSelectModalWindow.CloseWindow();
@@ -88,6 +88,10 @@ namespace Wave.Lobby.Room
                     if (mapIndex == null) return;
                     var mapGuid = _mapManager.Maps[(int)mapIndex].MapAsset.AssetObject.Guid.Value;
                     StartGame(mapGuid);
+                    break;
+                
+                case WaveUIConnect.PhotonEventCode.KickPlayer:
+                    LeaveRoom();
                     break;
                 default:
                     break;
@@ -238,6 +242,43 @@ namespace Wave.Lobby.Room
         {
             Debug.Log($" マスタークライアントが{newMasterClient.NickName}に変更されました");
             UpdateRoomControls();
+        }
+
+        #endregion
+
+        #region PlayerSelectMenu
+
+        public void SetMaster(Photon.Realtime.Player player)
+        {
+            //マスターをplayerに設定
+            if (ClientManager.Client.LocalPlayer.IsMasterClient)
+            {
+                ClientManager.Client.CurrentRoom.SetMasterClient(player);
+            }
+        }
+
+        public void ViewPlayerInfo(Photon.Realtime.Player player)
+        {
+        }
+
+        public void KickPlayer(Photon.Realtime.Player player)
+        {
+            if (ClientManager.Client.OpRaiseEvent(
+                    (byte)WaveUIConnect.PhotonEventCode.KickPlayer,
+                    null,
+                    new RaiseEventOptions { TargetActors = new[] { player.ActorNumber }},
+                    SendOptions.SendReliable))
+            {
+                Debug.Log("プレイヤーをキックします");
+            }
+            else
+            {
+                Debug.Log("プレイヤーをキックできませんでした");
+            }
+        }
+
+        public void BanPlayer(Photon.Realtime.Player player)
+        {
         }
 
         #endregion

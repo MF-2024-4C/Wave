@@ -13,7 +13,9 @@ namespace Wave.Lobby
 
         public enum PhotonEventCode : byte
         {
-            StartGame = 110
+            StartGame = 110,
+            KickPlayer = 111,
+            BanPlayer = 112,
         }
 
         private void Start()
