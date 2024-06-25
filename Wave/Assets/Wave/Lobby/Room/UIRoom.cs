@@ -136,6 +136,8 @@ namespace Wave.Lobby.Room
             QuantumRunner.StartGame(clientId, param);
 
             ReconnectInformation.Refresh(ClientManager.Client, TimeSpan.FromMinutes(1));
+            
+            LobbyOnlyObjectManager.Instance.LobbyDisable();
         }
 
         public void OnJoinRoom()
