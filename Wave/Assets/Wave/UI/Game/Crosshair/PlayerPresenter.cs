@@ -125,8 +125,17 @@ namespace Wave.UI.Game
 
         private void OnInventoryUpdated(EventInventoryUpdate e)
         {
-            if (!_game.PlayerIsLocal(e.Player)) return;
-            if (!e.WeaponRef.IsValid) return;
+            Debug.Log($"Inventory updated: weaponRef:{e.WeaponRef}, player:{e.Player}, entity:{_entityView.EntityRef}");
+            if (!_game.PlayerIsLocal(e.Player))
+            {
+                Debug.Log($"Inventory updated: {e.Id} Not local player");
+                return;
+            }
+            if (!e.WeaponRef.IsValid)
+            {
+                Debug.Log($"Inventory updated: {e.Id} Invalid weaponRef");
+                return;
+            }
             Debug.Log("Inventory updated");
             var frame = _game.Frames.Predicted;
             var weapon = frame.Get<Quantum.Weapon>(e.WeaponRef);
