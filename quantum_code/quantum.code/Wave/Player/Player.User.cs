@@ -1,5 +1,7 @@
-﻿using Quantum.QuantumDemo;
+﻿using System.Runtime.CompilerServices;
+using Quantum.QuantumDemo;
 using Photon.Deterministic;
+using Quantum.Physics2D;
 using Quantum.Physics3D;
 
 namespace Quantum
@@ -66,22 +68,31 @@ namespace Quantum
         public static void Interact(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys,
             Input input)
         {
-            if (input.Interact.WasPressed)
+            //インプットを入力しているか確認
+            if (!input.Interact)
             {
-                Log.Info("Interact input was pressed");
-                PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
-                var start = transform->Position + config.InteractRayOffset;
-                var end = start + input.CameraForwardDirection * config.InteractRayDistance;
-                var hits = f.Physics3D.LinecastAll(start, end);
-                for (int i = 0; i < hits.Count; i++)
+                if (playerSys->InteractEntity == EntityRef.None) return;
+                f.Signals.OnReleaseInteractor(playerSys->InteractEntity, entity);
+                playerSys->InteractEntity = EntityRef.None;
+                return;
+            }
+            
+            //インタラクト可能範囲にあるオブジェクトを取得してソート
+            PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
+            var start = transform->Position + config.InteractRayOffset;
+            var end = start + input.CameraForwardDirection * config.InteractRayDistance;
+            var hits = f.Physics3D.LinecastAll(start, end);
+            hits.Sort(transform->Position);
+            
+            //一番近いInteractorを取得してインタラクト
+            for (int i = 0; i < hits.Count; i++)
+            {
+                var hit = hits[i];
+                if (f.Unsafe.TryGetPointer(hit.Entity, out Interactor* interactor))
                 {
-                    var hit = hits[i];
-                    if (f.Unsafe.TryGetPointer(hit.Entity, out Interactor* interacter))
-                    {
-                        if (!interacter->IsInteract) continue;
-                        Interactor.Interact(f, entity, hit.Entity, interacter);
-                        return;
-                    }
+                    Interactor.Interact(f, entity, hit.Entity, interactor);
+                    playerSys->InteractEntity = hit.Entity;
+                    return;
                 }
             }
         }

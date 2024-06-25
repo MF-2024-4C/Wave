@@ -8,6 +8,7 @@ namespace Quantum
         public FP TestFP;
 
         public abstract void Execute(Frame f, EntityRef item, EntityRef player);
+        public abstract void Release(Frame f, EntityRef item, EntityRef player);
     }
     
     [Serializable]
@@ -22,6 +23,10 @@ namespace Quantum
                 pTran->Position.Y += TestFP1;
             }
         }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
+        }
     }
 
     [Serializable]
@@ -35,6 +40,29 @@ namespace Quantum
             {
                 pTran->Position.X += TestFP2;
             }
+        }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
+        }
+    }
+    
+    [Serializable]
+    public unsafe partial class Item3Config : BaseItemConfig
+    {
+        
+        public FP TestFP3;
+        public override void Execute(Frame f, EntityRef item, EntityRef player)
+        {
+            if (f.Unsafe.TryGetPointer<Transform3D>(player, out Transform3D* pTran))
+            {
+                pTran->Position.X -= TestFP3;
+            }
+        }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
+            Log.Info("Item3 is Cancelled");
         }
     }
     
