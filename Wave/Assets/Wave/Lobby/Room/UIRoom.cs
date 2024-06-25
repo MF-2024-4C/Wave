@@ -11,12 +11,15 @@ using UnityEngine;
 using Wave.Lobby.MapManager;
 using Wave.Lobby.Room.OverlayPlayer;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Wave.Lobby.Room
 {
     public class UIRoom : MonoBehaviour, IInRoomCallbacks, IOnEventCallback
     {
         public static UIRoom Instance;
+
+        [SerializeField] private PanelManager _panelManager;
 
         [SerializeField] private ButtonManager _playButtonManager;
         [SerializeField] private TMP_InputField _roomNameInputField;
@@ -51,7 +54,8 @@ namespace Wave.Lobby.Room
         {
             Debug.Log($"マップを{map.MapName}に設定します");
 
-            var customProperties = new Hashtable { { "MAP-GUID", map.MapAsset.AssetObject.Guid.Value } };
+            var mapIndex = _mapManager.Maps.ToList().IndexOf(map);
+            var customProperties = new Hashtable { { "MAP-INDEX", mapIndex } };
             ClientManager.Client.CurrentRoom.SetCustomProperties(customProperties);
 
             _mapSelectModalWindow.CloseWindow();
@@ -83,15 +87,15 @@ namespace Wave.Lobby.Room
                 case WaveUIConnect.PhotonEventCode.StartGame:
 
                     Debug.Log("ゲーム開始イベントを受信しました");
-                    ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-GUID", out var mapGuid);
+                    ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-INDEX", out var mapIndex);
+                    if (mapIndex == null) return;
+                    var mapGuid = _mapManager.Maps[(int)mapIndex].MapAsset.AssetObject.Guid.Value;
+                    StartGame(mapGuid);
+                    break;
 
-                    if (mapGuid == null)
-                    {
-                        Debug.Log("マップが選択されていません");
-                        return;
-                    }
-
-                    StartGame((long)mapGuid);
+                case WaveUIConnect.PhotonEventCode.KickPlayer:
+                    LeaveRoom();
+                    _panelManager.OpenPanelByIndex(1);
                     break;
                 default:
                     break;
@@ -125,13 +129,16 @@ namespace Wave.Lobby.Room
                 StartGameTimeoutInSeconds = 10.0f
             };
 
-            var clientId = ClientManager.Client.LocalPlayer.NickName;
+            //var clientId = ClientManager.Client.LocalPlayer.NickName;
+            var clientId = Random.Range(1, 100000000).ToString();
 
             _overlayCharacterManager.AllRemoveOverlayCharacter();
 
             QuantumRunner.StartGame(clientId, param);
 
             ReconnectInformation.Refresh(ClientManager.Client, TimeSpan.FromMinutes(1));
+            
+            LobbyOnlyObjectManager.Instance.LobbyDisable();
         }
 
         public void OnJoinRoom()
@@ -164,17 +171,17 @@ namespace Wave.Lobby.Room
 
         private void UpdateMapInfo()
         {
-            if (!ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-GUID", out var mapGuid)) return;
-            var mapInfo = GetMapInfoFromGuid((long)mapGuid);
+            if (!ClientManager.Client.CurrentRoom.CustomProperties.TryGetValue("MAP-INDEX", out var mapIndex)) return;
+            var mapInfo = GetMapInfoFromMapIndex((int)mapIndex);
             if (mapInfo == null) return;
             _mapNameText.text = mapInfo.MapName;
             _mapDescriptionText.text = mapInfo.MapDescription;
             _mapPreviewImage.sprite = mapInfo.PreviewImage;
         }
 
-        public MapInfo GetMapInfoFromGuid(long mapGuid)
+        public MapInfo GetMapInfoFromMapIndex(int mapIndex)
         {
-            return _mapManager.Maps.FirstOrDefault(map => map.MapAsset.AssetObject.Guid.Value == mapGuid);
+            return _mapManager.Maps[mapIndex];
         }
 
         private void UpdatePlayerInfo()
@@ -241,6 +248,43 @@ namespace Wave.Lobby.Room
         {
             Debug.Log($" マスタークライアントが{newMasterClient.NickName}に変更されました");
             UpdateRoomControls();
+        }
+
+        #endregion
+
+        #region PlayerSelectMenu
+
+        public void SetMaster(Photon.Realtime.Player player)
+        {
+            //マスターをplayerに設定
+            if (ClientManager.Client.LocalPlayer.IsMasterClient)
+            {
+                ClientManager.Client.CurrentRoom.SetMasterClient(player);
+            }
+        }
+
+        public void ViewPlayerInfo(Photon.Realtime.Player player)
+        {
+        }
+
+        public void KickPlayer(Photon.Realtime.Player player)
+        {
+            if (ClientManager.Client.OpRaiseEvent(
+                    (byte)WaveUIConnect.PhotonEventCode.KickPlayer,
+                    null,
+                    new RaiseEventOptions { TargetActors = new[] { player.ActorNumber } },
+                    SendOptions.SendReliable))
+            {
+                Debug.Log("プレイヤーをキックします");
+            }
+            else
+            {
+                Debug.Log("プレイヤーをキックできませんでした");
+            }
+        }
+
+        public void BanPlayer(Photon.Realtime.Player player)
+        {
         }
 
         #endregion

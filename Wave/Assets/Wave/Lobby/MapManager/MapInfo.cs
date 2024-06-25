@@ -1,3 +1,4 @@
+using System;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -5,6 +6,7 @@ using UnityEngine.Serialization;
 namespace Wave.Lobby.MapManager
 {
     [CreateAssetMenu(fileName = "MapInfo", menuName = "Wave/Lobby/MapManager/MapInfo")]
+    [Serializable]
     public class MapInfo : ScriptableObject
     {
         public MapAsset MapAsset;

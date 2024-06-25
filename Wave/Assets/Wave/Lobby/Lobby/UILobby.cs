@@ -2,6 +2,7 @@
 using ExitGames.Client.Photon;
 using Michsky.UI.Heat;
 using Photon.Realtime;
+using Quantum;
 using UnityEngine;
 using Wave.Lobby.Room;
 
@@ -48,7 +49,6 @@ namespace Wave.Lobby.Lobby
             // Fall back to the first map asset we find
             var allMapsInResources =
                 Resources.LoadAll<MapAsset>(QuantumEditorSettings.Instance.DatabasePathInResources);
-            var defaultMapGuid = _mapManager.Maps[0].MapAsset.AssetObject.Guid.Value;
             
             var enterRoomParams = new EnterRoomParams
             {
@@ -57,10 +57,10 @@ namespace Wave.Lobby.Lobby
                     IsVisible = true,
                     MaxPlayers = 4,
                     Plugins = new[] { "QuantumPlugin" },
-                    CustomRoomPropertiesForLobby = new[] { "MAP-GUID","ROOM-NAME" },
+                    CustomRoomPropertiesForLobby = new[] { "MAP-INDEX","ROOM-NAME" },
                     CustomRoomProperties = new Hashtable
                     {
-                        { "MAP-GUID", defaultMapGuid },
+                        { "MAP-INDEX", 0 },
                         { "ROOM-NAME", PlayerProfile.PlayerProfile.Instance.PlayerName + "'s Room" },
                     },
                     PlayerTtl = PhotonServerSettings.Instance.PlayerTtlInSeconds * 1000,

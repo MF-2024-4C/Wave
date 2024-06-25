@@ -18,9 +18,9 @@ namespace Wave.Lobby.Lobby
         {
             _roomName.text = roomInfo.CustomProperties["ROOM-NAME"].ToString();
             _playerCount.text = $"{roomInfo.PlayerCount}/{roomInfo.MaxPlayers}";
-            if (roomInfo.CustomProperties.TryGetValue("MAP-GUID", out var mapGuid))
+            if (roomInfo.CustomProperties.TryGetValue("MAP-INDEX", out var mapIndex))
             {
-                var mapInfo = UIRoom.Instance.GetMapInfoFromGuid((long)mapGuid);
+                var mapInfo = UIRoom.Instance.GetMapInfoFromMapIndex((int)mapIndex);
                 if (mapInfo != null)
                 {
                     _mapName.text = mapInfo.MapName;
