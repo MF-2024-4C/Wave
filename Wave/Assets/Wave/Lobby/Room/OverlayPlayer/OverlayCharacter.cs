@@ -18,11 +18,9 @@ namespace Wave.Lobby.Room.OverlayPlayer
 
         public void OnClicked()
         {
-          
-            if (Input.GetMouseButtonUp(1))
-            {
-                PlayerSelectWindow.Instance.Show(Player);
-            }
+            if (Equals(ClientManager.Client.LocalPlayer, Player)) return;
+            if (!ClientManager.Client.LocalPlayer.IsMasterClient) return;
+            PlayerSelectWindow.Instance.Show(Player);
         }
     }
 }

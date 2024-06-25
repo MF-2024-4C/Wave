@@ -19,6 +19,8 @@ namespace Wave.Lobby.Room
     {
         public static UIRoom Instance;
 
+        [SerializeField] private PanelManager _panelManager;
+
         [SerializeField] private ButtonManager _playButtonManager;
         [SerializeField] private TMP_InputField _roomNameInputField;
         [SerializeField] private SwitchManager _privateSwitchManager;
@@ -89,9 +91,10 @@ namespace Wave.Lobby.Room
                     var mapGuid = _mapManager.Maps[(int)mapIndex].MapAsset.AssetObject.Guid.Value;
                     StartGame(mapGuid);
                     break;
-                
+
                 case WaveUIConnect.PhotonEventCode.KickPlayer:
                     LeaveRoom();
+                    _panelManager.OpenPanelByIndex(1);
                     break;
                 default:
                     break;
@@ -266,7 +269,7 @@ namespace Wave.Lobby.Room
             if (ClientManager.Client.OpRaiseEvent(
                     (byte)WaveUIConnect.PhotonEventCode.KickPlayer,
                     null,
-                    new RaiseEventOptions { TargetActors = new[] { player.ActorNumber }},
+                    new RaiseEventOptions { TargetActors = new[] { player.ActorNumber } },
                     SendOptions.SendReliable))
             {
                 Debug.Log("プレイヤーをキックします");

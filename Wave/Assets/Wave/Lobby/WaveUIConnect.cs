@@ -10,19 +10,20 @@ namespace Wave.Lobby
         private const string FixedRegion = "jp";
 
         [SerializeField] private PlayerNameSetter _playerNameSetter;
-
-        public enum PhotonEventCode : byte
-        {
+        
+        public enum PhotonEventCode : byte {
             StartGame = 110,
             KickPlayer = 111,
-            BanPlayer = 112,
+        }
+
+
+        private void Awake()
+        {
+            ClientManager.Client.AddCallbackTarget(this);
         }
 
         private void Start()
         {
-            ClientManager.Client.AddCallbackTarget(this);
-           //ClientManager.Client.RemoveCallbackTarget(this);
-
             var appSettings = PhotonServerSettings.CloneAppSettings(PhotonServerSettings.Instance.AppSettings);
             appSettings.FixedRegion = FixedRegion;
             appSettings.AppVersion = _appVersion;
@@ -36,6 +37,20 @@ namespace Wave.Lobby
             {
                 Debug.Log("サーバーに接続できませんでした");
             }
+        }
+
+        private void OnDestroy()
+        {
+            ClientManager.Client?.RemoveCallbackTarget(this);
+            if (ClientManager.Client is { IsConnected: true })
+            {
+                ClientManager.Client.Disconnect();
+            }
+        }
+
+        private void Update()
+        {
+            ClientManager.Client?.Service();
         }
 
         private void JoinToLobby()
@@ -58,12 +73,13 @@ namespace Wave.Lobby
 
             ClientManager.Client.LocalPlayer.NickName = PlayerProfile.PlayerProfile.Instance.PlayerName;
             _playerNameSetter.ViewPlayerName();
-
+            
             JoinToLobby();
         }
 
         public void OnDisconnected(DisconnectCause cause)
         {
+            
         }
 
         public void OnRegionListReceived(RegionHandler regionHandler)

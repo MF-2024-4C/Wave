@@ -11,6 +11,8 @@ public class PlayerSelectWindow : MonoBehaviour
 
     public Photon.Realtime.Player _player;
 
+    [SerializeField] private Canvas _canvas;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -21,10 +23,26 @@ public class PlayerSelectWindow : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Hide();
+    }
+
     public void Show(Photon.Realtime.Player player)
     {
         _player = player;
         gameObject.SetActive(true);
+
+        MoveCursor();
+    }
+
+    private void MoveCursor()
+    {
+        var canvasRect = _canvas.GetComponent<RectTransform>();
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, _canvas.worldCamera,
+            out var localPoint);
+        GetComponent<RectTransform>().anchoredPosition = localPoint;
     }
 
     public void Hide()
@@ -34,15 +52,15 @@ public class PlayerSelectWindow : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
-            //Hide();
+            Hide();
         }
     }
 
     public void SetMaster()
     {
-        Debug.Log($" SetMaster {_player.NickName}   ");
+        Debug.Log($" SetMaster {_player.NickName}");
         UIRoom.Instance.SetMaster(_player);
     }
 
@@ -60,7 +78,7 @@ public class PlayerSelectWindow : MonoBehaviour
 
     public void BanPlayer()
     {
-           Debug.Log($"BanPlayer {_player.NickName}");
+        Debug.Log($"BanPlayer {_player.NickName}");
         UIRoom.Instance.BanPlayer(_player);
     }
 }
