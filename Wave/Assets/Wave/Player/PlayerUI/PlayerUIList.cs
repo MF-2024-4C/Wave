@@ -49,7 +49,8 @@ namespace Wave.Player
                 {
                     List<Photon.Realtime.Player> playerList = new List<Photon.Realtime.Player>(ClientManager.Client.CurrentRoom.Players.Values);
                     
-                    playerName = playerList[i].NickName;
+                    //TODO::プレイヤーのニックネーム取得
+                    //playerName = playerList[i].NickName;
                 }
                 stateUI.ActiveStateUI(e.EntityRef, e.PlayerLink, playerName);
                 return;
