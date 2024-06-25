@@ -36,6 +36,7 @@
     "com.unity.ugui": "2.0.0",
     "com.unity.xr.legacyinputhelpers": "2.1.10",
     "dev.n5y.asmdefhelper": "https://github.com/naninunenoy/AsmdefHelper.git?path=Assets",
+    "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.15.4",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

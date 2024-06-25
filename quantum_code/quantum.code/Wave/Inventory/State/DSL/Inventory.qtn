@@ -1,0 +1,4 @@
+﻿event InventoryUpdate {
+    PlayerRef Player;
+    entity_ref WeaponRef;
+}

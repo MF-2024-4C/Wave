@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UIBlurBelow
+    uniqueID: 492727205
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UIBlurAbove
+    uniqueID: 1060637451
     locked: 0

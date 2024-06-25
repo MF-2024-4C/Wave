@@ -1,27 +1,28 @@
 ﻿using Photon.Deterministic;
+using Quantum.Wave.Weapon;
 
 namespace Quantum;
 
 public unsafe partial struct Weapon
 {
-    public void Fire(Frame frame, PlayerLink* player)
+    public void Fire(Frame frame, PlayerLink* player,EntityRef weapon)
     {
-        OnFire(frame, player);
+        OnFire(frame, player,weapon);
     }
 
-    private void OnFire(Frame frame, PlayerLink* player)
+    private void OnFire(Frame frame, PlayerLink* player,EntityRef weapon)
     {
         currentAmmo--;
         nextFireTime = FP._1 / fireRate;
 
         Recoil(frame);
-        SendFireEvent(frame, player);
+        SendFireEvent(frame, player,weapon);
     }
 
-    public void Reload(Frame frame, PlayerLink* player)
+    public void Reload(Frame frame, PlayerLink* player,EntityRef weapon)
     {
         OnReload();
-        SendReloadEvent(frame, player);
+        SendReloadEvent(frame, player,weapon);
     }
 
     private void OnReload()
@@ -82,13 +83,13 @@ public unsafe partial struct Weapon
         return nextFireTime <= FP._0;
     }
 
-    private void SendFireEvent(Frame frame, PlayerLink* player)
+    private void SendFireEvent(Frame frame, PlayerLink* player,EntityRef weapon)
     {
-        frame.Events.Fire(player->Player);
+        frame.Events.Fire(player->Player, weapon);
     }
 
-    private void SendReloadEvent(Frame frame, PlayerLink* player)
+    private void SendReloadEvent(Frame frame, PlayerLink* player,EntityRef weapon)
     {
-        frame.Events.Reload(player->Player);
+        frame.Events.Reload(player->Player, weapon);
     }
 }
