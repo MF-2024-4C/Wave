@@ -131,6 +131,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
@@ -155,8 +156,8 @@ MonoBehaviour:
     PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
-    TmpPlayer: []
     Weapon: []
+    WeaponEvents: []
     WeaponInventory: []
     WeaponInventorySetup: []
     Zombie: []
@@ -236,6 +237,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
@@ -260,8 +262,8 @@ MonoBehaviour:
     PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
-    TmpPlayer: []
     Weapon: []
+    WeaponEvents: []
     WeaponInventory: []
     WeaponInventorySetup: []
     Zombie: []
@@ -341,6 +343,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
@@ -365,8 +368,8 @@ MonoBehaviour:
     PlayerSys: []
     RuntimeSwarm: []
     SingletonZombiesSpawnEvent: []
-    TmpPlayer: []
     Weapon: []
+    WeaponEvents: []
     WeaponInventory: []
     WeaponInventorySetup: []
     Zombie: []
@@ -427,6 +430,218 @@ MonoBehaviour:
     - Position:
         X:
           RawValue: -418775
+        Y:
+          RawValue: 90439
+        Z:
+          RawValue: 1030881
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    HealthComponent: []
+    Interactor:
+    - Config:
+        Id:
+          Value: 198859142049440293
+      CanInteract:
+        Value: 1
+      OnInteract:
+        Value: 0
+      InteractStartTime:
+        RawValue: 0
+      InteractEndTime:
+        RawValue: 0
+      InteractPlayer:
+        SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
+    ItemData:
+    - Config:
+        Id:
+          Value: 2657003019457506801
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 1
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -615383
+        Y:
+          RawValue: 90439
+        Z:
+          RawValue: 1030881
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    HealthComponent: []
+    Interactor:
+    - Config:
+        Id:
+          Value: 198859142049440293
+      CanInteract:
+        Value: 1
+      OnInteract:
+        Value: 0
+      InteractStartTime:
+        RawValue: 0
+      InteractEndTime:
+        RawValue: 0
+      InteractPlayer:
+        SceneIndexPlusOne: 0
+      NowCoolDown:
+        Value: 0
+    ItemData:
+    - Config:
+        Id:
+          Value: 2833699801600376985
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 1
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -877527
         Y:
           RawValue: 90439
         Z:

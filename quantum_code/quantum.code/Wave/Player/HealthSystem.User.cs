@@ -14,7 +14,7 @@ public unsafe partial struct HealthComponent
         if (healthComponent->CurrentHealth > healthComponent->MaxHealth)
             healthComponent->CurrentHealth = healthComponent->MaxHealth;
         
-        Log.Info($"Player{entity.Index} Health: {healthComponent->CurrentHealth}");
+        //Log.Info($"Player{entity.Index} Health: {healthComponent->CurrentHealth}");
     }
     
     public static void DecHealth(Frame f, EntityRef entity, HealthComponent* healthComponent, FP decHealth)
@@ -26,6 +26,6 @@ public unsafe partial struct HealthComponent
             f.Signals.OnDead(entity);
         }
         
-        Log.Info($"Player{entity.Index} Health: {healthComponent->CurrentHealth}");
+        //Log.Info($"Player{entity.Index} Health: {healthComponent->CurrentHealth}");
     }
 }

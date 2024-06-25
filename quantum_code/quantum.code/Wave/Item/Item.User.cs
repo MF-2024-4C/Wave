@@ -65,7 +65,6 @@ namespace Quantum
             Log.Info("Item3 is Cancelled");
         }
     }
-    
     [Serializable]
     public unsafe partial class AddDamageItemConfig : BaseItemConfig
     {
@@ -77,6 +76,10 @@ namespace Quantum
             {
                 HealthComponent.DecHealth(f, player, healthComponent, Amount);
             }
+        }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
         }
     }
 
@@ -91,6 +94,10 @@ namespace Quantum
             {
                 HealthComponent.AddHealth(f, player, healthComponent, Amount);
             }
+        }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
         }
     }
 }
