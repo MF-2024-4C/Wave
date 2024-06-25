@@ -16,7 +16,8 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         };
 
         frame.Add(entity, playerLink);
-
+        frame.Events.PlayerSpawnEvent(playerLink, entity);
+        Log.Info("イベント発行");
         Log.Info("PlayerSpawnSystem.OnPlayerDataSet");
 
         //スーポン地点をずらすように

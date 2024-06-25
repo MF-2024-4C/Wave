@@ -12,9 +12,24 @@ namespace Wave.Player
         [SerializeField] private List<PlayerStateUI> PlayerStateUIList = new List<PlayerStateUI>();
         private DispatcherSubscription _subscription;
 
-        private void OnEnable()
+        private void Awake()
         {
+            Debug.Log("イベント購買");
             _subscription = QuantumEvent.Subscribe<EventPlayerSpawnEvent>(this, SpawnPlayer);
+        }
+
+        private void Start()
+        {
+            var frame = QuantumRunner.Default.Game.Frames.Predicted;
+            foreach (var (entity, component) in frame.GetComponentIterator<PlayerLink>())
+            {
+                var e = new EventPlayerSpawnEvent
+                {
+                    EntityRef = entity,
+                    PlayerLink = component
+                };
+                SpawnPlayer(e);
+            }
         }
 
         private void OnDisable()
@@ -24,11 +39,19 @@ namespace Wave.Player
 
         private void SpawnPlayer(EventPlayerSpawnEvent e)
         {
-            var frame = QuantumRunner.Default.Game.Frames.Predicted;
-            foreach (PlayerStateUI stateUI in PlayerStateUIList)
+            Debug.Log("イベント実行");
+            for (int i = 0; i < PlayerStateUIList.Count; i++)
             {
+                PlayerStateUI stateUI = PlayerStateUIList[i];
                 if (stateUI.IsSetEntityView()) continue;
-                stateUI.ActiveStateUI(e.EntityRef);
+                string playerName = "Unknown";
+                if (ClientManager.Client != null)
+                {
+                    List<Photon.Realtime.Player> playerList = new List<Photon.Realtime.Player>(ClientManager.Client.CurrentRoom.Players.Values);
+                    
+                    playerName = playerList[i].NickName;
+                }
+                stateUI.ActiveStateUI(e.EntityRef, e.PlayerLink, playerName);
                 return;
             }
         }

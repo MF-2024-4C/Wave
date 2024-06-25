@@ -18,6 +18,7 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
             Player = player,
         };
         frame.Add(entity, playerLink);
+        frame.Events.PlayerSpawnEvent(playerLink, entity);
 
         // Offset the instantiated object in the world, based on its ID.
         if (frame.Unsafe.TryGetPointer<Transform3D>(entity, out var transform))

@@ -17,5 +17,6 @@ component PlayerSys
 }
 
 event PlayerSpawnEvent{
+    PlayerLink PlayerLink;
     EntityRef EntityRef;
 }

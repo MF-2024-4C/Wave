@@ -5,13 +5,16 @@ using Photon.Deterministic;
 using Quantum;
 using UnityEngine;
 using UnityEngine.UI;
+using Wave.Lobby;
 
 namespace Wave.Player
 {
     public class PlayerStateUI : MonoBehaviour
     {
         [SerializeField] private Image _healthBar;
-        
+        [SerializeField] private Text _nameText;
+
+        private PlayerLink _playerLink;
         private EntityRef _playerEntityRef;
 
         private void Awake()
@@ -23,9 +26,12 @@ namespace Wave.Player
             }
         }
 
-        public void ActiveStateUI(EntityRef entityRef)
+        public void ActiveStateUI(EntityRef entityRef, PlayerLink playerLink, string name)
         {
+            _playerLink = playerLink;
             _playerEntityRef = entityRef;
+            _nameText.text = name;
+            
             this.gameObject.SetActive(true);
         }
         
@@ -46,8 +52,6 @@ namespace Wave.Player
             
             _healthBar.fillAmount = currentHealth / maxHealth;
         }
-        
-        public void SetPlayerEntityView(EntityRef entityView) => _playerEntityRef = entityView;
 
         public bool IsSetEntityView()
         {
