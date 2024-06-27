@@ -74823,12 +74823,12 @@ PrefabInstance:
     - target: {fileID: 1639480375773583942, guid: 173c5c9e0b3b2bf4d81cfbab7e1dfc3c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 224
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1639480375773583942, guid: 173c5c9e0b3b2bf4d81cfbab7e1dfc3c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 72.259995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3666098203461337646, guid: 173c5c9e0b3b2bf4d81cfbab7e1dfc3c,
         type: 3}
@@ -74838,7 +74838,7 @@ PrefabInstance:
     - target: {fileID: 3666098203461337646, guid: 173c5c9e0b3b2bf4d81cfbab7e1dfc3c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3753481256210036526, guid: 173c5c9e0b3b2bf4d81cfbab7e1dfc3c,
         type: 3}

@@ -1,61 +1,66 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Wave.NavimationMarker;
 
 public class NavigationMarkerViewer : MonoBehaviour
 {
+    [SerializeField] private Camera _overlayCamera, _mainCamera;
+    [SerializeField] private RectTransform _markerImage;
+
     [SerializeField] private NavigationManager _navigationManager;
+    private int _currentNavigationPointIndex = 0;
+    private Vector3 _currentNavigationPointPosition;
+    
+    private const float MarkerScale = 0.1f;
+    private const float MarkerScaleDuration = 1.0f;
 
-    [SerializeField] private bool _showFirstNavigationMarker;
-
-    [SerializeField] private GameObject _navigationMarkerObject;
-    private int _currentNavigationMarkerIndex = 0;
-
-    [SerializeField] private Transform _navigationMarkerParent;
 
     private void Start()
     {
-        if (_showFirstNavigationMarker) ShowNextNavigationMarker();
+        ShowMarker();
     }
-
+    
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            ShowNextNavigationMarker();
+        //オーバーレイカメラの座標をメインカメラと同期
+        _overlayCamera.transform.position = _mainCamera.transform.position;
+        SetMarkerPosition(_currentNavigationPointPosition);
+        
+        if ( Input.GetKeyDown(KeyCode.Space) )
+            SetNextMarkerPosition();
     }
 
-    public void ShowNextNavigationMarker()
+    public void SetNextMarkerPosition()
     {
-        if (_currentNavigationMarkerIndex >= _navigationManager._navigationPoints.Count) return;
-        ClearNavigationMarkers();
-        var navigationPoint = _navigationManager._navigationPoints[_currentNavigationMarkerIndex];
-        Instantiate(_navigationMarkerObject, navigationPoint.Position, Quaternion.identity, _navigationMarkerParent);
-        _currentNavigationMarkerIndex++;
+        _currentNavigationPointIndex++;
+        if (_currentNavigationPointIndex >= _navigationManager._navigationPoints.Count)
+            return;
+        
+        
+        _currentNavigationPointPosition = _navigationManager._navigationPoints[_currentNavigationPointIndex].Position;
+    }
+    
+    public void SetMarkerPositionByIndex(int index)
+    {
+        if (index < 0 || index >= _navigationManager._navigationPoints.Count)
+            return;
+
+        _currentNavigationPointIndex = index;
+        _currentNavigationPointPosition = _navigationManager._navigationPoints[_currentNavigationPointIndex].Position;
+    }
+    
+    public void ShowMarker()
+    {
+        _markerImage.gameObject.SetActive(true);
+    }
+    
+    public void HideMarker()
+    {
+        _markerImage.gameObject.SetActive(false);
     }
 
-    public void ShowNavigationMarkerByIndex(int index)
+    private void SetMarkerPosition(Vector3 worldPosition)
     {
-        if (index >= _navigationManager._navigationPoints.Count) return;
-        ClearNavigationMarkers();
-        var navigationPoint = _navigationManager._navigationPoints[index];
-        Instantiate(_navigationMarkerObject, navigationPoint.Position, Quaternion.identity, _navigationMarkerParent);
-    }
-
-    public void HideNavigationMarkers()
-    {
-        ClearNavigationMarkers();
-    }
-
-    public void ShowAllNavigationMarkers()
-    {
-        ClearNavigationMarkers();
-        ShowNavigationMarkerByIndex(_currentNavigationMarkerIndex);
-    }
-
-    public void ClearNavigationMarkers()
-    {
-        foreach (Transform child in _navigationMarkerParent)
-            Destroy(child.gameObject);
+        var screenPosition = _mainCamera.WorldToScreenPoint(worldPosition);
+        _markerImage.position = screenPosition;
     }
 }
