@@ -25,6 +25,7 @@ namespace Wave.Player
             {
                 var e = new EventPlayerSpawnEvent
                 {
+                    Game = QuantumRunner.Default.Game,
                     EntityRef = entity,
                     PlayerLink = component
                 };
@@ -39,7 +40,8 @@ namespace Wave.Player
 
         private void SpawnPlayer(EventPlayerSpawnEvent e)
         {
-            Debug.Log("イベント実行");
+            Debug.Log($"イベント実行:{e.EntityRef} {e.PlayerLink.Player}");
+            var frame = e.Game.Frames.Predicted;
             for (int i = 0; i < PlayerStateUIList.Count; i++)
             {
                 PlayerStateUI stateUI = PlayerStateUIList[i];
@@ -47,11 +49,11 @@ namespace Wave.Player
                 string playerName = "Unknown";
                 if (ClientManager.Client != null)
                 {
-                    List<Photon.Realtime.Player> playerList = new List<Photon.Realtime.Player>(ClientManager.Client.CurrentRoom.Players.Values);
-                    
-                    //TODO::プレイヤーのニックネーム取得
-                    //playerName = playerList[i].NickName;
+                    var playerList = ClientManager.Client.CurrentRoom.Players;
+                    var actorId = frame.PlayerToActorId(e.PlayerLink.Player);
+                    playerName = actorId == null ? "Unknown" : playerList[(int)actorId].NickName;
                 }
+
                 stateUI.ActiveStateUI(e.EntityRef, e.PlayerLink, playerName);
                 return;
             }
