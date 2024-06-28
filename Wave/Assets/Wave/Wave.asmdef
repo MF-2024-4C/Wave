@@ -22,7 +22,8 @@
         "quantum.code.dll",
         "quantum.core.dll",
         "PhotonDeterministic.dll",
-        "Photon3Unity3D.dll"
+        "Photon3Unity3D.dll",
+        "DOTween.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],
