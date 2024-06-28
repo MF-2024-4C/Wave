@@ -28354,7 +28354,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 112, y: -19.314999}
-  m_SizeDelta: {x: 0, y: 28.63}
+  m_SizeDelta: {x: 204, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422736920
 MonoBehaviour:
@@ -90767,7 +90767,7 @@ MonoBehaviour:
   PlayerData:
     CharacterPrototype:
       Id:
-        Value: 2699151491591919434
+        Value: 3510670654372677438
 --- !u!4 &1311992739
 Transform:
   m_ObjectHideFlags: 0
@@ -134431,7 +134431,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1317171191}
   m_HandleRect: {fileID: 1508784318}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
