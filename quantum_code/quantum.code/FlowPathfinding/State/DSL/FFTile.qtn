@@ -1,0 +1,13 @@
+[Serializable]
+struct FFTile {
+    int SectorIndex;
+    int WorldAreaIndex;
+    int Cost;
+    int IntegrationValue;
+    bool Blocked;
+    Vector2Int GridPosition;
+    FP Y;
+    FP Angle;
+    int IndexWithinSector;
+    bool HasAbstractNodeConnection;
+}

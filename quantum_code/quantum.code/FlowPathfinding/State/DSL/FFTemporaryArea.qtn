@@ -1,0 +1,4 @@
+[Serializable]
+struct FFTemporaryArea {
+    list<FFTile> TileGrid;
+}

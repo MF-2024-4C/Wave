@@ -81,6 +81,11 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="Events\Events.qtn"/>
+        <Content Include="FlowPathfinding\State\DSL\FFTemporaryArea.qtn" />
+        <Content Include="FlowPathfinding\State\DSL\FFTile.qtn" />
+        <Content Include="FlowPathfinding\State\DSL\FFWorld.qtn" />
+        <Content Include="Math\Vector2Int.qtn" />
+        <Content Include="Math\Vector3Int.qtn" />
         <Content Include="QuantumDemo\Input.qtn"/>
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
         <Content Include="Wave\Inventory\State\DSL\Inventory.qtn"/>

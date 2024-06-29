@@ -15,6 +15,13 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefFFWorldSetup))]
+  public class AssetRefFFWorldSetupPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(FFWorldSetupAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(AssetRefInteractConfig))]
   public class AssetRefInteractConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {

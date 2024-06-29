@@ -1,0 +1,7 @@
+[Serializable]
+struct Vector3Int
+{
+	int X;
+	int Y;
+	int Z;
+}
