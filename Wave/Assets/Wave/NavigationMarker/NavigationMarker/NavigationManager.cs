@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Wave.NavimationMarker
+namespace Wave.NavigationMarker.NavigationMarker
 {
     public class NavigationManager : MonoBehaviour
     {
