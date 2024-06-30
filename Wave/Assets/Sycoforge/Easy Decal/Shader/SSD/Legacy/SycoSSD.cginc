@@ -66,7 +66,6 @@ struct FragmentInputFSSD
 	UNITY_FOG_COORDS(7)	  
 				
 	fixed4 color	: COLOR;
-
 };
 
 

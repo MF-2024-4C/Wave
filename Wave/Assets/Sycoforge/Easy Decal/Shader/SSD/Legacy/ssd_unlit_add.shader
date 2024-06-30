@@ -18,13 +18,6 @@ Shader "Easy Decal/SSD/Unlit Additive SSD"
 			"DisableBatching" = "True" 
 		}
 
-		Stencil
-		{
-			Ref 1
-			Comp notequal
-			Pass Zero
-		}
-
 		ZWrite On ZTest Always
 		Lighting Off Cull Front
 		Blend Zero SrcColor

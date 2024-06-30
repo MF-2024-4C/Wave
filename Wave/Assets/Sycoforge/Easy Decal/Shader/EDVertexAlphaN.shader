@@ -8,7 +8,7 @@ Shader "Easy Decal/ED Standard Normal (Vertex Alpha)"
 		_BumpMap ("Normal Map", 2D) = "bump" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
-		_NormalStrength ("Normal Strength", Range(0.1,10)) = 1.0
+		_NormalStrength ("Normal Strength", Range(1,2)) = 1.0
 	}
 	SubShader 
 	{
@@ -57,8 +57,7 @@ Shader "Easy Decal/ED Standard Normal (Vertex Alpha)"
 		{
 			// Albedo comes from a texture tinted by color
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			//fixed3 n = UnpackNormal(tex2D(_BumpMap, IN.uv_MainTex)) * _NormalStrength; 
-			fixed3 n = UnpackScaleNormal(tex2D (_BumpMap, IN.uv_MainTex), _NormalStrength);
+			fixed3 n = UnpackNormal (tex2D (_BumpMap, IN.uv_MainTex))*_NormalStrength;
 			o.Albedo = c.rgb;
 			o.Normal = n;
 

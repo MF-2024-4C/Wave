@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2844209699811722524}
   - component: {fileID: 1252932835598762496}
+  - component: {fileID: 428271166977783914}
   m_Layer: 0
   m_Name: Sidewalk
   m_TagString: Untagged
@@ -46,19 +47,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc94c3ce6de4c74989839aecde663d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SourceCollider: {fileID: 0}
+  SourceCollider: {fileID: 428271166977783914}
   Size:
     X:
-      RawValue: 114032
+      RawValue: 114688
     Y:
-      RawValue: 16384
+      RawValue: 13959
     Z:
       RawValue: 360448
   PositionOffset:
     X:
-      RawValue: 57016
+      RawValue: 57344
     Y:
-      RawValue: 5701
+      RawValue: 6979
     Z:
       RawValue: 180224
   RotationOffset:
@@ -77,6 +78,27 @@ MonoBehaviour:
       Id:
         Value: 0
     Trigger: 0
+--- !u!65 &428271166977783914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876068932703096095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 0.21300387, z: 5.5}
+  m_Center: {x: 0.875, y: 0.10650179, z: 2.75}
 --- !u!1001 &5171015591389785162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,7 +159,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: abc00000000002976738599536928723, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6057140222963153312, guid: abc00000000014644103180117854807, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -208,7 +231,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: abc00000000015942421698863975573, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6057140222963153312, guid: abc00000000013438462378494878394, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -38,7 +38,7 @@ Shader "Easy Decal/SSD/Unlit Alpha SSD"
 		{		
 			CGPROGRAM
 			#pragma vertex vert
-			#pragma fragment fragAlpha
+			#pragma fragment frag
 			#pragma target 3.0
 			#pragma multi_compile_fog
 

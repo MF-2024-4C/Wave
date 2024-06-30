@@ -6,8 +6,7 @@ Shader "Easy Decal/Legacy/Alpha Edge Bleed Multiply"
 	Properties 
 	{
 		_MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
-		_Factor("Fade Out", Range(1,2)) = 1
-		_Threshold ("Cutoff", Range(0,1)) = 0.5
+		_Factor ("Fade Out", Range(1,2)) = 1
 	}
 	
 	Category 
@@ -35,7 +34,6 @@ Shader "Easy Decal/Legacy/Alpha Edge Bleed Multiply"
 				 uniform sampler2D _MainTex;
 				 uniform float4 _MainTex_ST; 
 				 float _Factor;
-				 float _Threshold;
 
  
 				 struct vertexInput 
@@ -83,7 +81,7 @@ Shader "Easy Decal/Legacy/Alpha Edge Bleed Multiply"
 
 					UNITY_APPLY_FOG_COLOR(input.fogCoord, color, fixed4(1,1,1,1));
 
-					clip(c.a - _Threshold);
+
 
 					return color;
 				 }

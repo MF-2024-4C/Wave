@@ -26,23 +26,24 @@ Shader "Easy Decal/SSD/Deferred SSD"
 	{
 		Tags
 		{ 
-			"RenderType" = "Transparent"
-			"Queue" = "Transparent+1"
+			"Queue" = "Transparent+1" 
+			"DisableBatching" = "True"  
+			"IgnoreProjector" = "True" 
 		}
 
 		ZWrite Off 
 		ZTest Always 
 		Cull Front
-		//Fog { Mode Off } 
+		Fog { Mode Off } 
 
 		// Use custom blend function
-		//Blend Off
+		Blend Off
 
 		//------------------------------------------
 		// Pass 0 ** Diffuse/SpecSmooth/Normal
 		//------------------------------------------
 		Pass
-		{	
+		{		
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -59,7 +60,7 @@ Shader "Easy Decal/SSD/Deferred SSD"
 		// Pass 1 ** Diffuse/SpecSmooth
 		//------------------------------------------
 		Pass
-		{	
+		{		
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -75,7 +76,7 @@ Shader "Easy Decal/SSD/Deferred SSD"
 		// Pass 2 ** Diffuse/Normal
 		//------------------------------------------
 		Pass
-		{
+		{		
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -91,7 +92,7 @@ Shader "Easy Decal/SSD/Deferred SSD"
 		// Pass 3 ** SpecSmooth/Normal
 		//------------------------------------------
 		Pass
-		{
+		{		
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -107,7 +108,7 @@ Shader "Easy Decal/SSD/Deferred SSD"
 		// Pass 4 ** Diffuse
 		//------------------------------------------
 		Pass
-		{
+		{		
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -137,7 +138,7 @@ Shader "Easy Decal/SSD/Deferred SSD"
 		// Pass 6 ** Normal
 		//------------------------------------------
 		Pass
-		{	
+		{		
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -152,3 +153,4 @@ Shader "Easy Decal/SSD/Deferred SSD"
 	FallBack Off
 	//CustomEditor "ch.sycoforge.Decal.Editor.DSSDShaderGUI"
 }
+

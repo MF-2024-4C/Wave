@@ -1,6 +1,6 @@
 //-----------------------------------------------------
-// Forward screen space decal multiply shader. Version 0.9
-// Copyright (c) 2020 by Sycoforge
+// Forward screen space decal multiply shader. Version 0.9.2 for Unity 2020.3
+// Copyright (c) 2021 by Sycoforge
 // Based on LWRP template https://gist.github.com/urschanselmann/06b7f4bb294ae2fe059aa517483149d4
 //-----------------------------------------------------
 Shader "Easy Decal/SSD/URP - Lit SSD"
@@ -72,13 +72,6 @@ Shader "Easy Decal/SSD/URP - Lit SSD"
 		//Blend DstColor SrcColor // 2x Multiplicative
 
 		Offset -1,-1
-
-		Stencil 
-		{
-			Ref 1
-			Comp notequal
-			Pass Zero
-		}
 
 	Pass
 	{
@@ -230,6 +223,8 @@ Shader "Easy Decal/SSD/URP - Lit SSD"
 			outSurfaceData.normalTS = SampleNormal(ATLAS_TEXCOORDS_2(uv, st, localPos), TEXTURE2D_ARGS(_BumpMap, sampler_BumpMap), _BumpScale);
 			outSurfaceData.occlusion = SampleOcclusion(ATLAS_TEXCOORDS_2(uv, st, localPos));
 			outSurfaceData.emission = SampleEmission(ATLAS_TEXCOORDS_2(uv, st, localPos), _EmissionColor.rgb, TEXTURE2D_ARGS(_EmissionMap, sampler_EmissionMap));
+			outSurfaceData.clearCoatMask = 0.0h;
+			outSurfaceData.clearCoatSmoothness = 0.0h;
 		}
 
 		struct Attributes
@@ -347,20 +342,20 @@ Shader "Easy Decal/SSD/URP - Lit SSD"
 
 		half4 LitPassFragment(Varyings input) : SV_Target
 		{
+			float ortho = unity_OrthoParams.w;
 			float4x4 invMVP = input.mpv_inv;
-			input.ray = input.ray * (_ProjectionParams.z / input.ray.z);
+			input.ray = ortho ? input.ray : input.ray * (_ProjectionParams.z / input.ray.z);
 			float2 uvs = input.screenPos.xy;
 			float2 screenUV = (uvs / input.screenPos.w);
-			float depth = SAMPLE_TEXTURE2D(TEXTURE2D_ARGS(_CameraDepthTexture, sampler_CameraDepthTexture), screenUV).r;//#   define SAMPLE_DEPTH_TEXTURE(sampler, uv) (tex2D(sampler, uv).r)
+			
+			float depth = SAMPLE_TEXTURE2D(_CameraDepthTexture, sampler_CameraDepthTexture, screenUV).r;
+			//float depth = SampleDepthTexture(uvs);
 
-			depth = Linear01Depth(depth, _ZBufferParams);
-			float4 viewPos = float4(input.ray * depth, 1.0f);
+			depth = ortho ? depth : Linear01Depth(depth, _ZBufferParams);
+			float4 viewPos = ortho ? float4(input.ray.xy, depth, 1.0f) : float4(input.ray * depth, 1.0f);
 			float4 worldPos = mul(invMVP, viewPos);
 			float3 localPos = worldPos.xyz / worldPos.w;
 
-			//return half4(input.ray, 1);
-			//return viewPos;
-			//return worldPos;
 			// Clip outside
 			clip(0.5f - abs(localPos));
 

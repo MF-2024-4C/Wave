@@ -1,16 +1,9 @@
 fileFormatVersion: 2
-guid: de221ba13c9d85244a7b49b22e9c4063
+guid: e857a4e403ea84b40aa01df93af647f8
+timeCreated: 1467563021
+licenseType: Store
 ShaderImporter:
-  externalObjects: {}
   defaultTextures: []
-  nonModifiableTextures: []
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 22867
-  packageName: Easy Decal
-  packageVersion: 2021.4.1
-  assetPath: Assets/Sycoforge/Easy Decal/Shader/SSD/Legacy/ssd_urp_lit.shader
-  uploadId: 619907

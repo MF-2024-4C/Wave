@@ -8,6 +8,8 @@
 #ifndef DSSD_SYCO_CG_INCLUDED
 #define DSSD_SYCO_CG_INCLUDED
 
+
+
 #include "UnityCG.cginc"
 #include "UnityGlobalIllumination.cginc"
 
@@ -229,10 +231,10 @@ inline void DiscardPixel(FragmentInputDSSD input, fixed4 rawWorldNormalBuffered,
 //-------------------------------------------------------------------
 
 // Mappings and channel order
-//out half4 outDiffuse			: SV_Target0,	// RT0: diffuse color (rgb), occlusion (a)
-//out half4 outSpecSmoothness	: SV_Target1,	// RT1: spec color (rgb), smoothness (a)
-//out half4 outNormal			: SV_Target2,	// RT2: normal (rgb), --unused, very low precision-- (a) 
-//out half4 outEmission			: SV_Target3	// RT3: emission (rgb), --unused-- (a)
+//out half4 outDiffuse			: SV_TARGET0,	// RT0: diffuse color (rgb), occlusion (a)
+//out half4 outSpecSmoothness	: SV_TARGET1,	// RT1: spec color (rgb), smoothness (a)
+//out half4 outNormal			: SV_TARGET2,	// RT2: normal (rgb), --unused, very low precision-- (a) 
+//out half4 outEmission			: SV_TARGET3	// RT3: emission (rgb), --unused-- (a)
 
 
 void frag(FragmentInputDSSD input, 
@@ -302,7 +304,7 @@ void frag(FragmentInputDSSD input,
 #endif
 #endif
 
-//out float4 outEmission		: SV_Target3)
+//out float4 outEmission		: SV_TARGET3)
 {
 	PROCESS_BASIC_SSD(input);
 

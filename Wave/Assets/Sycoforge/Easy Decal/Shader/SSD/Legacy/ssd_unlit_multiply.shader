@@ -38,7 +38,7 @@ Shader "Easy Decal/SSD/Unlit Multiply SSD"
 		{		
 			CGPROGRAM
 			#pragma vertex vert
-			#pragma fragment fragMultiply
+			#pragma fragment frag
 			#pragma target 3.0
 			#pragma multi_compile_fog
 

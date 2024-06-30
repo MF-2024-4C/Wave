@@ -8,37 +8,37 @@
 
 
 #define SIGNATURE_DSN \
-	out float4 outDiffuse		: SV_Target0, \
-	out float4 outSpecSmooth	: SV_Target1, \
-	out float4 outNormal		: SV_Target2, \
-	out float4 outEmission		: SV_Target3) \
+	out float4 outDiffuse		: SV_TARGET0, \
+	out float4 outSpecSmooth	: SV_TARGET1, \
+	out float4 outNormal		: SV_TARGET2, \
+	out float4 outEmission		: SV_TARGET3) \
 
 #define SIGNATURE_DS \
-	out float4 outDiffuse		: SV_Target0, \
-	out float4 outSpecSmooth	: SV_Target1, \
-	out float4 outEmission		: SV_Target2) \
+	out float4 outDiffuse		: SV_TARGET0, \
+	out float4 outSpecSmooth	: SV_TARGET1, \
+	out float4 outEmission		: SV_TARGET2) \
 
 #define SIGNATURE_DN \
-	out float4 outDiffuse		: SV_Target0, \
-	out float4 outNormal		: SV_Target1, \
-	out float4 outEmission		: SV_Target2) \
+	out float4 outDiffuse		: SV_TARGET0, \
+	out float4 outNormal		: SV_TARGET1, \
+	out float4 outEmission		: SV_TARGET2) \
 	
 #define SIGNATURE_SN \
-	out float4 outSpecSmooth	: SV_Target0, \
-	out float4 outNormal		: SV_Target1, \
-	out float4 outEmission		: SV_Target2) \
+	out float4 outSpecSmooth	: SV_TARGET0, \
+	out float4 outNormal		: SV_TARGET1, \
+	out float4 outEmission		: SV_TARGET2) \
 
 #define SIGNATURE_D \
-	out float4 outDiffuse		: SV_Target0, \
-	out float4 outEmission		: SV_Target1) \
+	out float4 outDiffuse		: SV_TARGET0, \
+	out float4 outEmission		: SV_TARGET1) \
 
 #define SIGNATURE_S \
-	out float4 outSpecSmooth	: SV_Target0, \
-	out float4 outEmission		: SV_Target1) \
+	out float4 outSpecSmooth	: SV_TARGET0, \
+	out float4 outEmission		: SV_TARGET1) \
 
 #define SIGNATURE_N \
-	out float4 outNormal		: SV_Target0, \
-	out float4 outEmission		: SV_Target1) \
+	out float4 outNormal		: SV_TARGET0, \
+	out float4 outEmission		: SV_TARGET1) \
 
 
 #endif // SSD_SYCO_DSSDSIG_CG_INCLUDED
