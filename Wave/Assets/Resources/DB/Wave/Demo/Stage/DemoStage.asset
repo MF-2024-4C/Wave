@@ -55,27 +55,27 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: -393216
+          RawValue: -336200
         Y:
-          RawValue: -228719
+          RawValue: -217121
         Z:
-          RawValue: -327680
+          RawValue: 1016920
       PhysicsMaterial:
         Id:
           Value: 0
-      ShapeType: 4
+      ShapeType: 2
       SphereRadius:
         RawValue: 0
       BoxExtents:
         X:
-          RawValue: 0
+          RawValue: 57016
         Y:
-          RawValue: 0
+          RawValue: 8192
         Z:
-          RawValue: 0
+          RawValue: 180224
       SmoothSphereMeshCollisions: 0
       StaticData:
-        Name: Bill
+        Name: 1_Sidewalk
         Tag: Untagged
         Layer: 0
         Asset:
@@ -96,6 +96,990 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
+          RawValue: -336200
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 656472
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 1
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336200
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 296024
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 2
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 2098264
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 3
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 1737816
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 4
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 1377368
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 5
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 4260952
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 6
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 3540056
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 7
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 3179608
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 8
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 2819160
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 9
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 2458712
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 10
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -336199
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 3900504
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 1_Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 11
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 2098264
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 12
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 1377368
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 13
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 4260952
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 14
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 1016920
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 15
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 656472
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 16
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 296024
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 17
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 1737816
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 18
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 3540056
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 19
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 3179608
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 20
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 2819160
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 21
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 2458712
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 22
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 65535
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 73
+      Position:
+        X:
+          RawValue: 794899
+        Y:
+          RawValue: -217121
+        Z:
+          RawValue: 3900504
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 57016
+        Y:
+          RawValue: 8192
+        Z:
+          RawValue: 180224
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: 2-Sidewalk
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 23
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -393216
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: -327680
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 24
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
           RawValue: -393216
         Y:
           RawValue: -228719
@@ -123,7 +1107,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 1
+        ColliderIndex: 25
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -164,7 +1148,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 2
+        ColliderIndex: 26
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -205,7 +1189,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 3
+        ColliderIndex: 27
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -246,7 +1230,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 4
+        ColliderIndex: 28
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -287,7 +1271,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 5
+        ColliderIndex: 29
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -328,7 +1312,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 6
+        ColliderIndex: 30
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -369,7 +1353,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 7
+        ColliderIndex: 31
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -410,7 +1394,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 8
+        ColliderIndex: 32
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -451,7 +1435,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 9
+        ColliderIndex: 33
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -492,7 +1476,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 10
+        ColliderIndex: 34
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -533,7 +1517,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 11
+        ColliderIndex: 35
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -574,7 +1558,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 12
+        ColliderIndex: 36
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -615,7 +1599,335 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 13
+        ColliderIndex: 37
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 244658
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: -1043348
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 38
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 244658
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 1274949
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (1)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 39
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 244658
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 3593246
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (2)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 40
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 244658
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 5911544
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (3)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 41
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 2839121
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 3593246
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (6)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 42
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 2839121
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 5911544
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (7)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 43
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -2349803
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 3593246
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (4)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 44
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: -2349803
+        Y:
+          RawValue: -222822
+        Z:
+          RawValue: 5911544
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: UModeler Object (5)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 45
         MutableMode: 0
       MutableMode: 0
     MapEntities: []
