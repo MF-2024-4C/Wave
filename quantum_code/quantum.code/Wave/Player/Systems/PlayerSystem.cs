@@ -1,6 +1,6 @@
 ﻿namespace Quantum.Player
 {
-    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>
+    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>, ISignalOnDead
     {
         public struct PlayerFilter
         {
@@ -26,7 +26,18 @@
 
         public void OnAdded(Frame f, EntityRef entity, PlayerSys* component)
         {
-            component->SetConfig(f);
+            component->SetConfig(f, entity);
+        }
+
+        public void OnDead(Frame f, EntityRef entity)
+        {
+            if(!f.Unsafe.TryGetPointer(entity, out PlayerSys* playerSys))
+            {
+                Log.Info("PlayerSys not found");
+                return;
+            }
+
+            PlayerSys.Dead(f, entity, playerSys);
         }
     }
 }

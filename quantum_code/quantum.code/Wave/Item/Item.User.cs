@@ -65,4 +65,39 @@ namespace Quantum
             Log.Info("Item3 is Cancelled");
         }
     }
+    [Serializable]
+    public unsafe partial class AddDamageItemConfig : BaseItemConfig
+    {
+        public FP Amount;
+        
+        public override void Execute(Frame f, EntityRef item, EntityRef player)
+        {
+            if (f.Unsafe.TryGetPointer<HealthComponent>(player, out HealthComponent* healthComponent))
+            {
+                HealthComponent.DecHealth(f, player, healthComponent, Amount);
+            }
+        }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
+        }
+    }
+
+    [Serializable]
+    public unsafe partial class AddHealthItemConfig : BaseItemConfig
+    {
+        public FP Amount;
+        
+        public override void Execute(Frame f, EntityRef item, EntityRef player)
+        {
+            if (f.Unsafe.TryGetPointer<HealthComponent>(player, out HealthComponent* healthComponent))
+            {
+                HealthComponent.AddHealth(f, player, healthComponent, Amount);
+            }
+        }
+
+        public override void Release(Frame f, EntityRef item, EntityRef player)
+        {
+        }
+    }
 }

@@ -1,0 +1,10 @@
+component HealthComponent
+{       
+    FP MaxHealth;
+    [ReadOnly]
+    FP CurrentHealth;
+}
+
+signal OnAddHealth(entity_ref entity, FP amount);
+signal OnDecHealth(entity_ref entity, FP amount);
+signal OnDead(entity_ref entity);
