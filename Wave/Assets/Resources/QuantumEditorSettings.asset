@@ -63,9 +63,9 @@ MonoBehaviour:
   DrawNavMeshLinks: 0
   NavMeshDefaultColor: {r: 0, g: 0.75, b: 1, a: 0.5}
   NavMeshRegionColor: {r: 1, g: 0, b: 0.5, a: 0.5}
-  DrawNavMeshDefinitionAlways: 0
-  DrawNavMeshDefinitionMesh: 0
-  DrawNavMeshDefinitionOptimized: 0
+  DrawNavMeshDefinitionAlways: 1
+  DrawNavMeshDefinitionMesh: 1
+  DrawNavMeshDefinitionOptimized: 1
   UseQuantumAssetInspector: 1
   UseAssetBasePostprocessor: 1
   UseQuantumToolbarUtilities: 1

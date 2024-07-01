@@ -1,1 +1,26 @@
-asset import ZombieSpawnItemConfig;
+asset import MissionConfig;
+asset import DefenseMissionTriggerConfig;
+
+component DefenseMission {
+    asset_ref<MissionConfig> MissionConfig;
+
+    int MissionEndId;
+    int SpawnEventId;
+    
+    // Config
+    FP MissionEndDelay;    
+    FP SpawnEventDelay;
+    FP SpawnEventInterval;
+    int MaxSpawnCount;
+    
+    // Runtime
+    FP MissionTimer;
+    FP SpawnEventTimer;
+}
+event MissionStart {
+    asset_ref<MissionConfig> MissionConfig;
+}
+
+event MissionComplete {
+    asset_ref<MissionConfig> MissionConfig;
+}

@@ -1,4 +1,6 @@
-﻿using Quantum.Events;
+﻿using System;
+using Photon.Deterministic;
+using Quantum.Events;
 
 namespace Quantum;
 
@@ -19,6 +21,7 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
         _eventReader = EventInternal.GetGameEventReader(f);
     }
 
+    private const short SpawnPerFrame = 10;
     public override void Update(Frame f, ref Filter filter)
     {
         var spawnArea = filter.ZombieSpawnArea;
@@ -31,8 +34,15 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
             
             if (mapEvent.ID == filter.EventComponent->mapEvent.ID)
             {
-                spawnArea->Active = true;
-                Log.Info("SpawnArea Active");
+                if (spawnArea->Active)
+                {
+                    Log.Warn($"Event ID: [{mapEvent.ID}] SpawnArea is already Active.");
+                }else
+                {
+                    spawnArea->Active = true;
+                    spawnArea->CurrentSpawnCount = 0;
+                    Log.Info("SpawnArea Active");
+                }
             }
         }
         
@@ -47,11 +57,17 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
             return;
         }
 
-        for (var i = 0; i < spawnArea->MaxSpawnCount; i++)
+        var spawnCount = (short)Math.Min(spawnArea->CurrentSpawnCount + SpawnPerFrame, spawnArea->MaxSpawnCount);
+        for (var i = spawnArea->CurrentSpawnCount; i < spawnCount; i++)
         {
             spawnAreaConfig.Spawn(f, filter.Transform->Position, *spawnArea);
         }
-
-        spawnArea->CurrentSpawnCount = spawnArea->MaxSpawnCount;
+        spawnArea->CurrentSpawnCount += spawnCount;
+        
+        if(spawnArea->CurrentSpawnCount >= spawnArea->MaxSpawnCount)
+        {
+            spawnArea->Active = false;
+            
+        }
     }
 }

@@ -35,6 +35,7 @@ namespace Quantum.Editor {
       public Quantum.ZombieSpawnAreaConfig[] ZombieSpawnAreaConfig = {};
       public Quantum.SystemConfig[] SystemConfig = {};
       public Quantum.SimulationConfig[] SimulationConfig = {};
+      public Quantum.DefenseMissionTriggerConfig[] DefenseMissionTriggerConfig = {};
       public Quantum.Item1Config[] Item1Config = {};
       public Quantum.Item2Config[] Item2Config = {};
       public Quantum.Item3Config[] Item3Config = {};

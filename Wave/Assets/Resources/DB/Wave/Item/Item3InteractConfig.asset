@@ -21,3 +21,5 @@ MonoBehaviour:
       Value: 1
     HoldTime:
       RawValue: 65536
+    InteractCoolTime:
+      RawValue: 196608

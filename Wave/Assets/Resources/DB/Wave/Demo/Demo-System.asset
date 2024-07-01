@@ -61,6 +61,12 @@ MonoBehaviour:
       StartDisabled: 0
       Children: []
     - SystemType:
+        AssemblyQualifiedName: Quantum.Wave.GameEvent.DefenseMissionSystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
+      SystemName: 
+      StartDisabled: 0
+      Children: []
+    - SystemType:
         AssemblyQualifiedName: Quantum.Player.PlayerSystem, quantum.code, Version=2.1.8.0,
           Culture=neutral, PublicKeyToken=null
       SystemName: 

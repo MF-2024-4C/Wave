@@ -23,10 +23,11 @@ namespace Wave.Exp.Enemy
 
         [Header("Animations")] [SerializeField]
         private AnimationClip _idle;
+
         [SerializeField] private AnimationClip _run;
         [SerializeField] private AnimationClip _attack;
         [SerializeField] private AnimationClip _die;
-        
+
         private static ZombieAnimationController _instance;
 
         public static ZombieAnimationController Instance()
@@ -47,6 +48,7 @@ namespace Wave.Exp.Enemy
                 crowdPrefab = prefab,
                 EntityRef = entityRef,
             });
+            AnimationState(_zombies[^1], ZombieState.Sleep);
         }
 
         public void RemoveZombie(EntityRef entityRef)
@@ -70,6 +72,8 @@ namespace Wave.Exp.Enemy
             {
                 var zombieComponent = frame.Get<Zombie>(zombie.EntityRef);
                 var zombieState = zombieComponent.State;
+                if (zombie.State == zombieState)
+                    continue;
                 AnimationState(zombie, zombieState);
             }
         }
@@ -97,17 +101,36 @@ namespace Wave.Exp.Enemy
             return null;
         }
 
+        private float GetStartTime(AnimationClip clip, ZombieState state)
+        {
+            switch (state)
+            {
+                case ZombieState.Attack:
+                case ZombieState.Die:
+                    return -1;
+                    break;
+                case ZombieState.Sleep:
+                case ZombieState.Idle:
+                case ZombieState.Chase:
+                    return UnityEngine.Random.Range(0, clip.length);
+                    ;
+            }
+
+            Debug.LogWarning($"{state} State AnimationClip not found.");
+            return 0;
+        }
+
         private void AnimationState(ZombieAgent agent, ZombieState currentState)
         {
-            if (agent.State == currentState)
-                return;
-
             var prevState = agent.State;
             agent.State = currentState;
             var clip = GetClip(currentState);
             if (clip == null)
                 return;
-            GPUICrowdAPI.StartAnimation(agent.crowdPrefab, clip, -1, 1, 0.5f);
+            var startTime = GetStartTime(clip, currentState);
+            GPUICrowdAPI.StartAnimation(agent.crowdPrefab, clip, startTime, 1, 0.5f);
+            Debug.Log(
+                $"Zombie {agent.EntityRef.Index} Animation: {prevState} -> {currentState}\nStartTime: {startTime}");
         }
 
         private void Awake()
