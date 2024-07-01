@@ -83,6 +83,7 @@
         <Content Include="Events\Events.qtn"/>
         <Content Include="QuantumDemo\Input.qtn"/>
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
+        <Content Include="Wave\GameEvent\State\DSL\GameEvent.qtn" />
         <Content Include="Wave\Inventory\State\DSL\Inventory.qtn"/>
         <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn"/>
         <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn"/>
