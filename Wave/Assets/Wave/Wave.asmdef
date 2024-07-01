@@ -11,7 +11,8 @@
         "GUID:df380645f10b7bc4b97d4f5eb6303d95",
         "GUID:831409e8f9d13b5479a3baef9822ad34",
         "GUID:df2f44e767fa8e2459be669a017e5a43",
-        "GUID:797d0b45e73c406ab8048d7d61e7b5a3"
+        "GUID:797d0b45e73c406ab8048d7d61e7b5a3",
+        "GUID:e64835bd87e21c046a217f9b617045f6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -21,7 +22,8 @@
         "quantum.code.dll",
         "quantum.core.dll",
         "PhotonDeterministic.dll",
-        "Photon3Unity3D.dll"
+        "Photon3Unity3D.dll",
+        "DOTween.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],
