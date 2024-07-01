@@ -17,6 +17,11 @@ component DefenseMission {
     FP MissionTimer;
     FP SpawnEventTimer;
 }
+
+component DestroyEvent {
+    int EventId;
+}
+
 event MissionStart {
     asset_ref<MissionConfig> MissionConfig;
 }

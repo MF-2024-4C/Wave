@@ -71,7 +71,6 @@ namespace Wave.Lobby.Room
                     new RaiseEventOptions { Receivers = ReceiverGroup.All },
                     SendOptions.SendReliable))
             {
-                Camera.main.Hide();
                 Debug.Log("ゲームを開始します");
             }
             else
@@ -135,7 +134,6 @@ namespace Wave.Lobby.Room
             _overlayCharacterManager.AllRemoveOverlayCharacter();
 
             QuantumRunner.StartGame(clientId, param);
-
             ReconnectInformation.Refresh(ClientManager.Client, TimeSpan.FromMinutes(1));
             
             LobbyOnlyObjectManager.Instance.LobbyDisable();

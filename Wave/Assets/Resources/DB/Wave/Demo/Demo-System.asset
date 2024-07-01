@@ -145,6 +145,12 @@ MonoBehaviour:
       StartDisabled: 0
       Children: []
     - SystemType:
+        AssemblyQualifiedName: Quantum.Wave.GameEvent.DestroyEventSystem, quantum.code,
+          Version=2.1.8.0, Culture=neutral, PublicKeyToken=null
+      SystemName: 
+      StartDisabled: 0
+      Children: []
+    - SystemType:
         AssemblyQualifiedName: Quantum.Events.GameEventSystem, quantum.code, Version=2.1.8.0,
           Culture=neutral, PublicKeyToken=null
       SystemName: 

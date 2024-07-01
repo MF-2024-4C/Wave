@@ -144,6 +144,7 @@ namespace Wave.Lobby.Lobby
         {
             Debug.Log("部屋から退室した");
             LoadingScreen.LoadingScreen.Instance.HideLoading();
+            _panelManager.OpenPanelByIndex(1);
         }
 
         #endregion

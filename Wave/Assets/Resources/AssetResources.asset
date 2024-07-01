@@ -271,6 +271,11 @@ MonoBehaviour:
         Id:
           Value: 2297739561713297934
       ResourcePath: DB/Exp/Enemy/02-ZombieAnimation/Expo-Enemy-01ZombieMove_mesh
+    - Path: Resources/DB/NestedAssetType|EntityView
+      AssetRef:
+        Id:
+          Value: 2318278074504610116
+      ResourcePath: DB/NestedAssetType
     - Path: Resources/DB/Wave/Item/Config/New Item 1 Config Asset
       AssetRef:
         Id:
@@ -446,6 +451,11 @@ MonoBehaviour:
         Id:
           Value: 4127952087584879725
       ResourcePath: DB/Exp/GPU-Instancer/PlayerCharacter
+    - Path: Resources/DB/Wave/Demo/DefenseMission2
+      AssetRef:
+        Id:
+          Value: 4156078486404289752
+      ResourcePath: DB/Wave/Demo/DefenseMission2
     - Path: Resources/DB/Wave/Demo/ZombieSpawn2
       AssetRef:
         Id:

@@ -85,6 +85,7 @@
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
         <Content Include="Wave\GameEvent\State\DSL\GameEvent.qtn" />
         <Content Include="Wave\Inventory\State\DSL\Inventory.qtn"/>
+        <Content Include="Wave\Object\State\DSL\Shutter.qtn" />
         <Content Include="Wave\Weapon\Input\TmpPlayerInput.qtn"/>
         <Content Include="Wave\Weapon\DSL\WeaponInventory.qtn"/>
         <Content Include="Wave\Weapon\DSL\TmpPlayer.qtn"/>

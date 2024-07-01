@@ -79,7 +79,7 @@ namespace Wave.Lobby
 
         public void OnDisconnected(DisconnectCause cause)
         {
-            
+            Debug.Log($"サーバーから切断されました: {cause}");
         }
 
         public void OnRegionListReceived(RegionHandler regionHandler)
