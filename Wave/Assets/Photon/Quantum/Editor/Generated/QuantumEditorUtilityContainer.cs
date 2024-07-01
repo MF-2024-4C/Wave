@@ -39,6 +39,8 @@ namespace Quantum.Editor {
       public Quantum.Item1Config[] Item1Config = {};
       public Quantum.Item2Config[] Item2Config = {};
       public Quantum.Item3Config[] Item3Config = {};
+      public Quantum.AddDamageItemConfig[] AddDamageItemConfig = {};
+      public Quantum.AddHealthItemConfig[] AddHealthItemConfig = {};
       public Quantum.ZombieSpawnAreaCondition[] ZombieSpawnAreaCondition = {};
       public Quantum.ZombieSpawnItemConfig[] ZombieSpawnItemConfig = {};
       public Quantum.BinaryData[] BinaryData = {};

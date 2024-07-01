@@ -73,6 +73,12 @@ MonoBehaviour:
       StartDisabled: 0
       Children: []
     - SystemType:
+        AssemblyQualifiedName: Quantum.Player.HealthSystem, quantum.code, Version=2.1.8.0,
+          Culture=neutral, PublicKeyToken=null
+      SystemName: 
+      StartDisabled: 0
+      Children: []
+    - SystemType:
         AssemblyQualifiedName: Quantum.Wave.Zombie.ZombieSystem, quantum.code, Version=2.1.8.0,
           Culture=neutral, PublicKeyToken=null
       SystemName: 

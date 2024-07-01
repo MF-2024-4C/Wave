@@ -4441,6 +4441,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -4531,6 +4532,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
@@ -4639,6 +4641,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
@@ -4751,6 +4754,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -4822,6 +4826,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -4893,6 +4898,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -4964,6 +4970,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5035,6 +5042,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5106,6 +5114,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5177,6 +5186,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5248,6 +5258,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5319,6 +5330,7 @@ MonoBehaviour:
         Value: 0
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5386,6 +5398,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5529,6 +5542,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5672,6 +5686,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5815,6 +5830,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -5958,6 +5974,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor: []
     ItemData: []
     PlayerLink: []
@@ -6101,6 +6118,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
@@ -6209,6 +6227,7 @@ MonoBehaviour:
     EventComponent: []
     GameEvent: []
     GameEventQueue: []
+    HealthComponent: []
     Interactor:
     - Config:
         Id:
