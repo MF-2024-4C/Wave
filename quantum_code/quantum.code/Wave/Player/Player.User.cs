@@ -11,6 +11,7 @@ namespace Quantum
         public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
             Input input)
         {
+            /*
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
 
             cconfig.Braking = playerSys->BreakPower;
@@ -18,7 +19,12 @@ namespace Quantum
 
             if (input.PlayerJump.WasPressed && controller->Grounded)
             {
-                controller->Jump(f, false, playerSys->JumpPower);
+                //controller->Jump(f, false, playerSys->JumpPower);
+                FPVector3 velocity = controller->Velocity;
+                velocity = FPVector3.Scale(velocity, input.PlayerDirection.XOY);
+                velocity.Y = playerSys->JumpPower;
+                controller->Velocity = velocity;
+                controller->Jumped = true;
                 animState |= PlayerConfig.PAnimJump;
             }
 
@@ -30,8 +36,15 @@ namespace Quantum
                 animState |= PlayerConfig.PAnimRun;
             }
 
+            FPVector3 dir = input.PlayerDirection.XOY;
+            if (!controller->Grounded)
+            {
+                dir = controller->Velocity;
+                dir.Y = 0;
+            }
+
             controller->MaxSpeed = speed;
-            controller->Move(f, entityRef, input.PlayerDirection.XOY);
+            controller->Move(f, entityRef, dir);
 
             if (input.PlayerDirection != FPVector2.Zero)
             {
@@ -47,6 +60,48 @@ namespace Quantum
                 animState |= PlayerConfig.PAnimGrounded;
             }
 
+            playerSys->PlayerAnimState = animState;
+            */
+
+            var animState = PlayerConfig.PAnimIdle;
+            //ジャンプ処理
+            if (input.PlayerJump.WasPressed && controller->Grounded)
+            {
+                //TODO::ジャンプした際に向いてる方向と入力の値から進行方向に行くように
+                FPVector3 velocity = controller->Velocity;
+                FP mulX = input.PlayerDirection.X;
+                FP mulZ = input.PlayerDirection.Y;
+                mulX = FPMath.Abs(mulX);
+                mulZ = FPMath.Abs(mulZ);
+                velocity = FPVector3.Scale(velocity, new FPVector3(mulX, 0, mulZ));
+                velocity.Y = playerSys->JumpPower;
+                controller->Velocity = velocity;
+                controller->Jumped = true;
+                animState |= PlayerConfig.PAnimJump;
+            }
+            
+            //移動処理
+            FP speed = playerSys->WalkSpeed;
+            FPVector3 dir = input.PlayerDirection.XOY;
+            if (input.PlayerDash)
+            {
+                speed = playerSys->RunSpeed;
+                animState |= PlayerConfig.PAnimRun;
+            }
+
+            if (controller->Grounded)
+            {
+                animState |= PlayerConfig.PAnimMove;
+            }
+            else
+            {
+                dir = controller->Velocity;
+                dir.Y = 0;
+                animState |= PlayerConfig.PAnimFall;
+            }
+            
+            controller->MaxSpeed = speed;
+            controller->Move(f, entityRef, dir);
             playerSys->PlayerAnimState = animState;
         }
 
