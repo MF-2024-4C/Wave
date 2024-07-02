@@ -14,7 +14,7 @@ namespace Wave.UI.Game.Status
         {
             _itemName.text = itemViewInfo.ItemName;
             _itemCount.text = ZeroPaddingAndColoring(itemViewInfo.ItemCount, 3, Color.gray);
-            _itemStackCount.text = itemViewInfo.ItemStack.ToString("D3");
+            _itemStackCount.text = ZeroPaddingAndColoring(itemViewInfo.ItemStack, 3, Color.gray);
         }
 
         private static string ZeroPaddingAndColoring(int num, int len, Color color)

@@ -26,6 +26,7 @@ MonoBehaviour:
     ReloadTime:
       RawValue: 196608
     MaxAmmo: 30
+    InventoryAmmo: 600
     Damage: 0
     PenetrationPower: 0
     EquipTime:

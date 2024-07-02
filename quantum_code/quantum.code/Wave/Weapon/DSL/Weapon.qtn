@@ -26,6 +26,8 @@ component  Weapon {
     //----------射撃----------
     //現在マガジンに入っている段数
     int currentAmmo;
+    //現在の所持弾数
+    int currentAmmoInInventory;
     //1発の弾丸を撃つのにかかる時間
     FP fireTime;
     //射撃中の加算時間

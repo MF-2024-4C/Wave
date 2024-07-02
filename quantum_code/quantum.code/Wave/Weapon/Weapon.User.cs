@@ -33,7 +33,12 @@ public unsafe partial struct Weapon
 
     public void OnReloaded()
     {
-        currentAmmo = maxAmmo;
+        var needAmmo = maxAmmo - currentAmmo;
+        var reloadAmmo = needAmmo > currentAmmoInInventory ? currentAmmoInInventory : needAmmo;
+        
+        currentAmmo += reloadAmmo;
+        currentAmmoInInventory -= reloadAmmo;
+        
         isReloading = false;
         reloadingTime = FP._0;
     }

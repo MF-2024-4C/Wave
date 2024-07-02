@@ -14,6 +14,7 @@ public partial class WeaponData
     [Tooltip("1秒間に発射できる弾数")] public FP FireRate;
     [Tooltip("リロードするのにかかる時間")] public FP ReloadTime;
     [Tooltip("マガジンに入る弾の弾数")] public int MaxAmmo;
+    [Tooltip("所持弾数")] public int InventoryAmmo;
     [Tooltip("1発のダメージ")] public int Damage;
     [Tooltip("弾の貫通力")] public int PenetrationPower;
     [Tooltip("武器を取り出す時間")] public FP EquipTime;
@@ -36,6 +37,7 @@ public partial class WeaponData
         weapon->fireRate = FireRate;
         weapon->reloadTime = ReloadTime;
         weapon->maxAmmo = MaxAmmo;
+        weapon->currentAmmoInInventory = InventoryAmmo;
         weapon->damage = Damage;
         weapon->penetrationPower = PenetrationPower;
 

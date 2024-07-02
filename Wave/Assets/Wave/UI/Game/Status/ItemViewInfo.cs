@@ -23,12 +23,13 @@ namespace Wave.UI.Game.Status
         public int ItemStack => _itemStack;
 
 
-        public ItemViewInfo(Sprite itemSprite, string itemName, string itemDescription, int itemCount)
+        public ItemViewInfo(Sprite itemSprite, string itemName, string itemDescription, int itemCount,int itemStack)
         {
             _itemSprite = itemSprite;
             _itemName = itemName;
             _itemDescription = itemDescription;
             _itemCount = itemCount;
+            _itemStack = itemStack;
         }
     }
 }

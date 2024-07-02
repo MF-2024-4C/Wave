@@ -53,7 +53,7 @@ namespace Wave.UI.Game
             if (!_isLocalPlayer) return;
             _gunHand = GetComponentInChildren<GunHand.GunHand>();
             _gunHand.Active();
-            
+
             _crosshair = FindObjectsByType<Crosshair>(FindObjectsSortMode.None)[0];
             QuantumEvent.Subscribe<EventFire>(this, OnFireLocal);
             QuantumEvent.Subscribe<EventOnPlayerAttackHitLocal>(this, OnAttackHitLocal);
@@ -131,11 +131,13 @@ namespace Wave.UI.Game
                 Debug.Log($"Inventory updated: {e.Id} Not local player");
                 return;
             }
+
             if (!e.WeaponRef.IsValid)
             {
                 Debug.Log($"Inventory updated: {e.Id} Invalid weaponRef");
                 return;
             }
+
             Debug.Log("Inventory updated");
             var frame = _game.Frames.Predicted;
             var weapon = frame.Get<Quantum.Weapon>(e.WeaponRef);
@@ -147,7 +149,7 @@ namespace Wave.UI.Game
         private static ItemViewInfo CreateItemViewInfo(in Quantum.Weapon weapon)
         {
             var weaponDataAsset = UnityDB.FindAsset<WeaponDataAsset>(weapon.data.Id);
-            return new ItemViewInfo(null, weaponDataAsset.name, "", weapon.currentAmmo);
+            return new ItemViewInfo(null, weaponDataAsset.name, "", weapon.currentAmmo, weapon.currentAmmoInInventory);
         }
 
         private static int ItemTypeIndex(in Quantum.Weapon weapon)
