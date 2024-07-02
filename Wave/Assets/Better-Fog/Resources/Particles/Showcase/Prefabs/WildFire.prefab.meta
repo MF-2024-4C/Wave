@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f293a2dcc753a4a489fefe7f8f312d69
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 259457
+  packageName: 'Better Fog: Height Fog, Light Scattering & More'
+  packageVersion: 1.2
+  assetPath: Assets/Better-Fog/Resources/Particles/Showcase/Prefabs/WildFire.prefab
+  uploadId: 649686

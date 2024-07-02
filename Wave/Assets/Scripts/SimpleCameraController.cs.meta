@@ -9,3 +9,10 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162770
+  packageName: URP Post Processing Profiles
+  packageVersion: 
+  assetPath: Assets/Scripts/SimpleCameraController.cs
+  uploadId: 0

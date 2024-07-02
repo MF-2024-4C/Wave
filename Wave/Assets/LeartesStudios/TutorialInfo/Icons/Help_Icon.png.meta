@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9266273b8f123004195741f969177dda
+guid: 34f556d724b1bbf4097ca6220db2c581
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -128,8 +128,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 262233
-  packageName: Abandoned Industrial Factory Environment
-  packageVersion: 1.0
+  productId: 162770
+  packageName: URP Post Processing Profiles
+  packageVersion: 1.26
   assetPath: Assets/LeartesStudios/TutorialInfo/Icons/Help_Icon.png
-  uploadId: 605007
+  uploadId: 593619
