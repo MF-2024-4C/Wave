@@ -11,63 +11,10 @@ namespace Quantum
         public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
             Input input)
         {
-            /*
-            CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
-
-            cconfig.Braking = playerSys->BreakPower;
-            var animState = PlayerConfig.PAnimIdle;
-
-            if (input.PlayerJump.WasPressed && controller->Grounded)
-            {
-                //controller->Jump(f, false, playerSys->JumpPower);
-                FPVector3 velocity = controller->Velocity;
-                velocity = FPVector3.Scale(velocity, input.PlayerDirection.XOY);
-                velocity.Y = playerSys->JumpPower;
-                controller->Velocity = velocity;
-                controller->Jumped = true;
-                animState |= PlayerConfig.PAnimJump;
-            }
-
-
-            FP speed = playerSys->WalkSpeed;
-            if (input.PlayerDash)
-            {
-                speed = playerSys->RunSpeed;
-                animState |= PlayerConfig.PAnimRun;
-            }
-
-            FPVector3 dir = input.PlayerDirection.XOY;
-            if (!controller->Grounded)
-            {
-                dir = controller->Velocity;
-                dir.Y = 0;
-            }
-
-            controller->MaxSpeed = speed;
-            controller->Move(f, entityRef, dir);
-
-            if (input.PlayerDirection != FPVector2.Zero)
-            {
-                animState |= PlayerConfig.PAnimMove;
-            }
-
-            if (!controller->Grounded)
-            {
-                animState |= PlayerConfig.PAnimFall;
-            }
-            else if ((playerSys->PlayerAnimState & PlayerConfig.PAnimFall) == PlayerConfig.PAnimFall)
-            {
-                animState |= PlayerConfig.PAnimGrounded;
-            }
-
-            playerSys->PlayerAnimState = animState;
-            */
-
             var animState = PlayerConfig.PAnimIdle;
             //ジャンプ処理
             if (input.PlayerJump.WasPressed && controller->Grounded)
             {
-                //TODO::ジャンプした際に向いてる方向と入力の値から進行方向に行くように
                 FPVector3 normVelo = controller->Velocity.Normalized;
                 normVelo.X = FPMath.Abs(normVelo.X);
                 normVelo.Z = FPMath.Abs(normVelo.Z);
@@ -91,15 +38,16 @@ namespace Quantum
                 animState |= PlayerConfig.PAnimRun;
             }
 
-            if (controller->Grounded)
-            {
-                animState |= PlayerConfig.PAnimMove;
-            }
-            else
+            if (!controller->Grounded)
             {
                 dir = controller->Velocity;
                 dir.Y = 0;
                 animState |= PlayerConfig.PAnimFall;
+            }
+            
+            if(input.PlayerDirection != FPVector2.Zero)
+            {
+                animState |= PlayerConfig.PAnimMove;
             }
             
             controller->MaxSpeed = speed;
