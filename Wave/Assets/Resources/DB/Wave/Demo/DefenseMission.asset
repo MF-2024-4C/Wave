@@ -24,7 +24,7 @@ MonoBehaviour:
     StartEventID: 300
     EndEventID: 400
     SpawnEventId: 3
-    MissionEndDelay: 11
+    MissionEndDelay: 100
     SpawnEventDelay: 5
     SpawnEventInterval: 35
     MaxSpawnCount: 1000

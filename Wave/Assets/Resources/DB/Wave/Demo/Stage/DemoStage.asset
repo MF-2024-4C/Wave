@@ -4965,7 +4965,7 @@ MonoBehaviour:
     DestroyEvent: []
     EventComponent:
     - mapEvent:
-        ID: 2
+        ID: 4
       isTriggered:
         Value: 0
     GameEvent: []
@@ -5037,7 +5037,7 @@ MonoBehaviour:
     DestroyEvent: []
     EventComponent:
     - mapEvent:
-        ID: 2
+        ID: 4
       isTriggered:
         Value: 0
     GameEvent: []
@@ -5058,7 +5058,7 @@ MonoBehaviour:
     ZombieSpawnArea:
     - Active:
         Value: 0
-      MaxSpawnCount: 50
+      MaxSpawnCount: 10
       CurrentSpawnCount: 0
       Radius:
         RawValue: 393216
@@ -5325,7 +5325,79 @@ MonoBehaviour:
     DestroyEvent: []
     EventComponent:
     - mapEvent:
-        ID: 3
+        ID: 4
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    HealthComponent: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    Shutter: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 10
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 826408
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: -652083
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    DefenseMission: []
+    DestroyEvent: []
+    EventComponent:
+    - mapEvent:
+        ID: 4
       isTriggered:
         Value: 0
     GameEvent: []
@@ -5376,11 +5448,83 @@ MonoBehaviour:
     Transform3D:
     - Position:
         X:
-          RawValue: 826408
+          RawValue: -623902
         Y:
           RawValue: -217382
         Z:
-          RawValue: -652083
+          RawValue: -745799
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    DefenseMission: []
+    DestroyEvent: []
+    EventComponent:
+    - mapEvent:
+        ID: 4
+      isTriggered:
+        Value: 0
+    GameEvent: []
+    GameEventQueue: []
+    HealthComponent: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    Shutter: []
+    SingletonZombiesSpawnEvent: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 10
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 393216
+      isHorde:
+        Value: 1
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 1026949
+        Y:
+          RawValue: -217382
+        Z:
+          RawValue: -1360527
       Rotation:
         X:
           RawValue: 0

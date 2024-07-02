@@ -33,13 +33,8 @@ namespace Wave.UI.Game.Status
             {
                 return;
             }
-            
-            _selectedItemIndex = index;
-            
-            if (_selectedItemIndex == index)
-            {
-                UpdateItemDetail(itemViewInfo);
-            }
+
+            OnItemSelected(index, itemViewInfo);
         }
 
         public void OnItemChanged(int index, ItemViewInfo itemViewInfo)
