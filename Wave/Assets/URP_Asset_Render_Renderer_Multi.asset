@@ -33,7 +33,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-  m_Name: URP_Asset_Render_Renderer
+  m_Name: URP_Asset_Render_Renderer_Multi
   m_EditorClassIdentifier: 
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
@@ -60,8 +60,7 @@ MonoBehaviour:
   - {fileID: -2280832752048856615}
   - {fileID: 6895306815788285935}
   - {fileID: 6052674170925496839}
-  - {fileID: 6256168489264786162}
-  m_RendererFeatureMap: 27a359d9badcb678aee772c7c0090649d9210d46b2da58e0efff631c040db15f073a320b176bff53f2aa9e291860d256
+  m_RendererFeatureMap: 27a359d9badcb678aee772c7c0090649d9210d46b2da58e0efff631c040db15f073a320b176bff53
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -152,23 +151,6 @@ MonoBehaviour:
   m_Name: URPOutlineFeature
   m_EditorClassIdentifier: 
   m_Active: 1
---- !u!114 &6256168489264786162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15c3bed367adf64da6316ae42ef95dc, type: 3}
-  m_Name: BetterFogFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  settings:
-    Event: 550
-    _UseCustomDepthTexture: 0
-    _UseFogOffsetTexture: 0
 --- !u!114 &6895306815788285935
 MonoBehaviour:
   m_ObjectHideFlags: 0
