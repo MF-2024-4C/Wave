@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -1
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -27,7 +27,74 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
+    m_Value: -13.03
+--- !u!114 &-8026592667421917810
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06437c1ff663d574d9447842ba0a72e4, type: 3}
+  m_Name: ScreenSpaceLensFlare
+  m_EditorClassIdentifier: 
+  active: 0
+  intensity:
+    m_OverrideState: 1
     m_Value: 0
+  tintColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  bloomMip:
+    m_OverrideState: 0
+    m_Value: 1
+  firstFlareIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  secondaryFlareIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  warpedFlareIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  warpedFlareScale:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1}
+  samples:
+    m_OverrideState: 1
+    m_Value: 1
+  sampleDimmer:
+    m_OverrideState: 0
+    m_Value: 0.5
+  vignetteEffect:
+    m_OverrideState: 1
+    m_Value: 1
+  startingPosition:
+    m_OverrideState: 1
+    m_Value: 1.25
+  scale:
+    m_OverrideState: 1
+    m_Value: 1.5
+  streaksIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  streaksLength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  streaksOrientation:
+    m_OverrideState: 1
+    m_Value: 0
+  streaksThreshold:
+    m_OverrideState: 1
+    m_Value: 0.25
+  resolution:
+    m_OverrideState: 0
+    m_Value: 4
+  chromaticAbberationIntensity:
+    m_OverrideState: 1
+    m_Value: 0.5
 --- !u!114 &-7465753169536601502
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -56,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 2
@@ -153,6 +220,8 @@ MonoBehaviour:
   - {fileID: 6264791973784435014}
   - {fileID: -7465753169536601502}
   - {fileID: 1191484224994889403}
+  - {fileID: 2174218312941235761}
+  - {fileID: -8026592667421917810}
 --- !u!114 &974915898123294377
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -165,21 +234,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   color:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   center:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.41
+    m_Value: 0.16
   smoothness:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.2
   rounded:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &1191484224994889403
 MonoBehaviour:
@@ -205,7 +274,7 @@ MonoBehaviour:
     m_Value: 0
   _FogColor:
     m_OverrideState: 1
-    m_Value: {r: 0.68867916, g: 0.71517456, b: 1, a: 1}
+    m_Value: {r: 0.9276729, g: 0.9331661, b: 1, a: 1}
   _GradientStart:
     m_OverrideState: 1
     m_Value: 0
@@ -223,7 +292,7 @@ MonoBehaviour:
     m_Value: 1
   _SunColor:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.65882355, b: 0.3764706, a: 1}
+    m_Value: {r: 0.37647057, g: 0.86480796, b: 1, a: 1}
   _SunIntensity:
     m_OverrideState: 1
     m_Value: 1
@@ -307,7 +376,7 @@ MonoBehaviour:
     m_Value: 0.227
   _UseSSMS:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   _Threshold:
     m_OverrideState: 1
     m_Value: 0
@@ -333,6 +402,31 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: 4827eac072da90940ae8247716a74434, type: 3}
     dimension: 1
+--- !u!114 &2174218312941235761
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
+  quality:
+    m_OverrideState: 1
+    m_Value: 2
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  clamp:
+    m_OverrideState: 1
+    m_Value: 0.05
 --- !u!114 &6264791973784435014
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -410,19 +504,19 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 4
   threshold:
-    m_OverrideState: 0
-    m_Value: 6.99
+    m_OverrideState: 1
+    m_Value: 0.93
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.98
   scatter:
     m_OverrideState: 0
     m_Value: 0
   clamp:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 65472
   tint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 0.8254717, b: 0.8669497, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
