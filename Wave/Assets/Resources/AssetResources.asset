@@ -311,6 +311,11 @@ MonoBehaviour:
         Id:
           Value: 2654404672301726934
       ResourcePath: DB/Wave/Zombie/Zombie
+    - Path: Resources/DB/Wave/Item/Config/HealItemConfig
+      AssetRef:
+        Id:
+          Value: 2657003019457506801
+      ResourcePath: DB/Wave/Item/Config/HealItemConfig
     - Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_Navmesh_data
       AssetRef:
         Id:
@@ -321,6 +326,11 @@ MonoBehaviour:
         Id:
           Value: 2699151491591919434
       ResourcePath: DB/Wave/Weapon/Prefab/Gun-Player
+    - Path: Resources/DB/Wave/Item/Config/DamageItemConfig
+      AssetRef:
+        Id:
+          Value: 2833699801600376985
+      ResourcePath: DB/Wave/Item/Config/DamageItemConfig
     - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_Navmesh
       AssetRef:
         Id:
