@@ -68,12 +68,14 @@ namespace Quantum
             if (input.PlayerJump.WasPressed && controller->Grounded)
             {
                 //TODO::ジャンプした際に向いてる方向と入力の値から進行方向に行くように
-                FPVector3 velocity = controller->Velocity;
-                FP mulX = input.PlayerDirection.X;
-                FP mulZ = input.PlayerDirection.Y;
-                mulX = FPMath.Abs(mulX);
-                mulZ = FPMath.Abs(mulZ);
-                velocity = FPVector3.Scale(velocity, new FPVector3(mulX, 0, mulZ));
+                FPVector3 normVelo = controller->Velocity.Normalized;
+                normVelo.X = FPMath.Abs(normVelo.X);
+                normVelo.Z = FPMath.Abs(normVelo.Z);
+                FP magnitude = controller->Velocity.Magnitude;
+
+                FPVector3 velocity = input.PlayerDirection.XOY;
+                velocity = FPVector3.Scale(velocity, normVelo);
+                velocity *= magnitude;
                 velocity.Y = playerSys->JumpPower;
                 controller->Velocity = velocity;
                 controller->Jumped = true;

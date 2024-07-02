@@ -20,7 +20,7 @@ MonoBehaviour:
     WalkSpeed:
       RawValue: 327680
     RunSpeed:
-      RawValue: 655360
+      RawValue: 458752
     JumpPower:
       RawValue: 327680
     BreakPower:
@@ -34,13 +34,6 @@ MonoBehaviour:
         RawValue: 110100
       Z:
         RawValue: 0
-    CameraForwardDirection:
-      X:
-        RawValue: 51349
-      Y:
-        RawValue: -34132
-      Z:
-        RawValue: -22208
     InteractRayDistance:
       RawValue: 196608
     InteractLayer:
