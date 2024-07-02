@@ -9,4 +9,6 @@ public unsafe partial class ZombieSpec : AssetObject
     public FP HP;
     [Tooltip("休止時の索敵距離")]
     public FP DormantSearchDistance;
+    [Tooltip("攻撃範囲")]
+    public FP AttackRange;
 }

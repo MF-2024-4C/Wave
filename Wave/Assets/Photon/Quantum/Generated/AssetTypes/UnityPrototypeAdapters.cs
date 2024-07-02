@@ -90,6 +90,8 @@ namespace Quantum.Prototypes.Unity {
     [Quantum.LocalReference]
     public global::EntityPrototype Target;
     public Quantum.AssetRefZombieSpec Spec;
+    public Photon.Deterministic.FP AttackInterval;
+    public Photon.Deterministic.FP AttackIntervalTimer;
 
     public sealed override Quantum.Prototypes.Zombie_Prototype Convert(EntityPrototypeConverter converter) {
       var result = new Quantum.Prototypes.Zombie_Prototype();
@@ -97,6 +99,8 @@ namespace Quantum.Prototypes.Unity {
       result.State = this.State;
       converter.Convert(this.Target, out result.Target);
       result.Spec = this.Spec;
+      result.AttackInterval = this.AttackInterval;
+      result.AttackIntervalTimer = this.AttackIntervalTimer;
       return result;
     }
   }

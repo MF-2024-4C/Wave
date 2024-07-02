@@ -17,6 +17,9 @@ component Zombie {
     
     entity_ref Target;
     asset_ref<ZombieSpec> Spec;
+    
+    FP AttackInterval;
+    FP AttackIntervalTimer;
 }
 
 component ZombieTargetable {

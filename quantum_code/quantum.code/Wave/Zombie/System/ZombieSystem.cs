@@ -2,7 +2,7 @@
 
 namespace Quantum.Wave.Zombie;
 
-public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,ISignalOnDamage
+public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,ISignalOnComponentAdded<Quantum.Zombie>,ISignalOnDamage
 {
     public struct Filter
     {
@@ -63,19 +63,34 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,I
             }
         }
 
+        if (filter.Zombie->State != ZombieState.Chase) return;
+        if (f.Exists(filter.Zombie->Target) == false) return;
+
+        var targetTransform = f.Get<Transform3D>(filter.Zombie->Target);
+
+        var targetDistance = FPMath.Abs((targetTransform.Position - filter.Transform->Position).Magnitude);
+        if (targetDistance < spec.AttackRange)
+        {
+            filter.Zombie->AttackIntervalTimer -= f.DeltaTime;
+            if (filter.Zombie->AttackIntervalTimer <= 0)
+            {
+                filter.Zombie->AttackIntervalTimer = filter.Zombie->AttackInterval;
+                f.Signals.OnDecHealth(filter.Zombie->Target,3);
+            }
+            
+        }
+        
         if (f.Number % UpdateTargetPosPerFrame != 0)
         {
             return;
         }
 
-        if (f.Exists(filter.Zombie->Target) == false) return;
-        if (filter.Zombie->State != ZombieState.Chase) return;
-        var targetTransform = f.Unsafe.GetPointer<Transform3D>(filter.Zombie->Target);
 
         if (f.Unsafe.TryGetPointer(filter.Entity, out NavMeshPathfinder* pathfinder))
         {
-            pathfinder->SetTarget(f, targetTransform->Position, _navMesh);
+            pathfinder->SetTarget(f, targetTransform.Position, _navMesh);
         }
+
     }
 
     public void OnDamage(Frame f, EntityRef target, DamageSource source, FP amount)
@@ -90,5 +105,10 @@ public unsafe class ZombieSystem : SystemMainThreadFilter<ZombieSystem.Filter>,I
             f.Remove<PhysicsBody3D>(target);
             f.Remove<NavMeshPathfinder>(target);
         }
+    }
+
+    public void OnAdded(Frame f, EntityRef entity, Quantum.Zombie* component)
+    {
+        component->AttackIntervalTimer = component->AttackInterval;
     }
 }

@@ -21,3 +21,5 @@ MonoBehaviour:
       RawValue: 1310720
     DormantSearchDistance:
       RawValue: 327680
+    AttackRange:
+      RawValue: 147456

@@ -5420,6 +5420,10 @@ MonoBehaviour:
       Spec:
         Id:
           Value: 98722892196609692
+      AttackInterval:
+        RawValue: 327680
+      AttackIntervalTimer:
+        RawValue: 0
     ZombieSpawnArea: []
     ZombieTargetable: []
     ZombiesSpawnEvent: []
@@ -5564,6 +5568,10 @@ MonoBehaviour:
       Spec:
         Id:
           Value: 98722892196609692
+      AttackInterval:
+        RawValue: 327680
+      AttackIntervalTimer:
+        RawValue: 0
     ZombieSpawnArea: []
     ZombieTargetable: []
     ZombiesSpawnEvent: []
@@ -5708,6 +5716,10 @@ MonoBehaviour:
       Spec:
         Id:
           Value: 98722892196609692
+      AttackInterval:
+        RawValue: 327680
+      AttackIntervalTimer:
+        RawValue: 0
     ZombieSpawnArea: []
     ZombieTargetable: []
     ZombiesSpawnEvent: []
@@ -5852,6 +5864,10 @@ MonoBehaviour:
       Spec:
         Id:
           Value: 98722892196609692
+      AttackInterval:
+        RawValue: 327680
+      AttackIntervalTimer:
+        RawValue: 0
     ZombieSpawnArea: []
     ZombieTargetable: []
     ZombiesSpawnEvent: []
@@ -5996,6 +6012,10 @@ MonoBehaviour:
       Spec:
         Id:
           Value: 98722892196609692
+      AttackInterval:
+        RawValue: 327680
+      AttackIntervalTimer:
+        RawValue: 0
     ZombieSpawnArea: []
     ZombieTargetable: []
     ZombiesSpawnEvent: []

@@ -1353,6 +1353,10 @@ MonoBehaviour:
     Spec:
       Id:
         Value: 98722892196609692
+    AttackInterval:
+      RawValue: 327680
+    AttackIntervalTimer:
+      RawValue: 0
 --- !u!114 &2859952741287743341
 MonoBehaviour:
   m_ObjectHideFlags: 0
