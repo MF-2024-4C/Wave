@@ -157,7 +157,7 @@ namespace Wave.NavigationMarker.NavigationMarker
             var clampedPosition = ClampToScreenBounds(screenPosition);
 
             _markerRectTransform.position = _markerAnimationPlaying
-                ? Vector3.Lerp(_markerRectTransform.position, clampedPosition, Time.deltaTime * 10)
+                ? Vector3.Lerp(_markerRectTransform.position, clampedPosition, Time.deltaTime * 7)
                 : clampedPosition;
 
             _cursorImage.gameObject.SetActive(true);
@@ -169,20 +169,31 @@ namespace Wave.NavigationMarker.NavigationMarker
             var screenPosition = camera.WorldToScreenPoint(worldPosition);
 
             _markerRectTransform.position = _markerAnimationPlaying
-                ? Vector3.Lerp(_markerRectTransform.position, screenPosition, Time.deltaTime * 10)
+                ? Vector3.Lerp(_markerRectTransform.position, screenPosition, Time.deltaTime * 7)
                 : screenPosition;
 
             _cursorImage.gameObject.SetActive(false);
         }
 
+        private const float _offset = 50.0f;
+
         private Vector3 ClampToScreenBounds(Vector3 screenPosition)
         {
-            const int offset = 50;
-            return new Vector3(
-                Mathf.Clamp(screenPosition.x, offset, width - offset),
-                Mathf.Clamp(screenPosition.y, offset, height - offset),
+            var result = new Vector3(
+                Mathf.Clamp(screenPosition.x, _offset, width - _offset),
+                Mathf.Clamp(screenPosition.y, _offset, height - _offset),
                 screenPosition.z
             );
+
+            if (!Mathf.Approximately(result.x, _offset) &&
+                !Mathf.Approximately(result.x, width - _offset) &&
+                !Mathf.Approximately(result.y, _offset) &&
+                !Mathf.Approximately(result.y, height - _offset))
+            {
+                Debug.Log("Clamped");
+            }
+
+            return result;
         }
 
         private void SetMarkerRotation(Vector3 screenPosition)
