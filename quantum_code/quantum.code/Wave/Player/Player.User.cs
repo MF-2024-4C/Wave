@@ -24,6 +24,7 @@ namespace Quantum
                 velocity = FPVector3.Scale(velocity, normVelo);
                 velocity *= magnitude;
                 velocity.Y = playerSys->JumpPower;
+                
                 controller->Velocity = velocity;
                 controller->Jumped = true;
                 animState |= PlayerConfig.PAnimJump;
@@ -48,6 +49,12 @@ namespace Quantum
             if(input.PlayerDirection != FPVector2.Zero)
             {
                 animState |= PlayerConfig.PAnimMove;
+            }
+            else
+            {
+                FPVector3 setVelocity = FPVector3.Zero;
+                setVelocity.Y = controller->Velocity.Y;
+                controller->Velocity = setVelocity;
             }
             
             controller->MaxSpeed = speed;

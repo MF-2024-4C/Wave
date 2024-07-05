@@ -2,33 +2,54 @@ using System;
 using UnityEngine;
 using Quantum;
 using Photon.Deterministic;
+using UnityEngine.InputSystem;
 
 namespace Wave.Player
 {
     public class PlayerLocalInput : MonoBehaviour
     {
+        [SerializeField] private PlayerInput _playerInput;
+        
         private DispatcherSubscription _subscription;
+
+        private Vector2 _moveInput;
+        private bool _isPushJump;
+        private bool _isPushInteract;
+        private bool _isDash;
+        
+        private bool _isInputSystem;
         
         private void OnEnable()
         {
             _subscription = QuantumCallback.Subscribe(this, (CallbackPollInput callback) => PollInput(callback));
+
+            if (_playerInput == null)
+            {
+                _isInputSystem = false;
+                return;
+            }
+            
+            EnableInputSystem();
         }
 
         private void OnDisable()
         {
             QuantumCallback.Unsubscribe(_subscription);
+            
+            if (_isInputSystem) DisableInputSystem();
         }
 
         public void PollInput(CallbackPollInput callback)
         {
             Quantum.Input input = new Quantum.Input();
-            input.PlayerJump = UnityEngine.Input.GetButton("Jump");
-            input.PlayerDash = UnityEngine.Input.GetButton("Fire3");
-            input.Interact = UnityEngine.Input.GetKey(KeyCode.F);
-            var x = UnityEngine.Input.GetAxis("Horizontal");
-            var y = UnityEngine.Input.GetAxis("Vertical");
-            Vector2 dir = new Vector2(x, y);
-        
+            if (!_isInputSystem) SetInputManager();
+
+            input.PlayerJump = _isPushJump;
+            input.PlayerDash = _isDash;
+            input.Interact = _isPushInteract;
+            _isPushJump = false;
+            Vector2 dir = _moveInput;
+            
             //カメラの向きと入力を合わせる
             Transform mainCameraTran = UnityEngine.Camera.main.transform;
             Vector3 cameraForward = Vector3.Scale(mainCameraTran.forward, new Vector3(1, 0, 1)).normalized;
@@ -47,6 +68,60 @@ namespace Wave.Player
             input.Reload = UnityEngine.Input.GetKey(KeyCode.R);
             
             callback.SetInput(input, DeterministicInputFlags.Repeatable);
+        }
+
+        public void OnMoveInput(InputAction.CallbackContext context)
+        {
+            var value = context.ReadValue<Vector2>();
+            _moveInput = value;
+        }
+
+        public void OnJumpInput(InputAction.CallbackContext context)
+        {
+            if (context.started) _isPushJump = true;
+            else if(context.canceled) _isPushJump = false;
+        }
+        
+        public void OnInteractInput(InputAction.CallbackContext context)
+        {
+            if (context.started) _isPushInteract = true;
+            else if (context.canceled) _isPushInteract = false;
+        }
+        
+        public void OnDashInput(InputAction.CallbackContext context)
+        {
+            if (context.started) _isDash = true;
+            else if (context.canceled) _isDash = false;
+        }
+
+        private void SetInputManager()
+        {
+            _isPushJump = UnityEngine.Input.GetButton("Jump");
+            _isDash = UnityEngine.Input.GetButton("Fire3");
+            _isPushInteract = UnityEngine.Input.GetKey(KeyCode.F);
+            var x = UnityEngine.Input.GetAxis("Horizontal");
+            var y = UnityEngine.Input.GetAxis("Vertical");
+            _moveInput = new Vector2(x, y);
+        }
+
+        private void EnableInputSystem()
+        {
+            _playerInput.actions["Move"].performed += OnMoveInput;
+            _playerInput.actions["Jump"].performed += OnJumpInput;
+            _playerInput.actions["Interact"].performed += OnInteractInput;
+            _playerInput.actions["Dash"].performed += OnDashInput;
+
+            _isInputSystem = true;
+        }
+
+        private void DisableInputSystem()
+        {
+            _playerInput.actions["Move"].performed -= OnMoveInput;
+            _playerInput.actions["Jump"].performed -= OnJumpInput;
+            _playerInput.actions["Interact"].performed -= OnInteractInput;
+            _playerInput.actions["Dash"].performed -= OnDashInput;
+
+            _isInputSystem = false;
         }
     }
 }
