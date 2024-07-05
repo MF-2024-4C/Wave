@@ -69,10 +69,12 @@ namespace Michsky.UI.Heat
             UpdateUI();
         }
 
-        void Start()
+        async void Start()
         {
             if (startBehaviour == StartBehaviour.Disable) { isOn = false; gameObject.SetActive(false); }
-            else if (startBehaviour == StartBehaviour.Enable) { isOn = false; OpenWindow(); }
+            else if (startBehaviour == StartBehaviour.Enable) { isOn = false; 
+                OpenWindow();
+            }
         }
 
         void Update()
@@ -154,7 +156,7 @@ namespace Michsky.UI.Heat
             else if (confirmButton != null) { confirmButton.gameObject.SetActive(false); }
         }
 
-        public void OpenWindow()
+        public async void OpenWindow()
         {
             if (isOn) { return; }
             if (EventSystem.current.currentSelectedGameObject != null) { latestEventSystemObject = EventSystem.current.currentSelectedGameObject; }
@@ -164,6 +166,7 @@ namespace Michsky.UI.Heat
 
             StopCoroutine("DisableObject");
             StopCoroutine("DisableAnimator");
+            await Awaitable.NextFrameAsync();
             StartCoroutine("DisableAnimator");
 
             mwAnimator.enabled = true;
