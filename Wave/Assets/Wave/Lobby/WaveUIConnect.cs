@@ -37,6 +37,9 @@ namespace Wave.Lobby
             else
             {
                 Debug.Log("サーバーに接続できませんでした");
+
+                MessageWindowManager.Instance.ShowMessage("Failed to connect to server", "Please try again later",
+                    "Confirm", ReconnectToServer);
             }
         }
 
@@ -82,14 +85,19 @@ namespace Wave.Lobby
         {
             Debug.Log($"サーバーから切断されました: {cause}");
 
-            MessageWindowManager.Instance.ShowMessage("Disconnected from server", cause.ToString(), "Confirm", () =>
-            {
-                LoadingScreen.LoadingScreen.Instance.ShowLoading("Reconnecting to server...");
-                Start();
-            });
+            if (cause == DisconnectCause.DisconnectByClientLogic) return;
+            
+            MessageWindowManager.Instance.ShowMessage("Disconnected from server", cause.ToString(), "Reconnecting", ReconnectToServer);
+        }
+        
+        private void ReconnectToServer()
+        {
+            LoadingScreen.LoadingScreen.Instance.HideLoading();
+            LoadingScreen.LoadingScreen.Instance.ShowLoading("Reconnecting to server...");
+            Invoke(nameof(Start),1.0f);
         }
 
-        public void OnRegionListReceived(RegionHandler regionHandler)    
+        public void OnRegionListReceived(RegionHandler regionHandler)
         {
         }
 

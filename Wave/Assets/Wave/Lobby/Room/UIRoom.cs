@@ -93,6 +93,7 @@ namespace Wave.Lobby.Room
                     break;
 
                 case WaveUIConnect.PhotonEventCode.KickPlayer:
+                    MessageWindowManager.Instance.ShowMessage("You have been kicked from the room");
                     LeaveRoom();
                     _panelManager.OpenPanelByIndex(1);
                     break;
@@ -135,7 +136,7 @@ namespace Wave.Lobby.Room
 
             QuantumRunner.StartGame(clientId, param);
             ReconnectInformation.Refresh(ClientManager.Client, TimeSpan.FromMinutes(1));
-            
+
             LobbyOnlyObjectManager.Instance.LobbyDisable();
         }
 
@@ -245,6 +246,10 @@ namespace Wave.Lobby.Room
         public void OnMasterClientSwitched(Photon.Realtime.Player newMasterClient)
         {
             Debug.Log($" マスタークライアントが{newMasterClient.NickName}に変更されました");
+
+            if (Equals(ClientManager.Client.LocalPlayer, newMasterClient))
+                MessageWindowManager.Instance.ShowMessage("You are the new master");
+
             UpdateRoomControls();
         }
 

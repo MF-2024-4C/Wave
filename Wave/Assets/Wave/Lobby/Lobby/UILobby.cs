@@ -46,10 +46,6 @@ namespace Wave.Lobby.Lobby
 
         public void RoomCreate()
         {
-            // Fall back to the first map asset we find
-            var allMapsInResources =
-                Resources.LoadAll<MapAsset>(QuantumEditorSettings.Instance.DatabasePathInResources);
-            
             var enterRoomParams = new EnterRoomParams
             {
                 RoomOptions = new RoomOptions
@@ -57,7 +53,7 @@ namespace Wave.Lobby.Lobby
                     IsVisible = true,
                     MaxPlayers = 4,
                     Plugins = new[] { "QuantumPlugin" },
-                    CustomRoomPropertiesForLobby = new[] { "MAP-INDEX","ROOM-NAME" },
+                    CustomRoomPropertiesForLobby = new[] { "MAP-INDEX", "ROOM-NAME" },
                     CustomRoomProperties = new Hashtable
                     {
                         { "MAP-INDEX", 0 },
@@ -120,6 +116,8 @@ namespace Wave.Lobby.Lobby
         {
             Debug.Log("部屋の作成に失敗した");
             LoadingScreen.LoadingScreen.Instance.HideLoading();
+
+            MessageWindowManager.Instance.ShowMessage("Failed to create room", message);
         }
 
         public void OnJoinedRoom()
@@ -134,6 +132,8 @@ namespace Wave.Lobby.Lobby
         {
             Debug.Log("部屋の入室に失敗した");
             LoadingScreen.LoadingScreen.Instance.HideLoading();
+
+            MessageWindowManager.Instance.ShowMessage("Failed to join room", message);
         }
 
         public void OnJoinRandomFailed(short returnCode, string message)

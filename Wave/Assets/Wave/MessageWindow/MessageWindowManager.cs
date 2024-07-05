@@ -29,10 +29,12 @@ public class MessageWindowManager : MonoBehaviour
     public void ShowMessage(string message, string description = "", string confirmButtonText = "Confirm",
         UnityAction confirmEvent = null, string cancelButtonText = "", UnityAction cancelEvent = null)
     {
+        Debug.Log(message);
+
         confirmButton.onClick.RemoveAllListeners();
         cancelButton.onClick.RemoveAllListeners();
-        
-        modalWindowManager.Show();
+
+        modalWindowManager.OpenWindow();
         messageText.text = message;
         descriptionPanel.SetActive(!string.IsNullOrEmpty(description));
         descriptionText.text = description;
@@ -40,10 +42,13 @@ public class MessageWindowManager : MonoBehaviour
         cancelButton.gameObject.SetActive(!string.IsNullOrEmpty(cancelButtonText));
         confirmButton.buttonText = confirmButtonText;
         cancelButton.buttonText = cancelButtonText;
-        if (confirmEvent != null) confirmButton.onClick.AddListener(confirmEvent);;
-        if (cancelEvent != null) cancelButton.onClick.AddListener(cancelEvent);
         
-        confirmButton.onClick.AddListener(() => modalWindowManager.Hide());
-        confirmButton.onClick.AddListener(() => modalWindowManager.Hide());
+        confirmButton.onClick.AddListener(() => modalWindowManager.CloseWindow());
+        cancelButton.onClick.AddListener(() => modalWindowManager.CloseWindow());
+        
+        if (confirmEvent != null) confirmButton.onClick.AddListener(confirmEvent);
+        if (cancelEvent != null) cancelButton.onClick.AddListener(cancelEvent);
+
+        
     }
 }

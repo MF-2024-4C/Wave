@@ -96,7 +96,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118180803317528468}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f0c1de43dee014b84fe5087cd9d0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modalWindowManager: {fileID: 0}
+  modalWindowManager: {fileID: 7360373334213503371}
   messageText: {fileID: 6736814293684803499}
   descriptionText: {fileID: 5531146409720574963}
   descriptionPanel: {fileID: 4036722323390545716}
