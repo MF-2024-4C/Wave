@@ -15,15 +15,15 @@ namespace Wave.UI.Game.Status
         {
             _focusImage.enabled = true;
         }
-        
+
         public void OnUnFocus()
         {
             _focusImage.enabled = false;
         }
-        
+
         public void SetItemViewInfo(ItemViewInfo itemViewInfo)
         {
-            _itemImage.sprite = itemViewInfo.ItemSprite;
+            if (itemViewInfo.ItemSprite) _itemImage.sprite = itemViewInfo.ItemSprite;
             _itemName.text = itemViewInfo.ItemName;
             _itemCount.text = itemViewInfo.ItemCount.ToString();
         }
