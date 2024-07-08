@@ -9,17 +9,16 @@ public unsafe class DestroyEventSystem : SystemMainThreadFilter<DestroyEventSyst
         public EntityRef Entity;
         public DestroyEvent* DestroyEvent;
     }
-    private GameEventWriter _eventWriter;
+    private GameEventReader _eventReader;
 
     public override void OnInit(Frame f)
     {
-        _eventWriter = EventInternal.GetGameEventWriter(f);
+        _eventReader = EventInternal.GetGameEventReader(f);
     }
 
     public override void Update(Frame f, ref Filter filter)
     {
-        var eventReader = EventInternal.GetGameEventReader(f);
-        foreach (var mapEvent in eventReader.Read(f))
+        foreach (var mapEvent in _eventReader.Read(f))
         {
             if (mapEvent.ID == filter.DestroyEvent->EventId)
             {

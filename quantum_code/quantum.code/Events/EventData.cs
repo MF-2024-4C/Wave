@@ -24,7 +24,7 @@ namespace Quantum
             var gameEventsData = f.Heap->AllocateAndClear(sizeof(GameEventsData));
             var data = new GameEventsData(initialCapacity, f);
             UnsafeUtility.CopyStructureToPtr(ref data, gameEventsData);
-            container = new GameEventsDataPtr()
+            container = new GameEventsDataPtr
             {
                 ptr = f.Heap->Void(gameEventsData)
             };

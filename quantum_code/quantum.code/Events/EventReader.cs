@@ -18,7 +18,7 @@ namespace Quantum.Events
         public GameEventsDataIterator Read(FrameBase f)
         {
             var itr = new GameEventsDataIterator(_buffer, _eventCounter, f);
-            _eventCounter = _buffer->eventCounter;
+            _eventCounter = _buffer->prevEventCounter;
             return itr;
         }
     }

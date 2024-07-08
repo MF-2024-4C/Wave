@@ -25,7 +25,6 @@ public unsafe class ZombieSpawnAreaSystem : SystemMainThreadFilter<ZombieSpawnAr
     public override void Update(Frame f, ref Filter filter)
     {
         var spawnArea = filter.ZombieSpawnArea;
-        _eventReader = EventInternal.GetGameEventReader(f);
 
         foreach (var mapEvent in _eventReader.Read(f))
         {

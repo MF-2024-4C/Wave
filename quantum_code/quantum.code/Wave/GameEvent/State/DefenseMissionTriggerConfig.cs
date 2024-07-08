@@ -6,16 +6,14 @@ namespace Quantum;
 [Serializable]
 public abstract class MissionConfig : BaseItemConfig
 {
-    
+    public Int32 StartEventID;
+    public Int32 EndEventID;
 }
 
 
 [Serializable]
 public class DefenseMissionTriggerConfig : MissionConfig
 {
-    public Int32 StartEventID;
-    public Int32 EndEventID;
-
 
     public Int32 SpawnEventId;
     public int MissionEndDelay;

@@ -17,17 +17,25 @@ public unsafe class GameEventSystem : SystemMainThread, ISignalActivateEvent
 
     public override void Update(Frame f)
     {
-        var ptr = EventInternal.GetSingletonComponent(f).events.container.ptr;
-        f.Heap->Void<GameEventsData>(ptr)->Update(f);
+
+        
+        foreach (var @event in _eventReader.Read(f))
+        {
+            Log.Debug($"First Read Event ID: {@event.ID}");
+        }
+        foreach (var @event in _eventReader.Read(f))
+        {
+            Log.Debug($"First Read Event ID: {@event.ID}");
+        }
+
         var reader = EventInternal.GetGameEventReader(f);
         foreach (var @event in reader.Read(f))
         {
             Log.Debug($"Read Event ID: {@event.ID}");
         }
         
-        foreach (var @event in _eventReader.Read(f))
-        {
-            Log.Debug($"First Read Event ID: {@event.ID}");
-        }
+        var ptr = EventInternal.GetSingletonComponent(f).events.container.ptr;
+        f.Heap->Void<GameEventsData>(ptr)->Update(f);
+
     }
 }

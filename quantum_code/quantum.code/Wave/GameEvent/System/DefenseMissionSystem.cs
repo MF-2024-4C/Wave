@@ -21,7 +21,7 @@ public unsafe class DefenseMissionSystem : SystemMainThreadFilter<DefenseMission
         var mission = filter.DefenseMission;
         mission->MissionTimer += f.DeltaTime;
         mission->SpawnEventTimer -= f.DeltaTime;
-
+        
         if (mission->MissionTimer > mission->MissionEndDelay)
         {
             MissionComplete(f, mission);
@@ -42,6 +42,7 @@ public unsafe class DefenseMissionSystem : SystemMainThreadFilter<DefenseMission
     {
         var writer = EventInternal.GetGameEventWriter(f);
         writer.Write(new MapEvent { ID = mission->MissionEndId }, f);
+        f.Events.MissionComplete(mission->MissionConfig);
         Log.Info($"Mission Complete Event ID: {mission->MissionEndId}");
     }
 
@@ -50,6 +51,5 @@ public unsafe class DefenseMissionSystem : SystemMainThreadFilter<DefenseMission
         var writer = EventInternal.GetGameEventWriter(f);
         writer.Write(new MapEvent { ID = mission->SpawnEventId }, f);
         Log.Info($"Spawn Event ID: {mission->SpawnEventId}");
-        f.Events.MissionComplete(mission->MissionConfig);
     }
 }
