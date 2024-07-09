@@ -23,20 +23,14 @@ namespace Wave.Player
         {
             _subscription = QuantumCallback.Subscribe(this, (CallbackPollInput callback) => PollInput(callback));
 
-            if (_playerInput == null)
-            {
-                _isInputSystem = false;
-                return;
-            }
-            
-            EnableInputSystem();
+            _isInputSystem = _playerInput != null;
         }
 
         private void OnDisable()
         {
             QuantumCallback.Unsubscribe(_subscription);
-            
-            if (_isInputSystem) DisableInputSystem();
+
+            _isInputSystem = false;
         }
 
         public void PollInput(CallbackPollInput callback)
@@ -102,26 +96,6 @@ namespace Wave.Player
             var x = UnityEngine.Input.GetAxis("Horizontal");
             var y = UnityEngine.Input.GetAxis("Vertical");
             _moveInput = new Vector2(x, y);
-        }
-
-        private void EnableInputSystem()
-        {
-            _playerInput.actions["Move"].performed += OnMoveInput;
-            _playerInput.actions["Jump"].performed += OnJumpInput;
-            _playerInput.actions["Interact"].performed += OnInteractInput;
-            _playerInput.actions["Dash"].performed += OnDashInput;
-
-            _isInputSystem = true;
-        }
-
-        private void DisableInputSystem()
-        {
-            _playerInput.actions["Move"].performed -= OnMoveInput;
-            _playerInput.actions["Jump"].performed -= OnJumpInput;
-            _playerInput.actions["Interact"].performed -= OnInteractInput;
-            _playerInput.actions["Dash"].performed -= OnDashInput;
-
-            _isInputSystem = false;
         }
     }
 }

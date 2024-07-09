@@ -20,6 +20,7 @@ namespace Wave.Player
 
         private void Start()
         {
+            if (QuantumRunner.Default == null) return;
             var frame = QuantumRunner.Default.Game.Frames.Predicted;
             foreach (var (entity, component) in frame.GetComponentIterator<PlayerLink>())
             {
