@@ -10,7 +10,7 @@ component PlayerSys
     FP WalkSpeed;
     FP RunSpeed;
     FP JumpPower;
-    FP BreakPower;
+    FP AirMovePower;
     
     FPVector3 CameraForwardDirection;
     EntityRef InteractEntity;

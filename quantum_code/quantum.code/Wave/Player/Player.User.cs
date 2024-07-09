@@ -11,55 +11,42 @@ namespace Quantum
         public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
             Input input)
         {
-            var animState = PlayerConfig.PAnimIdle;
+            bool isJump = false;
             //ジャンプ処理
             if (input.PlayerJump.WasPressed && controller->Grounded)
             {
-                FPVector3 normVelo = controller->Velocity.Normalized;
-                normVelo.X = FPMath.Abs(normVelo.X);
-                normVelo.Z = FPMath.Abs(normVelo.Z);
-                FP magnitude = controller->Velocity.Magnitude;
-
-                FPVector3 velocity = input.PlayerDirection.XOY;
-                velocity = FPVector3.Scale(velocity, normVelo);
-                velocity *= magnitude;
-                velocity.Y = playerSys->JumpPower;
-                
-                controller->Velocity = velocity;
-                controller->Jumped = true;
-                animState |= PlayerConfig.PAnimJump;
+                controller->Jump(f, false, playerSys->JumpPower);
+                isJump = true;
             }
             
             //移動処理
             FP speed = playerSys->WalkSpeed;
             FPVector3 dir = input.PlayerDirection.XOY;
+            //ダッシュ処理
             if (input.PlayerDash)
             {
                 speed = playerSys->RunSpeed;
-                animState |= PlayerConfig.PAnimRun;
-            }
-
-            if (!controller->Grounded)
-            {
-                dir = controller->Velocity;
-                dir.Y = 0;
-                animState |= PlayerConfig.PAnimFall;
             }
             
-            if(input.PlayerDirection != FPVector2.Zero)
+            //地面にいるとき
+            if (controller->Grounded && !isJump)
             {
-                animState |= PlayerConfig.PAnimMove;
+                dir = input.PlayerDirection.XOY;
             }
             else
             {
-                FPVector3 setVelocity = FPVector3.Zero;
-                setVelocity.Y = controller->Velocity.Y;
-                controller->Velocity = setVelocity;
+                //空中にいて移動入力がないとき
+                if (input.PlayerDirection == FPVector2.Zero)
+                {
+                    FPVector3 velo = controller->Velocity;
+                    velo.Y = 0;
+                    dir = velo.Normalized;
+                }
             }
             
             controller->MaxSpeed = speed;
             controller->Move(f, entityRef, dir);
-            playerSys->PlayerAnimState = animState;
+            playerSys->PlayerAnimState = GetAnimState(input, controller->Grounded, isJump);
         }
 
         public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller,
@@ -124,7 +111,7 @@ namespace Quantum
             WalkSpeed = config.WalkSpeed;
             RunSpeed = config.RunSpeed;
             JumpPower = config.JumpPower;
-            BreakPower = config.BreakPower;
+            AirMovePower = config.AirMovePower;
 
             if (!f.Unsafe.TryGetPointer(entity, out HealthComponent* health)) return;
             //if (!f.Unsafe.TryGetPointer(entity, out PlayerLink* playerLink)) return;
@@ -136,6 +123,33 @@ namespace Quantum
         private void Dead(EntityRef entity)
         {
             Log.Info($"Player{entity.Index} is Dead");
+        }
+
+        private static byte GetAnimState(Input input, bool isGround, bool isJumped)
+        {
+            byte animState = PlayerConfig.PAnimIdle;
+
+            //ジャンプしたとき
+            if (isJumped)
+            {
+                animState = PlayerConfig.PAnimJump;
+                return animState;
+            }
+
+            //地面にいないとき
+            if (!isGround)
+            {
+                animState = PlayerConfig.PAnimFall;
+                return animState;
+            }
+            
+            //移動していないとき
+            if (input.PlayerDirection == FPVector2.Zero) return animState;
+            //ダッシュしているとき
+            if(input.PlayerDash) return PlayerConfig.PAnimRun;
+            //歩いているとき
+            animState = PlayerConfig.PAnimMove;
+            return animState;
         }
     }
 }

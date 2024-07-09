@@ -14,7 +14,6 @@ namespace Wave.Player
 
         private void Awake()
         {
-            Debug.Log("イベント購買");
             _subscription = QuantumEvent.Subscribe<EventPlayerSpawnEvent>(this, SpawnPlayer);
         }
 
@@ -41,7 +40,6 @@ namespace Wave.Player
 
         private void SpawnPlayer(EventPlayerSpawnEvent e)
         {
-            Debug.Log($"イベント実行:{e.EntityRef} {e.PlayerLink.Player}");
             var frame = e.Game.Frames.Predicted;
             for (int i = 0; i < PlayerStateUIList.Count; i++)
             {

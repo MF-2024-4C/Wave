@@ -14,7 +14,7 @@ namespace Quantum
         public FP WalkSpeed;
         public FP RunSpeed;
         public FP JumpPower;
-        public FP BreakPower;
+        public FP AirMovePower;
         
         public FP RotationSpeed;
 

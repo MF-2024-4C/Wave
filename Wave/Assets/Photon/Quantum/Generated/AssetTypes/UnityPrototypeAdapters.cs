@@ -39,7 +39,7 @@ namespace Quantum.Prototypes.Unity {
     public Photon.Deterministic.FP WalkSpeed;
     public Photon.Deterministic.FP RunSpeed;
     public Photon.Deterministic.FP JumpPower;
-    public Photon.Deterministic.FP BreakPower;
+    public Photon.Deterministic.FP AirMovePower;
     public Photon.Deterministic.FPVector3 CameraForwardDirection;
     [Quantum.LocalReference]
     public global::EntityPrototype InteractEntity;
@@ -52,7 +52,7 @@ namespace Quantum.Prototypes.Unity {
       result.WalkSpeed = this.WalkSpeed;
       result.RunSpeed = this.RunSpeed;
       result.JumpPower = this.JumpPower;
-      result.BreakPower = this.BreakPower;
+      result.AirMovePower = this.AirMovePower;
       result.CameraForwardDirection = this.CameraForwardDirection;
       converter.Convert(this.InteractEntity, out result.InteractEntity);
       return result;
