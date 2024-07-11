@@ -2,6 +2,7 @@ using Quantum.Events;
 
 namespace Quantum.Wave.GameEvent;
 
+
 public unsafe class DefenseMissionSystem : SystemMainThreadFilter<DefenseMissionSystem.Filter>
 {
     public struct Filter
