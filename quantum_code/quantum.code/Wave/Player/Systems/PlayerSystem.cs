@@ -1,6 +1,6 @@
 ﻿namespace Quantum.Player
 {
-    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>, ISignalOnDead
+    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>, ISignalOnDead, ISignalOnInteractCall, ISignalOnReleaseCall
     {
         public struct PlayerFilter
         {
@@ -38,6 +38,16 @@
             }
 
             PlayerSys.Dead(f, entity, playerSys);
+        }
+
+        public void OnInteractCall(Frame f, EntityRef interactor, EntityRef player)
+        {
+            //TODO::蘇生時の処理
+            PlayerSys.Revive(f, interactor);
+        }
+
+        public void OnReleaseCall(Frame f, EntityRef interactor, EntityRef player)
+        {
         }
     }
 }

@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 5684033664292768011}
   - component: {fileID: 7569993271907966049}
   - component: {fileID: -1500112013048758693}
+  - component: {fileID: -6087913135262893534}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -550,7 +551,7 @@ MonoBehaviour:
       RawValue: 0
     JumpPower:
       RawValue: 0
-    BreakPower:
+    AirMovePower:
       RawValue: 0
     CameraForwardDirection:
       X:
@@ -649,6 +650,33 @@ MonoBehaviour:
       RawValue: 6553600
     CurrentHealth:
       RawValue: 0
+--- !u!114 &-6087913135262893534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958795330284115381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd20d009155074c4c9f7a885ff8cd443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    Config:
+      Id:
+        Value: 251999629019651395
+    CanInteract:
+      Value: 0
+    OnInteract:
+      Value: 0
+    InteractStartTime:
+      RawValue: 0
+    InteractEndTime:
+      RawValue: 0
+    InteractPlayer: {fileID: 0}
+    NowCoolDown:
+      Value: 0
 --- !u!1001 &7421127153867234411
 PrefabInstance:
   m_ObjectHideFlags: 0

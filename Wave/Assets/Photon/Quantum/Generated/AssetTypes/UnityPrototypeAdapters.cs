@@ -43,6 +43,7 @@ namespace Quantum.Prototypes.Unity {
     public Photon.Deterministic.FPVector3 CameraForwardDirection;
     [Quantum.LocalReference]
     public global::EntityPrototype InteractEntity;
+    public Quantum.QBoolean IsDead;
 
     public sealed override Quantum.Prototypes.PlayerSys_Prototype Convert(EntityPrototypeConverter converter) {
       var result = new Quantum.Prototypes.PlayerSys_Prototype();
@@ -55,6 +56,7 @@ namespace Quantum.Prototypes.Unity {
       result.AirMovePower = this.AirMovePower;
       result.CameraForwardDirection = this.CameraForwardDirection;
       converter.Convert(this.InteractEntity, out result.InteractEntity);
+      result.IsDead = this.IsDead;
       return result;
     }
   }

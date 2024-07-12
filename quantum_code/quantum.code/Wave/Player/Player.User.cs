@@ -11,6 +11,8 @@ namespace Quantum
         public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
             Input input)
         {
+            if (playerSys->IsDead) return;
+            
             bool isJump = false;
             //ジャンプ処理
             if (input.PlayerJump.WasPressed && controller->Grounded)
@@ -89,6 +91,9 @@ namespace Quantum
                 var hit = hits[i];
                 if (f.Unsafe.TryGetPointer(hit.Entity, out Interactor* interactor))
                 {
+                    //自分の場合はインタラクトしない
+                    if (hit.Entity == entity) continue;
+                    
                     Interactor.Interact(f, entity, hit.Entity, interactor);
                     playerSys->InteractEntity = hit.Entity;
                     return;
@@ -98,11 +103,27 @@ namespace Quantum
         
         public static void Dead(Frame f, EntityRef entity, PlayerSys* playerSys)
         {
-            playerSys->Dead(entity);
+            //playerSys->Dead(entity);
+            Log.Info($"Player{entity.Index} is Dead");
+
+            if (!f.Unsafe.TryGetPointer<Interactor>(entity, out Interactor* interactor)) return;
+            interactor->OnInteract = true;
+
+            playerSys->IsDead = true;
         }
 
         public static void Recoil(FPVector2 recoil)
         {
+        }
+
+        public static void Revive(Frame f, EntityRef entity)
+        {
+            if (f.Unsafe.TryGetPointer(entity, out PlayerSys* playerSys)) return;
+            if (f.Unsafe.TryGetPointer(entity, out HealthComponent* healthComp)) return;
+            
+            //TODO::蘇生時の体力をコンフィグで設定できるようにする
+            HealthComponent.Revive(f, entity, healthComp, healthComp->MaxHealth);
+            playerSys->IsDead = false;
         }
 
         public void SetConfig(Frame　f, EntityRef entity)
@@ -118,6 +139,11 @@ namespace Quantum
             //f.Events.PlayerSpawnEvent(entity);
             //Log.Info("イベント発行");
             HealthComponent.InitializeHealth(f, health);
+
+            if (!f.Unsafe.TryGetPointer(entity, out Interactor* interactor)) return;
+            interactor->CanInteract = false;
+
+            IsDead = false;
         }
 
         private void Dead(EntityRef entity)

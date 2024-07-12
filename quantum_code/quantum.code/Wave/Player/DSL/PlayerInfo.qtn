@@ -14,6 +14,8 @@ component PlayerSys
     
     FPVector3 CameraForwardDirection;
     EntityRef InteractEntity;
+    
+    bool IsDead;
 }
 
 event PlayerSpawnEvent{

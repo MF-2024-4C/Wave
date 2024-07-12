@@ -28,4 +28,9 @@ public unsafe partial struct HealthComponent
         
         //Log.Info($"Player{entity.Index} Health: {healthComponent->CurrentHealth}");
     }
+
+    public static void Revive(Frame f, EntityRef entity, HealthComponent* healthComponent, FP amount)
+    {
+        
+    }
 }
