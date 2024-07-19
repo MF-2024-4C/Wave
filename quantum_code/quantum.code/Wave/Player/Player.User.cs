@@ -107,7 +107,7 @@ namespace Quantum
             Log.Info($"Player{entity.Index} is Dead");
 
             if (!f.Unsafe.TryGetPointer<Interactor>(entity, out Interactor* interactor)) return;
-            interactor->OnInteract = true;
+            interactor->CanInteract = true;
 
             playerSys->IsDead = true;
         }
@@ -118,11 +118,13 @@ namespace Quantum
 
         public static void Revive(Frame f, EntityRef entity)
         {
-            if (f.Unsafe.TryGetPointer(entity, out PlayerSys* playerSys)) return;
-            if (f.Unsafe.TryGetPointer(entity, out HealthComponent* healthComp)) return;
+            if (!f.Unsafe.TryGetPointer(entity, out PlayerSys* playerSys)) return;
+            if (!f.Unsafe.TryGetPointer(entity, out HealthComponent* healthComp)) return;
+            if (!f.Unsafe.TryGetPointer(entity, out Interactor* interactor)) return;
             
             //TODO::蘇生時の体力をコンフィグで設定できるようにする
             HealthComponent.Revive(f, entity, healthComp, healthComp->MaxHealth);
+            interactor->CanInteract = false;
             playerSys->IsDead = false;
         }
 

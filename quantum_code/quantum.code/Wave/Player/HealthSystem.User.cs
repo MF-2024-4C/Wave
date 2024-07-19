@@ -31,6 +31,6 @@ public unsafe partial struct HealthComponent
 
     public static void Revive(Frame f, EntityRef entity, HealthComponent* healthComponent, FP amount)
     {
-        
+        AddHealth(f,entity,healthComponent,amount);
     }
 }
