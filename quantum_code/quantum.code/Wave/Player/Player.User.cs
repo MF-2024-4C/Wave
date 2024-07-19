@@ -58,8 +58,6 @@ namespace Quantum
             FPQuaternion targetRotation = FPQuaternion.LookRotation(input.CameraForwardDirection);
             targetRotation.X = 0;
             targetRotation.Z = 0;
-            //transform->Rotation = FPQuaternion.Slerp(transform->Rotation, targetRotation, f.DeltaTime * config.RotationSpeed);
-            //transform->Rotation = targetRotation;
             playerSys->TargetRotation = targetRotation;
 
             //インタラクト用にカメラの向いている方向を保存
@@ -103,7 +101,6 @@ namespace Quantum
         
         public static void Dead(Frame f, EntityRef entity, PlayerSys* playerSys)
         {
-            //playerSys->Dead(entity);
             Log.Info($"Player{entity.Index} is Dead");
 
             if (!f.Unsafe.TryGetPointer<Interactor>(entity, out Interactor* interactor)) return;
@@ -137,20 +134,12 @@ namespace Quantum
             AirMovePower = config.AirMovePower;
 
             if (!f.Unsafe.TryGetPointer(entity, out HealthComponent* health)) return;
-            //if (!f.Unsafe.TryGetPointer(entity, out PlayerLink* playerLink)) return;
-            //f.Events.PlayerSpawnEvent(entity);
-            //Log.Info("イベント発行");
             HealthComponent.InitializeHealth(f, health);
 
             if (!f.Unsafe.TryGetPointer(entity, out Interactor* interactor)) return;
             interactor->CanInteract = false;
 
             IsDead = false;
-        }
-
-        private void Dead(EntityRef entity)
-        {
-            Log.Info($"Player{entity.Index} is Dead");
         }
 
         private static byte GetAnimState(Input input, bool isGround, bool isJumped)

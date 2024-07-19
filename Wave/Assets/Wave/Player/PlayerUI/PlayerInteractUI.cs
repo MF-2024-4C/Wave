@@ -63,18 +63,18 @@ public class PlayerInteractUI : MonoBehaviour
             forward = transform.root.forward;
         }
 
-        var hits = Physics.RaycastAll(from, forward, distance, _interactLayer);
+        var hits = Physics.RaycastAll(from, forward, distance);
         
         foreach (RaycastHit hit in hits)
         {
-            //Debug.Log("Hit Any");
-            hitEntityView = null;
+            //自分だった場合は飛ばす
+            if (hit.transform.root == transform.root) continue;
+            
             hitEntityView = hit.transform.GetComponentInParent<EntityView>();
             if (hitEntityView == null) continue;
+            
             if (!frame.TryGet<Interactor>(hitEntityView.EntityRef,out var hitInteractor)) continue;
-            Debug.Log($"Can Interact is {hitInteractor.CanInteract} :: OnInteract is {hitInteractor.OnInteract} :: NowCoolDown is {hitInteractor.NowCoolDown}");
             if (!hitInteractor.CanInteract || hitInteractor.OnInteract || hitInteractor.NowCoolDown) continue;
-            //Debug.Log("Hit Interacter!");
             return true;
         }
 
