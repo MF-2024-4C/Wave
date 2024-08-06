@@ -67,6 +67,8 @@ namespace Quantum
         public static void Interact(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys,
             Input input)
         {
+            if (playerSys->IsDead) return;
+            
             //インプットを入力しているか確認
             if (!input.Interact)
             {

@@ -50,6 +50,7 @@ public class PlayerInteractUI : MonoBehaviour
         EntityView hitEntityView = null;
         var frame = QuantumRunner.Default.Game.Frames.Verified;
         if (!frame.TryGet<PlayerSys>(_entityView.EntityRef, out PlayerSys playerSys)) return false;
+        if (playerSys.IsDead) return false;
         
         var prototypeConfig = _entityComponentPlayerSys.Prototype.Config;
         if (prototypeConfig == null) return false;
