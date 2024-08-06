@@ -109,6 +109,7 @@ namespace Quantum
             interactor->CanInteract = true;
 
             playerSys->IsDead = true;
+            playerSys->PlayerAnimState = PlayerConfig.PAnimDown;
         }
 
         public static void Recoil(FPVector2 recoil)

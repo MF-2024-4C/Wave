@@ -10,6 +10,7 @@ namespace Quantum
         public const byte PAnimJump = 0b00000100;
         public const byte PAnimFall = 0b00001000;
         public const byte PAnimGrounded = 0b00010000;
+        public const byte PAnimDown = 0b00100000;
         
         public FP WalkSpeed;
         public FP RunSpeed;
