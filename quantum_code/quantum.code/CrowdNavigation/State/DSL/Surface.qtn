@@ -1,0 +1,10 @@
+asset CrowdNavigationData;
+component Surface {
+   FPVector2 Size;
+   int CellCountWidth;
+   int CellCountHeight;
+   Density Density;
+   Slope Slope;
+   LayerMask LayerMask;
+   asset_ref<CrowdNavigationData> Data;
+}

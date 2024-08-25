@@ -81,6 +81,8 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="Events\Events.qtn"/>
+        <Content Include="CrowdNavigation\Social\Social.qtn" />
+        <Content Include="CrowdNavigation\State\DSL\Surface.qtn" />
         <Content Include="QuantumDemo\Input.qtn"/>
         <Content Include="QuantumDemo\PlayerLink.qtn"/>
         <Content Include="Wave\GameEvent\State\DSL\GameEvent.qtn" />

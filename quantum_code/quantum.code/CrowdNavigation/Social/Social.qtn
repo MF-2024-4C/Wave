@@ -1,0 +1,13 @@
+struct Density
+{
+    FP Min;
+    FP Max;
+    
+    FP Exponent;
+}
+
+struct Slope
+{
+    FP Min;
+    FP Max;
+}
