@@ -1,15 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using Unity.AI.Navigation;
-using UnityEditor.AI;
-using UnityEditor.SceneManagement;
 using UnityEditor;
 using UnityEngine.AI;
 using UnityEngine;
 
 using Debug = UnityEngine.Debug;
-using Object = UnityEngine.Object;
 
 
 namespace idbrii.navgen
@@ -64,12 +60,22 @@ namespace idbrii.navgen
 
         public static void CreateNonWalkableVolumes()
         {
-            CreateNonWalkableVolumes(Get());
+            var collection = Get();
+            if (collection == null)
+            {
+                return;
+            }
+            CreateNonWalkableVolumes(collection);
         }
 
         public static void ClearNonWalkableVolumes()
         {
-            ClearVolumes(Get());
+            var collection = Get();
+            if (collection == null)
+            {
+                return;
+            }
+            ClearVolumes(collection);
         }
 
         static void ClearVolumes(NavNonWalkableCollection collection)

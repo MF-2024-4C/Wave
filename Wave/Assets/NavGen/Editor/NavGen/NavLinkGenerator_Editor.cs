@@ -2,11 +2,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using Unity.AI.Navigation;
+using Unity.AI.Navigation.Editor;
 using UnityEditor;
 using UnityEngine.AI;
 using UnityEngine;
-using Unity.AI.Navigation;
-using Unity.AI.Navigation.Editor;
 using Debug = UnityEngine.Debug;
 
 
@@ -299,7 +299,7 @@ namespace idbrii.navgen
             NavMeshHit nav_hit;
             var ground_found = Color.Lerp(Color.red, Color.white, 0.75f);
             var ground_missing = Color.Lerp(Color.red, Color.white, 0.35f);
-            var navmesh_found = Color.Lerp(Color.cyan, Color.white, 0.75f);
+            var navmesh_found = Color.Lerp(Color.yellow, Color.white, 0.75f);
             var navmesh_missing = Color.Lerp(Color.red, Color.white, 0.65f);
             var traverse_clear = Color.green;
             var traverse_hit = Color.red;
@@ -310,22 +310,34 @@ namespace idbrii.navgen
                 var top = mid + (fwd * gen.m_MaxHorizontalJump * scale);
                 var down = top + (Vector3.down * gen.m_MaxVerticalFall);
                 bool hit = Physics.Linecast(top, down, out phys_hit, gen.m_PhysicsMask.value, QueryTriggerInteraction.Ignore);
-                Debug.DrawLine(mid, top, hit ? ground_found : ground_missing, k_DrawDuration);
-                Debug.DrawLine(top, down, hit ? ground_found : ground_missing, k_DrawDuration);
+                //~ Debug.DrawLine(mid, top, hit ? ground_found : ground_missing, k_DrawDuration);
+                //~ Debug.DrawLine(top, down, hit ? ground_found : ground_missing, k_DrawDuration);
                 if (hit)
                 {
                     var max_distance = gen.m_MaxVerticalFall - phys_hit.distance;
-                    hit = NavMesh.SamplePosition(phys_hit.point, out nav_hit, max_distance, gen.m_NavMask);
-                    // Only place downward links (to avoid double placement).
+                    hit = NavMesh.SamplePosition(phys_hit.point, out nav_hit, max_distance*2, (int)gen.m_NavMask);
+                    // Only place downward links (to avoid back and forth double placement).
                     hit = hit && (nav_hit.position.y <= mid.y);
+                    // Only accept 90 wedge in front of normal (prevent links
+                    // that other edges are already handling).
+                    hit = hit && Vector3.Dot(nav_hit.position - mid, edge.m_Normal) > Mathf.Cos(gen.m_MaxAngleFromEdgeNormal);
                     bool is_original_edge = edge.IsPointOnEdge(nav_hit.position);
                     hit &= !is_original_edge; // don't count self
-                    Debug.DrawLine(phys_hit.point, nav_hit.position, hit ? navmesh_found : navmesh_missing, k_DrawDuration);
+                    //~ Debug.DrawLine(phys_hit.point, nav_hit.position, hit ? navmesh_found : navmesh_missing, k_DrawDuration);
                     if (hit)
                     {
+                        Debug.DrawLine(phys_hit.point, nav_hit.position, hit ? navmesh_found : navmesh_missing, k_DrawDuration);
                         var height_offset = Vector3.up * gen.m_AgentHeight;
+                        
                         var transit_start = mid + height_offset;
                         var transit_end = nav_hit.position + height_offset;
+
+                        var transhit_direrction = transit_end - transit_start;
+                        transhit_direrction.y = 0;
+                        var transit_normalized = transhit_direrction.normalized;
+                        var transit_offset = transit_normalized * gen.m_AgentRadius;
+                        transit_start += transit_offset;
+                        transit_end += transit_offset;
                         // Raycast both ways to ensure we're not inside a collider.
 
                         hit = Physics.Linecast(transit_start, transit_end, out ignored, gen.m_PhysicsMask.value, QueryTriggerInteraction.Ignore)
@@ -336,7 +348,16 @@ namespace idbrii.navgen
                             // Agent can't jump through here.
                             continue;
                         }
-                        var height_delta = nav_hit.position.y - mid.y;
+                        
+                        var distance = mid - nav_hit.position;
+                        if(Mathf.Abs(distance.y) < 0.2f && distance.magnitude < 2f)
+                        {
+                            // Don't create links that are too short.
+                            continue;
+                        }
+                        
+                        var height_delta = mid.y - nav_hit.position.y;
+                        Debug.Assert(height_delta >= 0, "Not handling negative delta.");
                         var prefab = gen.m_JumpLinkPrefab;
                         if (height_delta > gen.m_MaxVerticalJump)
                         {
@@ -355,7 +376,7 @@ namespace idbrii.navgen
                         link.endPoint = link.transform.InverseTransformPoint(nav_hit.position) + (Vector3.forward * inset);
                         link.width = edge.m_Length;
                         link.UpdateLink();
-                        Debug.Log("Created NavLink");
+                        Debug.Log("Created NavLink", link);
                         Undo.RegisterCompleteObjectUndo(link.gameObject, "Create NavMeshLink");
 
                         if (m_AttachDebugToLinks)

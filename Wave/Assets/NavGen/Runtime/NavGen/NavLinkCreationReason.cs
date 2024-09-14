@@ -1,11 +1,6 @@
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using UnityEngine.AI;
 using UnityEngine;
 
 using Debug = UnityEngine.Debug;
-using Object = UnityEngine.Object;
 
 namespace idbrii.navgen
 {

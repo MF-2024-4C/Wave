@@ -41,8 +41,7 @@ MonoBehaviour:
     NavMeshLinks:
     - Id:
         Value: 1913669733921426467
-    Regions:
-    - Jump
+    Regions: []
     StaticColliders2D: []
     StaticColliders3D:
     - Rotation:

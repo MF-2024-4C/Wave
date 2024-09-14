@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
+﻿using System.Collections.Generic;
 using System;
 using System.Linq;
 using System.IO;
@@ -21,14 +18,14 @@ namespace UnityEngine.AI
         public enum NavMeshAreas
         {
             None = 0,
-            Walkable = 1, NotWalkable = 2, Jump = 4, 
+            Walkable = 1, NotWalkable = 2, Jump = 4, Climb = 8, Blocked = 16, Hole = 32, Edge = 64, Fall = 128, New1 = 256, Stuff = 512, 
             All = ~0,
         }
 
         // NavMeshSurface, NavMeshLink, NavMeshModifierVolume, etc. use indexes.
         public enum NavMeshAreaIndex
         {
-            Walkable = 0, NotWalkable = 1, Jump = 2, 
+            Walkable = 0, NotWalkable = 1, Jump = 2, Climb = 3, Blocked = 4, Hole = 5, Edge = 6, Fall = 7, New1 = 8, Stuff = 9, 
         }
 
     #endregion

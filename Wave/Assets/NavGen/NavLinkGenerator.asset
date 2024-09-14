@@ -16,13 +16,14 @@ MonoBehaviour:
     type: 3}
   m_FallLinkPrefab: {fileID: 6128189398219158676, guid: 2c0b24ea0bd0159449cd2918cf58fa6d,
     type: 3}
-  m_MaxHorizontalJump: 2
-  m_MaxVerticalJump: 2
-  m_MaxVerticalFall: 90
-  m_Steps: 100
+  m_MaxHorizontalJump: 1
+  m_MaxVerticalJump: 1
+  m_MaxVerticalFall: 100
+  m_Steps: 10
   m_PhysicsMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_NavMask: -1
   m_AgentHeight: 2
-  m_AgentRadius: 0.75
+  m_AgentRadius: 0.25
+  m_MaxAngleFromEdgeNormal: 4.5

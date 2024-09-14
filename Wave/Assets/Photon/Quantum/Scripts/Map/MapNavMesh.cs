@@ -633,8 +633,9 @@ public static class MapNavMesh
                 // Add link
                 ArrayUtils.Add(ref result.Links, new MapNavMeshLink
                 {
-                    Start = link.transform.position + link.startPoint,
-                    End = link.transform.position + link.endPoint, Bidirectional = link.bidirectional,
+                    Start = link.transform.TransformPoint(link.startPoint),
+                    End = link.transform.TransformPoint(link.endPoint),
+                    Bidirectional = link.bidirectional,
                     CostOverride = link.costModifier,
                     RegionId = regionId,
                     Name = link.name
