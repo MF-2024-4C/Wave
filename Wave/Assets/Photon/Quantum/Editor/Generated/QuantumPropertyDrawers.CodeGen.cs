@@ -32,7 +32,6 @@ namespace Quantum.Editor {
   [CustomPropertyDrawer(typeof(AssetRefCrowdNavigationData))]
   public class AssetRefCrowdNavigationDataPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
-      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(CrowdNavigationDataAsset));
     }
   }
 

@@ -3,9 +3,7 @@
     "rootNamespace": "",
     "references": [
         "PhotonRealtime",
-        "PhotonQuantumCode",
-        "Unity.Addressables",
-        "Unity.ResourceManager"
+        "Unity.AI.Navigation"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

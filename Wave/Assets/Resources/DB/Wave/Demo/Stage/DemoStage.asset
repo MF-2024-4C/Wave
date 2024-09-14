@@ -41,7 +41,8 @@ MonoBehaviour:
     NavMeshLinks:
     - Id:
         Value: 1913669733921426467
-    Regions: []
+    Regions:
+    - Jump
     StaticColliders2D: []
     StaticColliders3D:
     - Rotation:
@@ -1604,6 +1605,88 @@ MonoBehaviour:
       MutableMode: 0
     - Rotation:
         X:
+          RawValue: 9226
+        Y:
+          RawValue: 45492
+        Z:
+          RawValue: -9196
+        W:
+          RawValue: -45339
+      Position:
+        X:
+          RawValue: 468136
+        Y:
+          RawValue: -139357
+        Z:
+          RawValue: 1181107
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 137350
+        Y:
+          RawValue: 24500
+        Z:
+          RawValue: 70900
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Car_1_Yellow (8)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 38
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 9226
+        Y:
+          RawValue: 45492
+        Z:
+          RawValue: -9196
+        W:
+          RawValue: -45339
+      Position:
+        X:
+          RawValue: 468136
+        Y:
+          RawValue: -137977
+        Z:
+          RawValue: 1129483
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 90200
+        Y:
+          RawValue: 46000
+        Z:
+          RawValue: 70900
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Car_1_Yellow (8)
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 39
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
           RawValue: 0
         Y:
           RawValue: 46314
@@ -1640,7 +1723,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 38
+        ColliderIndex: 40
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1681,7 +1764,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 39
+        ColliderIndex: 41
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1722,7 +1805,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 40
+        ColliderIndex: 42
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1763,7 +1846,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 41
+        ColliderIndex: 43
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1804,7 +1887,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 42
+        ColliderIndex: 44
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1845,7 +1928,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 43
+        ColliderIndex: 45
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1886,7 +1969,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 44
+        ColliderIndex: 46
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1927,7 +2010,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 45
+        ColliderIndex: 47
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -1968,7 +2051,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 46
+        ColliderIndex: 48
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2009,7 +2092,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 47
+        ColliderIndex: 49
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2050,7 +2133,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 48
+        ColliderIndex: 50
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2091,7 +2174,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 49
+        ColliderIndex: 51
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2132,7 +2215,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 50
+        ColliderIndex: 52
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2173,7 +2256,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 51
+        ColliderIndex: 53
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2214,7 +2297,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 52
+        ColliderIndex: 54
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2255,7 +2338,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 53
+        ColliderIndex: 55
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2296,7 +2379,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 54
+        ColliderIndex: 56
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2337,7 +2420,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 55
+        ColliderIndex: 57
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2378,7 +2461,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 56
+        ColliderIndex: 58
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2419,7 +2502,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 57
+        ColliderIndex: 59
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2460,7 +2543,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 58
+        ColliderIndex: 60
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2501,7 +2584,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 59
+        ColliderIndex: 61
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2542,7 +2625,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 60
+        ColliderIndex: 62
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2583,7 +2666,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 61
+        ColliderIndex: 63
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2624,7 +2707,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 62
+        ColliderIndex: 64
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2665,7 +2748,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 63
+        ColliderIndex: 65
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2706,88 +2789,6 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 64
-        MutableMode: 0
-      MutableMode: 0
-    - Rotation:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-        W:
-          RawValue: 65536
-      Position:
-        X:
-          RawValue: -393216
-        Y:
-          RawValue: -228719
-        Z:
-          RawValue: -327680
-      PhysicsMaterial:
-        Id:
-          Value: 0
-      ShapeType: 4
-      SphereRadius:
-        RawValue: 0
-      BoxExtents:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-      SmoothSphereMeshCollisions: 0
-      StaticData:
-        Name: Bill
-        Tag: Untagged
-        Layer: 0
-        Asset:
-          Id:
-            Value: 0
-        IsTrigger: 0
-        ColliderIndex: 65
-        MutableMode: 0
-      MutableMode: 0
-    - Rotation:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-        W:
-          RawValue: 65536
-      Position:
-        X:
-          RawValue: -393216
-        Y:
-          RawValue: -228719
-        Z:
-          RawValue: 393216
-      PhysicsMaterial:
-        Id:
-          Value: 0
-      ShapeType: 4
-      SphereRadius:
-        RawValue: 0
-      BoxExtents:
-        X:
-          RawValue: 0
-        Y:
-          RawValue: 0
-        Z:
-          RawValue: 0
-      SmoothSphereMeshCollisions: 0
-      StaticData:
-        Name: Bill
-        Tag: Untagged
-        Layer: 0
-        Asset:
-          Id:
-            Value: 0
-        IsTrigger: 0
         ColliderIndex: 66
         MutableMode: 0
       MutableMode: 0
@@ -2802,7 +2803,7 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: 1507328
+          RawValue: -393216
         Y:
           RawValue: -228719
         Z:
@@ -2843,7 +2844,7 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
-          RawValue: 1507328
+          RawValue: -393216
         Y:
           RawValue: -228719
         Z:
@@ -2884,6 +2885,88 @@ MonoBehaviour:
           RawValue: 65536
       Position:
         X:
+          RawValue: 1507328
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: -327680
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 69
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 1507328
+        Y:
+          RawValue: -228719
+        Z:
+          RawValue: 393216
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 4
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Bill
+        Tag: Untagged
+        Layer: 0
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 70
+        MutableMode: 0
+      MutableMode: 0
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
           RawValue: -393216
         Y:
           RawValue: -228719
@@ -2911,7 +2994,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 69
+        ColliderIndex: 71
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2952,7 +3035,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 70
+        ColliderIndex: 72
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -2993,7 +3076,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 71
+        ColliderIndex: 73
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3034,7 +3117,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 72
+        ColliderIndex: 74
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3075,7 +3158,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 73
+        ColliderIndex: 75
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3116,7 +3199,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 74
+        ColliderIndex: 76
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3157,7 +3240,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 75
+        ColliderIndex: 77
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3198,7 +3281,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 76
+        ColliderIndex: 78
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3239,7 +3322,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 77
+        ColliderIndex: 79
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3280,7 +3363,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 78
+        ColliderIndex: 80
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3321,7 +3404,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 79
+        ColliderIndex: 81
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3362,7 +3445,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 80
+        ColliderIndex: 82
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3403,7 +3486,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 81
+        ColliderIndex: 83
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3444,7 +3527,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 82
+        ColliderIndex: 84
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3485,7 +3568,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 83
+        ColliderIndex: 85
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3526,7 +3609,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 84
+        ColliderIndex: 86
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3567,7 +3650,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 85
+        ColliderIndex: 87
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3608,7 +3691,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 86
+        ColliderIndex: 88
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3649,7 +3732,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 87
+        ColliderIndex: 89
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3690,7 +3773,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 88
+        ColliderIndex: 90
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3731,7 +3814,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 89
+        ColliderIndex: 91
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3772,7 +3855,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 90
+        ColliderIndex: 92
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3813,7 +3896,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 91
+        ColliderIndex: 93
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3854,7 +3937,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 92
+        ColliderIndex: 94
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3895,7 +3978,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 93
+        ColliderIndex: 95
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3936,7 +4019,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 94
+        ColliderIndex: 96
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -3977,7 +4060,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 95
+        ColliderIndex: 97
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4018,7 +4101,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 96
+        ColliderIndex: 98
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4059,7 +4142,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 97
+        ColliderIndex: 99
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4100,7 +4183,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 98
+        ColliderIndex: 100
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4141,7 +4224,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 99
+        ColliderIndex: 101
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4182,7 +4265,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 100
+        ColliderIndex: 102
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4223,7 +4306,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 101
+        ColliderIndex: 103
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4264,7 +4347,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 102
+        ColliderIndex: 104
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4305,7 +4388,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 103
+        ColliderIndex: 105
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4346,7 +4429,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 104
+        ColliderIndex: 106
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4387,7 +4470,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 105
+        ColliderIndex: 107
         MutableMode: 0
       MutableMode: 0
     - Rotation:
@@ -4428,7 +4511,7 @@ MonoBehaviour:
           Id:
             Value: 0
         IsTrigger: 0
-        ColliderIndex: 106
+        ColliderIndex: 108
         MutableMode: 0
       MutableMode: 0
     MapEntities: []
@@ -4449,6 +4532,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -4558,6 +4642,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -4667,6 +4752,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -4762,6 +4848,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -4834,6 +4921,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -4906,6 +4994,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -4978,6 +5067,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5050,6 +5140,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5122,6 +5213,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5194,6 +5286,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5266,6 +5359,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5338,6 +5432,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5410,6 +5505,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5482,6 +5578,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5550,6 +5647,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5698,6 +5796,156 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
+    Weapon: []
+    WeaponEvents: []
+    WeaponInventory: []
+    WeaponInventorySetup: []
+    Zombie:
+    - HP:
+        RawValue: 0
+      State:
+        Value: 0
+      Target:
+        SceneIndexPlusOne: 0
+      Spec:
+        Id:
+          Value: 98722892196609692
+      AttackInterval:
+        RawValue: 327680
+      AttackIntervalTimer:
+        RawValue: 0
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder:
+    - AgentConfig:
+        Id:
+          Value: 2
+      InitialTarget:
+        _hasValue: 0
+        _value:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+      InitialTargetNavMesh:
+        Id:
+          Value: 0
+      InitialTargetNavMeshName: 
+    NavMeshSteeringAgent:
+    - OverrideMaxSpeed: 0
+      OverrideAcceleration: 0
+      MaxSpeed:
+        RawValue: 0
+      Acceleration:
+        RawValue: 0
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 5
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 12451
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 19660
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 6
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 512229
+        Y:
+          RawValue: 42926
+        Z:
+          RawValue: 1530724
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    DefenseMission: []
+    DestroyEvent: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    HealthComponent: []
+    Interactor: []
+    ItemData: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    Shutter: []
+    SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5846,6 +6094,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -5994,6 +6243,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -6142,6 +6392,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -6308,6 +6559,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []
@@ -6417,6 +6669,7 @@ MonoBehaviour:
     RuntimeSwarm: []
     Shutter: []
     SingletonZombiesSpawnEvent: []
+    Surface: []
     Weapon: []
     WeaponEvents: []
     WeaponInventory: []

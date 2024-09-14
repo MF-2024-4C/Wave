@@ -1,0 +1,20 @@
+{
+    "name": "idbrii.NavGen.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.AI.Navigation",
+        "idbrii.NavGen",
+        "Unity.AI.Navigation.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

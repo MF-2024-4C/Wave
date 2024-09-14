@@ -526,6 +526,11 @@ $@"<?xml version=""1.0"" encoding=""utf-8""?>
                 if (!match.Success)
                   throw new InvalidOperationException($"Unexpected line: {lines[i]} (at {i})");
 
+                if (!result.Projects.Contains(match.Groups[1].Value))
+                {
+                  Debug.LogWarning($"Project {match.Groups[1].Value} not found in solution");
+                  continue;
+                }
                 var project = result.Projects[match.Groups[1].Value];
 
                 Dictionary<string, string> conf;

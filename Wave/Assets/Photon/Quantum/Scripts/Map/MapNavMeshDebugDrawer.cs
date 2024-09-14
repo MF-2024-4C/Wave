@@ -48,11 +48,14 @@ public class MapNavMeshDebugDrawer : MonoBehaviour {
 
     if (DrawLinks) {
       for (int i = 0; i < _navmesh.Links.Length; i++) {
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.red;
         GizmoUtils.DrawGizmoVector(
           _navmesh.Links[i].Start.ToUnityVector3(true), 
           _navmesh.Links[i].End.ToUnityVector3(true), 
           GizmoUtils.DefaultArrowHeadLength * editorSettings.GizmoIconScale.AsFloat);
+        
+        Handles.Label(_navmesh.Links[i].Start.ToUnityVector3(true), i.ToString());
+        Handles.Label(_navmesh.Links[i].End.ToUnityVector3(true), i.ToString());
       }
     }
 
