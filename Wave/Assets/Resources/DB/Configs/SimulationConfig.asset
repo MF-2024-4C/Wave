@@ -21,7 +21,7 @@ MonoBehaviour:
       DefaultNavMeshAgent:
         Id:
           Value: 2
-      EnableNavigationCallbacks: 0
+      EnableNavigationCallbacks: 1
       HeightThresholdForWaypoints:
         RawValue: 65536
       HeightThresholdForAvoidance:

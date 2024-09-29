@@ -47,7 +47,7 @@ MonoBehaviour:
       PositionSolverIterations: 2
       UseJoints: 0
       UseAngularVelocity: 1
-      UseVerticalTransform: 0
+      UseVerticalTransform: 1
       PenetrationAllowance:
         RawValue: 655
       PenetrationCorrection:
@@ -63,7 +63,7 @@ MonoBehaviour:
         RawValue: 655
       ShapeCastSoftTolerance:
         RawValue: 3275
-      AllowSleeping: 0
+      AllowSleeping: 1
       SleepTimeSec:
         RawValue: 32768
       LinearSleepTolerance:
