@@ -122,6 +122,10 @@ namespace KINEMATION.KAnimationCore.Runtime.Rig
             // Invalid index, try to use the element name instead.
             if (index < 0 || index > hierarchy.Count - 1)
             {
+                if (!_hierarchyMap.ContainsKey(rigElement.name))
+                {
+                    Debug.LogError($"Rig element `{rigElement.name}` not found!", this);
+                }
                 index = _hierarchyMap[rigElement.name];
             }
 

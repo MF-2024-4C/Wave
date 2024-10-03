@@ -260,6 +260,7 @@ namespace Demo.Scripts.Runtime.Character
         
         private void UpdateLookInput()
         {
+            Debug.Log("Updating Look Input" + _sensitivityMultiplierPropertyIndex);
             float scale = _userInput.GetValue<float>(_sensitivityMultiplierPropertyIndex);
             
             float deltaMouseX = _lookDeltaInput.x * settings.sensitivity * scale;

@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a38f36b54b84df3873b796d6728c637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorProfile: {fileID: 11400000, guid: 5e05f8c501cf100499d220425ec62f1a, type: 2}
+  animatorProfile: {fileID: 11400000, guid: fea8d6d5b828182489eff44ccc6024a7, type: 2}
   defaultAimPoint: {fileID: 4299444512101388841}
 --- !u!114 &2511039851541650472
 MonoBehaviour:

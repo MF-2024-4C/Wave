@@ -46,7 +46,8 @@ namespace KINEMATION.FPSAnimationFramework.Editor.Tools
             {
                 for (int i = _maskToModify.transformCount - 1; i >= 0; i--)
                 {
-                    if (_maskToModify.GetTransformPath(i).EndsWith(_boneToAdd.name))
+                    var transformPath = _maskToModify.GetTransformPath(i);
+                    if (transformPath.EndsWith(_boneToAdd.name))
                     {
                         return;
                     }

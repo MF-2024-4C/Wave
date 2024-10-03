@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a38f36b54b84df3873b796d6728c637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorProfile: {fileID: 11400000, guid: ca0f87b4add08a24b9c437e6dd0ba7e4, type: 2}
+  animatorProfile: {fileID: 11400000, guid: fea8d6d5b828182489eff44ccc6024a7, type: 2}
   defaultAimPoint: {fileID: 105817931825604440}
 --- !u!95 &7307489893473480553
 Animator:

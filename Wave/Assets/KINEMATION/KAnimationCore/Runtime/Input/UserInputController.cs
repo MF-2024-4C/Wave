@@ -167,7 +167,7 @@ namespace KINEMATION.KAnimationCore.Runtime.Input
             {
                 return default(T);
             }
-            
+
             return (T) _inputProperties[propertyIndex];
         }
 

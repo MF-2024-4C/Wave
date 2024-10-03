@@ -257,6 +257,7 @@ namespace KINEMATION.FPSAnimationFramework.Runtime.Core
             
             foreach (var setting in _activeProfile.settings)
             {
+                Debug.Log($"Linking {setting.name}");
                 // If the setting type is in the map, we must dynamically link it.
                 if (linkedStatesMap.TryGetValue(setting.GetType(), out var layerState))
                 {

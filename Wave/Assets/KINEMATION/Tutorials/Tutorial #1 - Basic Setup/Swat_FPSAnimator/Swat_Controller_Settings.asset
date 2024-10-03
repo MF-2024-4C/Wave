@@ -25,7 +25,8 @@ MonoBehaviour:
   sensitivity: 1
   weaponBone:
     name: IK WeaponBone
-    index: -1
+    index: 46
     isVirtual: 0
   weaponPrefabs:
   - {fileID: 5184969205598449029, guid: c03bfe1e98e1a9045a15c6b9654ef1cd, type: 3}
+  - {fileID: 6279796977330283349, guid: aacdb77dce8391f4f943a3049dd9e090, type: 3}
