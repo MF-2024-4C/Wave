@@ -812,20 +812,24 @@ namespace Quantum.Editor {
 
       private static readonly Type InternalType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.ScriptAttributeUtility", true);
 
-      public delegate FieldInfo GetFieldInfoFromPropertyDelegate(SerializedProperty property, out Type type);
+      public delegate FieldInfo GetFieldInfoFromPropertyDelegate(UnityEditor.SerializedProperty property, out Type type);
       public static readonly GetFieldInfoFromPropertyDelegate GetFieldInfoFromProperty =
         CreateEditorMethodDelegate<GetFieldInfoFromPropertyDelegate>(
-        "UnityEditor.ScriptAttributeUtility",
-        "GetFieldInfoFromProperty",
-        BindingFlags.Static | BindingFlags.NonPublic);
+          "UnityEditor.ScriptAttributeUtility",
+          "GetFieldInfoFromProperty",
+          BindingFlags.Static | BindingFlags.NonPublic);
 
-      public delegate Type GetDrawerTypeForTypeDelegate(Type type,bool isManagedReference);
+      public delegate Type GetDrawerTypeForTypeDelegate(Type type, bool isManagedReference);
       public static readonly GetDrawerTypeForTypeDelegate GetDrawerTypeForType =
-        CreateEditorMethodDelegate<GetDrawerTypeForTypeDelegate>(
-        "UnityEditor.ScriptAttributeUtility",
-        "GetDrawerTypeForType",
-        BindingFlags.Static | BindingFlags.NonPublic);
+        InternalType.CreateMethodDelegate<GetDrawerTypeForTypeDelegate>(
+          "GetDrawerTypeForType",
+          BindingFlags.Static | BindingFlags.NonPublic,
+          typeof(GetDrawerTypeForTypeDelegate),
+          DelegateSwizzle<Type, bool>.Make((t, b) => t), // post 2023.3
+          DelegateSwizzle<Type, bool>.Make((t, b) => t, (t, b) => (Type[])null, (t, b) => b) // pre 2023.3.23
+        );
 
+      
       private delegate object GetHandlerDelegate(SerializedProperty property);
       private static readonly GetHandlerDelegate _GetHandler = InternalType.CreateMethodDelegate<GetHandlerDelegate>("GetHandler", BindingFlags.NonPublic | BindingFlags.Static,
         MakeFuncType(typeof(SerializedProperty), PropertyHandler.InternalType)
@@ -1100,11 +1104,9 @@ namespace Quantum.Editor {
 
     [InitializeOnLoad]
     public static class LayerMatrixGUI {
-
       static Assembly FindAssembly(string name) {
         return AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.GetName().Name == name);
       }
-      
       private static readonly Type InternalType = FindAssembly("UnityEditor.Physics2DModule")?.GetType("UnityEditor.LayerCollisionMatrixGUI2D", true);
       private static readonly Type InternalGetValueFuncType = InternalType.GetNestedTypeOrThrow(nameof(GetValueFunc), BindingFlags.Public);
       private static readonly Type InternalSetValueFuncType = InternalType.GetNestedTypeOrThrow(nameof(SetValueFunc), BindingFlags.Public);
@@ -1116,9 +1118,10 @@ namespace Quantum.Editor {
           false;
 #endif
 
-      private static readonly Delegate _Draw = InternalType?.CreateMethodDelegate(nameof(Draw), BindingFlags.Public | BindingFlags.Static, 
+      private static readonly Delegate _doGUI = InternalType.CreateMethodDelegate(nameof(Draw), BindingFlags.Public | BindingFlags.Static,
         typeof(Action<,,>).MakeGenericType(
-          typeof(GUIContent), InternalGetValueFuncType, InternalSetValueFuncType)
+          _doGUIUsesGUIContent ? typeof(GUIContent) : typeof(string),
+          InternalGetValueFuncType, InternalSetValueFuncType)
       );
 
       private delegate void Ref2Action<T1, T2, T3, T4>(T1 t1, ref T2 t2, T3 t3, T4 t4);
@@ -1126,19 +1129,17 @@ namespace Quantum.Editor {
       public delegate bool GetValueFunc(int layerA, int layerB);
       public delegate void SetValueFunc(int layerA, int layerB, bool val);
 
-      public static void DoGUI(string title, ref bool show, GetValueFunc getValue, SetValueFunc setValue) {
+      public static void Draw(string title, ref bool show, GetValueFunc getValue, SetValueFunc setValue) {
         var getter = Delegate.CreateDelegate(InternalGetValueFuncType, getValue.Target, getValue.Method);
         var setter = Delegate.CreateDelegate(InternalSetValueFuncType, setValue.Target, setValue.Method);
-
-        var args = new object[] { title, show, getter, setter };
+        var args = new object[] { title, getter, setter };
         if (_doGUIUsesGUIContent) {
 #pragma warning disable CS0162 // Unreachable code detected
           args[0] = new GUIContent(title);
 #pragma warning restore CS0162 // Unreachable code detected
         }
 
-        _Draw.DynamicInvoke(title, getter, setter);
-        show = (bool)args[1];
+        _doGUI.DynamicInvoke(args);
       }
     }
 

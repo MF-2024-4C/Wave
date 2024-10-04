@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 676ce269f3b4e4c4da02c203edd813a9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Prefabs/Rifle_Ammo_Pickupable.prefab
+  uploadId: 446320

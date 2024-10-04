@@ -1,0 +1,11 @@
+asset BaseItemConfig;
+asset import Item1Config;
+asset import Item2Config;
+asset import Item3Config;
+asset import AddDamageItemConfig;
+asset import AddHealthItemConfig;
+
+component ItemData
+{
+    asset_ref<BaseItemConfig> Config;
+}

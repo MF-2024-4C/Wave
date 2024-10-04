@@ -3485,9 +3485,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9633ef6a69a79f74d9e64e37d273caac, type: 2}
   - {fileID: 11400000, guid: 9970b44d8cd65884c84291aef7392d84, type: 2}
   - {fileID: 11400000, guid: a6e56f54b5bdb36498718ac639efe66a, type: 2}
+  - {fileID: 11400000, guid: 1af59e365c18d92428922e34792b4439, type: 2}
   autoSelectCamera: 1
   cameraData:
-    mainCamera: {fileID: 224802073}
+    mainCamera: {fileID: 0}
     renderOnlySelectedCamera: 0
   useFloatingOriginHandler: 0
   applyFloatingOriginRotationAndScale: 0
@@ -3496,7 +3497,7 @@ MonoBehaviour:
   isOcclusionCulling: 1
   minCullingDistance: 0
   selectedPrototypeList:
-  - {fileID: 11400000, guid: 4cf0c57d71a0ee14594781e87cde0ac2, type: 2}
+  - {fileID: 11400000, guid: 1af59e365c18d92428922e34792b4439, type: 2}
   isPrototypeTextMode: 0
   showSceneSettingsBox: 1
   showPrototypeBox: 1
@@ -3523,12 +3524,15 @@ MonoBehaviour:
     registeredPrefabs: []
   - prefabPrototype: {fileID: 11400000, guid: a6e56f54b5bdb36498718ac639efe66a, type: 2}
     registeredPrefabs: []
+  - prefabPrototype: {fileID: 11400000, guid: 1af59e365c18d92428922e34792b4439, type: 2}
+    registeredPrefabs: []
   prefabList:
   - {fileID: 8438636531806021862, guid: ae95deef55e10b848bcef33f48624142, type: 3}
   - {fileID: 3568986732492470400, guid: bc45d547ef5d0bf4a822623c9c3f822e, type: 3}
   - {fileID: 4789352614063257090, guid: 1e2938ad3de22844f9f9fd2cae221bab, type: 3}
   - {fileID: 3355850618905030047, guid: a519f4d821c9d574aae1dbb6bd4aefd2, type: 3}
   - {fileID: 1376482703722273950, guid: 00833a148ac5c2c47ab60949a99da0db, type: 3}
+  - {fileID: 8438636531806021862, guid: 0b37df627ba272641bc21e4102c22d76, type: 3}
   enableMROnManagerDisable: 1
   enableMROnRemoveInstance: 1
   animationEvents: []

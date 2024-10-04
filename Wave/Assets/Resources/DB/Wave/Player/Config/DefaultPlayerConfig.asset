@@ -20,10 +20,21 @@ MonoBehaviour:
     WalkSpeed:
       RawValue: 327680
     RunSpeed:
-      RawValue: 655360
+      RawValue: 458752
     JumpPower:
       RawValue: 327680
-    BreakPower:
-      RawValue: 6553600
+    AirMovePower:
+      RawValue: 65536
     RotationSpeed:
       RawValue: 655360
+    InteractRayOffset:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 110100
+      Z:
+        RawValue: 0
+    InteractRayDistance:
+      RawValue: 196608
+    InteractLayer:
+      BitMask: 183

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0136c32b1d1603478b41ffffac00838
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Pistol/Materials/PistolSand.mat
+  uploadId: 446320

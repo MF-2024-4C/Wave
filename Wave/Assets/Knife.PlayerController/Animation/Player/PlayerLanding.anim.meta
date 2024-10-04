@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 013ba7c675fa58f498b44928ea18489a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Animation/Player/PlayerLanding.anim
+  uploadId: 446320

@@ -1,0 +1,524 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a366507de6e4aa44aea490bd69adace, type: 3}
+  m_Name: Expo-Enemy-03
+  m_EditorClassIdentifier: 
+  Settings:
+    Identifier:
+      Path: Resources/DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03
+      Guid:
+        Value: 3331598356427461593
+    UserAsset:
+      Id:
+        Value: 0
+    Scene: Expo-Eneymy-03ZombieSpawn
+    ScenePath: Assets/Wave/Exp/Enemy/03-ZombieSpawn/Expo-Eneymy-03ZombieSpawn.unity
+    SceneGuid: 993b9de494aa1c246945aa86fe3986f4
+    WorldSize: 256
+    BucketsCount: 32
+    BucketsSubdivisions: 8
+    BucketingAxis: 0
+    SortingAxis: 1
+    TriangleMeshCellSize: 4
+    StaticColliders3DTrianglesData:
+      Id:
+        Value: 703508689461989815
+    OptionalTriangleMetadataSerializationEnabled: 1
+    SerializeTrianglesMetadata: 0
+    StaticColliders3DTrianglesBinaryFile: 
+    GridSizeX: 8
+    GridSizeY: 8
+    GridNodeSize: 16
+    NavMeshLinks:
+    - Id:
+        Value: 2175693206120820960
+    Regions: []
+    StaticColliders2D: []
+    StaticColliders3D:
+    - Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+        W:
+          RawValue: 65536
+      Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: -155975
+        Z:
+          RawValue: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+      ShapeType: 2
+      SphereRadius:
+        RawValue: 0
+      BoxExtents:
+        X:
+          RawValue: 3276800
+        Y:
+          RawValue: 32768
+        Z:
+          RawValue: 3276800
+      SmoothSphereMeshCollisions: 0
+      StaticData:
+        Name: Floor
+        Tag: Untagged
+        Layer: 7
+        Asset:
+          Id:
+            Value: 0
+        IsTrigger: 0
+        ColliderIndex: 0
+        MutableMode: 0
+      MutableMode: 0
+    MapEntities: []
+  Prototypes:
+  - ButtonEntity:
+    - trigger:
+        ID: 150
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Zombie: []
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 0
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 0
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 32768
+          Y:
+            RawValue: 32768
+          Z:
+            RawValue: 32768
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 0
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 262144
+        Z:
+          RawValue: 0
+      Rotation:
+        X:
+          RawValue: 2949120
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 2949119
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Zombie: []
+    ZombieSpawnArea:
+    - Active:
+        Value: 0
+      MaxSpawnCount: 30
+      CurrentSpawnCount: 0
+      Radius:
+        RawValue: 327680
+      isHorde:
+        Value: 0
+      EndTime:
+        RawValue: 0
+      Config:
+        Id:
+          Value: 2223039371131874354
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder: []
+    NavMeshSteeringAgent: []
+    PhysicsBody2D: []
+    PhysicsBody3D: []
+    PhysicsCollider2D: []
+    PhysicsCollider3D: []
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D: []
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: -124518
+        Z:
+          RawValue: 902430
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Zombie:
+    - HP:
+        RawValue: 0
+      State:
+        Value: 0
+      Target:
+        SceneIndexPlusOne: 0
+      Spec:
+        Id:
+          Value: 98722892196609692
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder:
+    - AgentConfig:
+        Id:
+          Value: 2
+      InitialTarget:
+        _hasValue: 0
+        _value:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+      InitialTargetNavMesh:
+        Id:
+          Value: 0
+      InitialTargetNavMeshName: 
+    NavMeshSteeringAgent:
+    - OverrideMaxSpeed: 0
+      OverrideAcceleration: 0
+      MaxSpeed:
+        RawValue: 0
+      Acceleration:
+        RawValue: 0
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 5
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 12451
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 19660
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 6
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 1458831
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []
+  - ButtonEntity: []
+    Character: []
+    EventComponent: []
+    GameEvent: []
+    GameEventQueue: []
+    PlayerLink: []
+    PlayerSys: []
+    RuntimeSwarm: []
+    SingletonZombiesSpawnEvent: []
+    TmpPlayer: []
+    Zombie:
+    - HP:
+        RawValue: 0
+      State:
+        Value: 0
+      Target:
+        SceneIndexPlusOne: 0
+      Spec:
+        Id:
+          Value: 98722892196609692
+    ZombieSpawnArea: []
+    ZombieTargetable: []
+    ZombiesSpawnEvent: []
+    CharacterController2D: []
+    CharacterController3D: []
+    NavMeshAvoidanceAgent: []
+    NavMeshAvoidanceObstacle: []
+    NavMeshPathfinder:
+    - AgentConfig:
+        Id:
+          Value: 2
+      InitialTarget:
+        _hasValue: 0
+        _value:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+      InitialTargetNavMesh:
+        Id:
+          Value: 0
+      InitialTargetNavMeshName: 
+    NavMeshSteeringAgent:
+    - OverrideMaxSpeed: 0
+      OverrideAcceleration: 0
+      MaxSpeed:
+        RawValue: 0
+      Acceleration:
+        RawValue: 0
+    PhysicsBody2D: []
+    PhysicsBody3D:
+    - Version: 2
+      Config:
+        Value: 58
+      Mass:
+        RawValue: 65536
+      Drag:
+        RawValue: 32768
+      AngularDrag:
+        RawValue: 32768
+      CenterOfMass:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+      RotationFreeze:
+        Value: 5
+      GravityScale:
+        _hasValue: 0
+        _value:
+          RawValue: 65536
+    PhysicsCollider2D: []
+    PhysicsCollider3D:
+    - ShapeConfig:
+        ShapeType: 2
+        SphereRadius:
+          RawValue: 32768
+        PositionOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 0
+        BoxExtents:
+          X:
+            RawValue: 12451
+          Y:
+            RawValue: 65536
+          Z:
+            RawValue: 19660
+        RotationOffset:
+          X:
+            RawValue: 0
+          Y:
+            RawValue: 0
+          Z:
+            RawValue: 0
+        UserTag: 0
+        IsPersistent: 1
+        CompoundShapes: []
+        IsSetFromSourceCollider: 0
+      Layer: 6
+      IsTrigger: 0
+      PhysicsMaterial:
+        Id:
+          Value: 0
+    PhysicsCallbacks2D: []
+    PhysicsCallbacks3D:
+    - CallbackFlags:
+        Value: 0
+    Transform2D: []
+    Transform2DVertical: []
+    Transform3D:
+    - Position:
+        X:
+          RawValue: -90505
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 1458831
+      Rotation:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    View: []
+    PhysicsJoints2D: []
+    PhysicsJoints3D: []

@@ -1,4 +1,6 @@
-﻿input
+﻿
+
+input
 {
     button Jump;
     FPVector2 Direction;

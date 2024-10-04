@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0542cd5e75e1ba94fa413e707832153e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Animation/UI/HexSlot.controller
+  uploadId: 446320

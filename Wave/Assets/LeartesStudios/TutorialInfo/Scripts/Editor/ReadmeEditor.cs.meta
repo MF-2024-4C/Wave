@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1321592a1e9db5243baa330b05596995
+timeCreated: 1484146680
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262233
+  packageName: Abandoned Industrial Factory Environment
+  packageVersion: 1.0
+  assetPath: Assets/LeartesStudios/TutorialInfo/Scripts/Editor/ReadmeEditor.cs
+  uploadId: 605007

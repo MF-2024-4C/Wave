@@ -5,5 +5,20 @@ component PlayerSys
     asset_ref<PlayerConfig> Config;
     
     byte PlayerAnimState;
-    FPQuaternion TargetRotation;
+    FPQuaternion TargetRotation;    
+    
+    FP WalkSpeed;
+    FP RunSpeed;
+    FP JumpPower;
+    FP AirMovePower;
+    
+    FPVector3 CameraForwardDirection;
+    EntityRef InteractEntity;
+    
+    bool IsDead;
+}
+
+event PlayerSpawnEvent{
+    PlayerLink PlayerLink;
+    EntityRef EntityRef;
 }

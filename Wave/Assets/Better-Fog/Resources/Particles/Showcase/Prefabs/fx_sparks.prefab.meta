@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5d3c1ceb15537374d875df398ff6dd00
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 259457
+  packageName: 'Better Fog: Height Fog, Light Scattering & More'
+  packageVersion: 1.2
+  assetPath: Assets/Better-Fog/Resources/Particles/Showcase/Prefabs/fx_sparks.prefab
+  uploadId: 649686

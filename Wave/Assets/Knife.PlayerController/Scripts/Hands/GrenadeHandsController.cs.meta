@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 54bb8e3d2b3723846ad56704b602e397
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Scripts/Hands/GrenadeHandsController.cs
+  uploadId: 446320

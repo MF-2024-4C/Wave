@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 172f41e3886a7ee44b6ddcc777f435f5
+timeCreated: 1473684431
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Effects/Misc Effects/Materials/Spark2Particle
+    2.mat
+  uploadId: 446320

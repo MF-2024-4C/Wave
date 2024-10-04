@@ -1,8 +1,8 @@
 ﻿namespace Quantum.Player
 {
-    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.Filter>
+    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>, ISignalOnDead, ISignalOnInteractCall, ISignalOnReleaseCall
     {
-        public struct Filter
+        public struct PlayerFilter
         {
             public EntityRef Entity;
             public Transform3D* Transform;
@@ -10,7 +10,7 @@
             public PlayerSys* Player;
         }
 
-        public override void Update(Frame f, ref Filter filter)
+        public override void Update(Frame f, ref PlayerFilter filter)
         {
             Input input = default;
             //PlayerAnimInfo* playerAnimInfo = f.Unsafe.GetPointer<PlayerAnimInfo>(filter.Entity);
@@ -19,9 +19,35 @@
                 input = *f.GetPlayerInput(playerLink->Player);
             }
 
-            f.Unsafe.TryGetPointer(filter.Entity, out PlayerSys* playerLocalInfo);
-            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, playerLocalInfo, input);
-            PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input, playerLocalInfo);
+            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input);
+            PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input);
+            PlayerSys.Interact(f, filter.Entity, filter.Transform, filter.Player, input);
+        }
+
+        public void OnAdded(Frame f, EntityRef entity, PlayerSys* component)
+        {
+            component->SetConfig(f, entity);
+        }
+
+        public void OnDead(Frame f, EntityRef entity)
+        {
+            if(!f.Unsafe.TryGetPointer(entity, out PlayerSys* playerSys))
+            {
+                Log.Info("PlayerSys not found");
+                return;
+            }
+
+            PlayerSys.Dead(f, entity, playerSys);
+        }
+
+        public void OnInteractCall(Frame f, EntityRef interactor, EntityRef player)
+        {
+            //TODO::蘇生時の処理
+            PlayerSys.Revive(f, interactor);
+        }
+
+        public void OnReleaseCall(Frame f, EntityRef interactor, EntityRef player)
+        {
         }
     }
 }

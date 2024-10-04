@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: b04fe7518657486089dfaf811db0b3ea
+timeCreated: 1667487357
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/Core/NetworkBehaviourSyncVar.cs
+  uploadId: 642007

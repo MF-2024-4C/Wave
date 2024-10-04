@@ -8,6 +8,69 @@ namespace Quantum.Editor {
   using UnityEngine;
   using UnityEditor;
 
+  [CustomPropertyDrawer(typeof(AssetRefAddDamageItemConfig))]
+  public class AssetRefAddDamageItemConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(AddDamageItemConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefAddHealthItemConfig))]
+  public class AssetRefAddHealthItemConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(AddHealthItemConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefBaseItemConfig))]
+  public class AssetRefBaseItemConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(BaseItemConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefDefenseMissionTriggerConfig))]
+  public class AssetRefDefenseMissionTriggerConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(DefenseMissionTriggerConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefInteractConfig))]
+  public class AssetRefInteractConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(InteractConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefItem1Config))]
+  public class AssetRefItem1ConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(Item1ConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefItem2Config))]
+  public class AssetRefItem2ConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(Item2ConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefItem3Config))]
+  public class AssetRefItem3ConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(Item3ConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefMissionConfig))]
+  public class AssetRefMissionConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(MissionConfigAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(AssetRefPlayerConfig))]
   public class AssetRefPlayerConfigPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -15,6 +78,38 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefWeaponData))]
+  public class AssetRefWeaponDataPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(WeaponDataAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpawnAreaConfig))]
+  public class AssetRefZombieSpawnAreaConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpawnAreaConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpawnItemConfig))]
+  public class AssetRefZombieSpawnItemConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpawnItemConfigAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(AssetRefZombieSpec))]
+  public class AssetRefZombieSpecPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(ZombieSpecAsset));
+    }
+  }
+
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.DamageType_Prototype))]
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.FireMode_Prototype))]
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.WeaponType_Prototype))]
+  [CustomPropertyDrawer(typeof(Quantum.Prototypes.ZombieState_Prototype))]
   [CustomPropertyDrawer(typeof(Quantum.Prototypes.InputButtons_Prototype))]
   partial class PrototypeDrawer {}
 }

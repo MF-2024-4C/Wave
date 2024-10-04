@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 67ccbe4892eb00047947f0150051e4ff
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Animation/Camera/CameraKnifeHit_Left.anim
+  uploadId: 446320

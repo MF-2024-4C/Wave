@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fab3ab2dabb8c164bbd5c5090e38f16d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Materials/MetalHitDecal.mat
+  uploadId: 446320

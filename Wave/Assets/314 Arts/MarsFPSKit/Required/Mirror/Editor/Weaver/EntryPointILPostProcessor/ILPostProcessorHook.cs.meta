@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5f113eb695b348b5b28cd85358c8959a
+timeCreated: 1628859074
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/Editor/Weaver/EntryPointILPostProcessor/ILPostProcessorHook.cs
+  uploadId: 642007

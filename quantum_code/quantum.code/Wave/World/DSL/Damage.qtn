@@ -1,0 +1,19 @@
+﻿enum DamageType{
+    Gun,
+    Explosion,
+}
+
+struct DamageSource{
+    DamageType Type;
+    entity_ref Causing;
+    entity_ref Target;
+}
+
+signal OnDamage(entity_ref target, DamageSource source, FP amount);
+
+//Player
+event OnPlayerAttackHitLocal{
+    local player_ref Player;
+    DamageSource Source;
+    FP Amount;
+}

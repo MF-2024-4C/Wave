@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d0bbe45cd39520e43a916930dc722603
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Wanderer/Materials/TopsMat.mat
+  uploadId: 446320

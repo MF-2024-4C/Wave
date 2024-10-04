@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdb10a75fc9f7e7478360abd08264752
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Prefabs/Grenade_InfinityPickupable.prefab
+  uploadId: 446320

@@ -10,8 +10,14 @@
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
-    "overrideReferences": false,
-    "precompiledReferences": [],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "quantum.code.dll",
+        "quantum.core.dll",
+        "PhotonDeterministic.dll",
+        "Photon3Unity3D.dll",
+        "LiteNetLib.dll"
+    ],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [

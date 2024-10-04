@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 50d0c4b99e32cb4499dbfac17b8e8c3c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 259457
+  packageName: 'Better Fog: Height Fog, Light Scattering & More'
+  packageVersion: 1.2
+  assetPath: Assets/Better-Fog/Demo Assets/Materials/Examples/Vertical Fog Offset.mat
+  uploadId: 649686

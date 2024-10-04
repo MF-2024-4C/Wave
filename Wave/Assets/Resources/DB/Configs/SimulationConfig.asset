@@ -46,7 +46,7 @@ MonoBehaviour:
       SolverIterations: 4
       PositionSolverIterations: 2
       UseJoints: 1
-      UseAngularVelocity: 1
+      UseAngularVelocity: 0
       UseVerticalTransform: 1
       PenetrationAllowance:
         RawValue: 655
@@ -83,10 +83,10 @@ MonoBehaviour:
       DefaultStaticsCapacity: 1024
       DefaultQueriesCapacity: 1024
       DefaultQueryItemsCapacity: 1024
-      DefaultHitCollectionItemsCapacity: 32
-      DefaultBucketsCapacity: 16
+      DefaultHitCollectionItemsCapacity: 128
+      DefaultBucketsCapacity: 64
       DefaultIslandsCapacity: 512
-      DefaultManifoldsCapacity: 1024
+      DefaultManifoldsCapacity: 2048
       DefaultJointsCapacity: 128
       DefaultPhysicsMaterial:
         Id:
@@ -104,6 +104,8 @@ MonoBehaviour:
       - 
       - Water
       - UI
+      - Zombie
+      - Ground
       - 
       - 
       - 
@@ -128,9 +130,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      LayerMatrix: fffefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+      LayerMatrix: bffeffffffffffffffffffffffffffffffffffffffffffff3effffff3ffffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     Entities:
       CommitCommandsMode: 0
       DefaultEntityCapacity: 1024
@@ -138,7 +138,7 @@ MonoBehaviour:
       ComponentTypeConfiguration: []
     AutoLoadSceneFromMap: 2
     DeltaTimeType: 0
-    ThreadCount: 2
+    ThreadCount: 5
     ChecksumSnapshotHistoryLengthSeconds:
       RawValue: 196608
     ChecksumErrorDumpOptions: 0

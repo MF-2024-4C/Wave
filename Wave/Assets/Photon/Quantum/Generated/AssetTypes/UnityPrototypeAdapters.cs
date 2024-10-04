@@ -6,6 +6,107 @@
 using System;
 namespace Quantum.Prototypes.Unity {
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Interactor))]
+  public class Interactor_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Interactor_Prototype> {
+    public Quantum.AssetRefInteractConfig Config;
+    public Quantum.QBoolean CanInteract;
+    public Quantum.QBoolean OnInteract;
+    public Photon.Deterministic.FP InteractStartTime;
+    public Photon.Deterministic.FP InteractEndTime;
+    [Quantum.LocalReference]
+    public global::EntityPrototype InteractPlayer;
+    public Quantum.QBoolean NowCoolDown;
+
+    public sealed override Quantum.Prototypes.Interactor_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Interactor_Prototype();
+      result.Config = this.Config;
+      result.CanInteract = this.CanInteract;
+      result.OnInteract = this.OnInteract;
+      result.InteractStartTime = this.InteractStartTime;
+      result.InteractEndTime = this.InteractEndTime;
+      converter.Convert(this.InteractPlayer, out result.InteractPlayer);
+      result.NowCoolDown = this.NowCoolDown;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PlayerSys))]
+  public class PlayerSys_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PlayerSys_Prototype> {
+    public Quantum.AssetRefPlayerConfig Config;
+    public System.Byte PlayerAnimState;
+    [Quantum.Inspector.DegreesAttribute()]
+    public Photon.Deterministic.FPVector3 TargetRotation;
+    public Photon.Deterministic.FP WalkSpeed;
+    public Photon.Deterministic.FP RunSpeed;
+    public Photon.Deterministic.FP JumpPower;
+    public Photon.Deterministic.FP AirMovePower;
+    public Photon.Deterministic.FPVector3 CameraForwardDirection;
+    [Quantum.LocalReference]
+    public global::EntityPrototype InteractEntity;
+    public Quantum.QBoolean IsDead;
+
+    public sealed override Quantum.Prototypes.PlayerSys_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.PlayerSys_Prototype();
+      result.Config = this.Config;
+      result.PlayerAnimState = this.PlayerAnimState;
+      result.TargetRotation = this.TargetRotation;
+      result.WalkSpeed = this.WalkSpeed;
+      result.RunSpeed = this.RunSpeed;
+      result.JumpPower = this.JumpPower;
+      result.AirMovePower = this.AirMovePower;
+      result.CameraForwardDirection = this.CameraForwardDirection;
+      converter.Convert(this.InteractEntity, out result.InteractEntity);
+      result.IsDead = this.IsDead;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.WeaponInventory))]
+  public class WeaponInventory_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.WeaponInventory_Prototype> {
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    public Quantum.Prototypes.WeaponType_Prototype currentWeaponType;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype primary;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype secondary;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype tertiary;
+
+    public sealed override Quantum.Prototypes.WeaponInventory_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.WeaponInventory_Prototype();
+      result.currentWeaponType = this.currentWeaponType;
+      converter.Convert(this.primary, out result.primary);
+      converter.Convert(this.secondary, out result.secondary);
+      converter.Convert(this.tertiary, out result.tertiary);
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Zombie))]
+  public class Zombie_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Zombie_Prototype> {
+    public Photon.Deterministic.FP HP;
+    public Quantum.Prototypes.ZombieState_Prototype State;
+    [Quantum.LocalReference]
+    public global::EntityPrototype Target;
+    public Quantum.AssetRefZombieSpec Spec;
+    public Photon.Deterministic.FP AttackInterval;
+    public Photon.Deterministic.FP AttackIntervalTimer;
+
+    public sealed override Quantum.Prototypes.Zombie_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Zombie_Prototype();
+      result.HP = this.HP;
+      result.State = this.State;
+      converter.Convert(this.Target, out result.Target);
+      result.Spec = this.Spec;
+      result.AttackInterval = this.AttackInterval;
+      result.AttackIntervalTimer = this.AttackIntervalTimer;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PhysicsJoints3D))]
   public class PhysicsJoints3D_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PhysicsJoints3D_Prototype> {
     [Quantum.Inspector.DynamicCollectionAttribute()]

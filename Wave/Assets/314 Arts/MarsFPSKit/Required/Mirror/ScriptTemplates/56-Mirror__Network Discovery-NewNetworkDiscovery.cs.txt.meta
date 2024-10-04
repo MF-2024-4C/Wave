@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 04337367db30af3459bf9e9f3f880734
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/ScriptTemplates/56-Mirror__Network
+    Discovery-NewNetworkDiscovery.cs.txt
+  uploadId: 642007

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bcde48b141a472e41aa3b75bd57cfbaa
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Animation/VacuumCleaner/CloseWithSpawn.anim
+  uploadId: 446320

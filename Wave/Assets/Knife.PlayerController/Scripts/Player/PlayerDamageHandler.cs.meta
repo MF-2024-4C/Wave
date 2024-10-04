@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4ab6431570717414d9bd598dadbefb21
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Scripts/Player/PlayerDamageHandler.cs
+  uploadId: 446320

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 599a6706848d54f169df9e37fcb67574
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/BlurryRefraction/SeparableBlur.shader
+  uploadId: 446320

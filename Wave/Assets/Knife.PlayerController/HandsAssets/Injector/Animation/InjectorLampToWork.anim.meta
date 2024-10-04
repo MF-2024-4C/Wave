@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a74b6ed5b56c5ee46a94454e9bf7ad7a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Injector/Animation/InjectorLampToWork.anim
+  uploadId: 446320

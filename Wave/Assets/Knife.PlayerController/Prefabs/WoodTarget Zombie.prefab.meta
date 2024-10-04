@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: baf47c3288cc1ac42b4fc51317631bbc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Prefabs/WoodTarget Zombie.prefab
+  uploadId: 446320

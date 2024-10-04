@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 39a8885a62139df44be6fe6a78da0813
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Scripts/Player/TransformStateSetupper.cs
+  uploadId: 446320

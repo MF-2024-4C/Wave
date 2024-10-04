@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3accea0d89b9fe140a72d84bba9e94d5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Shotgun/Animations/SGHide.anim
+  uploadId: 446320

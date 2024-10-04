@@ -1,0 +1,33 @@
+asset ZombieSpawnAreaConfig;
+component ZombieSpawnArea {
+    bool Active;
+    Int16 MaxSpawnCount;
+    [ReadOnly]
+    Int16 CurrentSpawnCount;
+    FP Radius;
+    [Tooltip("スポーン時に活性化しターゲットの方向へ走る")]
+    bool isHorde;
+    
+    [HideInInspector]
+    FP EndTime;
+    asset_ref<ZombieSpawnAreaConfig> Config;
+}
+
+component RuntimeSwarm {
+
+}
+
+
+struct ZombiesSpawnEvents {
+
+}
+
+component ZombiesSpawnEvent {
+    MapEvent MapEvent;
+}
+
+singleton component SingletonZombiesSpawnEvent {
+    ZombiesSpawnEvents events;
+}
+
+signal OccurrenceSwarm(entity_ref area);

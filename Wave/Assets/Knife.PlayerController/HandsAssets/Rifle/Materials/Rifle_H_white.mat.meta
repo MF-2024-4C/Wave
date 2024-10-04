@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 446d3f8ef9497414e9a6caa28d11db86
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Rifle/Materials/Rifle_H_white.mat
+  uploadId: 446320

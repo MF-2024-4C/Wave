@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4822a8acd3a5f3844b5291c522f3e216
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/Scripts/Player/ItemsPickup/PistolPickupItem.cs
+  uploadId: 446320

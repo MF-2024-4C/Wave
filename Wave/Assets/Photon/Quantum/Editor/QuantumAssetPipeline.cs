@@ -201,7 +201,6 @@ namespace Quantum.Editor {
 
           if (wasCloned) {
             var newGuid = AssetGuid.NewGuid();
-            Debug.LogFormat(asset, "Asset {0} ({3}) appears to have been cloned, assigning new id: {1} (old id: {2})", assetPath, newGuid, asset.AssetObject.Guid, asset.GetType());
             asset.AssetObject.Guid = newGuid;
             result |= ValidationResult.Invalidated;
           }

@@ -2,6 +2,11 @@ input
 {
     button PlayerJump;
     QBoolean PlayerDash;
+    QBoolean Interact;
+    
+    //入力された方向とカメラの向きを合わせた方向
     FPVector2 PlayerDirection;
+    
+    //カメラの向いている方向
     FPVector3 CameraForwardDirection;
 }

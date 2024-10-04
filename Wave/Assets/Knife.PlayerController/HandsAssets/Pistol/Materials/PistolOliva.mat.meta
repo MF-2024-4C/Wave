@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c9fe72af06a6e2d4390469927ebf43f9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 125288
+  packageName: 'PRO Military: Customizable FPS Character'
+  packageVersion: 1.2
+  assetPath: Assets/Knife.PlayerController/HandsAssets/Pistol/Materials/PistolOliva.mat
+  uploadId: 446320

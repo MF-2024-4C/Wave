@@ -1,0 +1,10 @@
+input
+{
+    button Fire;
+    
+    button Reload;
+    
+    button ChangePrimaryWeapon;
+    button ChangeSecondaryWeapon;
+    button ChangeTertiaryWeapon;
+}

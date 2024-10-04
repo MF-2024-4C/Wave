@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cc0737f62d0bf46bb5d88f3c523833, type: 3}
+  m_Name: DoorNavigationMarker
+  m_EditorClassIdentifier: 
+  Color: {r: 1, g: 1, b: 1, a: 1}
+  MainText: Head to the garage
+  SubText: The switch next to the shutter to open it.
+  Icon: {fileID: 21300000, guid: dbd6f0964bfc3cf42a8ef87d88132ff7, type: 3}

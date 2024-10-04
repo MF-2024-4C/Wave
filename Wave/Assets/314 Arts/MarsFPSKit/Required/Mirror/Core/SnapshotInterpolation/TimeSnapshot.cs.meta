@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: afe2b5ed49634971a2aec720ad74e5cd
+timeCreated: 1666288442
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192482
+  packageName: Modular Multiplayer FPS Engine (Mirror) (MMFPSE)
+  packageVersion: 0.8.0.9 BETA
+  assetPath: Assets/314 Arts/MarsFPSKit/Required/Mirror/Core/SnapshotInterpolation/TimeSnapshot.cs
+  uploadId: 642007

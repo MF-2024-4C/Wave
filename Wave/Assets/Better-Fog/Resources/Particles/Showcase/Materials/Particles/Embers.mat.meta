@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d7992ef933f523d4dbc6015aa2710e67
+timeCreated: 1471532950
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 259457
+  packageName: 'Better Fog: Height Fog, Light Scattering & More'
+  packageVersion: 1.2
+  assetPath: Assets/Better-Fog/Resources/Particles/Showcase/Materials/Particles/Embers.mat
+  uploadId: 649686
