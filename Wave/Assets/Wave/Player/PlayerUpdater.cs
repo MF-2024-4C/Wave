@@ -29,15 +29,13 @@ namespace Wave.Player
         
         private void OnPlayerDown(EventPlayerDownEvent e)
         {
-            if (!this.IsLocal(_entityView)) return;
-            
+            if (!QuantumRunner.Default.Game.PlayerIsLocal(e.PlayerLink.Player)) return;
             _playerCameraSO.OnChangeCameraHeight?.Invoke(_downCameraHeight);
         }
         
         private void OnPlayerRevive(EventPlayerReviveEvent e)
         {
-            if (!this.IsLocal(_entityView)) return;
-            
+            if (!QuantumRunner.Default.Game.PlayerIsLocal(e.PlayerLink.Player)) return;
             _playerCameraSO.OnChangeCameraHeight?.Invoke(_defaultCameraHeight);
         }
     }

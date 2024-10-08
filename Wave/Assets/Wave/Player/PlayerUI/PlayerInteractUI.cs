@@ -48,10 +48,12 @@ public class PlayerInteractUI : MonoBehaviour
     private bool CheckCanInteract()
     {
         EntityView hitEntityView = null;
+        //自分が倒れている場合はUIを表示しない
         var frame = QuantumRunner.Default.Game.Frames.Verified;
         if (!frame.TryGet<PlayerSys>(_entityView.EntityRef, out PlayerSys playerSys)) return false;
         if (playerSys.IsDead) return false;
         
+        //インタラクトする向きと距離を取得
         var prototypeConfig = _entityComponentPlayerSys.Prototype.Config;
         if (prototypeConfig == null) return false;
         Vector3 from = FPMathUtils.ToUnityVector3(playerSys.InteractRayOffset) + transform.root.position;
@@ -63,8 +65,10 @@ public class PlayerInteractUI : MonoBehaviour
             forward = transform.root.forward;
         }
 
+        //Raycastで対象がいるかどうかをチェック
         var hits = Physics.RaycastAll(from, forward, distance);
         
+        //Raycastで当たったEntityViewがInteractorを持っているかどうかをチェック
         foreach (RaycastHit hit in hits)
         {
             //自分だった場合は飛ばす

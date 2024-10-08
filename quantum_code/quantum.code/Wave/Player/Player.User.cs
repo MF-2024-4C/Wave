@@ -129,7 +129,7 @@ namespace Quantum
 
             if (f.TryGet(entity, out PlayerLink playerLink))
             {
-                f.Events.PlayerReviveEvent(playerLink);
+                f.Events.PlayerReviveEvent(playerLink, entity);
             }
         }
 

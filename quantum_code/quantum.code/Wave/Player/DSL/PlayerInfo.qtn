@@ -29,8 +29,10 @@ event PlayerSpawnEvent{
 
 event PlayerDownEvent{
     PlayerLink PlayerLink;
+    EntityRef EntityRef;
 }
 
 event PlayerReviveEvent{
     PlayerLink PlayerLink;
+    EntityRef EntityRef;
 }

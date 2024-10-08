@@ -39,7 +39,7 @@
 
             if (f.TryGet(entity, out PlayerLink playerLink))
             {
-                f.Events.PlayerDownEvent(playerLink);
+                f.Events.PlayerDownEvent(playerLink, entity);
             }
             
             PlayerSys.Dead(f, entity, playerSys);
