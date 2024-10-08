@@ -26,3 +26,11 @@ event PlayerSpawnEvent{
     PlayerLink PlayerLink;
     EntityRef EntityRef;
 }
+
+event PlayerDownEvent{
+    PlayerLink PlayerLink;
+}
+
+event PlayerReviveEvent{
+    PlayerLink PlayerLink;
+}

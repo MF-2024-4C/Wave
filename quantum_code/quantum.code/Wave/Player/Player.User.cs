@@ -126,6 +126,11 @@ namespace Quantum
             HealthComponent.Revive(f, entity, healthComp, healthComp->MaxHealth);
             interactor->CanInteract = false;
             playerSys->IsDead = false;
+
+            if (f.TryGet(entity, out PlayerLink playerLink))
+            {
+                f.Events.PlayerReviveEvent(playerLink);
+            }
         }
 
         public void SetConfig(Frame　f, EntityRef entity)

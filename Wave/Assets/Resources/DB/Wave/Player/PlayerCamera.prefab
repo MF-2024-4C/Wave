@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 2704691924815670462}
   - component: {fileID: 528623937873627267}
   - component: {fileID: 2692685974166899947}
+  - component: {fileID: 5689969585386635012}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -219,3 +220,17 @@ MonoBehaviour:
   AutoEnableInputs: 1
   XYAxis: {fileID: -5630151704836100654, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   ZAxis: {fileID: 0}
+--- !u!114 &5689969585386635012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041225563005405274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914230ed8e4572b41bd473b01091a888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerCameraSO: {fileID: 11400000, guid: 4961dca531ef0bd48a8624f1de43c73b, type: 2}
+  _virtualCamera: {fileID: 528623937873627267}

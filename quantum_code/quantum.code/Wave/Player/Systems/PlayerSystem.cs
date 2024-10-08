@@ -37,6 +37,11 @@
                 return;
             }
 
+            if (f.TryGet(entity, out PlayerLink playerLink))
+            {
+                f.Events.PlayerDownEvent(playerLink);
+            }
+            
             PlayerSys.Dead(f, entity, playerSys);
         }
 
