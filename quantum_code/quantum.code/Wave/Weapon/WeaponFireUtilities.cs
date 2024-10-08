@@ -6,7 +6,7 @@ public static unsafe class WeaponFireUtilities
         Input* input)
     {
         var config = frame.FindAsset<PlayerConfig>(playerSys->Config.Id);
-        var start = transform->Position + config.InteractRayOffset;
+        var start = transform->Position + playerSys->InteractRayOffset;
         var end = start + input->CameraForwardDirection * 50;
         var hits = frame.Physics3D.LinecastAll(start, end);
         for (var i = 0; i < hits.Count; i++)

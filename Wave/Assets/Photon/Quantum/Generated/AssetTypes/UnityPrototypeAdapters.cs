@@ -33,17 +33,29 @@ namespace Quantum.Prototypes.Unity {
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.PlayerSys))]
   public class PlayerSys_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.PlayerSys_Prototype> {
     public Quantum.AssetRefPlayerConfig Config;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public System.Byte PlayerAnimState;
     [Quantum.Inspector.DegreesAttribute()]
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FPVector3 TargetRotation;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FP WalkSpeed;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FP RunSpeed;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FP JumpPower;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FP AirMovePower;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FPVector3 CameraForwardDirection;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     [Quantum.LocalReference]
     public global::EntityPrototype InteractEntity;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Quantum.QBoolean IsDead;
+    public Photon.Deterministic.FPVector3 InteractRayOffset;
+    public Photon.Deterministic.FP InteractRayDistance;
+    public Quantum.LayerMask InteractLayer;
 
     public sealed override Quantum.Prototypes.PlayerSys_Prototype Convert(EntityPrototypeConverter converter) {
       var result = new Quantum.Prototypes.PlayerSys_Prototype();
@@ -57,6 +69,9 @@ namespace Quantum.Prototypes.Unity {
       result.CameraForwardDirection = this.CameraForwardDirection;
       converter.Convert(this.InteractEntity, out result.InteractEntity);
       result.IsDead = this.IsDead;
+      result.InteractRayOffset = this.InteractRayOffset;
+      result.InteractRayDistance = this.InteractRayDistance;
+      result.InteractLayer = this.InteractLayer;
       return result;
     }
   }

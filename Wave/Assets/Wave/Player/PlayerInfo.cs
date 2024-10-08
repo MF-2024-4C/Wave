@@ -32,10 +32,10 @@ namespace Wave.Player
             
             var assetRefPlayerConfig = _entityComponentPlayerSys.Prototype.Config;
             if (assetRefPlayerConfig == null) return;
-            var playerConfig = UnityDB.FindAsset<PlayerConfigAsset>(assetRefPlayerConfig.Id).Settings;
-            Vector3 from = FPMathUtils.ToUnityVector3(playerConfig.InteractRayOffset) + transform.position;
+            //var playerConfig = UnityDB.FindAsset<PlayerConfigAsset>(assetRefPlayerConfig.Id).Settings;
+            Vector3 from = FPMathUtils.ToUnityVector3(playerSys.InteractRayOffset) + transform.position;
             Vector3 forward = FPMathUtils.ToUnityVector3(playerSys.CameraForwardDirection);
-            float distance = playerConfig.InteractRayDistance.AsFloat;
+            float distance = playerSys.InteractRayDistance.AsFloat;
             //Debug.Log($"Config");
 
             if (forward == Vector3.zero)

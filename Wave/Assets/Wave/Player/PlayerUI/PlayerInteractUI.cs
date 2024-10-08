@@ -54,10 +54,9 @@ public class PlayerInteractUI : MonoBehaviour
         
         var prototypeConfig = _entityComponentPlayerSys.Prototype.Config;
         if (prototypeConfig == null) return false;
-        var playerConfig = UnityDB.FindAsset<PlayerConfigAsset>(prototypeConfig.Id).Settings;
-        Vector3 from = FPMathUtils.ToUnityVector3(playerConfig.InteractRayOffset) + transform.root.position;
+        Vector3 from = FPMathUtils.ToUnityVector3(playerSys.InteractRayOffset) + transform.root.position;
         Vector3 forward = FPMathUtils.ToUnityVector3(playerSys.CameraForwardDirection);
-        float distance = playerConfig.InteractRayDistance.AsFloat;
+        float distance = playerSys.InteractRayDistance.AsFloat;
 
         if (forward == Vector3.zero)
         {

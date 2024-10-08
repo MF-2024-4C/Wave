@@ -561,6 +561,19 @@ MonoBehaviour:
       Z:
         RawValue: 0
     InteractEntity: {fileID: 0}
+    IsDead:
+      Value: 0
+    InteractRayOffset:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 110099
+      Z:
+        RawValue: 0
+    InteractRayDistance:
+      RawValue: 196608
+    InteractLayer:
+      BitMask: 183
 --- !u!114 &-4638503294811154689
 MonoBehaviour:
   m_ObjectHideFlags: 0

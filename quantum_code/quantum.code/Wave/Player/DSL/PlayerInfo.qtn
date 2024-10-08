@@ -4,18 +4,22 @@ component PlayerSys
 {
     asset_ref<PlayerConfig> Config;
     
-    byte PlayerAnimState;
-    FPQuaternion TargetRotation;    
+    [HideInInspector] byte PlayerAnimState;
+    [HideInInspector] FPQuaternion TargetRotation;    
     
-    FP WalkSpeed;
-    FP RunSpeed;
-    FP JumpPower;
-    FP AirMovePower;
+    [HideInInspector] FP WalkSpeed;
+    [HideInInspector] FP RunSpeed;
+    [HideInInspector] FP JumpPower;
+    [HideInInspector] FP AirMovePower;
     
-    FPVector3 CameraForwardDirection;
-    EntityRef InteractEntity;
+    [HideInInspector] FPVector3 CameraForwardDirection;
+    [HideInInspector] EntityRef InteractEntity;
     
-    bool IsDead;
+    [HideInInspector] bool IsDead;
+    
+    FPVector3 InteractRayOffset;
+    FP InteractRayDistance;
+    LayerMask InteractLayer;
 }
 
 event PlayerSpawnEvent{

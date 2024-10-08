@@ -80,8 +80,8 @@ namespace Quantum
             
             //インタラクト可能範囲にあるオブジェクトを取得してソート
             PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
-            var start = transform->Position + config.InteractRayOffset;
-            var end = start + input.CameraForwardDirection * config.InteractRayDistance;
+            var start = transform->Position + playerSys->InteractRayOffset;
+            var end = start + input.CameraForwardDirection * playerSys->InteractRayDistance;
             var hits = f.Physics3D.LinecastAll(start, end);
             hits.Sort(transform->Position);
             
