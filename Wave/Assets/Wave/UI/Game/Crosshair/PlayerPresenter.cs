@@ -2,6 +2,7 @@
 using Quantum;
 using UnityEngine;
 using UnityEngine.Animations;
+using Wave.Player;
 using Wave.UI.Game.Status;
 
 namespace Wave.UI.Game
@@ -16,6 +17,8 @@ namespace Wave.UI.Game
         private Crosshair _crosshair;
         private StatusView _statusView;
         private GunHand.GunHand _gunHand;
+        
+        private PlayerMovementState _playerMovementState;
 
         private PlayerRef _playerRef;
         private bool _isLocalPlayer;

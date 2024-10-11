@@ -15,7 +15,6 @@ namespace Wave.Player
         [SerializeField] private EntityPrototype _entityPrototype;
         [SerializeField] private GameObject _virtualCameraPrefab;
         [SerializeField] private GameObject _playerModel;
-        [SerializeField] private PlayerAnimation _playerAnimation;
         
         
         [Header("Layer Mask")] [SerializeField]
@@ -84,7 +83,6 @@ namespace Wave.Player
                 meshRenderer.enabled = false;
             }
             
-            if(model.TryGetComponent<Animator>(out Animator anim)) _playerAnimation.SetAnimator(anim);
         }
         
         public void InstantiateOtherPlayerModel()
@@ -104,7 +102,6 @@ namespace Wave.Player
                 meshRenderer.enabled = true;
             }
             
-            if(model.TryGetComponent<Animator>(out Animator anim)) _playerAnimation.SetAnimator(anim);
         }
     }
 }

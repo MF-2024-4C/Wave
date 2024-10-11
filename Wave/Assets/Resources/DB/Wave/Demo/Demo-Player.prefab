@@ -161,6 +161,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 361489448854515481, guid: 08a74e60d1e377042be8014ee39a5b24,
+        type: 3}
+      propertyPath: outlineTargets.Array.data[0].IsVisible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 908227075985344832, guid: 08a74e60d1e377042be8014ee39a5b24,
         type: 3}
       propertyPath: m_LocalPosition.x

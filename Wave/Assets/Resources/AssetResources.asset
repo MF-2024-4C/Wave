@@ -121,6 +121,11 @@ MonoBehaviour:
         Id:
           Value: 703508689461989815
       ResourcePath: DB/Exp/Enemy/03-ZombieSpawn/Expo-Enemy-03_mesh
+    - Path: Resources/DB/Wave/Demo/MCunitychan|EntityView
+      AssetRef:
+        Id:
+          Value: 815736997592844785
+      ResourcePath: DB/Wave/Demo/MCunitychan
     - Path: Resources/DB/Exp/Enemy/02-ZombieAnimation/Exp-ZombieMove
       AssetRef:
         Id:
@@ -436,6 +441,11 @@ MonoBehaviour:
         Id:
           Value: 3549667073573082038
       ResourcePath: DB/Exp/Enemy/03-ZombieSpawn 1/Expo-Enemy-03_Navmesh_data
+    - Path: Resources/DB/Wave/Demo/MCunitychan|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 3678935259199149824
+      ResourcePath: DB/Wave/Demo/MCunitychan
     - Path: Resources/DB/Exp/Enemy/01-ZombieMove/Expo-Enemy-01ZombieMove_mesh
       AssetRef:
         Id:
