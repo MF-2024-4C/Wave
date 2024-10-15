@@ -34,3 +34,8 @@ event PlayerDownEvent{
 event PlayerReviveEvent{
     PlayerLink PlayerLink;
 }
+
+event PlayerCanInteractEvent{
+    PlayerLink PlayerLink;
+    bool IsCanInteract;
+}

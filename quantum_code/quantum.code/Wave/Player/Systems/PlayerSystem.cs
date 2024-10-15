@@ -22,6 +22,7 @@
             PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input);
             PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input);
             PlayerSys.Interact(f, filter.Entity, filter.Transform, filter.Player, input);
+            PlayerSys.CheckCanInteract(f, filter.Entity, filter.Transform, filter.Player, input.CameraForwardDirection);
         }
 
         public void OnAdded(Frame f, EntityRef entity, PlayerSys* component)

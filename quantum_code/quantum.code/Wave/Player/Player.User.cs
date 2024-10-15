@@ -100,6 +100,35 @@ namespace Quantum
                 }
             }
         }
+
+        public static void CheckCanInteract(Frame f, EntityRef entity, Transform3D* transform, PlayerSys* playerSys,
+            FPVector3 forward)
+        {
+            //インタラクト可能範囲にあるオブジェクトを取得してソート
+            PlayerConfig config = f.FindAsset<PlayerConfig>(playerSys->Config.Id);
+            var start = transform->Position + playerSys->InteractRayOffset;
+            var end = start + forward * playerSys->InteractRayDistance;
+            var hits = f.Physics3D.LinecastAll(start, end);
+            hits.Sort(transform->Position);
+
+            if (!f.TryGet(entity, out PlayerLink playerLink)) return;
+            
+            for (int i = 0; i < hits.Count; i++)
+            {
+                var hit = hits[i];
+                if (f.Unsafe.TryGetPointer(hit.Entity, out Interactor* interactor))
+                {
+                    if (hit.Entity == entity) continue;
+                    if(!interactor->CanInteract || interactor->OnInteract || interactor->NowCoolDown) continue;
+                    
+                    f.Events.PlayerCanInteractEvent(playerLink, true);
+                    
+                    return;
+                }
+            }
+            
+            f.Events.PlayerCanInteractEvent(playerLink, false);
+        }
         
         public static void Dead(Frame f, EntityRef entity, PlayerSys* playerSys)
         {

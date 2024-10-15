@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Quantum;
 using UnityEngine.UI;
@@ -12,10 +13,24 @@ public class PlayerInteractUI : MonoBehaviour
     [SerializeField] private GameObject _canInteractUI;
     [SerializeField] private Image _elapsedTimeUI;
     
+    private DispatcherSubscription _CheckCanInteractEventSubscript;
+    private bool _canInteract;
+
+    private void OnEnable()
+    {
+        _CheckCanInteractEventSubscript = QuantumEvent.Subscribe<EventPlayerCanInteractEvent>(this, OnCheckInteract);
+    }
+    
+    private void OnDisable()
+    {
+        QuantumEvent.Unsubscribe(_CheckCanInteractEventSubscript);
+    }
+
     private void Start()
     {
         QuantumGame game = QuantumRunner.Default.Game;
         Frame frame = game.Frames.Verified;
+        _canInteract = false;
         if(frame.TryGet(_entityView.EntityRef, out PlayerLink playerLink))
         {
             if (!game.PlayerIsLocal(playerLink.Player))
@@ -27,7 +42,7 @@ public class PlayerInteractUI : MonoBehaviour
     
     private void Update()
     {
-        if (CheckCanInteract())
+        if (_canInteract)
         {
             _canInteractUI.SetActive(true);
             return;
@@ -44,46 +59,12 @@ public class PlayerInteractUI : MonoBehaviour
         _elapsedTimeUI.enabled = true;
         _elapsedTimeUI.fillAmount = elapsedTimeRate;
     }
-    
-    private bool CheckCanInteract()
+
+    private void OnCheckInteract(EventPlayerCanInteractEvent e)
     {
-        EntityView hitEntityView = null;
-        //自分が倒れている場合はUIを表示しない
-        var frame = QuantumRunner.Default.Game.Frames.Verified;
-        if (!frame.TryGet<PlayerSys>(_entityView.EntityRef, out PlayerSys playerSys)) return false;
-        if (playerSys.IsDead) return false;
-        
-        //インタラクトする向きと距離を取得
-        var prototypeConfig = _entityComponentPlayerSys.Prototype.Config;
-        if (prototypeConfig == null) return false;
-        Vector3 from = FPMathUtils.ToUnityVector3(playerSys.InteractRayOffset) + transform.root.position;
-        Vector3 forward = FPMathUtils.ToUnityVector3(playerSys.CameraForwardDirection);
-        float distance = playerSys.InteractRayDistance.AsFloat;
-
-        if (forward == Vector3.zero)
-        {
-            forward = transform.root.forward;
-        }
-
-        //Raycastで対象がいるかどうかをチェック
-        var hits = Physics.RaycastAll(from, forward, distance);
-        
-        //Raycastで当たったEntityViewがInteractorを持っているかどうかをチェック
-        foreach (RaycastHit hit in hits)
-        {
-            //自分だった場合は飛ばす
-            if (hit.transform.root == transform.root) continue;
-            
-            hitEntityView = hit.transform.GetComponentInParent<EntityView>();
-            if (hitEntityView == null) continue;
-            
-            if (!frame.TryGet<Interactor>(hitEntityView.EntityRef,out var hitInteractor)) continue;
-            if (!hitInteractor.CanInteract || hitInteractor.OnInteract || hitInteractor.NowCoolDown) continue;
-            return true;
-        }
-
-        //Debug.Log("Not Hit Interacter!");
-        return false;
+        var frame = QuantumRunner.Default.Game.Frames.Predicted;
+        if(e.PlayerLink.Player != frame.Get<PlayerLink>(_entityView.EntityRef).Player) return;
+        _canInteract = e.IsCanInteract;
     }
 
     private bool CheckElapsedTime(out float elapsedTimeRate)
