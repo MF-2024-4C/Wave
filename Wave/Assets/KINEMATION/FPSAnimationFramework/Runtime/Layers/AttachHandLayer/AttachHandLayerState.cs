@@ -46,6 +46,10 @@ namespace KINEMATION.FPSAnimationFramework.Runtime.Layers.AttachHandLayer
             _handPose = new KTransform(_weaponBone).GetRelativeTransform(new KTransform(_handBone), false);
             
             _leftHandChain = _settings.GetRigAsset().GetPopulatedChain(_settings.elementChainName, _rigComponent);
+            if (_leftHandChain == null)
+            {
+                Debug.LogError("AttachHandLayerState: Chain not found." + newSettings.name,newSettings);
+            }
             _leftHandChain.CacheTransforms(ESpaceType.ParentBoneSpace);
 
             if (hasValidCustomPose)

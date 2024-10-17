@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using KINEMATION.KAnimationCore.Runtime.Rig;
 using Quantum;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Wave.Weapon;
 
 public class WeaponInstancer : MonoBehaviour
 {
+    [SerializeField] private WeaponMotionSettings _settings;
+
     [SerializeField] private WeaponInventory _weaponInventory;
-    [SerializeField] private EntityComponentWeaponInventory _entityWeaponInventory;
     [SerializeField] private EntityView _entityView;
+    
+    private Transform _weaponBone;
+
+    private void Awake()
+    {
+        _weaponBone = transform.parent.GetComponentInChildren<KRigComponent>().GetRigTransform(_settings.weaponBone);
+    }
 
     public void OnEntityInstantiated()
     {

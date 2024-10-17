@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86e81f2bb604158ac3e2406f16030f1, type: 3}
   m_Name: EmptyGrip_Pistol
   m_EditorClassIdentifier: 
-  rigAsset: {fileID: 11400000, guid: 20c86149126a2b24cb88e9fc185cbd50, type: 2}
+  rigAsset: {fileID: 11400000, guid: e258c96a8cb05504799fad09505b5dcd, type: 2}
   alpha: 1
   curveBlending:
   - name: MaskAttachHand
@@ -23,22 +23,22 @@ MonoBehaviour:
   isStandalone: 1
   customHandPose: {fileID: 7400000, guid: e1b1014a37f0cd14c8d953dc80f47640, type: 2}
   handBone:
-    name: Left_Hand
-    index: 18
+    name: CH_Hand_L
+    index: 14
     isVirtual: 0
   ikHandBone:
     name: IK LeftHand
-    index: 51
+    index: 7
     isVirtual: 0
   ikWeaponBone:
     name: IK WeaponBone
-    index: -1
+    index: 5
     isVirtual: 0
   weaponBone:
     name: WeaponBone
-    index: -1
+    index: 29
     isVirtual: 0
-  elementChainName: LeftHand
+  elementChainName: LeftHandChain
   handPoseOffset:
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 1}

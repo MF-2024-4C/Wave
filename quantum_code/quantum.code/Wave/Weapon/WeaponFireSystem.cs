@@ -44,7 +44,7 @@ public unsafe class WeaponFireSystem : SystemMainThreadFilter<WeaponInventorySys
         if (shouldFire)
         {
             var weapon = filter.Inventory->GetCurrentWeaponEntity();
-            currentWeapon->Fire(frame, player, weapon);
+            currentWeapon->Fire(frame, filter.Entity, player, weapon);
             WeaponFireUtilities.ProjectileCast(frame, filter.Entity, filter.Transform3D, filter.Player, &input);
         }
     }

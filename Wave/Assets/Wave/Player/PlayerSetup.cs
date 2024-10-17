@@ -13,6 +13,7 @@ namespace Wave.Player
     {
         [SerializeField] private EntityView _entityView;
         [SerializeField] private EntityPrototype _entityPrototype;
+        [SerializeField] private Transform _headTransform;
         [SerializeField] private GameObject _virtualCameraPrefab;
         [SerializeField] private GameObject _playerModel;
         
@@ -53,7 +54,8 @@ namespace Wave.Player
                 if (virtualCameraObject.TryGetComponent<CinemachineVirtualCamera>(
                         out CinemachineVirtualCamera virtualCamera))
                 {
-                    virtualCamera.m_Follow = this.transform;
+                    
+                    virtualCamera.m_Follow = _headTransform ? _headTransform : this.transform;
                 }
                 
                 Cursor.lockState = CursorLockMode.Locked;

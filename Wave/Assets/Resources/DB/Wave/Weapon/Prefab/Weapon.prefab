@@ -31,6 +31,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5865918814846316712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5883961722024285510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2174181019953332693}
+  m_Layer: 0
+  m_Name: AimPointBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2174181019953332693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883961722024285510}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.057, z: -0.305}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5865918814846316712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6543440782703717443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6555264308042985739}
+  m_Layer: 0
+  m_Name: AimPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6555264308042985739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543440782703717443}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0738, z: -0.183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5865918814846316712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7021332335922032784
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,6 +108,8 @@ GameObject:
   - component: {fileID: -388439095121184170}
   - component: {fileID: 7165834280828015405}
   - component: {fileID: 5488545456076467770}
+  - component: {fileID: 2014879157596827114}
+  - component: {fileID: 3577052558137073659}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -66,6 +130,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2174181019953332693}
+  - {fileID: 6555264308042985739}
   - {fileID: 3075689342370076383}
   - {fileID: 8141831307885201888}
   m_Father: {fileID: 0}
@@ -283,7 +349,7 @@ MonoBehaviour:
   Prototype:
     data:
       Id:
-        Value: 0
+        Value: 4340777512014185396
     currentFireMode:
       Value: 0
     isFullAuto:
@@ -302,6 +368,7 @@ MonoBehaviour:
     equipTime:
       RawValue: 0
     currentAmmo: 0
+    currentAmmoInInventory: 0
     fireTime:
       RawValue: 0
     nextFireTime:
@@ -330,6 +397,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponManager: {fileID: 1599192555841926381}
   _audioSource: {fileID: 6326960159504398125}
+--- !u!114 &2014879157596827114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021332335922032784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bd4759a6d44a48a6627d34d4c9f9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipMotion: {fileID: 11400000, guid: b11b46638e8719941a429aa33657277d, type: 2}
+  unEquipMotion: {fileID: 11400000, guid: 6e3ba419dec1a754b9c447a8fc1f9b1f, type: 2}
+--- !u!114 &3577052558137073659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021332335922032784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a38f36b54b84df3873b796d6728c637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorProfile: {fileID: 11400000, guid: fea8d6d5b828182489eff44ccc6024a7, type: 2}
+  defaultAimPoint: {fileID: 6555264308042985739}
 --- !u!1 &9078006073641540722
 GameObject:
   m_ObjectHideFlags: 0

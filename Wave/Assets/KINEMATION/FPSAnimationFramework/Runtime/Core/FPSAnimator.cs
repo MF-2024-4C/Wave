@@ -20,9 +20,20 @@ namespace KINEMATION.FPSAnimationFramework.Runtime.Core
         [NonSerialized] protected FPSBoneController _boneController;
         [NonSerialized] protected UserInputController _inputController;
         [NonSerialized] protected FPSCameraController _cameraController;
+        
+        private bool _isInitialized = false;
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
+            InitializeWithCheck();
+        }
+
+        private void InitializeWithCheck()
+        {
+            if (_isInitialized) return;
+
+            _isInitialized = true;
+            
             _boneController = GetComponent<FPSBoneController>();
             _inputController = GetComponent<UserInputController>();
             playablesController = GetComponent<IPlayablesController>();
@@ -82,6 +93,8 @@ namespace KINEMATION.FPSAnimationFramework.Runtime.Core
 
         public void LinkAnimatorProfile(GameObject itemEntity)
         {
+            InitializeWithCheck();
+            
             if (_boneController == null) return;
             
             if (itemEntity.GetComponent<FPSAnimatorEntity>() is var entity && entity != null)
@@ -93,6 +106,8 @@ namespace KINEMATION.FPSAnimationFramework.Runtime.Core
 
         public void LinkAnimatorProfile(FPSAnimatorProfile newProfile)
         {
+            InitializeWithCheck();
+
             if (_boneController == null) return;
             
             _boneController.LinkAnimatorProfile(newProfile);
@@ -102,6 +117,8 @@ namespace KINEMATION.FPSAnimationFramework.Runtime.Core
         // Will force to dynamically link the layer via OnSettingsUpdated callback.
         public void LinkAnimatorLayer(FPSAnimatorLayerSettings newSettings)
         {
+            InitializeWithCheck();
+            
             if (_boneController == null) return;
             
             _boneController.LinkAnimatorLayer(newSettings);

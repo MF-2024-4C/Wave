@@ -5,24 +5,24 @@ namespace Quantum;
 
 public unsafe partial struct Weapon
 {
-    public void Fire(Frame frame, PlayerLink* player,EntityRef weapon)
+    public void Fire(Frame frame, EntityRef owner, PlayerLink* player, EntityRef weapon)
     {
-        OnFire(frame, player,weapon);
+        OnFire(frame, owner, player, weapon);
     }
 
-    private void OnFire(Frame frame, PlayerLink* player,EntityRef weapon)
+    private void OnFire(Frame frame, EntityRef owner, PlayerLink* player, EntityRef weapon)
     {
         currentAmmo--;
         nextFireTime = FP._1 / fireRate;
 
         Recoil(frame);
-        SendFireEvent(frame, player,weapon);
+        SendFireEvent(frame,owner, player, weapon);
     }
 
-    public void Reload(Frame frame, PlayerLink* player,EntityRef weapon)
+    public void Reload(Frame frame, PlayerLink* player, EntityRef weapon)
     {
         OnReload();
-        SendReloadEvent(frame, player,weapon);
+        SendReloadEvent(frame, player, weapon);
     }
 
     private void OnReload()
@@ -35,10 +35,10 @@ public unsafe partial struct Weapon
     {
         var needAmmo = maxAmmo - currentAmmo;
         var reloadAmmo = needAmmo > currentAmmoInInventory ? currentAmmoInInventory : needAmmo;
-        
+
         currentAmmo += reloadAmmo;
         currentAmmoInInventory -= reloadAmmo;
-        
+
         isReloading = false;
         reloadingTime = FP._0;
     }
@@ -57,7 +57,7 @@ public unsafe partial struct Weapon
     {
         return IsEndedFireCoolTime() && IsExistAmmo() && !IsReloading() && IsEndedEquipTime();
     }
-    
+
     private bool IsEndedEquipTime()
     {
         return equipTime <= FP._0;
@@ -88,12 +88,12 @@ public unsafe partial struct Weapon
         return nextFireTime <= FP._0;
     }
 
-    private void SendFireEvent(Frame frame, PlayerLink* player,EntityRef weapon)
+    private void SendFireEvent(Frame frame, EntityRef owner, PlayerLink* player, EntityRef weapon)
     {
-        frame.Events.Fire(player->Player, weapon);
+        frame.Events.Fire(owner, player->Player, weapon);
     }
 
-    private void SendReloadEvent(Frame frame, PlayerLink* player,EntityRef weapon)
+    private void SendReloadEvent(Frame frame, PlayerLink* player, EntityRef weapon)
     {
         frame.Events.Reload(player->Player, weapon);
     }

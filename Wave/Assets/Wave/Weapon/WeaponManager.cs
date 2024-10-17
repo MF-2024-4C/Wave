@@ -1,4 +1,5 @@
 using UnityEngine;
+using Wave.Weapon;
 using Wave.Weapon.Animation;
 
 public class WeaponManager : MonoBehaviour
@@ -10,9 +11,13 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private WeaponSoundManager _weaponSoundManager;
     public WeaponSoundManager WeaponSoundManager => _weaponSoundManager;
 
-    private void Start()
+    public WeaponView WeaponView { get; private set; }
+
+    private void Awake()
     {
         var weapon = GetComponent<EntityComponentWeapon>();
         WeaponData = UnityDB.FindAsset<WeaponDataAsset>(weapon.Prototype.data.Id);
+        WeaponView = GetComponent<WeaponView>();
+        WeaponView.Initialize(WeaponData.Settings.FireMode.ToKinemationFireMode(), WeaponData.Settings.FireRate.AsFloat);
     }
 }

@@ -4,6 +4,7 @@ component WeaponEvents
 }
 
 event Fire {
+   entity_ref Owner;
    PlayerRef Player;
    entity_ref Weapon;
 }

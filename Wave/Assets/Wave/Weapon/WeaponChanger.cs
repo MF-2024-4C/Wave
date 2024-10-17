@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using ExitGames.Client.Photon.StructWrapping;
 using Quantum;
 using UnityEngine;
+using Wave.Weapon;
 using Wave.Weapon.Animation;
 
 public class WeaponChanger : MonoBehaviour
@@ -15,11 +16,12 @@ public class WeaponChanger : MonoBehaviour
     void Start()
     {
         QuantumEvent.Subscribe<EventChangeActiveWeapon>(this, ChangeWeapon);
+        ChangeWeaponFromType(WeaponType.Primary);
     }
 
     public void OnEntityInstantiated()
     {
-        ChangeWeaponFromType(WeaponType.Primary);
+        
     }
 
     private void ChangeWeaponFromType(WeaponType type)
@@ -34,8 +36,8 @@ public class WeaponChanger : MonoBehaviour
         }
 
         _weaponInventory.CurrentWeapon = gun;
-
         _weaponInventory.ToggleWeapon(container);
+        _weaponInventory.CurrentWeapon.GetComponent<WeaponView>().OnEquip(_entityView.gameObject);
     }
 
     private void ChangeWeapon(EventChangeActiveWeapon e)
