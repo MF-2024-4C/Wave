@@ -39,3 +39,9 @@ event PlayerCanInteractEvent{
     PlayerLink PlayerLink;
     bool IsCanInteract;
 }
+
+event PlayerInteractElapseEvent{
+    PlayerLink PlayerLink;
+    bool IsInteract;
+    FP ElapseTime;
+}

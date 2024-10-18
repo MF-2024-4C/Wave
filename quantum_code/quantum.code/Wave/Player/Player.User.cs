@@ -129,6 +129,30 @@ namespace Quantum
             
             f.Events.PlayerCanInteractEvent(playerLink, false);
         }
+
+        public static void CheckInteractElapseTime(Frame f, EntityRef entity, PlayerSys* playerSys)
+        {
+            if (!f.TryGet(entity, out PlayerLink playerLink)) return;
+
+            if (!f.TryGet<Interactor>(playerSys->InteractEntity, out Interactor interactor) || 
+                interactor.InteractPlayer != entity)
+            {
+                f.Events.PlayerInteractElapseEvent(playerLink, false, 0);
+                return;
+            }
+
+            if (!f.TryFindAsset<InteractConfig>(interactor.Config.Id, out InteractConfig interactConfig))
+            {
+                f.Events.PlayerInteractElapseEvent(playerLink, false, 0);
+                return;
+            }
+
+            FP elapsedTimeRate = 0;
+            FP nowElapsedTime = (f.Number * f.DeltaTime - interactor.InteractStartTime);
+            elapsedTimeRate = nowElapsedTime / interactConfig.HoldTime;
+            elapsedTimeRate = FPMath.Clamp01(elapsedTimeRate);
+            f.Events.PlayerInteractElapseEvent(playerLink, true, elapsedTimeRate);
+        }
         
         public static void Dead(Frame f, EntityRef entity, PlayerSys* playerSys)
         {
