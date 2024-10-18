@@ -18,6 +18,6 @@ public class WeaponManager : MonoBehaviour
         var weapon = GetComponent<EntityComponentWeapon>();
         WeaponData = UnityDB.FindAsset<WeaponDataAsset>(weapon.Prototype.data.Id);
         WeaponView = GetComponent<WeaponView>();
-        WeaponView.Initialize(WeaponData.Settings.FireMode.ToKinemationFireMode(), WeaponData.Settings.FireRate.AsFloat);
+        WeaponView.Initialize(WeaponData.Settings.FireMode.ToKinemationFireMode(), WeaponData.Settings.FireRate.AsFloat * 60f);
     }
 }

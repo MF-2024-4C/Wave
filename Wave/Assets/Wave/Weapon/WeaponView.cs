@@ -35,13 +35,14 @@ namespace Wave.Weapon
         
         private bool _isInitialized;
 
-        public void Initialize(FireMode settings, float fireRate)
+        public void Initialize(FireMode fireMode, float fireRate)
         {
             if (_isInitialized) return;
             
             _isInitialized = true;
-            _fireMode = settings;
+            _fireMode = fireMode;
             _fireRate = fireRate;
+            Debug.Log($"Weapon:{gameObject.name}:_fireMode: {_fireMode}, _fireRate: {_fireRate}");
         }
 
         public void OnFire()
@@ -56,6 +57,14 @@ namespace Wave.Weapon
             if (_recoilAnimation != null && _recoilData != null)
             {
                 _recoilAnimation.Play();
+            }
+        }
+        
+        public void OnFireReleased()
+        {
+            if (_recoilAnimation != null)
+            {
+                _recoilAnimation.Stop();
             }
         }
 

@@ -39,7 +39,10 @@ namespace Wave.Player
             
             //カメラの前方向を保存
             input.CameraForwardDirection = mainCameraTran.forward.ToFPVector3();
-        
+            
+            //マウスなど視点操作の入力差分を取得
+            input.LookDelta = new Vector2(UnityEngine.Input.GetAxis("Mouse X"), UnityEngine.Input.GetAxis("Mouse Y")).ToFPVector2();
+            
             input.ChangePrimaryWeapon = UnityEngine.Input.GetKey(KeyCode.Alpha1);
             input.ChangeSecondaryWeapon = UnityEngine.Input.GetKey(KeyCode.Alpha2);
             input.ChangeTertiaryWeapon = UnityEngine.Input.GetKey(KeyCode.Alpha3);

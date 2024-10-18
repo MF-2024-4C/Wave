@@ -5,4 +5,5 @@ input
     QBoolean Interact;
     FPVector2 PlayerDirection;
     FPVector3 CameraForwardDirection;
+    FPVector2 LookDelta;
 }

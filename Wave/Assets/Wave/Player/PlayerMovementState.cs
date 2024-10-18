@@ -17,7 +17,7 @@ namespace Wave.Player
             Sprinting,
             InAir
         }
-        
+
         private EntityView _entityView;
         private QuantumGame _game;
 
@@ -34,8 +34,8 @@ namespace Wave.Player
         private int _sensitivityMultiplierPropertyIndex;
 
         private WeaponInventory _weaponInventory;
-        
-        
+
+
         #region AnimatorParams
 
         private static readonly int InAir = Animator.StringToHash("InAir");
@@ -45,7 +45,6 @@ namespace Wave.Player
         private static readonly int Moving = Animator.StringToHash("Moving");
         private static readonly int Sprinting = Animator.StringToHash("Sprinting");
         private static readonly int ProneWeightHash = Animator.StringToHash("ProneWeight");
-
 
         #endregion
 
@@ -62,19 +61,33 @@ namespace Wave.Player
         {
             _sensitivityMultiplierPropertyIndex = _userInput.GetPropertyIndex("SensitivityMultiplier");
         }
-
+        
         private void OnEntityInstantiated(QuantumGame game)
         {
             _game = game;
             _animator = GetComponentInChildren<Animator>();
-            
+
             QuantumEvent.Subscribe<EventFire>(this, OnFired);
         }
-        
+
         private void OnFired(EventFire e)
         {
             if (e.Owner != _entityView.EntityRef) return;
             _weaponInventory.CurrentWeapon.WeaponView.OnFire();
+        }
+
+        private void OnFireReleased()
+        {
+            _weaponInventory.CurrentWeapon.WeaponView.OnFireReleased();
+        }
+
+        private unsafe bool WasFireReleased()
+        {
+            var frame = _game.Frames.Verified;
+            if (!frame.TryGet<PlayerLink>(_entityView.EntityRef, out var playerLink))
+                return false;
+            var input = frame.GetPlayerInput(playerLink.Player);
+            return input->Fire.WasReleased;
         }
 
         public void Update()
@@ -102,32 +115,39 @@ namespace Wave.Player
             UpdateLookAt();
             UpdateAnimatorParams(frame);
             UpdateRotation(playerLocalInfo);
+
+            if (WasFireReleased())
+            {
+                OnFireReleased();
+            }
         }
+
         public void OnLook(InputValue value)
         {
             _lookDeltaInput = value.Get<Vector2>();
         }
+
         private void UpdateLookAt()
         {
             float scale = _userInput.GetValue<float>(_sensitivityMultiplierPropertyIndex);
-            
+
             float deltaMouseX = _lookDeltaInput.x * 1f * scale;
             float deltaMouseY = -_lookDeltaInput.y * 1f * scale;
-            
+
             _playerInput.y += deltaMouseY;
             _playerInput.x += deltaMouseX;
-            
+
             float proneWeight = _animator.GetFloat(ProneWeightHash);
             Vector2 pitchClamp = Vector2.Lerp(new Vector2(-90f, 90f), new Vector2(-30, 0f), proneWeight);
 
             _playerInput.y = Mathf.Clamp(_playerInput.y, pitchClamp.x, pitchClamp.y);
-            
+
             transform.rotation *= Quaternion.Euler(0f, deltaMouseX, 0f);
-            
+
             _userInput.SetValue(FPSANames.MouseDeltaInput, new Vector4(deltaMouseX, deltaMouseY));
             _userInput.SetValue(FPSANames.MouseInput, new Vector4(_playerInput.x, _playerInput.y));
         }
-        
+
         private void UpdateAnimatorParams(Frame frame)
         {
             if (_animator == null) return;
