@@ -454,6 +454,30 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.vertx.attributes": {
+      "version": "1.5.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.vertx.serializereference-dropdown": {
+      "version": "1.0.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.vertx.attributes": "1.5.1",
+        "com.vertx.utilities": "3.1.0"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "com.vertx.utilities": {
+      "version": "3.1.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "dev.n5y.asmdefhelper": {
       "version": "https://github.com/naninunenoy/AsmdefHelper.git?path=Assets",
       "depth": 0,
