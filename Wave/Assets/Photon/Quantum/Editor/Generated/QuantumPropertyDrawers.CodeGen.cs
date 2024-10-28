@@ -78,6 +78,13 @@ namespace Quantum.Editor {
     }
   }
 
+  [CustomPropertyDrawer(typeof(AssetRefTurretConfig))]
+  public class AssetRefTurretConfigPropertyDrawer : PropertyDrawer {
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
+      AssetRefDrawer.DrawAssetRefSelector(position, property, label, typeof(TurretConfigAsset));
+    }
+  }
+
   [CustomPropertyDrawer(typeof(AssetRefWeaponData))]
   public class AssetRefWeaponDataPropertyDrawer : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {

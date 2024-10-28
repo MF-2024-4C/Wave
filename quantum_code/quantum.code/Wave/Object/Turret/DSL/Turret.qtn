@@ -1,0 +1,5 @@
+﻿asset TurretConfig;
+
+component Turret{
+    asset_ref<TurretConfig> Config;
+}
