@@ -59,6 +59,25 @@ namespace Quantum.Prototypes.Unity {
     }
   }
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Turret))]
+  public class Turret_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Turret_Prototype> {
+    public Quantum.AssetRefTurretConfig Config;
+    [Quantum.LocalReference]
+    public global::EntityPrototype TurretEntity;
+    [Quantum.LocalReference]
+    public global::EntityPrototype UsePlayer;
+    public Quantum.QBoolean IsUsed;
+
+    public sealed override Quantum.Prototypes.Turret_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Turret_Prototype();
+      result.Config = this.Config;
+      converter.Convert(this.TurretEntity, out result.TurretEntity);
+      converter.Convert(this.UsePlayer, out result.UsePlayer);
+      result.IsUsed = this.IsUsed;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.WeaponInventory))]
   public class WeaponInventory_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.WeaponInventory_Prototype> {
     [Quantum.Inspector.HideInInspectorAttribute()]
