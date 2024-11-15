@@ -8,13 +8,13 @@ component Interactor
     QBoolean CanInteract;
     
     //インタラクト中か？
-    QBoolean OnInteract;
-    FP InteractStartTime;
-    FP InteractEndTime;
-    EntityRef InteractPlayer;
+    [HideInInspector]QBoolean OnInteract;
+    [HideInInspector]FP InteractStartTime;
+    [HideInInspector]FP InteractEndTime;
+    [HideInInspector]EntityRef InteractPlayer;
     
     //クールダウン中か？
-    QBoolean NowCoolDown;
+    [HideInInspector]QBoolean NowCoolDown;
 }
 
 signal OnInteractCall(entity_ref interactor, entity_ref player);

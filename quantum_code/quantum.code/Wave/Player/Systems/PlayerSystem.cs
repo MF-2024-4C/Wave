@@ -1,6 +1,8 @@
-﻿namespace Quantum.Player
+﻿using Photon.Deterministic;
+
+namespace Quantum.Player
 {
-    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>, ISignalOnDead
+    public unsafe class PlayerSystem : SystemMainThreadFilter<PlayerSystem.PlayerFilter> , ISignalOnComponentAdded<PlayerSys>, ISignalOnDead, ISignalOnPlayerUseTurretAnimStart
     {
         public struct PlayerFilter
         {
@@ -38,6 +40,12 @@
             }
 
             PlayerSys.Dead(f, entity, playerSys);
+        }
+
+        public void OnPlayerUseTurretAnimStart(Frame f, FPVector3 targetPos, FPQuaternion targetRot, EntityRef targetPlayer)
+        {
+            if (!f.Unsafe.TryGetPointer(targetPlayer, out PlayerSys* playerSys)) return;
+            PlayerSys.UseTurret(f, targetPlayer, playerSys, targetPos, targetRot);
         }
     }
 }

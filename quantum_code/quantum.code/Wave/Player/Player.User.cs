@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using Quantum.QuantumDemo;
 using Photon.Deterministic;
 using Quantum.Physics2D;
@@ -104,6 +105,18 @@ namespace Quantum
 
         public static void Recoil(FPVector2 recoil)
         {
+        }
+
+        public static void UseTurret(Frame f, EntityRef entity, PlayerSys* playerSys, FPVector3 targetPos, FPQuaternion targetRot)
+        {
+            //TODO::プレイヤーがタレットを使うアニメーション終了時にシグナル発行
+            if(f.Unsafe.TryGetPointer(entity, out Transform3D* transform))
+            {
+                transform->Position = targetPos;
+                transform->Rotation = targetRot;
+            }
+            
+            f.Signals.OnPlayerUseTurretAnimEnd();
         }
 
         public void SetConfig(Frame　f, EntityRef entity)

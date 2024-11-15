@@ -191,6 +191,11 @@ MonoBehaviour:
         Id:
           Value: 1519622893075523582
       ResourcePath: DB/Exp/Enemy/03-ZombieSpawn 1/PlayerCharacter
+    - Path: Resources/DB/Wave/Item/TurretConfigAsset
+      AssetRef:
+        Id:
+          Value: 1532652637735474500
+      ResourcePath: DB/Wave/Item/TurretConfigAsset
     - Path: Resources/DB/QuantumDemo/Map1
       AssetRef:
         Id:

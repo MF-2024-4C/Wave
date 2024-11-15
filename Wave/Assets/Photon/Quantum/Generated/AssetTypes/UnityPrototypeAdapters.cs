@@ -10,11 +10,16 @@ namespace Quantum.Prototypes.Unity {
   public class Interactor_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Interactor_Prototype> {
     public Quantum.AssetRefInteractConfig Config;
     public Quantum.QBoolean CanInteract;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Quantum.QBoolean OnInteract;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FP InteractStartTime;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Photon.Deterministic.FP InteractEndTime;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     [Quantum.LocalReference]
     public global::EntityPrototype InteractPlayer;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Quantum.QBoolean NowCoolDown;
 
     public sealed override Quantum.Prototypes.Interactor_Prototype Convert(EntityPrototypeConverter converter) {
@@ -62,10 +67,13 @@ namespace Quantum.Prototypes.Unity {
   [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Turret))]
   public class Turret_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Turret_Prototype> {
     public Quantum.AssetRefTurretConfig Config;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     [Quantum.LocalReference]
     public global::EntityPrototype TurretEntity;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     [Quantum.LocalReference]
     public global::EntityPrototype UsePlayer;
+    [Quantum.Inspector.HideInInspectorAttribute()]
     public Quantum.QBoolean IsUsed;
 
     public sealed override Quantum.Prototypes.Turret_Prototype Convert(EntityPrototypeConverter converter) {

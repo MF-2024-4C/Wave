@@ -3,8 +3,21 @@
 component Turret{
     asset_ref<TurretConfig> Config;
     
-    EntityRef TurretEntity;
+    [HideInInspector]EntityRef TurretEntity;
     
-    EntityRef UsePlayer;
-    bool IsUsed;
+    [HideInInspector]EntityRef UsePlayer;
+    [HideInInspector]bool IsUsed;
 }
+
+event PlayerUseTurretAnimationStart{
+    //Y軸のポジションはプレイヤーの位置に合わせる
+    FPVector3 TargetPos;
+    FPQuaternion TargetRot;
+    EntityRef TargetPlayer;
+}
+
+event PlayerUseTurretAnimationEnd{
+}
+
+signal OnPlayerUseTurretAnimStart(FPVector3 targetPos, FPQuaternion targetRot, EntityRef targetPlayer);
+signal OnPlayerUseTurretAnimEnd();
