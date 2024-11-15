@@ -39,7 +39,7 @@ namespace ch.sycoforge.Decal.Demo
 
             if (distance >= DistanceThreshold)
             {
-                Vector3 offset = (index == 0 ? Vector3.right : Vector3.left) * FootDistance * 0.5f;
+                Vector3 offset = (index == 0 ? Vector3.right : Vector3.left) * (FootDistance * 0.5f);
                 Vector3 localPosition = offset;
                 Vector3 worldPosition = this.transform.TransformPoint(offset);
 

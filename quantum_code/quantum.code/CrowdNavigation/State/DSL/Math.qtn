@@ -1,0 +1,28 @@
+
+[Serializable]
+struct Vector2Byte
+{
+	byte X;
+	byte Y;
+}
+[Serializable]
+struct Vector3Byte
+{
+	byte X;
+	byte Y;
+	byte Z;
+}
+
+[Serializable]
+struct Vector2Int
+{
+	int X;
+	int Y;
+}
+[Serializable]
+struct Vector3Int
+{
+	int X;
+	int Y;
+	int Z;
+}

@@ -1,4 +1,6 @@
 asset CrowdNavigationData;
+asset FlowFieldData;
+
 component Surface {
    FPVector2 Size;
    int CellCountWidth;

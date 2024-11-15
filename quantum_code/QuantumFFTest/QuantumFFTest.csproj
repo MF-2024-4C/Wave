@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{0990AC7F-90E9-4894-8444-A545D398AA99}</ProjectGuid>
+        <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>QuantumFFTest</RootNamespace>
+        <AssemblyName>QuantumFFTest</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>latest</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="PhotonDeterministic">
+          <HintPath>..\..\assemblies\debug\PhotonDeterministic.dll</HintPath>
+        </Reference>
+        <Reference Include="quantum.core">
+          <HintPath>..\..\assemblies\debug\quantum.core.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="GraphTest.cs" />
+        <Compile Include="WorldTest.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="_GlobalUsings.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="System.Memory" Version="4.5.5" />
+      <PackageReference Include="xunit" Version="2.9.2" />
+      <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+      <PackageReference Include="xunit.assert" Version="2.9.2" />
+      <PackageReference Include="xunit.core" Version="2.9.2" />
+      <PackageReference Include="xunit.extensibility.core" Version="2.9.2" />
+      <PackageReference Include="xunit.extensibility.execution" Version="2.9.2" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\quantum.code\quantum.code.csproj">
+        <Project>{fbf32099-b197-4ab9-8e5a-b44d9d3750bd}</Project>
+        <Name>quantum.code</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

@@ -96,6 +96,11 @@ MonoBehaviour:
         Id:
           Value: 391217586855469871
       ResourcePath: DB/QuantumDemo/SimulationConfig
+    - Path: Resources/DB/Wave/Demo/Stage/DemoStageFlowFieldData
+      AssetRef:
+        Id:
+          Value: 397866846684504346
+      ResourcePath: DB/Wave/Demo/Stage/DemoStageFlowFieldData
     - Path: Resources/DB/QuantumDemo/GunMap
       AssetRef:
         Id:

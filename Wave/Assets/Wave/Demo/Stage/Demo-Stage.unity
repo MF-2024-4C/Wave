@@ -537,6 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baed99309934aad4897f51412ec62b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canSetInput: 1
 --- !u!4 &238464112
 Transform:
   m_ObjectHideFlags: 0
@@ -3791,6 +3792,8 @@ MonoBehaviour:
   _zombiePrototype: {fileID: 11400000, guid: beaca3484ee0b864cb48c43436c9b19e, type: 2}
   _idle: {fileID: 7400000, guid: 2e2b7350e68ead84ebb8efca8fd1643a, type: 3}
   _run: {fileID: 7400000, guid: 69628e28ee201db49a35fdb9d07e7bc8, type: 3}
+  _attack: {fileID: 0}
+  _die: {fileID: 0}
 --- !u!4 &1688362455
 Transform:
   m_ObjectHideFlags: 0
