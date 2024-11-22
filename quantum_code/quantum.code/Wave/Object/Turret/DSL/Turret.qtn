@@ -3,9 +3,9 @@
 component Turret{
     asset_ref<TurretConfig> Config;
     
-    [HideInInspector]EntityRef TurretEntity;
+    //[HideInInspector]EntityRef TurretEntity;
     
-    [HideInInspector]EntityRef UsePlayer;
+    //[HideInInspector]EntityRef UsePlayer;
     [HideInInspector]bool IsUsed;
 }
 

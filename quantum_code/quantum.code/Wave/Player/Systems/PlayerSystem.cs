@@ -10,6 +10,7 @@ namespace Quantum.Player
             public Transform3D* Transform;
             public CharacterController3D* CharacterController;
             public PlayerSys* Player;
+            public Rider* Rider;
         }
 
         public override void Update(Frame f, ref PlayerFilter filter)
@@ -21,9 +22,10 @@ namespace Quantum.Player
                 input = *f.GetPlayerInput(playerLink->Player);
             }
 
-            PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input);
-            PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input);
-            PlayerSys.Interact(f, filter.Entity, filter.Transform, filter.Player, input);
+            //PlayerSys.Rot(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input);
+            //PlayerSys.Move(f, filter.Entity, filter.CharacterController, filter.Player, input);
+            PlayerSys.Update(f, filter.Entity, filter.Transform, filter.CharacterController, filter.Player, input, filter.Rider);
+            //PlayerSys.Interact(f, filter.Entity, filter.Transform, filter.Player, input);
         }
 
         public void OnAdded(Frame f, EntityRef entity, PlayerSys* component)

@@ -1,0 +1,6 @@
+﻿component Rider
+{
+    [HideInInspector] Vehicle RideVehicle;
+    [HideInInspector] EntityRef VehicleEntity;
+    [HideInInspector] bool IsRiding;
+}

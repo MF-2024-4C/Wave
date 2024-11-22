@@ -64,24 +64,41 @@ namespace Quantum.Prototypes.Unity {
     }
   }
   [System.SerializableAttribute()]
-  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Turret))]
-  public class Turret_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Turret_Prototype> {
-    public Quantum.AssetRefTurretConfig Config;
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Rider))]
+  public class Rider_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Rider_Prototype> {
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    public Vehicle_Prototype RideVehicle;
     [Quantum.Inspector.HideInInspectorAttribute()]
     [Quantum.LocalReference]
-    public global::EntityPrototype TurretEntity;
+    public global::EntityPrototype VehicleEntity;
     [Quantum.Inspector.HideInInspectorAttribute()]
-    [Quantum.LocalReference]
-    public global::EntityPrototype UsePlayer;
-    [Quantum.Inspector.HideInInspectorAttribute()]
-    public Quantum.QBoolean IsUsed;
+    public Quantum.QBoolean IsRiding;
 
-    public sealed override Quantum.Prototypes.Turret_Prototype Convert(EntityPrototypeConverter converter) {
-      var result = new Quantum.Prototypes.Turret_Prototype();
-      result.Config = this.Config;
-      converter.Convert(this.TurretEntity, out result.TurretEntity);
-      converter.Convert(this.UsePlayer, out result.UsePlayer);
-      result.IsUsed = this.IsUsed;
+    public sealed override Quantum.Prototypes.Rider_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Rider_Prototype();
+      result.RideVehicle = this.RideVehicle.Convert(converter);
+      converter.Convert(this.VehicleEntity, out result.VehicleEntity);
+      result.IsRiding = this.IsRiding;
+      return result;
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.PrototypeAttribute(typeof(Quantum.Vehicle))]
+  public class Vehicle_Prototype : Quantum.PrototypeAdapter<Quantum.Prototypes.Vehicle_Prototype> {
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype VehicleEntityRef;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    [Quantum.LocalReference]
+    public global::EntityPrototype RiderEntityRef;
+    [Quantum.Inspector.HideInInspectorAttribute()]
+    public Photon.Deterministic.FPVector3 CameraForwardDir;
+
+    public sealed override Quantum.Prototypes.Vehicle_Prototype Convert(EntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.Vehicle_Prototype();
+      converter.Convert(this.VehicleEntityRef, out result.VehicleEntityRef);
+      converter.Convert(this.RiderEntityRef, out result.RiderEntityRef);
+      result.CameraForwardDir = this.CameraForwardDir;
       return result;
     }
   }

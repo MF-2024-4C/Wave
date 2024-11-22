@@ -231,6 +231,11 @@ MonoBehaviour:
         Id:
           Value: 1913669733921426467
       ResourcePath: DB/Wave/Demo/Stage/DemoStage_Navmesh
+    - Path: Resources/DB/Wave/Item/TurretInteractConfig
+      AssetRef:
+        Id:
+          Value: 1990163059812186368
+      ResourcePath: DB/Wave/Item/TurretInteractConfig
     - Path: Resources/DB/Exp/GPU-Instancer/PlayerArmature|EntityView
       AssetRef:
         Id:

@@ -24,8 +24,8 @@ namespace Quantum
             //インタラクトができるかどうか
             if (!interactor->CanInteract) return;
             
-            //現在インタラクト中かどうか
-            if (interactor->OnInteract) return;
+            //現在インタラクトされているかどうか？
+            if (interactConfig.IsHoldInteract && interactor->OnInteract) return;
             
             //クールタイムの確認
             var time = f.Number * f.DeltaTime;

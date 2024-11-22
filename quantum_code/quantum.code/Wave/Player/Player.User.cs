@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Messaging;
 using Quantum.QuantumDemo;
 using Photon.Deterministic;
 using Quantum.Physics2D;
@@ -9,7 +10,34 @@ namespace Quantum
 {
     public unsafe partial struct PlayerSys
     {
-        public static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
+        public static void Update(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller,
+            PlayerSys* playerSys, Input input, Rider* rider)
+        {
+            //乗り物に乗っていれば乗り物の移動処理を行う
+            if (rider->IsRiding)
+            {
+                rider->RideVehicle.CameraForwardDir = input.CameraForwardDirection;
+                f.Signals.OnVehicleUpdate(rider->VehicleEntity);
+            }
+            else
+            {
+                Move(f, entity, controller, playerSys, input);
+                Rot(f, entity, transform, controller, playerSys, input);
+            }
+
+            //インタラクト処理
+            if (input.Interact)
+            {
+                if (rider->IsRiding)
+                {
+                    if(f.Unsafe.TryGetPointer(rider->VehicleEntity, out Interactor* interactor))
+                        Interactor.Interact(f, entity, rider->VehicleEntity, interactor);
+                }
+                else Interact(f, entity, transform, playerSys, input);
+            }
+        }
+        
+        private static void Move(Frame f, EntityRef entityRef, CharacterController3D* controller, PlayerSys* playerSys,
             Input input)
         {
             CharacterController3DConfig cconfig = f.FindAsset<CharacterController3DConfig>(controller->Config.Id);
@@ -51,7 +79,7 @@ namespace Quantum
             playerSys->PlayerAnimState = animState;
         }
 
-        public static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller,
+        private static void Rot(Frame f, EntityRef entity, Transform3D* transform, CharacterController3D* controller,
             PlayerSys* playerSys, Input input)
         {
             //カメラの向いている方向にプレイヤーも回転する

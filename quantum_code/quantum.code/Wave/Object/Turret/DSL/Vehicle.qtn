@@ -1,0 +1,9 @@
+﻿component Vehicle
+{
+    [HideInInspector]EntityRef VehicleEntityRef;
+    [HideInInspector]EntityRef RiderEntityRef;
+    
+    [HideInInspector] FPVector3 CameraForwardDir;
+}
+
+signal OnVehicleUpdate(entity_ref VehicleEntity);

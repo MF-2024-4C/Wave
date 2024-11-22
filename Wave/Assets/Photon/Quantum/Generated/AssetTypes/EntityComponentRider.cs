@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentTurret : EntityComponentBase<Quantum.Prototypes.Turret_Prototype> {
+public partial class EntityComponentRider : EntityComponentBase<Quantum.Prototypes.Rider_Prototype, Quantum.Prototypes.Unity.Rider_Prototype> {
 }

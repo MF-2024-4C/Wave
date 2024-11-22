@@ -722,6 +722,7 @@ GameObject:
   - component: {fileID: 222217591}
   - component: {fileID: 222217590}
   - component: {fileID: 222217589}
+  - component: {fileID: 222217596}
   m_Layer: 0
   m_Name: TurretEntity
   m_TagString: Untagged
@@ -744,7 +745,7 @@ MonoBehaviour:
   Prototype:
     Config:
       Id:
-        Value: 198859142049440293
+        Value: 1990163059812186368
     CanInteract:
       Value: 1
     OnInteract:
@@ -772,8 +773,6 @@ MonoBehaviour:
     Config:
       Id:
         Value: 1532652637735474500
-    TurretEntity: {fileID: 0}
-    UsePlayer: {fileID: 0}
     IsUsed:
       Value: 0
 --- !u!114 &222217591
@@ -1021,6 +1020,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222217596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222217588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d113b418659e8489a761fe0dcd2f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    VehicleEntityRef: {fileID: 0}
+    RiderEntityRef: {fileID: 0}
+    CameraForwardDir:
+      X:
+        RawValue: 0
+      Y:
+        RawValue: 0
+      Z:
+        RawValue: 0
 --- !u!1 &247466783
 GameObject:
   m_ObjectHideFlags: 0

@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 5684033664292768011}
   - component: {fileID: 7569993271907966049}
   - component: {fileID: -1500112013048758693}
+  - component: {fileID: 9026546163379068771}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -649,6 +650,31 @@ MonoBehaviour:
       RawValue: 6553600
     CurrentHealth:
       RawValue: 0
+--- !u!114 &9026546163379068771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958795330284115381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7840825927a506a41a66a827b3a66ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    RideVehicle:
+      VehicleEntityRef: {fileID: 0}
+      RiderEntityRef: {fileID: 0}
+      CameraForwardDir:
+        X:
+          RawValue: 0
+        Y:
+          RawValue: 0
+        Z:
+          RawValue: 0
+    IsRiding:
+      Value: 0
 --- !u!1001 &7421127153867234411
 PrefabInstance:
   m_ObjectHideFlags: 0
