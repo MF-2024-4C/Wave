@@ -7,6 +7,6 @@ namespace Wave.Result
     {
         public abstract void Skip();
         public abstract void Next();
-        public abstract void Show(ResultGameData resultGameData, List<ResultPlayerData> resultPlayerDataList);
+        public abstract void Show(ResultGameData resultGameData, List<ResultPlayerData> resultPlayerDataList, Action onFinish);
     }
 }

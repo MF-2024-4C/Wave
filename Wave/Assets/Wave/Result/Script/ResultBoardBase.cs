@@ -15,6 +15,7 @@ namespace Wave.Result
         private bool _isShow = false;
         private bool _isNext = false;
         private Coroutine _coroutine;
+        private Action _onFinish;
 
         protected virtual void Awake()
         {
@@ -45,17 +46,20 @@ namespace Wave.Result
         /// <param name="resultGameData"></param>
         /// <param name="resultPlayerDataList"></param>
         /// <param name="onFinish"></param>
-        public void Show(ResultGameData resultGameData, List<ResultPlayerData> resultPlayerDataList)
+        public void Show(ResultGameData resultGameData, List<ResultPlayerData> resultPlayerDataList, Action onFinish)
         {
             _resultGameData = resultGameData;
             _resultPlayerDatas = resultPlayerDataList;
             _isShow = true;
             _isNext = false;
+            _onFinish = onFinish;
             _coroutine = StartCoroutine("ResultUpdate");
         }
 
         protected void AnimationFinish()
         {
+            _onFinish?.Invoke();
+            _onFinish = null;
             _isShow = false;
             _resultGameData = null;
             _resultPlayerDatas = null;

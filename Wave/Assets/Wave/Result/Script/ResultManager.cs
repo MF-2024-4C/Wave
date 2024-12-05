@@ -9,6 +9,8 @@ namespace Wave.Result
     {
         [SerializeField] private List<ResultBoardBase> _resultBoardList;
         [SerializeField] private float _resultChangeFadeTime = 0.5f;
+        [SerializeField] private GameObject _skipButton;
+        [SerializeField] private GameObject _nextButton;
         private bool _isShowResult = false;
         private ResultGameData _resultGameData;
         private ResultBoardBase _currentResultBoard;
@@ -18,6 +20,9 @@ namespace Wave.Result
 
         private void Start()
         {
+            _skipButton.SetActive(false);
+            _nextButton.SetActive(false);
+            
             //何かしらイベントが発行されてリザルトを表示させる
             //今回はStartでリザルトを表示させる
             /*----Test Data----*/
@@ -47,12 +52,14 @@ namespace Wave.Result
             
             foreach (ResultBoardBase resultBoard in _resultBoardList)
             {
+                _skipButton.SetActive(true);
+                _nextButton.SetActive(false);
                 _currentResultBoard = resultBoard;
                 resultBoard.gameObject.SetActive(true);
                 resultBoard.FadeInResultBoard(_resultChangeFadeTime);
                 yield return new WaitForSeconds(_resultChangeFadeTime);
                 
-                resultBoard.Show(_resultGameData, _resultPlayerDataList);
+                resultBoard.Show(_resultGameData, _resultPlayerDataList, FinishNowResultAnimation);
                 yield return new WaitUntil(() => resultBoard.IsNext);
                 
                 resultBoard.FadeOutResultBoard(_resultChangeFadeTime);
@@ -62,7 +69,16 @@ namespace Wave.Result
 
             _isShowResult = false;
             _resultGameData = null;
+            _skipButton.SetActive(false);
+            _nextButton.SetActive(false);
             Debug.Log("Finish Result");
+        }
+        
+        //現在のリザルトアニメーションが終了したタイミングで呼ばれる
+        private void FinishNowResultAnimation()
+        {
+            _skipButton.SetActive(false);
+            _nextButton.SetActive(true);
         }
 
         public void SkipResult()
