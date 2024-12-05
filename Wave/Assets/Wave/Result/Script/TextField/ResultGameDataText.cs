@@ -18,7 +18,7 @@ namespace Wave.Result
             {
                 object value = propertyInfo.GetValue(gameData);
                 _text.text = value?.ToString() ?? "N/A";
-                Show(animTime);
+                _tweener = _text.DOFade(1, animTime).OnComplete(() => _tweener = null);
             }
             else
             {
@@ -37,17 +37,13 @@ namespace Wave.Result
             color.a = 0;
             _text.color = color;
         }
-        
-        private void Show()
+
+        public override void StopAnimation()
         {
-            Color color = _text.color;
-            color.a = 1;
-            _text.color = color;
-        }
-        
-        private void Show(float animTime)
-        {
-            _text.DOFade(1, animTime);
+            if (_tweener != null)
+            {
+                _tweener.Kill();
+            }
         }
     }
 }

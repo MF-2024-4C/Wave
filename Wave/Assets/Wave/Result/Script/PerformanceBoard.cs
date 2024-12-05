@@ -4,9 +4,8 @@ namespace Wave.Result
 {
     public class PerformanceBoard : ResultBoardBase
     {
-        public override void Skip()
+        protected override void SkipFunc()
         {
-            base.Skip();
         }
 
         public override void Next()

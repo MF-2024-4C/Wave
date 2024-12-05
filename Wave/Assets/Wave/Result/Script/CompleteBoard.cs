@@ -10,10 +10,25 @@ namespace Wave.Result
     {
         [SerializeField] private List<ResultTextBase> _resultTexts = new List<ResultTextBase>();
         [SerializeField] private float _textFadeTime = 0.5f;
+        private ResultPlayerData _localPlayerData;
 
-        public override void Skip()
+        protected override void Awake()
         {
-            base.Skip();
+            base.Awake();
+            
+            foreach (ResultTextBase resultText in _resultTexts)
+            {
+                resultText.Hide();
+            }
+        }
+        
+        protected override void SkipFunc()
+        {
+            foreach (ResultTextBase resultText in _resultTexts)
+            {
+                resultText.StopAnimation();
+                resultText.Show(_localPlayerData, _resultGameData, 0);
+            }
         }
 
         public override void Next()
@@ -23,28 +38,23 @@ namespace Wave.Result
         
         protected override IEnumerator ResultUpdate()
         {
-            foreach (ResultTextBase resultText in _resultTexts)
-            {
-                resultText.Hide();
-            }
-            
-            ResultPlayerData localPlayerData = null;
+            _localPlayerData = null;
             foreach (var playerData in _resultPlayerDatas)
             {
                 if (playerData.IsLocalPlayer)
                 {
-                    localPlayerData = playerData;
+                    _localPlayerData = playerData;
                     break;
                 }
             }
 
             foreach (ResultTextBase resultText in _resultTexts)
             {
-                resultText.Show(localPlayerData, _resultGameData, _textFadeTime);
+                resultText.Show(_localPlayerData, _resultGameData, _textFadeTime);
                 yield return new WaitForSeconds(_textFadeTime);
             }
             
-            Finish();
+            AnimationFinish();
             yield return null;
         }
     }

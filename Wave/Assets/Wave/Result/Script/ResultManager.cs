@@ -11,6 +11,7 @@ namespace Wave.Result
         [SerializeField] private float _resultChangeFadeTime = 0.5f;
         private bool _isShowResult = false;
         private ResultGameData _resultGameData;
+        private ResultBoardBase _currentResultBoard;
         
         private List<ResultPlayerData> _resultPlayerDataList;
         private Coroutine _resultCoroutine;
@@ -41,6 +42,13 @@ namespace Wave.Result
         {
             foreach (ResultBoardBase resultBoard in _resultBoardList)
             {
+                resultBoard.gameObject.SetActive(false);
+            }
+            
+            foreach (ResultBoardBase resultBoard in _resultBoardList)
+            {
+                _currentResultBoard = resultBoard;
+                resultBoard.gameObject.SetActive(true);
                 resultBoard.FadeInResultBoard(_resultChangeFadeTime);
                 yield return new WaitForSeconds(_resultChangeFadeTime);
                 
@@ -49,8 +57,28 @@ namespace Wave.Result
                 
                 resultBoard.FadeOutResultBoard(_resultChangeFadeTime);
                 yield return new WaitForSeconds(_resultChangeFadeTime);
+                resultBoard.gameObject.SetActive(false);
             }
+
+            _isShowResult = false;
+            _resultGameData = null;
             Debug.Log("Finish Result");
+        }
+
+        public void SkipResult()
+        {
+            if(_isShowResult && _currentResultBoard != null)
+            {
+                _currentResultBoard.Skip();
+            }
+        }
+        
+        public void NextResult()
+        {
+            if(_isShowResult && _currentResultBoard != null)
+            {
+                _currentResultBoard.Next();
+            }
         }
     }
 

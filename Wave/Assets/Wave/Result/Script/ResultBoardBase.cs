@@ -6,34 +6,38 @@ using DG.Tweening;
 
 namespace Wave.Result
 {
-    public abstract class ResultBoardBase : MonoBehaviour , IResultBoard
+    public abstract class ResultBoardBase : MonoBehaviour, IResultBoard
     {
         [SerializeField] private CanvasGroup _layerGroup;
         protected ResultGameData _resultGameData;
         protected List<ResultPlayerData> _resultPlayerDatas;
-        
+
         private bool _isShow = false;
         private bool _isNext = false;
         private Coroutine _coroutine;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _layerGroup.alpha = 0;
         }
 
-        public virtual void Skip()
+        public void Skip()
         {
             if (_isShow)
             {
                 StopCoroutine(_coroutine);
-                Finish();
+                SkipFunc();
+                AnimationFinish();
             }
         }
 
-        public virtual void Next()
-        {
-            _isNext = true;
-        }
+        protected virtual void SkipFunc(){}
+
+    public virtual void Next()
+    { 
+        Skip();
+        _isNext = true;
+    }
 
         /// <summary>
         /// リザルト画面を表示させるアニメーション開始
@@ -50,13 +54,13 @@ namespace Wave.Result
             _coroutine = StartCoroutine("ResultUpdate");
         }
 
-        protected void Finish()
+        protected void AnimationFinish()
         {
             _isShow = false;
             _resultGameData = null;
             _resultPlayerDatas = null;
             _coroutine = null;
-            Debug.Log("Finish Result Board");
+            Debug.Log("Finish Result Board Anim");
         }
         
         public bool IsNext => _isNext;
