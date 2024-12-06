@@ -54,6 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerName: {fileID: 272511969294299397}
   _fieldBox: {fileID: 6450232992546338470}
+  _fieldImages:
+  - {fileID: 8373107549215201716}
+  - {fileID: 3215948222058566640}
+  _defaultColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
+  _highlightColor: {r: 0.6603774, g: 0.5613208, b: 0, a: 1}
 --- !u!1 &4695747990732748183
 GameObject:
   m_ObjectHideFlags: 0

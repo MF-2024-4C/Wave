@@ -24,6 +24,8 @@ namespace Wave.Result
                 PlayerPerformanceCard playerPerformanceCard = Instantiate(_playerCard, _parent.transform).GetComponent<PlayerPerformanceCard>();
                 playerPerformanceCard.PlayerName.text = playerDataList[i].PlayerName;
                 _playerPerformanceCards.Add(playerPerformanceCard);
+                if(playerDataList[i].IsLocalPlayer) playerPerformanceCard.SetLocalPlayerColor();
+                else playerPerformanceCard.SetOtherPlayerColor();
             }
         }
         
