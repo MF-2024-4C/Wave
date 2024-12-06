@@ -34,7 +34,7 @@ namespace Wave.Result
 
         protected virtual void SkipFunc(){}
 
-    public virtual void Next()
+    public void Next()
     { 
         Skip();
         _isNext = true;
@@ -89,5 +89,7 @@ namespace Wave.Result
         {
             _layerGroup.DOFade(targetAlpha, fadeTime);
         }
+        
+        public virtual void SetUp(List<ResultPlayerData> playerDataList){}
     }
 }

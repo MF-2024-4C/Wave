@@ -50,6 +50,7 @@ namespace Wave.Result
             foreach (ResultBoardBase resultBoard in _resultBoardList)
             {
                 resultBoard.gameObject.SetActive(false);
+                resultBoard.SetUp(_resultPlayerDataList);
             }
 
             int count = 0;
@@ -58,6 +59,7 @@ namespace Wave.Result
                 _progressBar.SetProgressBar(count);
                 _skipButton.SetActive(true);
                 _nextButton.SetActive(false);
+                
                 _currentResultBoard = resultBoard;
                 resultBoard.gameObject.SetActive(true);
                 resultBoard.FadeInResultBoard(_resultChangeFadeTime);

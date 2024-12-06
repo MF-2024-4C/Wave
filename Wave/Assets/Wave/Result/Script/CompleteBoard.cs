@@ -8,7 +8,7 @@ namespace Wave.Result
 {
     public class CompleteBoard : ResultBoardBase
     {
-        [SerializeField] private List<ResultTextBase> _resultTexts = new List<ResultTextBase>();
+        [SerializeField] private List<CompleteTextBase> _resultTexts = new List<CompleteTextBase>();
         [SerializeField] private float _textFadeTime = 0.5f;
         private ResultPlayerData _localPlayerData;
 
@@ -24,16 +24,11 @@ namespace Wave.Result
         
         protected override void SkipFunc()
         {
-            foreach (ResultTextBase resultText in _resultTexts)
+            foreach (CompleteTextBase resultText in _resultTexts)
             {
                 resultText.StopAnimation();
                 resultText.Show(_localPlayerData, _resultGameData, 0);
             }
-        }
-
-        public override void Next()
-        {
-            base.Next();
         }
         
         protected override IEnumerator ResultUpdate()
@@ -48,7 +43,7 @@ namespace Wave.Result
                 }
             }
 
-            foreach (ResultTextBase resultText in _resultTexts)
+            foreach (CompleteTextBase resultText in _resultTexts)
             {
                 resultText.Show(_localPlayerData, _resultGameData, _textFadeTime);
                 yield return new WaitForSeconds(_textFadeTime);

@@ -5,7 +5,7 @@ using DG.Tweening;
 
 namespace Wave.Result
 {
-    public class ResultGameDataText : ResultTextBase
+    public class CompleteGameDataText : CompleteTextBase
     {
         [SerializeField] private TextMeshProUGUI _text;
         [HideInInspector] public string fieldName;

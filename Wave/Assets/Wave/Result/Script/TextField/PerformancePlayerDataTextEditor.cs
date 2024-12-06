@@ -4,12 +4,12 @@ using UnityEditor;
 
 namespace Wave.Result
 {
-    [CustomEditor(typeof(CompletePlayerDataText))]
-    public class ResultPlayerDataTextEditor : Editor
+    [CustomEditor(typeof(PerformancePlayerDataText))]
+    public class PerformancePlayerDataTextEditor : Editor
     {
         public override void OnInspectorGUI()
         {
-            CompletePlayerDataText completeBoard = (CompletePlayerDataText)target;
+            PerformancePlayerDataText completeBoard = (PerformancePlayerDataText)target;
             DrawDefaultInspector();
 
             Type dataType = typeof(ResultPlayerData);

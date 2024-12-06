@@ -8,7 +8,7 @@ namespace Wave.Result
     /// <summary>
     /// プレイヤーデータに関するテキスト
     /// </summary>
-    public class ResultPlayerDataText : ResultTextBase
+    public class CompletePlayerDataText : CompleteTextBase
     {
         [SerializeField] private TextMeshProUGUI _text;
         [HideInInspector] public string fieldName;
